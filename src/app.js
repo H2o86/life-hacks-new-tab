@@ -1421,7 +1421,7 @@
       target.timerRunning = true;
       target.lastStartTime = now;
       target.onBreak = false;
-      showToast(`🚀 Đã chuyển "${target.text}" lên góc trên bên phải!`, '⚡');
+      showToast(`🚀 Đã chuyển "${target.text}" sang bên trái màn hình!`, '⚡');
       startTaskTimerEngine();
 
       if (elements.activeTaskWidget) {
@@ -1642,7 +1642,7 @@
     span.className = 'todo-text';
     span.textContent = todo.text;
     span.style.cursor = 'pointer';
-    span.title = 'Bấm để bắt đầu làm việc và chuyển sang góc trên bên phải';
+    span.title = 'Bấm để bắt đầu làm việc và chuyển sang bên trái màn hình';
     span.addEventListener('click', (e) => {
       e.stopPropagation();
       if (!todo.completed) {

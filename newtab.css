@@ -278,6 +278,13 @@ body {
   line-height: 1.35;
 }
 
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
 .header-right {
   display: flex;
   align-items: center;
@@ -1630,13 +1637,14 @@ textarea:focus {
 }
 
 /* ==========================================================================
-   Left Side To-Do List Panel Widget
+   Right Side To-Do List Panel Widget
    ========================================================================== */
 
 .todo-panel {
   position: fixed;
   top: 50%;
-  left: 20px;
+  right: 20px;
+  left: auto;
   transform: translateY(-50%);
   z-index: 90;
 }
@@ -1679,7 +1687,8 @@ textarea:focus {
 .todo-card-body {
   position: absolute;
   top: 50%;
-  left: 0;
+  right: 0;
+  left: auto;
   transform: translateY(-50%);
   width: 320px;
   max-height: 540px;
@@ -2554,17 +2563,20 @@ textarea:focus {
   .todo-panel {
     top: auto;
     bottom: 20px;
-    left: 20px;
+    right: 20px;
+    left: auto;
     transform: none;
   }
   .todo-card-body {
     top: auto;
     bottom: 0;
+    right: 0;
+    left: auto;
     transform: none;
   }
 }
 
-/* Active Task Floating Widget Top Right */
+/* Active Task Floating Widget Left Side Header */
 .active-task-widget {
   display: flex;
   align-items: center;
@@ -2590,14 +2602,14 @@ textarea:focus {
   to { opacity: 1; transform: translateY(0) scale(1); }
 }
 
-@keyframes flyUpToTopRight {
-  0% { opacity: 0; transform: translate(-40px, 20px) scale(0.8); filter: brightness(1.6); }
-  60% { opacity: 1; transform: translate(0, -3px) scale(1.04); }
+@keyframes flyUpToTopLeft {
+  0% { opacity: 0; transform: translate(60px, 20px) scale(0.8); filter: brightness(1.6); }
+  60% { opacity: 1; transform: translate(-4px, -3px) scale(1.04); }
   100% { opacity: 1; transform: translate(0, 0) scale(1); filter: brightness(1); }
 }
 
 .active-task-widget.fly-in {
-  animation: flyUpToTopRight 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  animation: flyUpToTopLeft 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 
 .active-task-status-icon {
