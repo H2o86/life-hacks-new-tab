@@ -160,6 +160,8 @@
     todoActiveList: document.getElementById('todoActiveList'),
     todoCompletedList: document.getElementById('todoCompletedList'),
     btnClearCompleted: document.getElementById('btnClearCompleted'),
+    btnToggleAddForm: document.getElementById('btnToggleAddForm'),
+    todoFormContainer: document.getElementById('todoFormContainer'),
 
     // Daily Work Efficiency Card
     dailyEfficiencyCard: document.getElementById('dailyEfficiencyCard'),
@@ -1775,6 +1777,24 @@
       });
     }
 
+    if (elements.btnToggleAddForm && elements.todoFormContainer) {
+      elements.btnToggleAddForm.addEventListener('click', () => {
+        const isOpen = elements.todoFormContainer.style.display !== 'none';
+        if (isOpen) {
+          elements.todoFormContainer.style.display = 'none';
+          elements.btnToggleAddForm.classList.remove('active');
+          elements.btnToggleAddForm.title = 'Bấm để mở giao diện thêm công việc mới';
+        } else {
+          elements.todoFormContainer.style.display = 'flex';
+          elements.btnToggleAddForm.classList.add('active');
+          elements.btnToggleAddForm.title = 'Đóng giao diện thêm công việc';
+          if (elements.todoInputText) {
+            elements.todoInputText.focus();
+          }
+        }
+      });
+    }
+
     if (elements.btnTypeSingle && elements.btnTypeRecurring) {
       elements.btnTypeSingle.addEventListener('click', () => {
         selectedTaskType = 'single';
@@ -1894,6 +1914,15 @@
         if (selectedTaskType === 'monthly') toastMsg = 'Đã thêm task lặp lại hàng tháng!';
         else if (selectedTaskType === 'recurring') toastMsg = 'Đã thêm task lặp lại hàng tuần!';
         showToast(toastMsg, '📝');
+
+        // Automatically collapse form after adding task to prioritize task list view
+        if (elements.todoFormContainer) {
+          elements.todoFormContainer.style.display = 'none';
+        }
+        if (elements.btnToggleAddForm) {
+          elements.btnToggleAddForm.classList.remove('active');
+          elements.btnToggleAddForm.title = 'Bấm để mở giao diện thêm công việc mới';
+        }
       });
     }
 

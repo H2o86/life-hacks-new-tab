@@ -1708,11 +1708,47 @@ textarea:focus {
   justify-content: space-between;
 }
 
+.todo-header-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
 .todo-header-title h3 {
   font-family: var(--font-heading);
   font-size: 1.05rem;
   font-weight: 700;
   margin: 0;
+}
+
+.btn-toggle-add-form {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: var(--primary-gradient);
+  border: none;
+  color: #ffffff;
+  font-size: 1.15rem;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), background var(--transition-fast), box-shadow var(--transition-fast);
+  line-height: 1;
+  padding-bottom: 2px;
+}
+
+.btn-toggle-add-form:hover {
+  transform: scale(1.15);
+  box-shadow: 0 4px 12px rgba(34, 197, 94, 0.4);
+}
+
+.btn-toggle-add-form.active {
+  transform: rotate(45deg);
+  background: rgba(239, 68, 68, 0.85);
+  box-shadow: 0 4px 12px rgba(239, 68, 68, 0.4);
 }
 
 .todo-minimize-btn {
@@ -1725,6 +1761,24 @@ textarea:focus {
 }
 
 .todo-minimize-btn:hover { color: var(--text-primary); }
+
+/* Collapsible Add Task Form Container */
+.todo-form-container {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  background: rgba(15, 23, 42, 0.4);
+  border: 1px solid var(--card-border);
+  border-radius: var(--radius-sm);
+  padding: 10px;
+  margin-top: 4px;
+  animation: formSlideDown 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes formSlideDown {
+  from { opacity: 0; transform: translateY(-8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
 
 /* Daily Work Efficiency Card */
 .daily-efficiency-card {

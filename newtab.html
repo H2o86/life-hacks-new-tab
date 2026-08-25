@@ -29,6 +29,7 @@
         <div class="todo-header">
           <div class="todo-header-title">
             <h3>📋 Công Việc Cần Làm</h3>
+            <button type="button" class="btn-toggle-add-form" id="btnToggleAddForm" title="Bấm để mở giao diện thêm công việc mới">+</button>
           </div>
           <button class="todo-minimize-btn" id="btnMinimizeTodo" title="Thu gọn">&times;</button>
         </div>
@@ -71,71 +72,74 @@
           </button>
         </div>
 
-        <!-- Form Input -->
-        <div class="todo-type-toggle">
-          <button type="button" class="type-btn active" id="btnTypeSingle" title="Công việc theo hạn chót">📅 Một lần</button>
-          <button type="button" class="type-btn" id="btnTypeRecurring" title="Công việc lặp lại theo thứ trong tuần">🔁 Lặp tuần</button>
-          <button type="button" class="type-btn" id="btnTypeMonthly" title="Công việc lặp lại theo ngày trong tháng">📆 Lặp tháng</button>
-        </div>
+        <!-- Collapsible Add Task Form Container (Prioritizes Task List View) -->
+        <div class="todo-form-container" id="todoFormContainer" style="display: none;">
+          <!-- Form Input -->
+          <div class="todo-type-toggle">
+            <button type="button" class="type-btn active" id="btnTypeSingle" title="Công việc theo hạn chót">📅 Một lần</button>
+            <button type="button" class="type-btn" id="btnTypeRecurring" title="Công việc lặp lại theo thứ trong tuần">🔁 Lặp tuần</button>
+            <button type="button" class="type-btn" id="btnTypeMonthly" title="Công việc lặp lại theo ngày trong tháng">📆 Lặp tháng</button>
+          </div>
 
-        <form class="todo-input-form" id="todoInputForm">
-          <div class="todo-input-row-main">
-            <input type="text" id="todoInputText" placeholder="Thêm việc cần làm..." autocomplete="off" maxlength="120" required>
-            <button type="submit" class="btn-add-todo" title="Thêm công việc">+</button>
-          </div>
-          <div class="todo-input-row-sub" id="todoSubSingle">
-            <input type="date" id="todoInputDate" class="todo-input-date" title="Chọn ngày hạn chót">
-            <input type="time" id="todoInputTime" class="todo-input-time" title="Chọn giờ hẹn">
-          </div>
-          <div class="todo-input-row-sub" id="todoSubRecurring" style="display: none;">
-            <input type="time" id="todoRecurTime" class="todo-input-time" title="Chọn giờ nhắc lặp lại">
-            <div class="weekday-picker" id="weekdayPicker">
-              <button type="button" class="day-chip" data-day="1" title="Thứ Hai">T2</button>
-              <button type="button" class="day-chip" data-day="2" title="Thứ Ba">T3</button>
-              <button type="button" class="day-chip" data-day="3" title="Thứ Tư">T4</button>
-              <button type="button" class="day-chip" data-day="4" title="Thứ Năm">T5</button>
-              <button type="button" class="day-chip" data-day="5" title="Thứ Sáu">T6</button>
-              <button type="button" class="day-chip" data-day="6" title="Thứ Bảy">T7</button>
-              <button type="button" class="day-chip" data-day="0" title="Chủ Nhật">CN</button>
+          <form class="todo-input-form" id="todoInputForm">
+            <div class="todo-input-row-main">
+              <input type="text" id="todoInputText" placeholder="Thêm việc cần làm..." autocomplete="off" maxlength="120" required>
+              <button type="submit" class="btn-add-todo" title="Thêm công việc">+</button>
             </div>
-          </div>
-          <div class="todo-input-row-sub" id="todoSubMonthly" style="display: none;">
-            <input type="time" id="todoMonthlyTime" class="todo-input-time" title="Chọn giờ nhắc lặp lại">
-            <select id="todoMonthlyDay" class="todo-input-select" title="Chọn ngày lặp lại trong tháng">
-              <option value="1">Ngày 1 hàng tháng</option>
-              <option value="2">Ngày 2 hàng tháng</option>
-              <option value="3">Ngày 3 hàng tháng</option>
-              <option value="4">Ngày 4 hàng tháng</option>
-              <option value="5">Ngày 5 hàng tháng</option>
-              <option value="6">Ngày 6 hàng tháng</option>
-              <option value="7">Ngày 7 hàng tháng</option>
-              <option value="8">Ngày 8 hàng tháng</option>
-              <option value="9">Ngày 9 hàng tháng</option>
-              <option value="10">Ngày 10 hàng tháng</option>
-              <option value="11">Ngày 11 hàng tháng</option>
-              <option value="12">Ngày 12 hàng tháng</option>
-              <option value="13">Ngày 13 hàng tháng</option>
-              <option value="14">Ngày 14 hàng tháng</option>
-              <option value="15">Ngày 15 hàng tháng</option>
-              <option value="16">Ngày 16 hàng tháng</option>
-              <option value="17">Ngày 17 hàng tháng</option>
-              <option value="18">Ngày 18 hàng tháng</option>
-              <option value="19">Ngày 19 hàng tháng</option>
-              <option value="20">Ngày 20 hàng tháng</option>
-              <option value="21">Ngày 21 hàng tháng</option>
-              <option value="22">Ngày 22 hàng tháng</option>
-              <option value="23">Ngày 23 hàng tháng</option>
-              <option value="24">Ngày 24 hàng tháng</option>
-              <option value="25">Ngày 25 hàng tháng</option>
-              <option value="26">Ngày 26 hàng tháng</option>
-              <option value="27">Ngày 27 hàng tháng</option>
-              <option value="28">Ngày 28 hàng tháng</option>
-              <option value="29">Ngày 29 hàng tháng</option>
-              <option value="30">Ngày 30 hàng tháng</option>
-              <option value="31">Ngày 31 (Hoặc ngày cuối tháng)</option>
-            </select>
-          </div>
-        </form>
+            <div class="todo-input-row-sub" id="todoSubSingle">
+              <input type="date" id="todoInputDate" class="todo-input-date" title="Chọn ngày hạn chót">
+              <input type="time" id="todoInputTime" class="todo-input-time" title="Chọn giờ hẹn">
+            </div>
+            <div class="todo-input-row-sub" id="todoSubRecurring" style="display: none;">
+              <input type="time" id="todoRecurTime" class="todo-input-time" title="Chọn giờ nhắc lặp lại">
+              <div class="weekday-picker" id="weekdayPicker">
+                <button type="button" class="day-chip" data-day="1" title="Thứ Hai">T2</button>
+                <button type="button" class="day-chip" data-day="2" title="Thứ Ba">T3</button>
+                <button type="button" class="day-chip" data-day="3" title="Thứ Tư">T4</button>
+                <button type="button" class="day-chip" data-day="4" title="Thứ Năm">T5</button>
+                <button type="button" class="day-chip" data-day="5" title="Thứ Sáu">T6</button>
+                <button type="button" class="day-chip" data-day="6" title="Thứ Bảy">T7</button>
+                <button type="button" class="day-chip" data-day="0" title="Chủ Nhật">CN</button>
+              </div>
+            </div>
+            <div class="todo-input-row-sub" id="todoSubMonthly" style="display: none;">
+              <input type="time" id="todoMonthlyTime" class="todo-input-time" title="Chọn giờ nhắc lặp lại">
+              <select id="todoMonthlyDay" class="todo-input-select" title="Chọn ngày lặp lại trong tháng">
+                <option value="1">Ngày 1 hàng tháng</option>
+                <option value="2">Ngày 2 hàng tháng</option>
+                <option value="3">Ngày 3 hàng tháng</option>
+                <option value="4">Ngày 4 hàng tháng</option>
+                <option value="5">Ngày 5 hàng tháng</option>
+                <option value="6">Ngày 6 hàng tháng</option>
+                <option value="7">Ngày 7 hàng tháng</option>
+                <option value="8">Ngày 8 hàng tháng</option>
+                <option value="9">Ngày 9 hàng tháng</option>
+                <option value="10">Ngày 10 hàng tháng</option>
+                <option value="11">Ngày 11 hàng tháng</option>
+                <option value="12">Ngày 12 hàng tháng</option>
+                <option value="13">Ngày 13 hàng tháng</option>
+                <option value="14">Ngày 14 hàng tháng</option>
+                <option value="15">Ngày 15 hàng tháng</option>
+                <option value="16">Ngày 16 hàng tháng</option>
+                <option value="17">Ngày 17 hàng tháng</option>
+                <option value="18">Ngày 18 hàng tháng</option>
+                <option value="19">Ngày 19 hàng tháng</option>
+                <option value="20">Ngày 20 hàng tháng</option>
+                <option value="21">Ngày 21 hàng tháng</option>
+                <option value="22">Ngày 22 hàng tháng</option>
+                <option value="23">Ngày 23 hàng tháng</option>
+                <option value="24">Ngày 24 hàng tháng</option>
+                <option value="25">Ngày 25 hàng tháng</option>
+                <option value="26">Ngày 26 hàng tháng</option>
+                <option value="27">Ngày 27 hàng tháng</option>
+                <option value="28">Ngày 28 hàng tháng</option>
+                <option value="29">Ngày 29 hàng tháng</option>
+                <option value="30">Ngày 30 hàng tháng</option>
+                <option value="31">Ngày 31 (Hoặc ngày cuối tháng)</option>
+              </select>
+            </div>
+          </form>
+        </div>
 
         <!-- Task Lists Container -->
         <div class="todo-list-container">
