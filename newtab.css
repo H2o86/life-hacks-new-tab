@@ -1994,6 +1994,70 @@ textarea:focus {
   gap: 8px;
 }
 
+/* Completed Tasks Date Grouping */
+.completed-date-group {
+  margin-bottom: 8px;
+  border-radius: var(--radius-sm);
+  background: rgba(15, 23, 42, 0.35);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  overflow: hidden;
+}
+
+.completed-group-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 10px;
+  background: rgba(255, 255, 255, 0.05);
+  cursor: pointer;
+  user-select: none;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  transition: all var(--transition-fast);
+}
+
+.completed-group-header:hover {
+  background: rgba(255, 255, 255, 0.09);
+  color: var(--text-primary);
+}
+
+.completed-group-header .group-arrow {
+  font-size: 0.65rem;
+  transition: transform 0.2s ease;
+}
+
+.completed-group-header.collapsed .group-arrow {
+  transform: rotate(-90deg);
+}
+
+.completed-group-header .group-title {
+  flex: 1;
+}
+
+.completed-group-header .group-count {
+  font-size: 0.7rem;
+  padding: 1px 6px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--text-muted);
+}
+
+.completed-group-list {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 6px;
+  list-style: none;
+  margin: 0;
+  transition: all 0.2s ease;
+}
+
+.completed-group-list.collapsed {
+  display: none;
+}
+
 .todo-item {
   display: flex;
   align-items: flex-start;

@@ -1597,10 +1597,82 @@
         </div>
       `;
     } else {
+      // Group completed tasks by completion date (lastCompletedDate or today)
+      const groupsMap = {};
+      const todayStr = getTodayStr();
+
       completedTodos.forEach(todo => {
-        elements.todoCompletedList.appendChild(createTodoItemElement(todo));
+        const dateKey = todo.lastCompletedDate || todayStr;
+        if (!groupsMap[dateKey]) {
+          groupsMap[dateKey] = [];
+        }
+        groupsMap[dateKey].push(todo);
+      });
+
+      // Sort date keys descending (newest dates first)
+      const sortedDateKeys = Object.keys(groupsMap).sort((a, b) => b.localeCompare(a));
+
+      sortedDateKeys.forEach((dateKey) => {
+        const groupTodos = groupsMap[dateKey];
+        groupTodos.sort((a, b) => (b.createdAt || 0) - (a.createdAt || 0));
+
+        const groupDiv = document.createElement('div');
+        groupDiv.className = 'completed-date-group';
+
+        const headerDiv = document.createElement('div');
+        headerDiv.className = 'completed-group-header';
+        
+        const arrowSpan = document.createElement('span');
+        arrowSpan.className = 'group-arrow';
+        arrowSpan.textContent = '▼';
+
+        const titleSpan = document.createElement('span');
+        titleSpan.className = 'group-title';
+        titleSpan.textContent = `📅 ${formatCompletedDateLabel(dateKey)}`;
+
+        const countSpan = document.createElement('span');
+        countSpan.className = 'group-count';
+        countSpan.textContent = `${groupTodos.length} việc`;
+
+        headerDiv.appendChild(arrowSpan);
+        headerDiv.appendChild(titleSpan);
+        headerDiv.appendChild(countSpan);
+
+        const listUl = document.createElement('ul');
+        listUl.className = 'completed-group-list';
+
+        groupTodos.forEach(todo => {
+          listUl.appendChild(createTodoItemElement(todo));
+        });
+
+        // Toggle collapse/expand on header click
+        headerDiv.addEventListener('click', () => {
+          const isCollapsed = listUl.classList.toggle('collapsed');
+          headerDiv.classList.toggle('collapsed', isCollapsed);
+        });
+
+        groupDiv.appendChild(headerDiv);
+        groupDiv.appendChild(listUl);
+
+        elements.todoCompletedList.appendChild(groupDiv);
       });
     }
+  }
+
+  function formatCompletedDateLabel(dateStr) {
+    if (!dateStr) return 'Ngày khác';
+    const todayStr = getTodayStr();
+    const yesterdayStr = getYesterdayStr();
+
+    const parts = dateStr.split('-');
+    const formattedDate = parts.length === 3 ? `${parts[2]}/${parts[1]}/${parts[0]}` : dateStr;
+
+    if (dateStr === todayStr) {
+      return `Hôm nay (${formattedDate})`;
+    } else if (dateStr === yesterdayStr) {
+      return `Hôm qua (${formattedDate})`;
+    }
+    return `Ngày ${formattedDate}`;
   }
 
   function isDueToday(todo) {
