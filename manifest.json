@@ -1,0 +1,32 @@
+{
+  "manifest_version": 3,
+  "name": "Life Hacks New Tab - Mẹo Vặt Mỗi Ngày",
+  "version": "1.0.0",
+  "description": "Mỗi lần mở tab mới là một mẹo vặt hữu ích giúp tối ưu công việc, công nghệ, sức khỏe và đời sống.",
+  "chrome_url_overrides": {
+    "newtab": "newtab.html"
+  },
+  "permissions": [
+    "storage"
+  ],
+  "host_permissions": [
+    "https://api.adviceslip.com/*",
+    "https://raw.githubusercontent.com/*",
+    "https://api.quotable.io/*",
+    "https://translate.googleapis.com/*",
+    "https://api.mymemory.translated.net/*"
+  ],
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "action": {
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    },
+    "default_title": "Life Hacks New Tab"
+  }
+}

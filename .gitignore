@@ -1,0 +1,14 @@
+# Dependencies
+node_modules/
+package-lock.json
+
+# OS & Editor files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.log
+
+# Temp files
+*.tmp
+*.bak

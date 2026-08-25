@@ -1,0 +1,452 @@
+[
+  {
+    "id": "prod_001",
+    "category": "productivity",
+    "categoryName": "⚡ Năng suất",
+    "title": "Quy tắc 2 phút của David Allen",
+    "content": "Nếu một công việc nào đó tốn ít hơn 2 phút để hoàn thành (như trả lời email ngắn, dọn bàn làm việc, cất tài liệu), hãy làm ngay lập tức thay vì ghi vào danh sách việc cần làm.",
+    "action": "👉 Áp dụng ngay: Tìm ngay 1 việc dưới 2 phút bạn đang trì hoãn và xử lý dứt điểm trong 120 giây tới!",
+    "tags": ["#quanlythoigian", "#trihoan", "#gettingthingsdone"],
+    "accent": "linear-gradient(135deg, #f6d365 0%, #fda085 100%)"
+  },
+  {
+    "id": "prod_002",
+    "category": "productivity",
+    "categoryName": "⚡ Năng suất",
+    "title": "Phương pháp Pomodoro cải tiến 50/10",
+    "content": "Thay vì 25 phút làm việc / 5 phút nghỉ truyền thống, phiên 50 phút tập trung sâu và 10 phút nghỉ ngơi giúp não bộ đi sâu vào trạng thái 'Flow State' mà không bị ngắt mạch suy nghĩ quá sớm.",
+    "action": "👉 Áp dụng ngay: Đặt đồng hồ 50 phút cho phiên làm việc tiếp theo, tắt hết thông báo mạng xã hội.",
+    "tags": ["#pomodoro", "#flowstate", "#focus"],
+    "accent": "linear-gradient(135deg, #f093fb 0%, #f5576c 100%)"
+  },
+  {
+    "id": "prod_003",
+    "category": "productivity",
+    "categoryName": "⚡ Năng suất",
+    "title": "Ăn con ếch (Eat That Frog)",
+    "content": "Năng lượng ý chí của bạn cao nhất vào đầu ngày. Hãy chọn ra nhiệm vụ quan trọng nhất, khó nhằn nhất và giải quyết nó đầu tiên trước khi làm bất kỳ việc vặt nào khác.",
+    "action": "👉 Áp dụng ngay: Xác định nhiệm vụ quan trọng nhất (MIT) của hôm nay và dành 60 phút đầu giờ giải quyết nó.",
+    "tags": ["#eatthafrog", "#uutien", "#hieuqua"],
+    "accent": "linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)"
+  },
+  {
+    "id": "prod_004",
+    "category": "productivity",
+    "categoryName": "⚡ Năng suất",
+    "title": "Quy tắc 5 giây (The 5 Second Rule)",
+    "content": "Khoảnh khắc bạn có thôi thúc làm một việc có ích, hãy đếm ngược 5-4-3-2-1 và hành động ngay trước khi não bộ kịp đưa ra những lý do để trì hoãn và bàn lùi.",
+    "action": "👉 Áp dụng ngay: Đếm nhẩm 5-4-3-2-1 và bật dậy khỏi ghế ngay khi bạn muốn bắt đầu một thói quen tốt!",
+    "tags": ["#5secondrule", "#dongluc", "#trihoan"],
+    "accent": "linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%)"
+  },
+  {
+    "id": "prod_005",
+    "category": "productivity",
+    "categoryName": "⚡ Năng suất",
+    "title": "Ma trận Eisenhower phân loại công việc",
+    "content": "Chia công việc thành 4 nhóm: 1. Khẩn cấp & Quan trọng (Làm ngay), 2. Không khẩn cấp nhưng Quan trọng (Lên lịch), 3. Khẩn cấp nhưng Không quan trọng (Ủy quyền), 4. Không cả hai (Xóa bỏ).",
+    "action": "👉 Áp dụng ngay: Dành 80% thời gian cho nhóm 2 (Học hỏi, sức khỏe, dự án dài hạn) để không bị rơi vào khủng hoảng.",
+    "tags": ["#eisenhower", "#kehoach", "#toiuu"],
+    "accent": "linear-gradient(135deg, #43e97b 0%, #38f9d7 100%)"
+  },
+  {
+    "id": "prod_006",
+    "category": "productivity",
+    "categoryName": "⚡ Năng suất",
+    "title": "Kỹ thuật Time Boxing (Chia khối thời gian)",
+    "content": "Thay vì dùng một to-do list dài ngoằng khiến bạn choáng ngợp, hãy gán từng công việc vào một khung giờ cụ thể trên lịch. Khi biết rõ 'lúc nào làm việc gì', bạn sẽ loại bỏ hoàn toàn sự phân vân.",
+    "action": "👉 Áp dụng ngay: Khóa cứng 2 tiếng sáng mai trên Google Calendar chỉ dành riêng cho 1 dự án quan trọng nhất.",
+    "tags": ["#timeboxing", "#calendar", "#focus"],
+    "accent": "linear-gradient(135deg, #4481eb 0%, #04befe 100%)"
+  },
+  {
+    "id": "prod_007",
+    "category": "productivity",
+    "categoryName": "⚡ Năng suất",
+    "title": "Quy tắc Batching (Gom nhóm công việc)",
+    "content": "Não bộ mất tới 23 phút để lấy lại tập trung sau mỗi lần chuyển đổi ngữ cảnh. Hãy gom các việc vặt tương tự nhau (như check email, trả lời tin nhắn, thanh toán hóa đơn) vào 1 khung giờ duy nhất trong ngày.",
+    "action": "👉 Áp dụng ngay: Chỉ mở và trả lời email vào 2 khung giờ cố định: 11h trưa và 16h30 chiều.",
+    "tags": ["#batching", "#focus", "#contextswitch"],
+    "accent": "linear-gradient(135deg, #667eea 0%, #764ba2 100%)"
+  },
+  {
+    "id": "prod_008",
+    "category": "productivity",
+    "categoryName": "⚡ Năng suất",
+    "title": "Kỹ thuật 'Ngắt kết nối nhân tạo' để tập trung sâu",
+    "content": "Khi cần viết lách, lập trình hay suy nghĩ chiến lược, hãy tạm thời rút dây mạng hoặc bật chế độ Máy bay (Airplane mode) trên máy tính trong 45 phút. Không internet = không xao nhãng.",
+    "action": "👉 Áp dụng ngay: Tắt Wi-Fi trong 30 phút tới để hoàn thành bản nháp báo cáo của bạn.",
+    "tags": ["#deepwork", "#focus", "#offline"],
+    "accent": "linear-gradient(135deg, #2af598 0%, #009efd 100%)"
+  },
+  {
+    "id": "prod_009",
+    "category": "productivity",
+    "categoryName": "⚡ Năng suất",
+    "title": "Nguyên lý Pareto 80/20 trong công việc",
+    "content": "80% kết quả công việc đến từ 20% nỗ lực trọng tâm. Hãy liên tục tự hỏi: 'Trong 10 việc mình chuẩn bị làm, 2 việc nào tạo ra 80% giá trị lớn nhất?' để tập trung tối đa.",
+    "action": "👉 Áp dụng ngay: Gạch bỏ hoặc lùi lại 3 việc ít quan trọng nhất trong to-do list hôm nay.",
+    "tags": ["#pareto", "#8020", "#toiuu"],
+    "accent": "linear-gradient(135deg, #f12711 0%, #f5af19 100%)"
+  },
+  {
+    "id": "prod_010",
+    "category": "productivity",
+    "categoryName": "⚡ Năng suất",
+    "title": "Quy tắc 1-3-5 quản lý danh sách việc hàng ngày",
+    "content": "Một ngày làm việc hiệu quả chỉ nên gồm: 1 Việc lớn trọng tâm (Big Thing), 3 Việc vừa quan trọng (Medium Things), và 5 Việc nhỏ vụn vặt (Small Things). Điều này giúp bạn không bao giờ cảm thấy bị quá tải.",
+    "action": "👉 Áp dụng ngay: Viết ra danh sách 1-3-5 cho ngày làm việc tiếp theo của bạn.",
+    "tags": ["#135rule", "#todolist", "#kehoach"],
+    "accent": "linear-gradient(135deg, #0ba360 0%, #3cba92 100%)"
+  },
+  {
+    "id": "prod_011",
+    "category": "productivity",
+    "categoryName": "⚡ Năng suất",
+    "title": "Kỹ thuật Feynman: Học sâu mọi kiến thức",
+    "content": "Cách tốt nhất để thực sự hiểu một khái niệm phức tạp là thử giải thích nó bằng ngôn ngữ cực kỳ đơn giản cho một đứa trẻ 10 tuổi hiểu. Chỗ nào bạn bị ngắc ngứ chính là lỗ hổng kiến thức bạn cần đọc lại.",
+    "action": "👉 Áp dụng ngay: Thử tóm tắt một kỹ năng bạn vừa học trong 3 câu đơn giản không dùng thuật ngữ chuyên ngành.",
+    "tags": ["#feynman", "#hocnhanh", "#kienthuc"],
+    "accent": "linear-gradient(135deg, #a18cd1 0%, #fbc2eb 100%)"
+  },
+  {
+    "id": "prod_012",
+    "category": "productivity",
+    "categoryName": "⚡ Năng suất",
+    "title": "Nghi thức khởi động làm việc (Work Ritual)",
+    "content": "Tạo một chuỗi hành động lặp đi lặp lại trước khi bắt đầu làm việc (pha một tách trà, dọn sạch mặt bàn, đeo tai nghe chống ồn). Não bộ sẽ tự động chuyển sang chế độ tập trung cao độ khi nhận diện tín hiệu này.",
+    "action": "👉 Áp dụng ngay: Thiết lập 1 nghi thức 2 phút trước khi bạn mở laptop làm việc.",
+    "tags": ["#ritual", "#thoi-quen", "#focus"],
+    "accent": "linear-gradient(135deg, #ff758c 0%, #ff7eb3 100%)"
+  },
+  {
+    "id": "tech_001",
+    "category": "tech",
+    "categoryName": "💻 Công nghệ",
+    "title": "Khôi phục tab vừa đóng nhầm trên trình duyệt",
+    "content": "Lỡ tay đóng mất một tab quan trọng? Không cần vào lịch sử tìm kiếm, chỉ cần dùng tổ hợp phím tắt thần thánh để mở lại ngay lập tức tab vừa đóng.",
+    "action": "👉 Phím tắt: Bấm `Ctrl + Shift + T` (Windows) hoặc `Cmd + Shift + T` (Mac) để mở lại tab vừa đóng!",
+    "tags": ["#chrome", "#phimtat", "#browser"],
+    "accent": "linear-gradient(135deg, #667eea 0%, #764ba2 100%)"
+  },
+  {
+    "id": "tech_002",
+    "category": "tech",
+    "categoryName": "💻 Công nghệ",
+    "title": "Lịch sử Clipboard đa năng trên Windows",
+    "content": "Thay vì chỉ copy được 1 mục duy nhất, bạn có thể lưu trữ lịch sử hàng chục đoạn văn bản và hình ảnh đã copy trước đó chỉ bằng một bảng chọn nhanh.",
+    "action": "👉 Phím tắt: Bấm `Windows + V` để mở bảng Clipboard History và dán bất kỳ nội dung nào trong quá khứ!",
+    "tags": ["#windows", "#clipboard", "#shortcut"],
+    "accent": "linear-gradient(135deg, #2af598 0%, #009efd 100%)"
+  },
+  {
+    "id": "tech_003",
+    "category": "tech",
+    "categoryName": "💻 Công nghệ",
+    "title": "Tìm kiếm chính xác trên Google với dấu ngoặc kép",
+    "content": "Khi bạn đặt cụm từ tìm kiếm trong dấu ngoặc kép `\"cụm từ cần tìm\"`, Google sẽ chỉ trả về những kết quả chứa chính xác từng từ theo đúng thứ tự đó, loại bỏ mọi kết quả suy đoán.",
+    "action": "👉 Mẹo tìm kiếm: Thử gõ `\"tên lỗi kỹ thuật cụ thể\"` hoặc `site:github.com \"từ khóa\"` để tìm kết quả chuẩn xác 100%.",
+    "tags": ["#google", "#search", "#tips"],
+    "accent": "linear-gradient(135deg, #0ba360 0%, #3cba92 100%)"
+  },
+  {
+    "id": "tech_004",
+    "category": "tech",
+    "categoryName": "💻 Công nghệ",
+    "title": "Tạm dừng video YouTube tức thì bằng phím K",
+    "content": "Phím Spacebar thường có thể cuộn trang nếu con trỏ không ở trên video. Sử dụng phím `K` để Pause/Play luôn đảm bảo video dừng/chạy chính xác ở mọi vị trí trên trang.",
+    "action": "👉 Thêm phím tắt: Bấm `J` để lùi 10s, `L` để tua tới 10s, và `M` để tắt/bật âm thanh YouTube.",
+    "tags": ["#youtube", "#shortcuts", "#media"],
+    "accent": "linear-gradient(135deg, #ff0844 0%, #ffb199 100%)"
+  },
+  {
+    "id": "tech_005",
+    "category": "tech",
+    "categoryName": "💻 Công nghệ",
+    "title": "Chụp màn hình chọn vùng nhanh gọn",
+    "content": "Không cần mở phần mềm Paint hay Snipping Tool thủ công, bạn có thể chụp ngay một vùng màn hình và tự động lưu vào Clipboard để dán trực tiếp vào Zalo, Slack hay Facebook.",
+    "action": "👉 Phím tắt: Bấm `Windows + Shift + S` (Windows) hoặc `Cmd + Shift + 4` (Mac) để khoanh vùng chụp nhanh.",
+    "tags": ["#screenshot", "#efficiency", "#tips"],
+    "accent": "linear-gradient(135deg, #a18cd1 0%, #fbc2eb 100%)"
+  },
+  {
+    "id": "tech_006",
+    "category": "tech",
+    "categoryName": "💻 Công nghệ",
+    "title": "Tìm lại mật khẩu đã lưu ẩn dưới dấu sao (***)",
+    "content": "Nếu bạn quên mật khẩu trên một trang web nhưng trình duyệt đã tự điền dấu hoa thị: Click chuột phải vào ô mật khẩu -> Chọn `Inspect` (Kiểm tra) -> Đổi `type=\"password\"` thành `type=\"text\"` để xem mật khẩu.",
+    "action": "👉 Mẹo tiện lợi: Cách này cực nhanh khi cần xem lại mật khẩu mà không phải vào sâu trong phần cài đặt trình duyệt.",
+    "tags": ["#inspect", "#password", "#chrome"],
+    "accent": "linear-gradient(135deg, #e14fad 0%, #f9d423 100%)"
+  },
+  {
+    "id": "tech_007",
+    "category": "tech",
+    "categoryName": "💻 Công nghệ",
+    "title": "Tìm kiếm theo định dạng file trên Google (filetype:)",
+    "content": "Bạn muốn tìm tài liệu PDF, Slide PowerPoint hoặc bảng tính Excel? Chỉ cần thêm cú pháp `filetype:pdf` hoặc `filetype:pptx` vào sau từ khóa tìm kiếm trên Google.",
+    "action": "👉 Thử ngay: Gõ `Báo cáo tài chính 2025 filetype:pdf` trên Google để tải ngay tài liệu chuẩn.",
+    "tags": ["#google", "#filetype", "#research"],
+    "accent": "linear-gradient(135deg, #13547a 0%, #80d0c7 100%)"
+  },
+  {
+    "id": "tech_008",
+    "category": "tech",
+    "categoryName": "💻 Công nghệ",
+    "title": "Khóa máy tính ngay lập tức khi rời khỏi bàn",
+    "content": "Bảo vệ thông tin cá nhân và tài liệu dự án bằng cách khóa máy tính ngay lập tức chỉ với một tổ hợp phím 1 giây khi bạn đứng dậy đi lấy nước hoặc ra ngoài.",
+    "action": "👉 Phím tắt: Bấm `Windows + L` (Windows) hoặc `Cmd + Ctrl + Q` (Mac) để khóa màn hình tức thì.",
+    "tags": ["#security", "#windows", "#shortcuts"],
+    "accent": "linear-gradient(135deg, #30cfd0 0%, #330867 100%)"
+  },
+  {
+    "id": "tech_009",
+    "category": "tech",
+    "categoryName": "💻 Công nghệ",
+    "title": "Dán văn bản thuần không kèm định dạng rối rắm",
+    "content": "Khi copy văn bản từ web vào Word/Docs thường bị dính màu chữ, font và cỡ chữ lạ. Sử dụng tổ hợp phím dán không định dạng giúp văn bản tự động khớp hoàn hảo với tài liệu hiện tại.",
+    "action": "👉 Phím tắt: Bấm `Ctrl + Shift + V` (Windows) hoặc `Cmd + Shift + V` (Mac) để dán văn bản thuần túy.",
+    "tags": ["#paste", "#shortcuts", "#textformatting"],
+    "accent": "linear-gradient(135deg, #6a11cb 0%, #2575fc 100%)"
+  },
+  {
+    "id": "tech_010",
+    "category": "tech",
+    "categoryName": "💻 Công nghệ",
+    "title": "Chuyển nhanh giữa các ứng dụng đang mở",
+    "content": "Bấm `Alt + Tab` (hoặc `Cmd + Tab`) để chuyển qua lại giữa 2 ứng dụng gần nhất. Bạn cũng có thể bấm `Windows + Tab` để mở chế độ xem toàn cảnh Task View và tạo nhiều màn hình ảo (Virtual Desktops).",
+    "action": "👉 Thử ngay: Tạo một Virtual Desktop thứ hai (`Windows + Ctrl + D`) để phân tách không gian làm việc và giải trí!",
+    "tags": ["#multitasking", "#virtualdesktop", "#windows"],
+    "accent": "linear-gradient(135deg, #fc6076 0%, #ff9a44 100%)"
+  },
+  {
+    "id": "health_001",
+    "category": "health",
+    "categoryName": "🧘 Sức khỏe",
+    "title": "Quy tắc 20-20-20 bảo vệ mắt khi dùng máy tính",
+    "content": "Cứ mỗi 20 phút nhìn vào màn hình máy tính, hãy phóng tầm mắt nhìn vào một vật ở khoảng cách 20 feet (khoảng 6 mét) trong vòng ít nhất 20 giây để cơ mắt được thư giãn và tránh khô mắt.",
+    "action": "👉 Áp dụng ngay: Hãy nhìn ra ngoài cửa sổ hoặc điểm xa nhất trong phòng trong 20 giây ngay bây giờ!",
+    "tags": ["#mat", "#suckhoe", "#dancuvanphong"],
+    "accent": "linear-gradient(135deg, #13547a 0%, #80d0c7 100%)"
+  },
+  {
+    "id": "health_002",
+    "category": "health",
+    "categoryName": "🧘 Sức khỏe",
+    "title": "Uống 1 ly nước ấm ngay sau khi thức dậy",
+    "content": "Sau 7-8 tiếng ngủ ban đêm, cơ thể bạn đang ở trạng thái mất nước nhẹ. Uống ngay 1 ly nước ấm vào buổi sáng kích hoạt hệ tiêu hóa, thải độc tố và đánh thức não bộ sảng khoái.",
+    "action": "👉 Áp dụng ngay: Đặt một bình nước cạnh giường ngủ để sẵn sàng uống ngay khi vừa mở mắt vào sáng mai.",
+    "tags": ["#nuoc", "#buoisang", "#thoi-quen"],
+    "accent": "linear-gradient(135deg, #30cfd0 0%, #330867 100%)"
+  },
+  {
+    "id": "health_003",
+    "category": "health",
+    "categoryName": "🧘 Sức khỏe",
+    "title": "Kỹ thuật thở 4-7-8 giúp giảm căng thẳng tức thì",
+    "content": "Hít vào bằng mũi trong 4 giây, nín thở trong 7 giây, sau đó thở ra hoàn toàn qua miệng trong 8 giây. Kỹ thuật này giúp kích hoạt hệ thần kinh phó giao cảm, hạ nhịp tim và làm dịu cơn lo âu.",
+    "action": "👉 Áp dụng ngay: Thực hiện 3 chu kỳ thở 4-7-8 ngay bây giờ để cảm nhận sự thư thái lan tỏa toàn thân.",
+    "tags": ["#giamstress", "#tho", "#tamly"],
+    "accent": "linear-gradient(135deg, #ff758c 0%, #ff7eb3 100%)"
+  },
+  {
+    "id": "health_004",
+    "category": "health",
+    "categoryName": "🧘 Sức khỏe",
+    "title": "Căn chỉnh màn hình ngang tầm mắt",
+    "content": "Mép trên của màn hình máy tính nên ngang bằng hoặc thấp hơn một chút so với tầm mắt của bạn. Điều này giữ cho cổ ở tư thế trung tính, phòng tránh thoái hóa đốt sống cổ và đau vai gáy.",
+    "action": "👉 Áp dụng ngay: Kê thêm vài cuốn sách hoặc dùng giá đỡ nâng laptop/màn hình lên đúng độ cao chuẩn.",
+    "tags": ["#tuthe", "#ergonomics", "#vaigay"],
+    "accent": "linear-gradient(135deg, #6a11cb 0%, #2575fc 100%)"
+  },
+  {
+    "id": "health_005",
+    "category": "health",
+    "categoryName": "🧘 Sức khỏe",
+    "title": "Ngủ ngắn Power Nap 15-20 phút vào buổi trưa",
+    "content": "Một giấc ngủ trưa kéo dài đúng 15-20 phút giúp não bộ phục hồi độ tỉnh táo và khả năng tập trung mà không bị rơi vào giấc ngủ sâu (ngăn ngừa cảm giác chếnh choáng mệt mỏi khi thức dậy).",
+    "action": "👉 Áp dụng ngay: Đặt báo thức 20 phút sau bữa ăn trưa để nạp lại 100% năng lượng cho buổi chiều.",
+    "tags": ["#powernap", "#ngutrua", "#nangluong"],
+    "accent": "linear-gradient(135deg, #0acffe 0%, #495aff 100%)"
+  },
+  {
+    "id": "health_006",
+    "category": "health",
+    "categoryName": "🧘 Sức khỏe",
+    "title": "Quy tắc 90 phút chu kỳ giấc ngủ (Sleep Cycles)",
+    "content": "Giấc ngủ tự nhiên của con người diễn ra theo các chu kỳ khoảng 90 phút. Hãy lên lịch ngủ sao cho tổng thời gian ngủ là bội số của 90 phút (6 tiếng, 7.5 tiếng hoặc 9 tiếng) để thức dậy đúng lúc cơ thể ở pha ngủ nông.",
+    "action": "👉 Áp dụng ngay: Nếu cần dậy lúc 6h sáng, hãy đi ngủ lúc 22h30 hoặc 0h00 để thức dậy sảng khoái nhất.",
+    "tags": ["#giacngu", "#sleepcycle", "#suckhoe"],
+    "accent": "linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)"
+  },
+  {
+    "id": "health_007",
+    "category": "health",
+    "categoryName": "🧘 Sức khỏe",
+    "title": "Đứng dậy vươn vai sau mỗi 45 phút ngồi liên tục",
+    "content": "Ngồi bất động kéo dài làm giảm lưu thông máu, gây ứ đọng tĩnh mạch và tăng nguy cơ đau cột sống. Hãy đứng dậy đi lại 1-2 phút, uống nước hoặc duỗi thẳng chân tay.",
+    "action": "👉 Áp dụng ngay: Đứng dậy, xoay khớp cổ tay và duỗi thẳng lưng trong 30 giây ngay lúc này!",
+    "tags": ["#vandong", "#ngoiit", "#dancuvanphong"],
+    "accent": "linear-gradient(135deg, #11998e 0%, #38ef7d 100%)"
+  },
+  {
+    "id": "health_008",
+    "category": "health",
+    "categoryName": "🧘 Sức khỏe",
+    "title": "Hạn chế ánh sáng xanh 60 phút trước khi ngủ",
+    "content": "Ánh sáng xanh từ màn hình điện thoại và máy tính ức chế hormone Melatonin (hormone gây buồn ngủ), làm giảm chất lượng giấc ngủ sâu. Hãy chuyển màn hình sang chế độ Night Light (Ấm) sau 20h.",
+    "action": "👉 Áp dụng ngay: Bật tính năng 'Night Light' trên Windows hoặc 'Night Shift' trên Mac ngay hôm nay.",
+    "tags": ["#anhsangxanh", "#nightshift", "#ngungon"],
+    "accent": "linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%)"
+  },
+  {
+    "id": "finance_001",
+    "category": "finance",
+    "categoryName": "💰 Tài chính",
+    "title": "Quy tắc 24 giờ trước khi mua sắm ngoài dự tính",
+    "content": "Khi bạn nhìn thấy một món đồ muốn mua không có trong danh sách cần thiết, hãy tự ép bản thân chờ đủ 24 giờ (hoặc 72 giờ cho món đắt tiền). Hơn 70% cảm giác muốn mua sẽ biến mất sau khi cảm xúc hưng phấn hạ nhiệt.",
+    "action": "👉 Áp dụng ngay: Nếu có món đồ nào đang nằm trong giỏ hàng online, hãy để đó đến ngày mai xem bạn còn thực sự cần không.",
+    "tags": ["#tietkiem", "#chitieuthongminh", "#muasam"],
+    "accent": "linear-gradient(135deg, #f12711 0%, #f5af19 100%)"
+  },
+  {
+    "id": "finance_002",
+    "category": "finance",
+    "categoryName": "💰 Tài chính",
+    "title": "Nguyên tắc quản lý tài chính 50/30/20",
+    "content": "Chia thu nhập hàng tháng thành 3 phần: 50% cho nhu cầu thiết yếu (nhà ở, ăn uống, hóa đơn), 30% cho mong muốn cá nhân (giải trí, sở thích), và 20% bắt buộc dành cho tiết kiệm & đầu tư.",
+    "action": "👉 Áp dụng ngay: Tự động trích ngay 20% lương vào tài khoản tiết kiệm/đầu tư ngay trong ngày nhận lương.",
+    "tags": ["#503020", "#ngansach", "#dautu"],
+    "accent": "linear-gradient(135deg, #11998e 0%, #38ef7d 100%)"
+  },
+  {
+    "id": "finance_003",
+    "category": "finance",
+    "categoryName": "💰 Tài chính",
+    "title": "Hủy đăng ký các gói dịch vụ ngầm không dùng",
+    "content": "Các khoản phí thuê bao định kỳ (Netflix, Spotify, Cloud, App VIP) vài chục đến vài trăm ngàn mỗi tháng tích lũy thành số tiền rất lớn. Kiểm tra lại sao kê ngân hàng mỗi quý một lần.",
+    "action": "👉 Áp dụng ngay: Mở danh sách Subscriptions trên điện thoại và hủy ngay 1 dịch vụ bạn không dùng trong 30 ngày qua.",
+    "tags": ["#subscriptions", "#catgiambocuoc", "#taichinh"],
+    "accent": "linear-gradient(135deg, #fc6076 0%, #ff9a44 100%)"
+  },
+  {
+    "id": "finance_004",
+    "category": "finance",
+    "categoryName": "💰 Tài chính",
+    "title": "Quy đổi giá tiền thành số giờ làm việc",
+    "content": "Trước khi mua một món đồ xa xỉ, hãy lấy giá tiền chia cho thu nhập mỗi giờ làm việc của bạn. Tự hỏi: 'Món đồ này có thực sự xứng đáng với 15 giờ mồ hôi công sức lao động của mình không?'",
+    "action": "👉 Bài tập: Tính toán xem mỗi giờ làm việc bạn kiếm được bao nhiêu để có hệ quy chiếu chi tiêu chuẩn xác.",
+    "tags": ["#tietkiem", "#chitieuhoply", "#tamlytaichinh"],
+    "accent": "linear-gradient(135deg, #43e97b 0%, #38f9d7 100%)"
+  },
+  {
+    "id": "finance_005",
+    "category": "finance",
+    "categoryName": "💰 Tài chính",
+    "title": "Xây dựng quỹ khẩn cấp 3-6 tháng chi phí sinh hoạt",
+    "content": "Trước khi nghĩ đến đầu tư sinh lời mạo hiểm, hãy đảm bảo bạn có một khoản tiền dự phòng tương đương 3 đến 6 tháng chi phí sinh hoạt thiết yếu gửi tại ngân hàng có tính thanh khoản cao.",
+    "action": "👉 Áp dụng ngay: Thiết lập một mục tiêu tiết kiệm quỹ khẩn cấp trong ứng dụng ngân hàng của bạn.",
+    "tags": ["#quykhancap", "#anantoantaichinh", "#tietkiem"],
+    "accent": "linear-gradient(135deg, #667eea 0%, #764ba2 100%)"
+  },
+  {
+    "id": "life_001",
+    "category": "life",
+    "categoryName": "🏠 Đời sống",
+    "title": "Khử mùi lò vi sóng nhanh bằng chanh và nước",
+    "content": "Cắt lát 1 quả chanh cho vào bát nước, quay lò vi sóng ở công suất cao trong 3-5 phút. Hơi nước chanh sẽ làm mềm dầu mỡ bám dính và khử sạch mùi hôi tanh, sau đó chỉ cần lấy khăn lau nhẹ là sạch bóng.",
+    "action": "👉 Áp dụng ngay: Thử làm sạch lò vi sóng hoặc nồi chiên không dầu bằng mẹo hơi nước chanh này vào cuối tuần.",
+    "tags": ["#nhabep", "#meovat", "#vesinh"],
+    "accent": "linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%)"
+  },
+  {
+    "id": "life_002",
+    "category": "life",
+    "categoryName": "🏠 Đời sống",
+    "title": "Bóc vỏ chuối từ phần đáy thay vì phần cuống",
+    "content": "Những chú khỉ luôn bóc chuối từ phía đuôi đáy (bóp nhẹ đuôi quả chuối). Cách này giúp vỏ chuối tách ra làm đôi cực kỳ dễ dàng, không bị dập nát phần đầu và loại bỏ sạch các sợi xơ.",
+    "action": "👉 Áp dụng ngay: Lần tới ăn chuối, hãy thử bóp nhẹ phần đáy quả để bóc ngược lên nhé!",
+    "tags": ["#anngon", "#meonho", "#khoahoc"],
+    "accent": "linear-gradient(135deg, #ffe259 0%, #ffa751 100%)"
+  },
+  {
+    "id": "life_003",
+    "category": "life",
+    "categoryName": "🏠 Đời sống",
+    "title": "Giữ rau củ tươi lâu gấp đôi bằng khăn giấy",
+    "content": "Độ ẩm ngưng tụ trong túi nylon là nguyên nhân chính khiến rau nhanh úng thối. Lót 1-2 lớp khăn giấy khô vào hộp đựng rau để hút bớt hơi ẩm thừa, rau sẽ giòn và tươi xanh suốt 1-2 tuần.",
+    "action": "👉 Áp dụng ngay: Đặt một tờ khăn giấy khô vào hộp bảo quản rau trong tủ lạnh của bạn hôm nay.",
+    "tags": ["#baoquanthucpham", "#tuilanh", "#meonhabep"],
+    "accent": "linear-gradient(135deg, #00b09b 0%, #96c93d 100%)"
+  },
+  {
+    "id": "life_004",
+    "category": "life",
+    "categoryName": "🏠 Đời sống",
+    "title": "Dùng kẹp ghim giấy để bảo vệ đầu cáp sạc",
+    "content": "Lồng một chiếc lò xo bút bi cũ vào phần đầu dây sạc điện thoại. Lò xo sẽ giữ cho sợi cáp luôn thẳng, chống gãy gập dây đồng bên trong và kéo dài tuổi thọ cáp sạc thêm nhiều năm.",
+    "action": "👉 Áp dụng ngay: Tận dụng lò xo từ một chiếc bút bi hết mực để bọc bảo vệ đầu cáp sạc của bạn.",
+    "tags": ["#capsac", "#meovat", "#tietkiem"],
+    "accent": "linear-gradient(135deg, #a18cd1 0%, #fbc2eb 100%)"
+  },
+  {
+    "id": "life_005",
+    "category": "life",
+    "categoryName": "🏠 Đời sống",
+    "title": "Ủi phẳng quần áo nhanh bằng máy sấy tóc khi đi du lịch",
+    "content": "Nếu phòng khách sạn không có bàn là: Treo áo lên móc, xịt một chút nước sương ẩm lên các nếp nhăn, sau đó dùng máy sấy tóc hơ nóng cách 10cm. Hơi nóng và gió sẽ kéo phẳng nếp nhăn trong 2 phút.",
+    "action": "👉 Mẹo du lịch: Cứu cánh cực nhanh cho áo sơ mi và váy khi vừa mở vali đồ.",
+    "tags": ["#dulich", "#quanao", "#meosong"],
+    "accent": "linear-gradient(135deg, #f6d365 0%, #fda085 100%)"
+  },
+  {
+    "id": "mindset_001",
+    "category": "mindset",
+    "categoryName": "🧠 Tâm lý & Tư duy",
+    "title": "Hiệu ứng Tiêu Điểm (Spotlight Effect)",
+    "content": "Chúng ta luôn lầm tưởng rằng mọi người xung quanh đang chú ý, soi xét từng lỗi nhỏ hay ngoại hình của mình. Thực tế, ai cũng chỉ đang bận rộn lo nghĩ về chính bản thân họ.",
+    "action": "👉 Bài học: Đừng ngần ngại phát biểu hay thử nghiệm điều mới chỉ vì sợ người khác phán xét!",
+    "tags": ["#tamlyhoc", "#tutintoan", "#giamloau"],
+    "accent": "linear-gradient(135deg, #89f7fe 0%, #66a6ff 100%)"
+  },
+  {
+    "id": "mindset_002",
+    "category": "mindset",
+    "categoryName": "🧠 Tâm lý & Tư duy",
+    "title": "Tư duy Phát triển (Growth Mindset) vs Cố định",
+    "content": "Thay vì nghĩ 'Mình không có năng khiếu làm việc này', hãy thêm từ 'CHƯA' vào: 'Mình CHƯA làm tốt việc này'. Não bộ có tính mềm dẻo (Neuroplasticity) và sẽ tiến bộ theo thời gian nếu bạn kiên trì rèn luyện.",
+    "action": "👉 Áp dụng ngay: Mỗi khi gặp khó khăn, hãy tự nhủ: 'Đây là cơ hội để não mình phát triển thêm liên kết mới.'",
+    "tags": ["#growthmindset", "#phattrienbanthan", "#tuduy"],
+    "accent": "linear-gradient(135deg, #c471ed 0%, #f64f59 100%)"
+  },
+  {
+    "id": "mindset_003",
+    "category": "mindset",
+    "categoryName": "🧠 Tâm lý & Tư duy",
+    "title": "Kỹ thuật ghi nhật ký 3 điều biết ơn mỗi tối",
+    "content": "Viết ra 3 điều nhỏ bé khiến bạn cảm thấy biết ơn trong ngày (một ly cà phê ngon, một lời khen, một cơn mưa mát) giúp não bộ tái cấu trúc để tự động nhận diện những điều tích cực trong cuộc sống.",
+    "action": "👉 Áp dụng ngay: Trước khi đi ngủ tối nay, ghi nhớ 3 điều tốt đẹp đã xảy ra với bạn trong ngày hôm nay.",
+    "tags": ["#bieton", "#hanhphuc", "#thoi-quen"],
+    "accent": "linear-gradient(135deg, #f857a6 0%, #ff5858 100%)"
+  },
+  {
+    "id": "mindset_004",
+    "category": "mindset",
+    "categoryName": "🧠 Tâm lý & Tư duy",
+    "title": "Quy tắc 'Chiếc vòng kiểm soát' của Chủ nghĩa Khắc kỷ",
+    "content": "Mọi sự việc trên đời chia làm 2 loại: Những thứ bạn KIỂM SOÁT ĐƯỢC (thái độ, nỗ lực, phản ứng của bạn) và Những thứ bạn KHÔNG KIỂM SOÁT ĐƯỢC (thời tiết, ý kiến người khác, quá khứ). Đừng tốn 1 giây lo lắng cho nhóm thứ 2.",
+    "action": "👉 Áp dụng ngay: Khi gặp chuyện bực mình, tự hỏi: 'Mình có kiểm soát được việc này không?' Nếu không, hãy buông bỏ.",
+    "tags": ["#stoicism", "#khackyi", "#binhyen"],
+    "accent": "linear-gradient(135deg, #13547a 0%, #80d0c7 100%)"
+  },
+  {
+    "id": "mindset_005",
+    "category": "mindset",
+    "categoryName": "🧠 Tâm lý & Tư duy",
+    "title": "Quy tắc 1% tốt hơn mỗi ngày (Nguyên lý Kaizen)",
+    "content": "Nếu bạn tiến bộ 1% mỗi ngày trong suốt 1 năm, bạn sẽ trở nên tốt hơn gấp 37 lần (1.01^365 = 37.78). Đừng tìm kiếm những thay đổi đột biến khổng lồ, hãy tập trung vào các chiến thắng tí hon hàng ngày.",
+    "action": "👉 Áp dụng ngay: Chọn 1 thói quen cực nhỏ (đọc 2 trang sách, chống đẩy 5 cái) và duy trì đều đặn.",
+    "tags": ["#kaizen", "#atomic-habits", "#tiến-bộ"],
+    "accent": "linear-gradient(135deg, #30cfd0 0%, #330867 100%)"
+  }
+]
