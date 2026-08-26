@@ -1655,8 +1655,8 @@
         </div>
       `;
     } else {
-      activeTodos.forEach(todo => {
-        elements.todoActiveList.appendChild(createTodoItemElement(todo));
+      activeTodos.forEach((todo, idx) => {
+        elements.todoActiveList.appendChild(createTodoItemElement(todo, idx + 1));
       });
     }
 
@@ -1712,8 +1712,8 @@
         const listUl = document.createElement('ul');
         listUl.className = 'completed-group-list';
 
-        groupTodos.forEach(todo => {
-          listUl.appendChild(createTodoItemElement(todo));
+        groupTodos.forEach((todo, idx) => {
+          listUl.appendChild(createTodoItemElement(todo, idx + 1));
         });
 
         // Toggle collapse/expand on header click
@@ -1767,7 +1767,7 @@
     return false;
   }
 
-  function createTodoItemElement(todo) {
+  function createTodoItemElement(todo, itemIndex) {
     const li = document.createElement('li');
     const deadlineInfo = getDeadlineInfo(todo);
     const isOverdue = deadlineInfo && deadlineInfo.isOverdue && !todo.completed;
@@ -1781,6 +1781,10 @@
     checkbox.type = 'checkbox';
     checkbox.className = 'todo-checkbox';
     checkbox.checked = !!todo.completed;
+
+    const indexBadge = document.createElement('span');
+    indexBadge.className = 'todo-index-badge';
+    indexBadge.textContent = `#${itemIndex || 1}`;
 
     const contentBox = document.createElement('div');
     contentBox.className = 'todo-content-box';
@@ -1989,6 +1993,9 @@
     });
 
     li.appendChild(checkbox);
+    if (itemIndex) {
+      li.appendChild(indexBadge);
+    }
     li.appendChild(contentBox);
     li.appendChild(actionBox);
     return li;

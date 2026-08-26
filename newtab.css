@@ -2237,6 +2237,42 @@ textarea:focus {
   font-weight: 800;
 }
 
+/* Todo Item Index Badge */
+.todo-index-badge {
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: var(--text-muted);
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 4px;
+  padding: 1px 5px;
+  min-width: 22px;
+  text-align: center;
+  flex-shrink: 0;
+  margin-top: 3px;
+  user-select: none;
+  font-family: monospace, var(--font-sans, sans-serif);
+  line-height: 1.2;
+}
+
+.todo-item.overdue .todo-index-badge {
+  background: rgba(239, 68, 68, 0.22);
+  color: #fca5a5;
+  border-color: rgba(239, 68, 68, 0.45);
+}
+
+.todo-item.must-start-now .todo-index-badge {
+  background: rgba(59, 130, 246, 0.22);
+  color: #93c5fd;
+  border-color: rgba(59, 130, 246, 0.45);
+}
+
+.todo-item.due-today:not(.overdue):not(.must-start-now) .todo-index-badge {
+  background: rgba(245, 158, 11, 0.2);
+  color: #fef08a;
+  border-color: rgba(245, 158, 11, 0.4);
+}
+
 .todo-content-box {
   flex: 1;
   display: flex;
