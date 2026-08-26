@@ -157,6 +157,7 @@
     todoMonthlyTime: document.getElementById('todoMonthlyTime'),
     todoMonthlyDay: document.getElementById('todoMonthlyDay'),
     weekdayPicker: document.getElementById('weekdayPicker'),
+    todoInputEstDuration: document.getElementById('todoInputEstDuration'),
     todoActiveList: document.getElementById('todoActiveList'),
     todoCompletedList: document.getElementById('todoCompletedList'),
     btnClearCompleted: document.getElementById('btnClearCompleted'),
@@ -1525,46 +1526,101 @@
     const diffMs = targetDate - now;
     const diffMins = Math.round(diffMs / (1000 * 60));
 
+    const estMins = parseInt(todo.estMinutes, 10) || 0;
+    const recStartDate = estMins > 0 ? new Date(targetDate.getTime() - estMins * 60 * 1000) : targetDate;
+    const recStartHours = String(recStartDate.getHours()).padStart(2, '0');
+    const recStartMinutes = String(recStartDate.getMinutes()).padStart(2, '0');
+    const recStartStr = `${recStartHours}:${recStartMinutes}`;
+
     const todayMidnight = new Date(now.getFullYear(), now.getMonth(), now.getDate());
     const targetMidnight = new Date(targetDate.getFullYear(), targetDate.getMonth(), targetDate.getDate());
     const diffDays = Math.round((targetMidnight - todayMidnight) / (1000 * 60 * 60 * 24));
 
-    if (diffMs < 0) {
+    const isOverdue = diffMs < 0;
+    const isMustStartNow = !isOverdue && estMins > 0 && now >= recStartDate;
+
+    if (isOverdue) {
       if (diffDays === 0) {
-        return { text: `Quá hạn ${Math.abs(diffMins)}m (${todo.dueTime || ''}) ⚠️`, type: 'urgent', diffDays };
+        return { 
+          text: `🔥 QUÁ HẠN ${Math.abs(diffMins)}m! (${todo.dueTime || ''})`, 
+          type: 'urgent', 
+          diffDays, 
+          isOverdue: true, 
+          targetDate 
+        };
       }
-      return { text: `Quá hạn ${Math.abs(diffDays)}d! ⚠️`, type: 'urgent', diffDays };
+      return { 
+        text: `🔥 QUÁ HẠN ${Math.abs(diffDays)}d!`, 
+        type: 'urgent', 
+        diffDays, 
+        isOverdue: true, 
+        targetDate 
+      };
+    } else if (isMustStartNow) {
+      return { 
+        text: `⚡ CẦN LÀM NGAY! (Bắt đầu từ ${recStartStr})`, 
+        type: 'urgent', 
+        diffDays, 
+        isMustStartNow: true, 
+        recStartDate, 
+        targetDate 
+      };
     } else if (diffDays === 0) {
       if (todo.dueTime) {
-        if (diffMins <= 60) {
-          return { text: `Hạn: Còn ${diffMins} phút (${todo.dueTime}) 🔥`, type: 'urgent', diffDays };
+        if (estMins > 0) {
+          return { 
+            text: `⏰ Nên bd từ ${recStartStr} (Hạn ${todo.dueTime})`, 
+            type: 'warning', 
+            diffDays, 
+            recStartDate, 
+            targetDate 
+          };
         }
-        return { text: `Hạn: Hôm nay ${todo.dueTime} ⏳`, type: 'warning', diffDays };
+        return { text: `Hạn: Hôm nay ${todo.dueTime} ⏳`, type: 'warning', diffDays, targetDate };
       }
-      return { text: 'Hạn: Hôm nay 🔥', type: 'urgent', diffDays };
+      return { text: 'Hạn: Hôm nay 🔥', type: 'urgent', diffDays, targetDate };
     } else if (diffDays === 1) {
-      return { text: `Hạn: N.mai ${todo.dueTime ? todo.dueTime : ''} ⏳`, type: 'warning', diffDays };
+      if (estMins > 0) {
+        return { text: `Hạn N.mai (Nên bd lúc ${recStartStr}) ⏳`, type: 'warning', diffDays, recStartDate, targetDate };
+      }
+      return { text: `Hạn: N.mai ${todo.dueTime ? todo.dueTime : ''} ⏳`, type: 'warning', diffDays, targetDate };
     } else if (diffDays <= 3) {
-      return { text: `Còn ${diffDays}d ${todo.dueTime ? '(' + todo.dueTime + ')' : ''} ⏰`, type: 'warning', diffDays };
+      return { text: `Còn ${diffDays}d ${todo.dueTime ? '(' + todo.dueTime + ')' : ''} ⏰`, type: 'warning', diffDays, targetDate };
     } else {
-      return { text: `Còn ${diffDays}d 📅`, type: 'normal', diffDays };
+      return { text: `Còn ${diffDays}d 📅`, type: 'normal', diffDays, targetDate };
     }
+  }
+
+  function getTaskPriorityScore(todo) {
+    if (!todo || todo.completed) return 999;
+    const info = getDeadlineInfo(todo);
+    if (!info) return 500; // General tasks without deadline
+
+    if (info.isOverdue) return 10; // Overdue tasks -> Priority 1 (top of list!)
+    if (info.isMustStartNow) return 20; // Must start now tasks -> Priority 2!
+
+    if (info.recStartDate) {
+      return 100 + (info.recStartDate.getTime() / 10000000000);
+    }
+    if (info.targetDate) {
+      return 200 + (info.targetDate.getTime() / 10000000000);
+    }
+
+    return 300;
   }
 
   function renderTodoList() {
     const activeTodos = todoList.filter(t => !t.completed);
     const completedTodos = todoList.filter(t => t.completed);
 
-    // Sort active todos by deadline priority:
-    // Overdue & nearest deadlines come FIRST!
+    // Sort active todos by urgency & recommended start time:
+    // 1. Overdue tasks (fiery red) FIRST
+    // 2. Tasks needing immediate start (must-start-now) SECOND
+    // 3. Nearest recommended start time / deadline THIRD
     activeTodos.sort((a, b) => {
-      if (a.isRecurring && !b.isRecurring) return 1;
-      if (!a.isRecurring && b.isRecurring) return -1;
-      if (a.dueDate && b.dueDate) {
-        return new Date(`${a.dueDate}T${a.dueTime || '00:00'}`) - new Date(`${b.dueDate}T${b.dueTime || '00:00'}`);
-      }
-      if (a.dueDate) return -1;
-      if (b.dueDate) return 1;
+      const scoreA = getTaskPriorityScore(a);
+      const scoreB = getTaskPriorityScore(b);
+      if (scoreA !== scoreB) return scoreA - scoreB;
       return (b.createdAt || 0) - (a.createdAt || 0);
     });
 
@@ -1698,8 +1754,12 @@
 
   function createTodoItemElement(todo) {
     const li = document.createElement('li');
+    const deadlineInfo = getDeadlineInfo(todo);
+    const isOverdue = deadlineInfo && deadlineInfo.isOverdue && !todo.completed;
+    const isMustStart = deadlineInfo && deadlineInfo.isMustStartNow && !todo.completed;
     const dueToday = isDueToday(todo);
-    li.className = `todo-item ${todo.completed ? 'completed' : ''} ${dueToday ? 'due-today' : ''}`;
+
+    li.className = `todo-item ${todo.completed ? 'completed' : ''} ${isOverdue ? 'overdue' : ''} ${isMustStart ? 'must-start-now' : ''} ${dueToday && !isOverdue && !isMustStart ? 'due-today' : ''}`;
     li.dataset.todoId = todo.id;
     
     const checkbox = document.createElement('input');
@@ -1934,18 +1994,21 @@
         if (selectedTaskType === 'single') {
           const dueDate = elements.todoInputDate ? elements.todoInputDate.value : null;
           const dueTime = elements.todoInputTime ? elements.todoInputTime.value : null;
+          const estMinutes = elements.todoInputEstDuration ? parseInt(elements.todoInputEstDuration.value, 10) : null;
           newTodo = {
             id: `todo_${Date.now()}`,
             text,
             isRecurring: false,
             dueDate: dueDate || null,
             dueTime: dueTime || null,
+            estMinutes: estMinutes || null,
             completed: false,
             createdAt: Date.now()
           };
         } else if (selectedTaskType === 'monthly') {
           const monthlyTime = elements.todoMonthlyTime ? elements.todoMonthlyTime.value : null;
           const monthDay = elements.todoMonthlyDay ? (parseInt(elements.todoMonthlyDay.value, 10) || 1) : 1;
+          const estMinutes = elements.todoInputEstDuration ? parseInt(elements.todoInputEstDuration.value, 10) : null;
           newTodo = {
             id: `todo_month_${Date.now()}`,
             text,
@@ -1953,6 +2016,7 @@
             isMonthly: true,
             repeatMonthDay: monthDay,
             dueTime: monthlyTime || null,
+            estMinutes: estMinutes || null,
             completed: false,
             lastCompletedDate: null,
             createdAt: Date.now()
@@ -1960,12 +2024,14 @@
         } else {
           const recurTime = elements.todoRecurTime ? elements.todoRecurTime.value : null;
           const sortedDays = Array.from(selectedWeekdays).sort((a, b) => (a === 0 ? 7 : a) - (b === 0 ? 7 : b));
+          const estMinutes = elements.todoInputEstDuration ? parseInt(elements.todoInputEstDuration.value, 10) : null;
           newTodo = {
             id: `todo_rec_${Date.now()}`,
             text,
             isRecurring: true,
             repeatDays: sortedDays,
             dueTime: recurTime || null,
+            estMinutes: estMinutes || null,
             completed: false,
             lastCompletedDate: null,
             createdAt: Date.now()
@@ -1980,6 +2046,7 @@
         if (elements.todoInputTime) elements.todoInputTime.value = '';
         if (elements.todoRecurTime) elements.todoRecurTime.value = '';
         if (elements.todoMonthlyTime) elements.todoMonthlyTime.value = '';
+        if (elements.todoInputEstDuration) elements.todoInputEstDuration.value = '';
 
         renderTodoList();
         let toastMsg = 'Đã thêm công việc mới!';
