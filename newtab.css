@@ -2432,19 +2432,17 @@ textarea:focus {
   font-size: 0.82rem;
 }
 
-/* Task Actions Box & Edit/Delete Controls */
+/* Task Actions Box & Edit/Delete Controls (Hidden by default, shown on Hover) */
 .todo-actions-box {
-  display: flex;
+  display: none;
   align-items: center;
   gap: 2px;
-  opacity: 0.6;
-  transition: opacity var(--transition-fast);
   flex-shrink: 0;
   margin-top: 1px;
 }
 
 .todo-item:hover .todo-actions-box {
-  opacity: 1;
+  display: flex;
 }
 
 .todo-action-btn {
