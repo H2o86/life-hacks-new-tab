@@ -2432,6 +2432,132 @@ textarea:focus {
   font-size: 0.82rem;
 }
 
+/* Task Actions Box & Edit/Delete Controls */
+.todo-actions-box {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  opacity: 0.6;
+  transition: opacity var(--transition-fast);
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+.todo-item:hover .todo-actions-box {
+  opacity: 1;
+}
+
+.todo-action-btn {
+  background: transparent;
+  border: none;
+  color: var(--text-muted);
+  cursor: pointer;
+  padding: 2px 4px;
+  font-size: 0.8rem;
+  border-radius: var(--radius-sm);
+  transition: all var(--transition-fast);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.todo-action-btn.edit-btn:hover {
+  color: var(--primary-accent);
+  background: rgba(99, 102, 241, 0.15);
+}
+
+.todo-action-btn.del-btn:hover {
+  color: #ef4444;
+  background: rgba(239, 68, 68, 0.15);
+}
+
+/* Inline Edit Container */
+.todo-item.editing {
+  max-height: 280px !important;
+  background: rgba(15, 23, 42, 0.95) !important;
+  border-color: var(--primary-accent) !important;
+  box-shadow: 0 0 14px rgba(99, 102, 241, 0.35) !important;
+  flex-direction: column;
+  align-items: stretch;
+  padding: 8px 10px;
+  gap: 6px;
+}
+
+.todo-edit-container {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  width: 100%;
+}
+
+.todo-edit-text-input {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid var(--primary-accent);
+  border-radius: var(--radius-sm);
+  padding: 6px 8px;
+  color: #ffffff;
+  font-size: 0.85rem;
+  outline: none;
+}
+
+.todo-edit-sub-row {
+  display: flex;
+  gap: 4px;
+  flex-wrap: wrap;
+}
+
+.todo-edit-sub-row input {
+  padding: 4px 6px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: var(--radius-sm);
+  color: var(--text-primary);
+  font-size: 0.75rem;
+  outline: none;
+}
+
+.todo-edit-sub-row input:focus {
+  border-color: var(--primary-accent);
+}
+
+.todo-edit-btns-row {
+  display: flex;
+  gap: 6px;
+  justify-content: flex-end;
+  margin-top: 2px;
+}
+
+.btn-save-edit,
+.btn-cancel-edit {
+  border: none;
+  padding: 4px 10px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.btn-save-edit {
+  background: var(--primary-gradient);
+  color: #ffffff;
+}
+
+.btn-save-edit:hover {
+  opacity: 0.9;
+}
+
+.btn-cancel-edit {
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--text-secondary);
+}
+
+.btn-cancel-edit:hover {
+  background: rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+}
+
 .btn-clear-completed {
   width: 100%;
   background: transparent;

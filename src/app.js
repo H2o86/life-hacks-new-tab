@@ -1833,10 +1833,136 @@
     }
     contentBox.appendChild(timerBox);
 
+    // Action Box (Edit & Delete controls)
+    const actionBox = document.createElement('div');
+    actionBox.className = 'todo-actions-box';
+
+    const editBtn = document.createElement('button');
+    editBtn.type = 'button';
+    editBtn.className = 'todo-action-btn edit-btn';
+    editBtn.title = 'Sửa công việc này';
+    editBtn.innerHTML = '✏️';
+
     const delBtn = document.createElement('button');
-    delBtn.className = 'todo-del-btn';
-    delBtn.title = 'Xóa việc này';
-    delBtn.innerHTML = '&times;';
+    delBtn.type = 'button';
+    delBtn.className = 'todo-action-btn del-btn';
+    delBtn.title = 'Xóa công việc này';
+    delBtn.innerHTML = '🗑️';
+
+    actionBox.appendChild(editBtn);
+    actionBox.appendChild(delBtn);
+
+    editBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      enterEditMode();
+    });
+
+    delBtn.addEventListener('click', async (e) => {
+      e.stopPropagation();
+      todoList = todoList.filter(t => t.id !== todo.id);
+      await window.StorageService.saveTodoList(todoList);
+      renderTodoList();
+      showToast('Đã xóa công việc', '🗑️');
+    });
+
+    function enterEditMode() {
+      li.classList.add('editing');
+      li.innerHTML = ''; // Clear card contents for inline editing
+
+      const editContainer = document.createElement('div');
+      editContainer.className = 'todo-edit-container';
+
+      const textInput = document.createElement('input');
+      textInput.type = 'text';
+      textInput.className = 'todo-edit-text-input';
+      textInput.value = todo.text;
+      textInput.placeholder = 'Tên công việc...';
+
+      const subRow = document.createElement('div');
+      subRow.className = 'todo-edit-sub-row';
+
+      const dateInput = document.createElement('input');
+      dateInput.type = 'date';
+      dateInput.value = todo.dueDate || '';
+      dateInput.title = 'Sửa ngày hạn chót';
+
+      const timeInput = document.createElement('input');
+      timeInput.type = 'time';
+      timeInput.value = todo.dueTime || '';
+      timeInput.title = 'Sửa giờ hạn chót';
+
+      const estInput = document.createElement('input');
+      estInput.type = 'number';
+      estInput.value = todo.estMinutes || '';
+      estInput.placeholder = 'Dự kiến (m)';
+      estInput.title = 'Thời lượng làm dự kiến (phút)';
+      estInput.min = '5';
+      estInput.max = '1440';
+      estInput.style.width = '90px';
+
+      subRow.appendChild(dateInput);
+      subRow.appendChild(timeInput);
+      subRow.appendChild(estInput);
+
+      const btnsRow = document.createElement('div');
+      btnsRow.className = 'todo-edit-btns-row';
+
+      const saveBtn = document.createElement('button');
+      saveBtn.type = 'button';
+      saveBtn.className = 'btn-save-edit';
+      saveBtn.innerHTML = '💾 Lưu';
+
+      const cancelBtn = document.createElement('button');
+      cancelBtn.type = 'button';
+      cancelBtn.className = 'btn-cancel-edit';
+      cancelBtn.innerHTML = '❌ Hủy';
+
+      btnsRow.appendChild(saveBtn);
+      btnsRow.appendChild(cancelBtn);
+
+      editContainer.appendChild(textInput);
+      editContainer.appendChild(subRow);
+      editContainer.appendChild(btnsRow);
+
+      li.appendChild(editContainer);
+      setTimeout(() => textInput.focus(), 50);
+
+      async function saveChanges() {
+        const newText = textInput.value.trim();
+        if (!newText) {
+          showToast('Tên công việc không được để trống!', '⚠️');
+          return;
+        }
+        todo.text = newText;
+        todo.dueDate = dateInput.value || null;
+        todo.dueTime = timeInput.value || null;
+        todo.estMinutes = estInput.value ? parseInt(estInput.value, 10) : null;
+
+        await window.StorageService.saveTodoList(todoList);
+        renderTodoList();
+        showToast('✏️ Đã cập nhật công việc!', '💾');
+      }
+
+      saveBtn.addEventListener('click', (ev) => {
+        ev.stopPropagation();
+        saveChanges();
+      });
+
+      cancelBtn.addEventListener('click', (ev) => {
+        ev.stopPropagation();
+        renderTodoList();
+      });
+
+      textInput.addEventListener('keydown', (ev) => {
+        if (ev.key === 'Enter') {
+          ev.preventDefault();
+          saveChanges();
+        } else if (ev.key === 'Escape') {
+          ev.preventDefault();
+          renderTodoList();
+        }
+      });
+    }
 
     checkbox.addEventListener('change', async () => {
       todo.completed = checkbox.checked;
@@ -1856,16 +1982,9 @@
       renderTodoList();
     });
 
-    delBtn.addEventListener('click', async () => {
-      todoList = todoList.filter(t => t.id !== todo.id);
-      await window.StorageService.saveTodoList(todoList);
-      renderTodoList();
-      showToast('Đã xóa công việc', '🗑️');
-    });
-
     li.appendChild(checkbox);
     li.appendChild(contentBox);
-    li.appendChild(delBtn);
+    li.appendChild(actionBox);
     return li;
   }
 
