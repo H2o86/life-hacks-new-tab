@@ -1801,7 +1801,6 @@
     });
 
     // Render Deadline Badge if present and task not completed
-    const deadlineInfo = getDeadlineInfo(todo);
     if (deadlineInfo && !todo.completed) {
       const badge = document.createElement('span');
       badge.className = `todo-deadline-badge deadline-${deadlineInfo.type}`;
