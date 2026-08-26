@@ -106,6 +106,7 @@
     btnSaveSettingsModal: document.getElementById('btnSaveSettingsModal'),
     settingSearchEngine: document.getElementById('settingSearchEngine'),
     settingVersionBadge: document.getElementById('settingVersionBadge'),
+    settingVersionTime: document.getElementById('settingVersionTime'),
     toggleAutoOnline: document.getElementById('toggleAutoOnline'),
     toggleClock: document.getElementById('toggleClock'),
     toggleSearch: document.getElementById('toggleSearch'),
@@ -868,12 +869,17 @@
      ========================================================================== */
 
   function populateSettingsModal() {
-    // App Version Info
+    // App Version Info & Build Timestamp
     const appVersion = (typeof chrome !== 'undefined' && chrome.runtime && chrome.runtime.getManifest)
       ? chrome.runtime.getManifest().version
       : '1.0.0';
+    const buildTime = '26/08/2026 16:30';
+
     if (elements.settingVersionBadge) {
       elements.settingVersionBadge.textContent = `v${appVersion}`;
+    }
+    if (elements.settingVersionTime) {
+      elements.settingVersionTime.textContent = `🕒 ${buildTime}`;
     }
 
     // Tip mode

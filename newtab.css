@@ -2901,6 +2901,16 @@ textarea:focus {
   letter-spacing: 0.5px;
 }
 
+.version-time-badge {
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--text-secondary);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  font-weight: 500;
+  font-size: 0.7rem;
+  padding: 1px 7px;
+  border-radius: 10px;
+}
+
 .version-status-badge {
   background: rgba(16, 185, 129, 0.2);
   color: #34d399;
