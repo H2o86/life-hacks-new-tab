@@ -105,6 +105,7 @@
     btnCloseSettings: document.getElementById('btnCloseSettings'),
     btnSaveSettingsModal: document.getElementById('btnSaveSettingsModal'),
     settingSearchEngine: document.getElementById('settingSearchEngine'),
+    settingVersionBadge: document.getElementById('settingVersionBadge'),
     toggleAutoOnline: document.getElementById('toggleAutoOnline'),
     toggleClock: document.getElementById('toggleClock'),
     toggleSearch: document.getElementById('toggleSearch'),
@@ -867,6 +868,14 @@
      ========================================================================== */
 
   function populateSettingsModal() {
+    // App Version Info
+    const appVersion = (typeof chrome !== 'undefined' && chrome.runtime && chrome.runtime.getManifest)
+      ? chrome.runtime.getManifest().version
+      : '1.0.0';
+    if (elements.settingVersionBadge) {
+      elements.settingVersionBadge.textContent = `v${appVersion}`;
+    }
+
     // Tip mode
     const modeRadios = document.querySelectorAll('input[name="tipModeRadio"]');
     modeRadios.forEach(r => {
