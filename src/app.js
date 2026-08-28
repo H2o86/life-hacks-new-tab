@@ -1814,6 +1814,12 @@
 
     li.className = `todo-item ${todo.completed ? 'completed' : ''} ${isOverdue ? 'overdue' : ''} ${isMustStart ? 'must-start-now' : ''} ${dueToday && !isOverdue && !isMustStart ? 'due-today' : ''}`;
     li.dataset.todoId = todo.id;
+    li.draggable = true;
+
+    li.addEventListener('dragstart', (e) => {
+      e.dataTransfer.setData('text/plain', todo.id);
+      e.dataTransfer.effectAllowed = 'move';
+    });
     
     const checkbox = document.createElement('input');
     checkbox.type = 'checkbox';
@@ -2487,6 +2493,8 @@
       elements.tvListCompleted.innerHTML = completedTodos.length === 0 ? '<div class="todo-empty-state">📌 Chưa có task hoàn thành</div>' : '';
       completedTodos.forEach((t, i) => elements.tvListCompleted.appendChild(createTodoItemElement(t, i + 1)));
     }
+
+    bindTimelineAndGridDragDrop();
   }
 
   function renderSandwichPlateTimeline() {
@@ -2566,13 +2574,19 @@
       }
     }
 
-    // 6. Render Scheduled Task Slices on Timeline Track with Pointer Dragging
+    // 6. Render Scheduled Task Slices on Timeline Track with Pointer & HTML5 Dragging
     if (elements.timelineTrack) {
       elements.timelineTrack.innerHTML = '';
       scheduled.forEach(item => {
         const slice = document.createElement('div');
         const isConflicting = conflictTaskIds.has(item.todo.id);
         slice.className = `sandwich-slice ${isConflicting ? 'conflict' : ''}`;
+        slice.draggable = true;
+
+        slice.addEventListener('dragstart', (e) => {
+          e.dataTransfer.setData('text/plain', item.todo.id);
+          e.dataTransfer.effectAllowed = 'move';
+        });
 
         const leftPct = (item.startMin / 1440) * 100;
         const widthPct = Math.max((item.estMin / 1440) * 100, 2.5);
@@ -2683,13 +2697,22 @@
       unscheduled.forEach(todo => {
         const chip = document.createElement('div');
         chip.className = 'unscheduled-chip';
+        chip.draggable = true;
         chip.innerHTML = `<span>📋 ${todo.text}</span> <span>(${todo.estMinutes || 30}m)</span> <strong>+ Gán giờ</strong>`;
+
+        chip.addEventListener('dragstart', (e) => {
+          e.dataTransfer.setData('text/plain', todo.id);
+          e.dataTransfer.effectAllowed = 'move';
+        });
+
         chip.addEventListener('click', () => {
           promptAdjustTaskTime(todo);
         });
         elements.unscheduledSlicesList.appendChild(chip);
       });
     }
+
+    bindTimelineAndGridDragDrop();
   }
 
   function formatMinToTime(minutes) {
@@ -2774,6 +2797,100 @@
     } else {
       showToast('✨ Tất cả các task đã ở khung giờ hợp lý, không bị trùng!', '✅');
     }
+  }
+
+  function bindTimelineAndGridDragDrop() {
+    if (elements.timelineTrackContainer && !elements.timelineTrackContainer.dataset.dropBound) {
+      elements.timelineTrackContainer.dataset.dropBound = 'true';
+
+      elements.timelineTrackContainer.addEventListener('dragover', (e) => {
+        e.preventDefault();
+        e.dataTransfer.dropEffect = 'move';
+        elements.timelineTrackContainer.classList.add('drag-over');
+      });
+
+      elements.timelineTrackContainer.addEventListener('dragleave', () => {
+        elements.timelineTrackContainer.classList.remove('drag-over');
+      });
+
+      elements.timelineTrackContainer.addEventListener('drop', async (e) => {
+        e.preventDefault();
+        elements.timelineTrackContainer.classList.remove('drag-over');
+
+        const todoId = e.dataTransfer.getData('text/plain');
+        if (!todoId) return;
+
+        const todo = todoList.find(t => t.id === todoId);
+        if (!todo) return;
+
+        const rect = elements.timelineTrackContainer.getBoundingClientRect();
+        const dropX = e.clientX - rect.left;
+        const pct = Math.max(0, Math.min(1, dropX / rect.width));
+        const dropStartMin = Math.round((pct * 1440) / 15) * 15;
+        const dueTimeStr = formatMinToTime(dropStartMin);
+
+        // Check if duration (estMinutes) is missing -> Prompt user to quantify
+        if (!todo.estMinutes || todo.estMinutes <= 0) {
+          const durationInput = prompt(`⏱️ Định lượng thời gian làm việc cho "${todo.text}":\n(Nhập số phút dự kiến, ví dụ: 30, 45, 60):`, '30');
+          const minutes = parseInt(durationInput, 10);
+          if (minutes && minutes > 0) {
+            todo.estMinutes = minutes;
+          } else {
+            todo.estMinutes = 30; // default
+          }
+        }
+
+        todo.dueTime = dueTimeStr;
+        if (!todo.dueDate) todo.dueDate = getTodayStr();
+
+        await window.StorageService.saveTodoList(todoList);
+        renderTodoList();
+        renderSandwichPlateTimeline();
+        showToast(`📍 Đã xếp task "${todo.text}" vào Timeline 24h lúc ${todo.dueTime} (${todo.estMinutes}m)!`, '⏳');
+      });
+    }
+
+    // Bind dropzones for Task View columns
+    const cols = document.querySelectorAll('.task-view-col');
+    cols.forEach(col => {
+      if (col.dataset.dropBound) return;
+      col.dataset.dropBound = 'true';
+
+      col.addEventListener('dragover', (e) => {
+        e.preventDefault();
+        e.dataTransfer.dropEffect = 'move';
+        col.classList.add('drag-over');
+      });
+
+      col.addEventListener('dragleave', () => {
+        col.classList.remove('drag-over');
+      });
+
+      col.addEventListener('drop', async (e) => {
+        e.preventDefault();
+        col.classList.remove('drag-over');
+
+        const todoId = e.dataTransfer.getData('text/plain');
+        if (!todoId) return;
+
+        const todo = todoList.find(t => t.id === todoId);
+        if (!todo) return;
+
+        const colType = col.dataset.colType;
+        if (colType === 'completed') {
+          todo.completed = true;
+          todo.lastCompletedDate = getTodayStr();
+        } else {
+          // Unschedule from timeline
+          todo.dueTime = null;
+        }
+
+        await window.StorageService.saveTodoList(todoList);
+        renderTodoList();
+        renderSandwichPlateTimeline();
+        showToast(`📌 Đã chuyển task "${todo.text}" về danh sách!`, '📋');
+      });
+    });
   }
 
   /* ==========================================================================

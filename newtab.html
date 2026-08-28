@@ -765,16 +765,35 @@
     </div>
   </div>
 
-  <!-- Windows Task View Fullscreen Grid Modal -->
+  <!-- Windows Task View & Timeline 24h Combined Overlay Modal -->
   <div class="modal-overlay task-view-overlay" id="taskViewOverlay">
     <div class="task-view-container">
       <div class="task-view-header">
         <div class="task-view-title-box">
-          <h2>⛶ Windows Task View - Quản Lý Công Việc Toàn Màn Hình</h2>
-          <span class="task-view-subtitle">Giao diện danh sách mở rộng trực quan, kiểm soát toàn bộ công việc theo bảng</span>
+          <h2>⛶ Task View & Timeline 24h - Quản Lý & Kéo Thả Trực Quan</h2>
+          <span class="task-view-subtitle">Kéo thả các công việc giữa bảng danh sách và thanh Timeline 24h để sắp xếp khung giờ không bị trùng lặp</span>
         </div>
         <div class="task-view-header-actions">
+          <button type="button" class="btn-quick-add-sandwich" id="btnQuickAddSandwichTask" title="Tạo công việc mới trực tiếp trên timeline 24h">+ Tạo Task Mới</button>
+          <button type="button" class="btn-auto-fix-conflicts" id="btnAutoFixConflicts" title="Tự động xếp nối tiếp các task bị trùng giờ">⚡ Tự Động Xếp Nối Tiếp</button>
           <button type="button" class="btn-task-view-close" id="btnTaskViewClose" title="Thu gọn giao diện (&lt; ESC &gt;)">↙️ Thu Gọn</button>
+        </div>
+      </div>
+
+      <!-- Integrated 24-Hour Timeline Section -->
+      <div class="embedded-timeline-section">
+        <!-- Conflict Warning Alert Banner -->
+        <div class="sandwich-conflict-banner" id="sandwichConflictBanner" style="display: none;">
+          <span class="conflict-icon">⚠️</span>
+          <div class="conflict-text" id="sandwichConflictText">Phát hiện 2 công việc bị chồng chéo thời gian!</div>
+        </div>
+
+        <div class="sandwich-plate-body">
+          <div class="timeline-ruler" id="timelineRuler"></div>
+          <div class="timeline-track-container" id="timelineTrackContainer">
+            <div class="timeline-now-line" id="timelineNowLine" title="Thời gian hiện tại"></div>
+            <div class="timeline-track" id="timelineTrack"></div>
+          </div>
         </div>
       </div>
 

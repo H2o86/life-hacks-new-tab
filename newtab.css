@@ -3494,6 +3494,46 @@ textarea:focus {
   }
 }
 
+/* Embedded Timeline Section inside Task View Overlay */
+.embedded-timeline-section {
+  padding: 12px 20px;
+  background: rgba(15, 23, 42, 0.5);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.embedded-timeline-section .sandwich-plate-body {
+  padding: 10px 0;
+  background: transparent;
+}
+
+.embedded-timeline-section .timeline-track-container {
+  min-height: 110px;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.timeline-track-container.drag-over {
+  border-color: #3b82f6 !important;
+  box-shadow: 0 0 20px rgba(59, 130, 246, 0.5) !important;
+  background: rgba(59, 130, 246, 0.1) !important;
+}
+
+.task-view-col.drag-over {
+  border-color: #10b981 !important;
+  box-shadow: 0 0 20px rgba(16, 185, 129, 0.3) !important;
+  background: rgba(16, 185, 129, 0.08) !important;
+}
+
+.task-view-col .todo-item[draggable="true"] {
+  cursor: grab;
+}
+
+.task-view-col .todo-item[draggable="true"]:active {
+  cursor: grabbing;
+}
+
 /* Upgrade Buttons & Upgrade Modal */
 .btn-upgrade-auto {
   background: linear-gradient(135deg, #10b981 0%, #059669 100%);
