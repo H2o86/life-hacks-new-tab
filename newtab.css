@@ -3969,22 +3969,23 @@ textarea:focus {
   top: 0;
   right: 0;
   bottom: 0;
-  width: 12px;
-  background: rgba(255, 255, 255, 0.2);
-  cursor: ew-resize;
+  width: 14px;
+  background: rgba(255, 255, 255, 0.3);
+  cursor: ew-resize !important;
   border-top-right-radius: 6px;
   border-bottom-right-radius: 6px;
   transition: background 0.15s ease;
-  z-index: 10;
+  z-index: 25 !important;
   display: flex;
   align-items: center;
   justify-content: center;
+  touch-action: none;
 }
 
 .slice-resize-handle:hover,
 .slice-resize-handle:active {
-  background: rgba(255, 255, 255, 0.5);
-  box-shadow: 0 0 8px rgba(255, 255, 255, 0.8);
+  background: rgba(255, 255, 255, 0.75) !important;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.9) !important;
 }
 
 .slice-resize-handle::after {

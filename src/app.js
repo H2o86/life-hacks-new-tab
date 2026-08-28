@@ -2610,7 +2610,7 @@
           <div class="slice-resize-handle" title="Kéo mép phải để co giãn thời lượng"></div>
         `;
 
-        // Pointer Dragging for Slice
+        // Pointer Dragging for Slice (Position Move)
         let startPointerX = 0;
         let initialStartMin = item.startMin;
         let isDragging = false;
@@ -2618,11 +2618,13 @@
 
         slice.addEventListener('pointerdown', (e) => {
           if (e.button !== 0) return;
+          if (e.target.closest('.slice-resize-handle')) return;
+
           startPointerX = e.clientX;
           initialStartMin = item.startMin;
           isDragging = true;
           hasMoved = false;
-          slice.setPointerCapture(e.pointerId);
+          try { slice.setPointerCapture(e.pointerId); } catch (err) {}
           slice.style.transition = 'none';
         });
 
@@ -2662,7 +2664,7 @@
             await window.StorageService.saveTodoList(todoList);
             renderTodoList();
             renderSandwichPlateTimeline();
-            showToast(`📍 Đã xếp task "${item.todo.text}" vào khung giờ ${item.todo.dueTime}`, '🥪');
+            showToast(`📍 Đã xếp task "${item.todo.text}" vào khung giờ ${item.todo.dueTime}`, '⏳');
           } else {
             promptAdjustTaskTime(item.todo);
           }
@@ -2671,7 +2673,7 @@
         slice.addEventListener('pointerup', handlePointerEnd);
         slice.addEventListener('pointercancel', handlePointerEnd);
 
-        // Right Handle Resizing for Slice Duration
+        // Right Handle Resizing for Slice Duration (Co Giãn Thời Lượng)
         const resizeHandle = slice.querySelector('.slice-resize-handle');
         if (resizeHandle) {
           let isResizing = false;
@@ -2679,17 +2681,22 @@
           let initialEstMin = item.estMin;
 
           resizeHandle.addEventListener('pointerdown', (e) => {
+            e.preventDefault();
             e.stopPropagation();
             if (e.button !== 0) return;
             resizeStartX = e.clientX;
             initialEstMin = item.estMin;
             isResizing = true;
+            slice.draggable = false;
             try { resizeHandle.setPointerCapture(e.pointerId); } catch (err) {}
             slice.style.transition = 'none';
           });
 
           resizeHandle.addEventListener('pointermove', (e) => {
             if (!isResizing) return;
+            e.preventDefault();
+            e.stopPropagation();
+
             const deltaX = e.clientX - resizeStartX;
             const trackWidth = elements.timelineTrackContainer.clientWidth || 1440;
             const deltaMin = (deltaX / trackWidth) * 1440;
@@ -2708,7 +2715,10 @@
 
           const handleResizeEnd = async (e) => {
             if (!isResizing) return;
+            e.preventDefault();
+            e.stopPropagation();
             isResizing = false;
+            slice.draggable = true;
             try { resizeHandle.releasePointer(e.pointerId); } catch (err) {}
             slice.style.transition = '';
 
