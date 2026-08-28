@@ -3541,3 +3541,316 @@ textarea:focus {
   max-width: 560px;
   width: 92%;
 }
+
+/* Button Sandwich 24H Plate in Sidebar Header */
+.btn-open-sandwich-plate {
+  background: rgba(245, 158, 11, 0.15);
+  border: 1px solid rgba(245, 158, 11, 0.4);
+  color: #fbbf24;
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 3px 8px;
+  border-radius: 12px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  transition: all var(--transition-fast);
+}
+
+.btn-open-sandwich-plate:hover {
+  background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+  color: #ffffff;
+  border-color: transparent;
+  box-shadow: 0 0 10px rgba(245, 158, 11, 0.4);
+}
+
+/* 24-Hour Sandwich Timeline Plate Modal */
+.sandwich-plate-overlay {
+  z-index: 10045 !important;
+  background: rgba(15, 23, 42, 0.9) !important;
+  backdrop-filter: blur(12px) !important;
+  padding: 20px !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sandwich-plate-container {
+  width: 98vw;
+  max-width: 1600px;
+  max-height: 92vh;
+  background: rgba(30, 41, 59, 0.92);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.7);
+  animation: sandwichPopIn 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes sandwichPopIn {
+  from { opacity: 0; transform: scale(0.96); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+.sandwich-plate-header {
+  padding: 16px 24px;
+  background: rgba(15, 23, 42, 0.7);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.plate-title-box h2 {
+  margin: 0;
+  font-size: 1.25rem;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.plate-subtitle {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+.plate-header-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.btn-auto-fix-conflicts {
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+  border: none;
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 0.82rem;
+  padding: 8px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.15s ease;
+}
+
+.btn-auto-fix-conflicts:hover {
+  transform: scale(1.04);
+}
+
+.btn-plate-close {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-plate-close:hover {
+  background: rgba(239, 68, 68, 0.3);
+  border-color: #ef4444;
+}
+
+/* Conflict Alert Banner */
+.sandwich-conflict-banner {
+  background: linear-gradient(90deg, rgba(239, 68, 68, 0.25) 0%, rgba(249, 115, 22, 0.25) 100%);
+  border-bottom: 1px solid rgba(239, 68, 68, 0.4);
+  padding: 10px 24px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #fca5a5;
+  font-weight: 600;
+  font-size: 0.88rem;
+  animation: conflictBannerPulse 1.5s infinite alternate;
+}
+
+@keyframes conflictBannerPulse {
+  from { background-color: rgba(239, 68, 68, 0.2); }
+  to { background-color: rgba(239, 68, 68, 0.35); }
+}
+
+/* 24-Hour Timeline Plate Body */
+.sandwich-plate-body {
+  padding: 20px 24px;
+  background: rgba(15, 23, 42, 0.4);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  overflow-x: auto;
+}
+
+.timeline-ruler {
+  display: flex;
+  min-width: 1440px;
+  height: 28px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+  position: relative;
+}
+
+.timeline-tick {
+  flex: 1;
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--text-muted);
+  border-left: 1px solid rgba(255, 255, 255, 0.1);
+  padding-left: 4px;
+  white-space: nowrap;
+}
+
+.timeline-track-container {
+  min-width: 1440px;
+  min-height: 240px;
+  background: rgba(15, 23, 42, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  position: relative;
+  overflow: hidden;
+}
+
+.timeline-now-line {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: #ef4444;
+  z-index: 10;
+  pointer-events: none;
+  box-shadow: 0 0 8px #ef4444;
+}
+
+.timeline-now-line::before {
+  content: 'Hôm nay';
+  position: absolute;
+  top: 2px;
+  left: 4px;
+  font-size: 0.65rem;
+  font-weight: 700;
+  background: #ef4444;
+  color: #fff;
+  padding: 1px 4px;
+  border-radius: 3px;
+}
+
+.timeline-track {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: 240px;
+}
+
+/* Draggable Sandwich Task Slice */
+.sandwich-slice {
+  position: absolute;
+  height: 64px;
+  border-radius: 10px;
+  padding: 6px 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  cursor: grab;
+  user-select: none;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: linear-gradient(135deg, rgba(59, 130, 246, 0.85) 0%, rgba(37, 99, 235, 0.85) 100%);
+  color: #ffffff;
+  transition: box-shadow 0.2s ease, transform 0.15s ease;
+  overflow: hidden;
+}
+
+.sandwich-slice:active {
+  cursor: grabbing;
+  transform: scale(1.02);
+  z-index: 50 !important;
+}
+
+.sandwich-slice.conflict {
+  background: linear-gradient(135deg, rgba(239, 68, 68, 0.9) 0%, rgba(220, 38, 38, 0.9) 100%) !important;
+  border: 2px solid #f87171 !important;
+  box-shadow: 0 0 20px rgba(239, 68, 68, 0.6) !important;
+  animation: sliceConflictGlow 1s infinite alternate;
+}
+
+@keyframes sliceConflictGlow {
+  from { box-shadow: 0 0 10px rgba(239, 68, 68, 0.5); }
+  to { box-shadow: 0 0 25px rgba(249, 115, 22, 0.9); }
+}
+
+.sandwich-slice-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 4px;
+}
+
+.sandwich-slice-title {
+  font-size: 0.82rem;
+  font-weight: 700;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.sandwich-slice-time {
+  font-size: 0.72rem;
+  font-weight: 700;
+  background: rgba(0, 0, 0, 0.25);
+  padding: 1px 6px;
+  border-radius: 4px;
+  white-space: nowrap;
+}
+
+.sandwich-slice-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.68rem;
+  opacity: 0.9;
+}
+
+/* Unscheduled Tray */
+.sandwich-unscheduled-tray {
+  padding: 14px 24px;
+  background: rgba(15, 23, 42, 0.7);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.sandwich-unscheduled-tray h4 {
+  margin: 0 0 10px 0;
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+}
+
+.unscheduled-slices-list {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  max-height: 120px;
+  overflow-y: auto;
+}
+
+.unscheduled-chip {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  color: var(--text-primary);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.unscheduled-chip:hover {
+  background: rgba(99, 102, 241, 0.2);
+  border-color: #818cf8;
+  color: #ffffff;
+}

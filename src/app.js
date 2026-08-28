@@ -187,6 +187,19 @@
     tvCountCompleted: document.getElementById('tvCountCompleted'),
     tvListCompleted: document.getElementById('tvListCompleted'),
 
+    // 24-Hour Sandwich Timeline Plate
+    btnOpenSandwichPlate: document.getElementById('btnOpenSandwichPlate'),
+    sandwichPlateOverlay: document.getElementById('sandwichPlateOverlay'),
+    btnPlateClose: document.getElementById('btnPlateClose'),
+    btnAutoFixConflicts: document.getElementById('btnAutoFixConflicts'),
+    sandwichConflictBanner: document.getElementById('sandwichConflictBanner'),
+    sandwichConflictText: document.getElementById('sandwichConflictText'),
+    timelineRuler: document.getElementById('timelineRuler'),
+    timelineTrackContainer: document.getElementById('timelineTrackContainer'),
+    timelineTrack: document.getElementById('timelineTrack'),
+    timelineNowLine: document.getElementById('timelineNowLine'),
+    unscheduledSlicesList: document.getElementById('unscheduledSlicesList'),
+
     // Daily Work Efficiency Card
     dailyEfficiencyCard: document.getElementById('dailyEfficiencyCard'),
     efficiencyTitle: document.getElementById('efficiencyTitle'),
@@ -1751,6 +1764,7 @@
     }
 
     renderTaskViewGrid();
+    renderSandwichPlateTimeline();
   }
 
   function formatCompletedDateLabel(dateStr) {
@@ -2242,6 +2256,24 @@
       });
     }
 
+    // 24-Hour Sandwich Timeline Plate Open / Close & Auto-Fix
+    if (elements.btnOpenSandwichPlate && elements.sandwichPlateOverlay) {
+      elements.btnOpenSandwichPlate.addEventListener('click', () => {
+        elements.sandwichPlateOverlay.classList.add('active');
+        renderSandwichPlateTimeline();
+      });
+    }
+
+    if (elements.btnPlateClose && elements.sandwichPlateOverlay) {
+      elements.btnPlateClose.addEventListener('click', () => {
+        elements.sandwichPlateOverlay.classList.remove('active');
+      });
+    }
+
+    if (elements.btnAutoFixConflicts) {
+      elements.btnAutoFixConflicts.addEventListener('click', autoFixTaskConflicts);
+    }
+
     // Alarm Modal Controls
     if (elements.btnAlarmStart) {
       elements.btnAlarmStart.addEventListener('click', () => {
@@ -2315,6 +2347,9 @@
       if (e.key === 'Escape') {
         if (elements.taskViewOverlay && elements.taskViewOverlay.classList.contains('active')) {
           elements.taskViewOverlay.classList.remove('active');
+        }
+        if (elements.sandwichPlateOverlay && elements.sandwichPlateOverlay.classList.contains('active')) {
+          elements.sandwichPlateOverlay.classList.remove('active');
         }
         if (elements.taskAlarmModal && elements.taskAlarmModal.classList.contains('active')) {
           elements.taskAlarmModal.classList.remove('active');
@@ -2446,6 +2481,193 @@
     if (elements.tvListCompleted) {
       elements.tvListCompleted.innerHTML = completedTodos.length === 0 ? '<div class="todo-empty-state">📌 Chưa có task hoàn thành</div>' : '';
       completedTodos.forEach((t, i) => elements.tvListCompleted.appendChild(createTodoItemElement(t, i + 1)));
+    }
+  }
+
+  function renderSandwichPlateTimeline() {
+    if (!elements.sandwichPlateOverlay || !elements.sandwichPlateOverlay.classList.contains('active')) return;
+
+    // 1. Render Ruler (00:00 -> 23:00)
+    if (elements.timelineRuler) {
+      elements.timelineRuler.innerHTML = '';
+      for (let h = 0; h < 24; h++) {
+        const tick = document.createElement('div');
+        tick.className = 'timeline-tick';
+        tick.textContent = `${String(h).padStart(2, '0')}:00`;
+        elements.timelineRuler.appendChild(tick);
+      }
+    }
+
+    // 2. Position Current Time Line
+    if (elements.timelineNowLine) {
+      const now = new Date();
+      const currentMin = now.getHours() * 60 + now.getMinutes();
+      const pct = (currentMin / 1440) * 100;
+      elements.timelineNowLine.style.left = `${pct}%`;
+    }
+
+    // 3. Categorize active tasks: Scheduled vs Unscheduled
+    const activeTodos = todoList.filter(t => !t.completed && isDueToday(t));
+    const scheduled = [];
+    const unscheduled = [];
+
+    activeTodos.forEach(todo => {
+      if (todo.dueTime) {
+        const parts = todo.dueTime.split(':');
+        const startMin = parseInt(parts[0], 10) * 60 + parseInt(parts[1], 10);
+        const estMin = todo.estMinutes || 30;
+        scheduled.push({
+          todo,
+          startMin,
+          estMin,
+          endMin: startMin + estMin
+        });
+      } else {
+        unscheduled.push(todo);
+      }
+    });
+
+    // 4. Conflict Detection Engine
+    let hasConflict = false;
+    const conflictMessages = [];
+    const conflictTaskIds = new Set();
+
+    for (let i = 0; i < scheduled.length; i++) {
+      for (let j = i + 1; j < scheduled.length; j++) {
+        const itemA = scheduled[i];
+        const itemB = scheduled[j];
+        if (itemA.startMin < itemB.endMin && itemB.startMin < itemA.endMin) {
+          hasConflict = true;
+          conflictTaskIds.add(itemA.todo.id);
+          conflictTaskIds.add(itemB.todo.id);
+
+          const startAStr = formatMinToTime(itemA.startMin);
+          const endAStr = formatMinToTime(itemA.endMin);
+          const startBStr = formatMinToTime(itemB.startMin);
+          const endBStr = formatMinToTime(itemB.endMin);
+
+          conflictMessages.push(`⚠️ "${itemA.todo.text}" (${startAStr}-${endAStr}) bị trùng giờ với "${itemB.todo.text}" (${startBStr}-${endBStr})`);
+        }
+      }
+    }
+
+    // 5. Update Conflict Banner
+    if (elements.sandwichConflictBanner && elements.sandwichConflictText) {
+      if (hasConflict) {
+        elements.sandwichConflictBanner.style.display = 'flex';
+        elements.sandwichConflictText.innerHTML = conflictMessages.join(' | ');
+      } else {
+        elements.sandwichConflictBanner.style.display = 'none';
+      }
+    }
+
+    // 6. Render Scheduled Task Slices on Timeline Track
+    if (elements.timelineTrack) {
+      elements.timelineTrack.innerHTML = '';
+      scheduled.forEach(item => {
+        const slice = document.createElement('div');
+        const isConflicting = conflictTaskIds.has(item.todo.id);
+        slice.className = `sandwich-slice ${isConflicting ? 'conflict' : ''}`;
+
+        const leftPct = (item.startMin / 1440) * 100;
+        const widthPct = Math.max((item.estMin / 1440) * 100, 2.5);
+        slice.style.left = `${leftPct}%`;
+        slice.style.width = `${widthPct}%`;
+
+        const startTimeStr = formatMinToTime(item.startMin);
+        const endTimeStr = formatMinToTime(item.endMin);
+
+        slice.innerHTML = `
+          <div class="sandwich-slice-header">
+            <span class="sandwich-slice-title" title="${item.todo.text}">${item.todo.text}</span>
+            <span class="sandwich-slice-time">⏰ ${startTimeStr} - ${endTimeStr}</span>
+          </div>
+          <div class="sandwich-slice-footer">
+            <span>⏱️ ${item.estMin}m</span>
+            <span>${isConflicting ? '⚠️ Xung đột' : '✅ Hợp lý'}</span>
+          </div>
+        `;
+
+        slice.addEventListener('click', () => {
+          promptAdjustTaskTime(item.todo);
+        });
+
+        elements.timelineTrack.appendChild(slice);
+      });
+    }
+
+    // 7. Render Unscheduled Tray
+    if (elements.unscheduledSlicesList) {
+      elements.unscheduledSlicesList.innerHTML = unscheduled.length === 0 
+        ? '<span class="text-muted" style="font-size: 0.8rem;">✨ Tất cả công việc trong ngày đã có khung giờ cụ thể!</span>'
+        : '';
+
+      unscheduled.forEach(todo => {
+        const chip = document.createElement('div');
+        chip.className = 'unscheduled-chip';
+        chip.innerHTML = `<span>📋 ${todo.text}</span> <span>(${todo.estMinutes || 30}m)</span> <strong>+ Gán giờ</strong>`;
+        chip.addEventListener('click', () => {
+          promptAdjustTaskTime(todo);
+        });
+        elements.unscheduledSlicesList.appendChild(chip);
+      });
+    }
+  }
+
+  function formatMinToTime(minutes) {
+    const m = Math.max(0, Math.min(1439, minutes));
+    const hh = Math.floor(m / 60);
+    const mm = m % 60;
+    return `${String(hh).padStart(2, '0')}:${String(mm).padStart(2, '0')}`;
+  }
+
+  async function promptAdjustTaskTime(todo) {
+    const current = todo.dueTime || '09:00';
+    const input = prompt(`Nhập thời điểm bắt đầu cho "${todo.text}" (Định dạng HH:mm, ví dụ 09:30, 14:00):`, current);
+    if (input && /^([01]?[0-9]|2[0-3]):[0-5][0-9]$/.test(input.trim())) {
+      todo.dueTime = input.trim();
+      if (!todo.dueDate) todo.dueDate = getTodayStr();
+      await window.StorageService.saveTodoList(todoList);
+      renderTodoList();
+      renderSandwichPlateTimeline();
+      showToast(`Đã gán giờ ${todo.dueTime} cho task "${todo.text}"`, '⏰');
+    }
+  }
+
+  async function autoFixTaskConflicts() {
+    const activeToday = todoList.filter(t => !t.completed && isDueToday(t) && t.dueTime);
+
+    if (activeToday.length === 0) {
+      showToast('Không có task nào bị trùng giờ!', '✨');
+      return;
+    }
+
+    const items = activeToday.map(todo => {
+      const parts = todo.dueTime.split(':');
+      const startMin = parseInt(parts[0], 10) * 60 + parseInt(parts[1], 10);
+      const estMin = todo.estMinutes || 30;
+      return { todo, startMin, estMin };
+    }).sort((a, b) => a.startMin - b.startMin);
+
+    let currentPointer = items[0].startMin;
+    let fixedCount = 0;
+
+    items.forEach(item => {
+      if (item.startMin < currentPointer) {
+        item.startMin = currentPointer;
+        item.todo.dueTime = formatMinToTime(item.startMin);
+        fixedCount++;
+      }
+      currentPointer = item.startMin + item.estMin;
+    });
+
+    if (fixedCount > 0) {
+      await window.StorageService.saveTodoList(todoList);
+      renderTodoList();
+      renderSandwichPlateTimeline();
+      showToast(`⚡ Đã tự động xếp nối tiếp ${fixedCount} task tránh bị trùng giờ!`, '🎉');
+    } else {
+      showToast('✨ Tất cả các task đã ở khung giờ hợp lý, không bị trùng!', '✅');
     }
   }
 

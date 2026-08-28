@@ -31,6 +31,7 @@
             <h3>📋 Công Việc Cần Làm</h3>
             <button type="button" class="btn-toggle-add-form" id="btnToggleAddForm" title="Bấm để mở giao diện thêm công việc mới">+</button>
             <button type="button" class="btn-expand-task-view" id="btnExpandTaskView" title="Mở rộng danh sách công việc toàn màn hình (Task View)">⛶ Mở Rộng</button>
+            <button type="button" class="btn-open-sandwich-plate" id="btnOpenSandwichPlate" title="Giám sát & xếp khung giờ 24h không bị chồng chéo (Sandwich Timeline Plate)">🥪 24H</button>
           </div>
           <button class="todo-minimize-btn" id="btnMinimizeTodo" title="Thu gọn">&times;</button>
         </div>
@@ -874,6 +875,43 @@
       </div>
       <div class="modal-footer">
         <button type="button" class="btn-primary" id="btnFinishUpgradeGuide">Tôi Đã Hiểu & Hoàn Tất</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- 24-Hour Sandwich Timeline Plate Modal -->
+  <div class="modal-overlay sandwich-plate-overlay" id="sandwichPlateOverlay">
+    <div class="sandwich-plate-container">
+      <div class="sandwich-plate-header">
+        <div class="plate-title-box">
+          <h2>🥪 Đĩa Bánh 24 Giờ - Giám Sát & Tránh Xung Đột Thời Gian</h2>
+          <span class="plate-subtitle">Kéo thả các miếng bánh công việc trên đĩa 24h để loại bỏ hoàn toàn tình trạng chồng chéo khung giờ</span>
+        </div>
+        <div class="plate-header-actions">
+          <button type="button" class="btn-auto-fix-conflicts" id="btnAutoFixConflicts" title="Tự động xếp nối tiếp các task bị trùng giờ">⚡ Tự Động Xếp Nối Tiếp</button>
+          <button type="button" class="btn-plate-close" id="btnPlateClose" title="Thu gọn giao diện (&lt; ESC &gt;)">↙️ Thu Gọn</button>
+        </div>
+      </div>
+
+      <!-- Conflict Warning Alert Banner -->
+      <div class="sandwich-conflict-banner" id="sandwichConflictBanner" style="display: none;">
+        <span class="conflict-icon">⚠️</span>
+        <div class="conflict-text" id="sandwichConflictText">Phát hiện 2 công việc bị chồng chéo thời gian!</div>
+      </div>
+
+      <!-- The 24-Hour Timeline Plate / Tray -->
+      <div class="sandwich-plate-body">
+        <div class="timeline-ruler" id="timelineRuler"></div>
+        <div class="timeline-track-container" id="timelineTrackContainer">
+          <div class="timeline-now-line" id="timelineNowLine" title="Thời gian hiện tại"></div>
+          <div class="timeline-track" id="timelineTrack"></div>
+        </div>
+      </div>
+
+      <!-- Unscheduled / Floating Tasks Tray -->
+      <div class="sandwich-unscheduled-tray">
+        <h4>📋 Task Chưa Có Giờ Cụ Thể Trong Ngày (Bấm vào để gán khung giờ)</h4>
+        <div class="unscheduled-slices-list" id="unscheduledSlicesList"></div>
       </div>
     </div>
   </div>
