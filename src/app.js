@@ -2713,7 +2713,7 @@
   }
 
   async function quickCreateSandwichTask(defaultTimeStr = '09:00') {
-    const taskName = prompt(`🥪 Thêm công việc mới trên đĩa 24H (Bắt đầu lúc ${defaultTimeStr}):`, '');
+    const taskName = prompt(`⏳ Thêm công việc mới trên Timeline 24h (Bắt đầu lúc ${defaultTimeStr}):`, '');
     if (!taskName || !taskName.trim()) return;
 
     const estDurationStr = prompt(`Dự kiến làm "${taskName.trim()}" bao nhiêu phút? (Ví dụ: 30, 45, 60):`, '30');
@@ -2736,7 +2736,7 @@
 
     renderTodoList();
     renderSandwichPlateTimeline();
-    showToast(`🎉 Đã thêm miếng bánh task "${newTodo.text}" vào đĩa 24H lúc ${defaultTimeStr}!`, '🥪');
+    showToast(`🎉 Đã thêm task "${newTodo.text}" vào Timeline 24h lúc ${defaultTimeStr}!`, '⏳');
   }
 
   async function autoFixTaskConflicts() {
