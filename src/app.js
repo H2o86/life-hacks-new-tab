@@ -2599,11 +2599,40 @@
     elements.btnCloseSettings.addEventListener('click', () => closeModal(elements.settingsModal));
     elements.btnSaveSettingsModal.addEventListener('click', saveSettingsFromModal);
 
-    // Backup & Restore in Settings
+    // Backup, Restore & Auto Upgrade in Settings
+    const btnAutoBackupAndUpgrade = document.getElementById('btnAutoBackupAndUpgrade');
     const btnExportSettings = document.getElementById('btnExportSettings');
     const importSettingsFileInput = document.getElementById('importSettingsFileInput');
-    if (btnExportSettings) btnExportSettings.addEventListener('click', exportData);
-    if (importSettingsFileInput) importSettingsFileInput.addEventListener('change', handleImportFile);
+
+    if (btnAutoBackupAndUpgrade) {
+      btnAutoBackupAndUpgrade.addEventListener('click', handleAutoBackupAndUpgrade);
+    }
+
+    if (btnExportSettings) {
+      btnExportSettings.addEventListener('click', exportSettingsJSON);
+    }
+
+    if (importSettingsFileInput) {
+      importSettingsFileInput.addEventListener('change', (e) => {
+        const file = e.target.files[0];
+        if (file) {
+          handleImportJSONFile(file);
+          e.target.value = '';
+        }
+      });
+    }
+
+    // Upgrade Guide Modal Controls
+    const upgradeGuideModal = document.getElementById('upgradeGuideModal');
+    const btnCloseUpgradeModal = document.getElementById('btnCloseUpgradeModal');
+    const btnFinishUpgradeGuide = document.getElementById('btnFinishUpgradeGuide');
+
+    if (btnCloseUpgradeModal && upgradeGuideModal) {
+      btnCloseUpgradeModal.addEventListener('click', () => closeModal(upgradeGuideModal));
+    }
+    if (btnFinishUpgradeGuide && upgradeGuideModal) {
+      btnFinishUpgradeGuide.addEventListener('click', () => closeModal(upgradeGuideModal));
+    }
 
     // Settings Theme Selector (Live click preview)
     document.querySelectorAll('.theme-option-btn').forEach(btn => {
@@ -2628,6 +2657,111 @@
         showToast('Đã khôi phục cài đặt gốc!', '🔄');
       }
     });
+  }
+
+  /* ==========================================================================
+     Backup & Upgrade Functions
+     ========================================================================== */
+
+  async function exportSettingsJSON() {
+    try {
+      const data = {
+        app: 'Life Hacks New Tab',
+        version: (chrome.runtime && chrome.runtime.getManifest) ? chrome.runtime.getManifest().version : '1.0.0',
+        exportedAt: new Date().toISOString(),
+        settings: currentSettings,
+        todoList: todoList || [],
+        dailyWorkHistory: (await window.StorageService.getDailyWorkHistory()) || [],
+        customTips: (tipManager && tipManager.customTips) ? tipManager.customTips : [],
+        savedTips: (tipManager && tipManager.savedTips) ? tipManager.savedTips : []
+      };
+
+      const jsonStr = JSON.stringify(data, null, 2);
+      const blob = new Blob([jsonStr], { type: 'application/json' });
+      const url = URL.createObjectURL(blob);
+
+      const d = new Date();
+      const dateStr = `${d.getFullYear()}${String(d.getMonth() + 1).padStart(2, '0')}${String(d.getDate()).padStart(2, '0')}_${String(d.getHours()).padStart(2, '0')}${String(d.getMinutes()).padStart(2, '0')}`;
+      const fileName = `life-hacks-backup-${dateStr}.json`;
+
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = fileName;
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      URL.revokeObjectURL(url);
+
+      showToast(`📤 Đã tự động sao lưu dữ liệu ra ${fileName}!`, '💾');
+      return fileName;
+    } catch (err) {
+      console.error('Error exporting settings JSON:', err);
+      showToast('⚠️ Không thể xuất dữ liệu sao lưu!', '❌');
+    }
+  }
+
+  async function handleAutoBackupAndUpgrade() {
+    // Step 1: Auto backup JSON data
+    await exportSettingsJSON();
+
+    // Step 2: Download latest release zip package
+    const zipUrl = 'https://github.com/H2o86/life-hacks-new-tab/archive/refs/heads/main.zip';
+    const a = document.createElement('a');
+    a.href = zipUrl;
+    a.download = 'life-hacks-new-tab-main.zip';
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+
+    // Step 3: Open step-by-step Upgrade Guide Modal
+    const upgradeGuideModal = document.getElementById('upgradeGuideModal');
+    if (upgradeGuideModal) {
+      openModal(upgradeGuideModal);
+    }
+  }
+
+  async function handleImportJSONFile(file) {
+    if (!file) return;
+    try {
+      const text = await file.text();
+      const data = JSON.parse(text);
+
+      if (data.settings) {
+        currentSettings = { ...window.DEFAULT_SETTINGS, ...data.settings };
+        await window.StorageService.saveSettings(currentSettings);
+        applyTheme(currentSettings.theme);
+        applyWidgetVisibility();
+        setupSearchEngineDisplay();
+        renderShortcuts();
+      }
+
+      if (Array.isArray(data.todoList)) {
+        todoList = data.todoList;
+        await window.StorageService.saveTodoList(todoList);
+        renderTodoList();
+      }
+
+      if (Array.isArray(data.customTips) && tipManager) {
+        tipManager.setCustomTips(data.customTips);
+        await window.StorageService.saveCustomTips(data.customTips);
+      }
+
+      if (Array.isArray(data.savedTips) && tipManager) {
+        tipManager.setSavedTips(data.savedTips);
+        await window.StorageService.saveSavedTips(data.savedTips);
+      }
+
+      if (Array.isArray(data.dailyWorkHistory)) {
+        await window.StorageService.saveDailyWorkHistory(data.dailyWorkHistory);
+        updateDailyEfficiencyWidget();
+      }
+
+      showToast('🎉 Nhập dữ liệu sao lưu thành công!', '✅');
+      if (elements.settingsModal) closeModal(elements.settingsModal);
+    } catch (err) {
+      console.error('Error importing settings JSON:', err);
+      showToast('❌ File JSON không hợp lệ hoặc bị lỗi!', '⚠️');
+    }
   }
 
   /* ==========================================================================

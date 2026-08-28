@@ -512,7 +512,11 @@
                 <p class="version-desc">Mẹo Vặt Mỗi Ngày & Quản Lý Công Việc Năng Suất (Manifest V3)</p>
               </div>
             </div>
-            <div class="version-card-meta">
+            <div class="version-card-actions" style="margin-top: 10px; display: flex; gap: 8px; flex-wrap: wrap; align-items: center;">
+              <button type="button" class="btn-upgrade-auto" id="btnAutoBackupAndUpgrade" title="Tự động sao lưu dữ liệu JSON và tải bản cập nhật mới nhất">⚡ Nâng Cấp Bản Mới & Tự Động Backup JSON</button>
+              <a href="https://github.com/H2o86/life-hacks-new-tab/archive/refs/heads/main.zip" target="_blank" class="btn-upgrade-zip" title="Tải trực tiếp file zip mới nhất">📦 Tải File Zip</a>
+            </div>
+            <div class="version-card-meta" style="margin-top: 10px;">
               <span class="meta-item">🟢 Đã cập nhật thành công</span>
               <a href="https://github.com/H2o86/life-hacks-new-tab/releases" target="_blank" rel="noopener" class="version-changelog-link" title="Xem lịch sử cập nhật trên GitHub">📜 Nhật ký thay đổi (Release Notes)</a>
             </div>
@@ -662,6 +666,14 @@
               <input type="file" id="importSettingsFileInput" accept=".json" style="display: none;">
             </label>
           </div>
+          <div class="gdrive-recommend-box" style="margin-top: 12px; background: rgba(59, 130, 246, 0.08); border: 1px dashed rgba(59, 130, 246, 0.3); border-radius: var(--radius-sm); padding: 10px 12px;">
+            <div style="display: flex; align-items: center; gap: 6px; color: #60a5fa; font-weight: 700; font-size: 0.82rem;">
+              <span>💡 Khuyến Nghị Lưu Trữ Google Drive Đồng Bộ:</span>
+            </div>
+            <p style="font-size: 0.78rem; color: var(--text-secondary); margin: 4px 0 0 0; line-height: 1.4;">
+              Bạn nên giải nén thư mục tiện ích vào <strong>Google Drive đang đồng bộ trên máy tính</strong> (Ví dụ: <code>G:\My Drive\0-My Project\IT\3. Extension\life-hacks-new-tab</code>). Nhờ đó, extension có thể sử dụng đồng bộ trên nhiều máy tính mà không lo thất lạc dữ liệu!
+            </p>
+          </div>
         </div>
 
         <!-- Setting Group: Reset -->
@@ -794,6 +806,62 @@
           </div>
           <div class="col-body" id="tvListCompleted"></div>
         </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Step-by-Step Upgrade Guide Modal -->
+  <div class="modal-overlay" id="upgradeGuideModal">
+    <div class="modal-card upgrade-modal-card">
+      <div class="modal-header">
+        <h3>⚡ Đã Tự Động Sao Lưu Dữ Liệu & Khởi Tạo Nâng Cấp</h3>
+        <button class="btn-close-modal" id="btnCloseUpgradeModal">&times;</button>
+      </div>
+      <div class="modal-body upgrade-modal-body" style="padding: 16px 20px;">
+        <div class="upgrade-status-banner" style="background: rgba(16, 185, 129, 0.1); border: 1px solid rgba(16, 185, 129, 0.3); padding: 12px; border-radius: var(--radius-sm); display: flex; align-items: center; gap: 10px; margin-bottom: 16px;">
+          <span class="status-icon" style="font-size: 1.6rem;">🎉</span>
+          <div>
+            <strong style="color: #34d399; font-size: 0.9rem;">Đã tự động tải file sao lưu JSON & bản cập nhật mới nhất!</strong>
+            <p class="text-muted" style="margin: 2px 0 0 0; font-size: 0.78rem;">File <code>life-hacks-backup-*.json</code> và <code>life-hacks-new-tab-main.zip</code> đã nằm trong thư mục Downloads của máy bạn.</p>
+          </div>
+        </div>
+
+        <div class="upgrade-steps-list" style="display: flex; flex-direction: column; gap: 12px;">
+          <div class="upgrade-step-item" style="display: flex; gap: 12px; align-items: flex-start;">
+            <div class="step-num" style="background: var(--primary-gradient); color: #fff; width: 24px; height: 24px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.75rem; flex-shrink: 0;">1</div>
+            <div class="step-content">
+              <strong style="font-size: 0.85rem; color: var(--text-primary);">Giải Nén Thư Mục Mới</strong>
+              <p style="font-size: 0.78rem; color: var(--text-muted); margin: 2px 0 0 0;">Giải nén file <code>.zip</code> vừa tải về và ghi đè/thay thế các file mã nguồn mới nhất.</p>
+            </div>
+          </div>
+
+          <div class="upgrade-step-item highlight-gdrive" style="display: flex; gap: 12px; align-items: flex-start; background: rgba(59, 130, 246, 0.08); border: 1px dashed rgba(59, 130, 246, 0.4); padding: 10px 12px; border-radius: var(--radius-sm);">
+            <div class="step-num" style="background: #3b82f6; color: #fff; width: 24px; height: 24px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.75rem; flex-shrink: 0;">2</div>
+            <div class="step-content">
+              <strong style="font-size: 0.85rem; color: #60a5fa;">💡 Khuyến Nghị: Giải Nén Vào Google Drive Đồng Bộ</strong>
+              <p style="font-size: 0.78rem; color: var(--text-secondary); margin: 2px 0 0 0;">Nên đặt thư mục tiện ích trong <strong>Google Drive đang đồng bộ trên máy tính</strong> (Ví dụ: <code>G:\My Drive\0-My Project\IT\3. Extension\life-hacks-new-tab</code>). Nhờ đó bạn có thể dùng chung extension trên nhiều máy tính mà không bao giờ lo mất dữ liệu!</p>
+            </div>
+          </div>
+
+          <div class="upgrade-step-item" style="display: flex; gap: 12px; align-items: flex-start;">
+            <div class="step-num" style="background: var(--primary-gradient); color: #fff; width: 24px; height: 24px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.75rem; flex-shrink: 0;">3</div>
+            <div class="step-content">
+              <strong style="font-size: 0.85rem; color: var(--text-primary);">Tải Lại Tiện Ích Trực Tiếp Trên Chrome</strong>
+              <p style="font-size: 0.78rem; color: var(--text-muted); margin: 2px 0 0 0;">Mở trang <code>chrome://extensions</code> trên Chrome, tìm <strong>Life Hacks New Tab</strong> và bấm nút <strong>Tải lại (Reload 🔄)</strong> hoặc bấm <strong>Tải tiện ích đã giải nén</strong> chọn thư mục vừa giải nén.</p>
+            </div>
+          </div>
+
+          <div class="upgrade-step-item" style="display: flex; gap: 12px; align-items: flex-start;">
+            <div class="step-num" style="background: var(--primary-gradient); color: #fff; width: 24px; height: 24px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.75rem; flex-shrink: 0;">4</div>
+            <div class="step-content">
+              <strong style="font-size: 0.85rem; color: var(--text-primary);">Khôi Phục Dữ Liệu (Nếu Cần)</strong>
+              <p style="font-size: 0.78rem; color: var(--text-muted); margin: 2px 0 0 0;">Toàn bộ dữ liệu của bạn được Chrome tự động bảo toàn. Nếu đổi máy mới, sử dụng nút <strong>Nhập dữ liệu JSON</strong> trong Cài Đặt để khôi phục 100% dữ liệu cũ bất kỳ lúc nào!</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn-primary" id="btnFinishUpgradeGuide">Tôi Đã Hiểu & Hoàn Tất</button>
       </div>
     </div>
   </div>
