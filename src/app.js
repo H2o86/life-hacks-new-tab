@@ -2535,6 +2535,8 @@
       const category = elements.customCategory.value;
       const catNames = {
         productivity: '⚡ Năng suất',
+        '5s': '🧹 5S Văn Phòng',
+        safety: '🦺 An Toàn Lao Động',
         tech: '💻 Công nghệ',
         health: '🧘 Sức khỏe',
         finance: '💰 Tài chính',

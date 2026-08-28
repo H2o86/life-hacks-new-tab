@@ -448,5 +448,165 @@
     "action": "👉 Áp dụng ngay: Chọn 1 thói quen cực nhỏ (đọc 2 trang sách, chống đẩy 5 cái) và duy trì đều đặn.",
     "tags": ["#kaizen", "#atomic-habits", "#tiến-bộ"],
     "accent": "linear-gradient(135deg, #30cfd0 0%, #330867 100%)"
+  },
+  {
+    "id": "5s_001",
+    "category": "5s",
+    "categoryName": "🧹 5S Văn Phòng",
+    "title": "5S - Seiri (Sàng Lọc): Quy tắc 30 ngày cho đồ đạc",
+    "content": "Dán nhãn hoặc để riêng các hồ sơ, tài liệu, vật dụng trên bàn làm việc mà bạn chưa dùng đến trong 30 ngày qua. Nếu sau 30 ngày tiếp theo vẫn không đụng đến, hãy mạnh dạn hủy bỏ, nộp vào kho lưu trữ hoặc tái chế.",
+    "action": "👉 Áp dụng ngay: Lọc ngay 3 vật dụng hoặc tập tài liệu trên bàn đang bị bám bụi và dọn sạch khỏi không gian làm việc.",
+    "tags": ["#5s", "#seiri", "#sangloc", "#vanphonggondang"],
+    "accent": "linear-gradient(135deg, #10b981 0%, #059669 100%)"
+  },
+  {
+    "id": "5s_002",
+    "category": "5s",
+    "categoryName": "🧹 5S Văn Phòng",
+    "title": "5S - Seiton (Sắp Xếp): Quy tắc 30 giây lấy & 30 giây cất",
+    "content": "Mọi vật dụng văn phòng (bút, bấm kim, kẹp giấy, file trình ký) đều phải có một vị trí cố định được đánh dấu rõ ràng. Thiết kế vị trí sao cho bất kỳ ai cũng có thể lấy ra trong 30 giây và cất về đúng chỗ trong 30 giây.",
+    "action": "👉 Áp dụng ngay: Tạo vị trí cố định cho chìa khóa, bút viết và thẻ nhân viên ngay góc phải bàn làm việc.",
+    "tags": ["#5s", "#seiton", "#sapxep", "#toiuuchithoi"],
+    "accent": "linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%)"
+  },
+  {
+    "id": "5s_003",
+    "category": "5s",
+    "categoryName": "🧹 5S Văn Phòng",
+    "title": "5S - Seiso (Sạch Sẽ): Vệ sinh thiết bị 5 phút cuối ngày",
+    "content": "Dành 5 phút trước khi ra về để lau sạch bàn làm việc, màn hình máy tính, bàn phím và chuột. Việc vệ sinh máy tính định kỳ không chỉ diệt 99% vi khuẩn mà còn mang lại cảm giác hứng khởi cho sáng hôm sau.",
+    "action": "👉 Áp dụng ngay: Dùng khăn vi sợi lau sạch màn hình và bàn phím máy tính của bạn trước khi tắt máy.",
+    "tags": ["#5s", "#seiso", "#sachse", "#suckhoevanphong"],
+    "accent": "linear-gradient(135deg, #06b6d4 0%, #0891b2 100%)"
+  },
+  {
+    "id": "5s_004",
+    "category": "5s",
+    "categoryName": "🧹 5S Văn Phòng",
+    "title": "5S - Seiketsu (Săn Sóc): Chuẩn hóa quy trình 5S cá nhân",
+    "content": "Biến Sàng lọc, Sắp xếp và Sạch sẽ thành chuẩn mực làm việc hàng ngày. Lập danh sách kiểm tra 5S nhanh (Checklist 3 mục) dán ngay cạnh góc làm việc để duy trì không gian luôn ở trạng thái hoàn hảo.",
+    "action": "👉 Áp dụng ngay: Đặt lịch nhắc 17:25 mỗi ngày trên điện thoại để thực hiện 5S nhanh 3 phút.",
+    "tags": ["#5s", "#seiketsu", "#sansoc", "#chuanhoa"],
+    "accent": "linear-gradient(135deg, #8b5cf6 0%, #6d28d9 100%)"
+  },
+  {
+    "id": "5s_005",
+    "category": "5s",
+    "categoryName": "🧹 5S Văn Phòng",
+    "title": "5S - Shitsuke (Sẵn Sàng): Rèn luyện thói quen tự giác 5S",
+    "content": "5S không phải là một đợt tổng vệ sinh định kỳ mà là ý thức tự giác rèn luyện mỗi ngày. Khi mỗi cá nhân tự giác giữ gìn văn phòng ngăn nắp, tinh thần đồng đội và hiệu suất làm việc toàn công ty sẽ tăng đột biến.",
+    "action": "👉 Áp dụng ngay: Giúp đồng nghiệp xếp gọn lại ghế họp hoặc dọn sạch ly tách sau buổi họp nhóm.",
+    "tags": ["#5s", "#shitsuke", "#sansang", "#vanhoadoanhnghiep"],
+    "accent": "linear-gradient(135deg, #f59e0b 0%, #d97706 100%)"
+  },
+  {
+    "id": "5s_006",
+    "category": "5s",
+    "categoryName": "🧹 5S Văn Phòng",
+    "title": "5S Digital (5S File Máy Tính): Sàng lọc desktop & ổ cứng",
+    "content": "Áp dụng 5S cho máy tính: Xóa bỏ các file rác trong folder Downloads, sắp xếp các tập tin trên Desktop vào tối đa 4 thư mục chính (Dự án, Tài liệu, Công cụ, Lưu trữ). Một màn hình Desktop sạch sẽ giúp bạn bớt căng thẳng 40%.",
+    "action": "👉 Áp dụng ngay: Gom toàn bộ file lẻ tẻ trên Desktop vào 1 thư mục 'Cần Phân Loại' ngay bây giờ.",
+    "tags": ["#5sdigital", "#sapxepmaytinh", "#gondang"],
+    "accent": "linear-gradient(135deg, #ec4899 0%, #be185d 100%)"
+  },
+  {
+    "id": "5s_007",
+    "category": "5s",
+    "categoryName": "🧹 5S Văn Phòng",
+    "title": "5S Quản lý dây cáp điện văn phòng (Cable Management)",
+    "content": "Dây điện, dây sạc lộn xộn dưới chân bàn vừa mất thẩm mỹ vừa dễ gây vấp ngã hoặc chập điện. Dùng dây rút (Zip ties) hoặc ống bọc cáp để gom gọn toàn bộ dây nguồn máy tính thành một nhánh duy nhất.",
+    "action": "👉 Áp dụng ngay: Dùng kẹp bướm hoặc kẹp nhựa cố định đầu dây sạc điện thoại lên cạnh bàn làm việc.",
+    "tags": ["#5svanphong", "#dondang", "#antoandien"],
+    "accent": "linear-gradient(135deg, #14b8a6 0%, #0f766e 100%)"
+  },
+  {
+    "id": "5s_008",
+    "category": "5s",
+    "categoryName": "🧹 5S Văn Phòng",
+    "title": "5S Trực quan hóa (Visual Management) trong văn phòng",
+    "content": "Sử dụng màu sắc và nhãn dán để quản lý hồ sơ: Dán nhãn màu đỏ cho hồ sơ khẩn cấp, màu xanh cho dự án đang chạy, màu vàng cho tài liệu tham khảo. Nhìn lướt qua 1 giây là nhận biết ngay thông tin.",
+    "action": "👉 Áp dụng ngay: Dán nhãn phân loại màu sắc cho 3 bìa hồ sơ quan trọng nhất trên kệ.",
+    "tags": ["#5s", "#visualmanagement", "#trucquan"],
+    "accent": "linear-gradient(135deg, #6366f1 0%, #4338ca 100%)"
+  },
+  {
+    "id": "safety_001",
+    "category": "safety",
+    "categoryName": "🦺 An Toàn Lao Động",
+    "title": "An toàn tư thế ngồi máy tính chuẩn Ergonomics",
+    "content": "Chỉnh đỉnh màn hình ngang tầm mắt, hai bàn chân đặt bằng phẳng trên sàn, lưng tựa sát vào tựa lưng tự nhiên của ghế. Khuỷu tay vuông góc 90 độ khi gõ bàn phím để tránh hội chứng ống cổ tay và thoái hóa đốt sống cổ.",
+    "action": "👉 Áp dụng ngay: Điều chỉnh độ cao ghế và góc màn hình sao cho mắt bạn nhìn thẳng vào 1/3 trên của màn hình.",
+    "tags": ["#antoanlaodong", "#ergonomics", "#tuthengoi", "#suckhoevanphong"],
+    "accent": "linear-gradient(135deg, #ef4444 0%, #b91c1c 100%)"
+  },
+  {
+    "id": "safety_002",
+    "category": "safety",
+    "categoryName": "🦺 An Toàn Lao Động",
+    "title": "Quy tắc 20-20-20 bảo vệ thị lực khi làm việc",
+    "content": "Sau mỗi 20 phút nhìn vào màn hình máy tính, hãy nhìn xa 20 feet (khoảng 6 mét) trong vòng ít nhất 20 giây. Thói quen này giúp cơ mắt thư giãn, chống khô mắt, nhức mỏi và chói mắt hiệu quả.",
+    "action": "👉 Áp dụng ngay: Hướng mắt ra cửa sổ hoặc chậu cây xanh gần nhất trong 20 giây ngay bây giờ!",
+    "tags": ["#matkhoe", "#202020", "#antoanmat", "#congty"],
+    "accent": "linear-gradient(135deg, #10b981 0%, #047857 100%)"
+  },
+  {
+    "id": "safety_003",
+    "category": "safety",
+    "categoryName": "🦺 An Toàn Lao Động",
+    "title": "An toàn điện văn phòng & Chống quá tải ổ cắm",
+    "content": "Không cắm nối tiếp quá nhiều ổ cắm truyền động (Daisy chaining) hoặc cắm thiết bị công suất cao (bấm nhiệt, ấm siêu tốc, máy sưởi) chung một ổ cắm máy tính. Kiểm tra dây điện nếu bị rách vỏ nhựa cách điện thì phải thay ngay.",
+    "action": "👉 Áp dụng ngay: Kiểm tra ngay ổ cắm dưới chân bàn xem có bị đè nén hoặc cắm quá tải không.",
+    "tags": ["#antoandien", "#pccc", "#antoanlaodong"],
+    "accent": "linear-gradient(135deg, #f59e0b 0%, #b45309 100%)"
+  },
+  {
+    "id": "safety_004",
+    "category": "safety",
+    "categoryName": "🦺 An Toàn Lao Động",
+    "title": "Quy tắc An toàn PCCC & Lối thoát hiểm văn phòng",
+    "content": "Luôn ghi nhớ vị trí bình chữa cháy gần nhất và lối thoát hiểm của tầng làm việc. Tuyệt đối không để hàng hóa, thùng carton hay vật dụng chèn chắn trước cửa thoát hiểm hoặc tủ chứa bình chữa cháy.",
+    "action": "👉 Áp dụng ngay: Hãy quay sang tìm xem bình chữa cháy gần bàn làm việc của bạn nằm ở đâu.",
+    "tags": ["#pccc", "#thoathiem", "#antoanvanphong"],
+    "accent": "linear-gradient(135deg, #dc2626 0%, #991b1b 100%)"
+  },
+  {
+    "id": "safety_005",
+    "category": "safety",
+    "categoryName": "🦺 An Toàn Lao Động",
+    "title": "Phòng tránh chấn thương do trượt ngã (Slips & Trips)",
+    "content": "Trượt ngã là tai nạn phổ biến nhất tại văn phòng. Lau khô ngay tức khắc vết nước đổ trên sàn, không đi tất trên sàn gạch bóng, và nhặt ngay các vật nhỏ (bút, kẹp giấy, sỏi đá) rơi trên sàn nhà.",
+    "action": "👉 Áp dụng ngay: Báo cho bộ phận vệ sinh hoặc tự tay lau sạch nếu phát hiện giọt nước đổ gần cây nước uống.",
+    "tags": ["#antoanlaodong", "#phongtranhchanthuong", "#vanphong"],
+    "accent": "linear-gradient(135deg, #fb923c 0%, #c2410c 100%)"
+  },
+  {
+    "id": "safety_006",
+    "category": "safety",
+    "categoryName": "🦺 An Toàn Lao Động",
+    "title": "An toàn khi nâng hạ vật nặng (Manual Handling)",
+    "content": "Khi bê thùng tài liệu hoặc thiết bị nặng: Đứng sát vật thể, gập đầu gối (dùng lực cơ đùi chứ không dùng lực lưng), giữ lưng thẳng và ôm sát vật vào ngực trước khi đứng lên. Tuyệt đối không xoay người đột ngột khi đang bê nặng.",
+    "action": "👉 Áp dụng ngay: Luôn hạ thấp trọng tâm và dùng lực chân khi nhấc thùng giấy tài liệu từ dưới sàn.",
+    "tags": ["#bematngung", "#antoancotban", "#laodong"],
+    "accent": "linear-gradient(135deg, #84cc16 0%, #4d7c0f 100%)"
+  },
+  {
+    "id": "safety_007",
+    "category": "safety",
+    "categoryName": "🦺 An Toàn Lao Động",
+    "title": "Vấn đề chất lượng không khí & Thông thoáng văn phòng",
+    "content": "Ngồi trong phòng máy lạnh kín thời gian dài dễ gây mệt mỏi do thiếu oxy và tích tụ CO2. Hãy mở cửa sổ thông gió 10 phút vào đầu buổi sáng hoặc đi dạo ra không gian mở ngoài trời trong giờ nghỉ giải lao.",
+    "action": "👉 Áp dụng ngay: Bước ra ban công hoặc cửa sổ hít thở sâu 5 nhịp không khí tự nhiên.",
+    "tags": ["#khongkhisach", "#suckhoelaodong", "#vanphong"],
+    "accent": "linear-gradient(135deg, #0ea5e9 0%, #0369a1 100%)"
+  },
+  {
+    "id": "safety_008",
+    "category": "safety",
+    "categoryName": "🦺 An Toàn Lao Động",
+    "title": "Bảo vệ sức khỏe tâm thần & Chống Kiệt Sức (Burnout)",
+    "content": "An toàn lao động bao gồm cả an toàn sức khỏe tâm thần. Khi cảm thấy quá tải stress, hãy áp dụng kỹ thuật thở bụng 4-7-8 (Hít vào 4s - Giữ 7s - Thở ra 8s) để hạ nhịp tim và đưa hệ thần kinh về trạng thái cân bằng.",
+    "action": "👉 Áp dụng ngay: Nhắm mắt lại và thực hiện 3 nhịp hít thở sâu 4-7-8 ngay lúc này.",
+    "tags": ["#suckhoetamthan", "#stressmanagement", "#burnout"],
+    "accent": "linear-gradient(135deg, #a855f7 0%, #7e22ce 100%)"
   }
 ]
