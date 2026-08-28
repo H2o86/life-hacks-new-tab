@@ -163,8 +163,29 @@
     todoActiveList: document.getElementById('todoActiveList'),
     todoCompletedList: document.getElementById('todoCompletedList'),
     btnClearCompleted: document.getElementById('btnClearCompleted'),
-    btnToggleAddForm: document.getElementById('btnToggleAddForm'),
     todoFormContainer: document.getElementById('todoFormContainer'),
+    btnExpandTaskView: document.getElementById('btnExpandTaskView'),
+
+    // Task Alarm Center Screen Popup
+    taskAlarmModal: document.getElementById('taskAlarmModal'),
+    alarmTaskTitle: document.getElementById('alarmTaskTitle'),
+    alarmTaskEst: document.getElementById('alarmTaskEst'),
+    alarmTaskDeadline: document.getElementById('alarmTaskDeadline'),
+    btnAlarmStart: document.getElementById('btnAlarmStart'),
+    btnAlarmSnooze: document.getElementById('btnAlarmSnooze'),
+    btnAlarmClose: document.getElementById('btnAlarmClose'),
+
+    // Fullscreen Windows Task View Overlay
+    taskViewOverlay: document.getElementById('taskViewOverlay'),
+    btnTaskViewClose: document.getElementById('btnTaskViewClose'),
+    tvCountUrgent: document.getElementById('tvCountUrgent'),
+    tvListUrgent: document.getElementById('tvListUrgent'),
+    tvCountToday: document.getElementById('tvCountToday'),
+    tvListToday: document.getElementById('tvListToday'),
+    tvCountUpcoming: document.getElementById('tvCountUpcoming'),
+    tvListUpcoming: document.getElementById('tvListUpcoming'),
+    tvCountCompleted: document.getElementById('tvCountCompleted'),
+    tvListCompleted: document.getElementById('tvListCompleted'),
 
     // Daily Work Efficiency Card
     dailyEfficiencyCard: document.getElementById('dailyEfficiencyCard'),
@@ -1728,6 +1749,8 @@
         elements.todoCompletedList.appendChild(groupDiv);
       });
     }
+
+    renderTaskViewGrid();
   }
 
   function formatCompletedDateLabel(dateStr) {
@@ -2205,6 +2228,47 @@
       });
     }
 
+    // Task View Fullscreen Overlay Open / Close
+    if (elements.btnExpandTaskView && elements.taskViewOverlay) {
+      elements.btnExpandTaskView.addEventListener('click', () => {
+        elements.taskViewOverlay.classList.add('active');
+        renderTaskViewGrid();
+      });
+    }
+
+    if (elements.btnTaskViewClose && elements.taskViewOverlay) {
+      elements.btnTaskViewClose.addEventListener('click', () => {
+        elements.taskViewOverlay.classList.remove('active');
+      });
+    }
+
+    // Alarm Modal Controls
+    if (elements.btnAlarmStart) {
+      elements.btnAlarmStart.addEventListener('click', () => {
+        if (activeAlarmTask) {
+          if (elements.taskAlarmModal) elements.taskAlarmModal.classList.remove('active');
+          toggleTaskTimer(activeAlarmTask.id);
+          showToast('🚀 Đã bắt đầu thực hiện task!', '⚡');
+        }
+      });
+    }
+
+    if (elements.btnAlarmSnooze) {
+      elements.btnAlarmSnooze.addEventListener('click', () => {
+        if (activeAlarmTask) {
+          snoozedTaskUntil[activeAlarmTask.id] = Date.now() + 5 * 60 * 1000; // Snooze for 5 minutes
+          if (elements.taskAlarmModal) elements.taskAlarmModal.classList.remove('active');
+          showToast('⏱️ Đã hẹn nhắc lại sau 5 phút', '⏰');
+        }
+      });
+    }
+
+    if (elements.btnAlarmClose) {
+      elements.btnAlarmClose.addEventListener('click', () => {
+        if (elements.taskAlarmModal) elements.taskAlarmModal.classList.remove('active');
+      });
+    }
+
     if (elements.btnClearCompleted) {
       elements.btnClearCompleted.addEventListener('click', async () => {
         todoList = todoList.filter(t => !t.completed);
@@ -2244,6 +2308,144 @@
           renderTodoList();
         }
       });
+    }
+
+    // ESC key listener to close modals / task view
+    window.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        if (elements.taskViewOverlay && elements.taskViewOverlay.classList.contains('active')) {
+          elements.taskViewOverlay.classList.remove('active');
+        }
+        if (elements.taskAlarmModal && elements.taskAlarmModal.classList.contains('active')) {
+          elements.taskAlarmModal.classList.remove('active');
+        }
+      }
+    });
+
+    // Start 5-second Task Alarm Checking Ticker
+    setInterval(checkTaskAlarms, 5000);
+  }
+
+  let activeAlarmTask = null;
+  const alertedTaskIds = new Set();
+  const snoozedTaskUntil = {};
+
+  function playAlarmChimeSound() {
+    try {
+      const AudioCtx = window.AudioContext || window.webkitAudioContext;
+      if (!AudioCtx) return;
+      const ctx = new AudioCtx();
+      const now = ctx.currentTime;
+      
+      const osc1 = ctx.createOscillator();
+      const gain1 = ctx.createGain();
+      osc1.type = 'sine';
+      osc1.frequency.setValueAtTime(880, now);
+      gain1.gain.setValueAtTime(0.3, now);
+      gain1.gain.exponentialRampToValueAtTime(0.001, now + 0.4);
+      osc1.connect(gain1);
+      gain1.connect(ctx.destination);
+      osc1.start(now);
+      osc1.stop(now + 0.4);
+
+      const osc2 = ctx.createOscillator();
+      const gain2 = ctx.createGain();
+      osc2.type = 'sine';
+      osc2.frequency.setValueAtTime(1046.5, now + 0.25);
+      gain2.gain.setValueAtTime(0.4, now + 0.25);
+      gain2.gain.exponentialRampToValueAtTime(0.001, now + 0.8);
+      osc2.connect(gain2);
+      gain2.connect(ctx.destination);
+      osc2.start(now + 0.25);
+      osc2.stop(now + 0.8);
+    } catch (e) {
+      console.warn('AudioContext playback blocked or error:', e);
+    }
+  }
+
+  function checkTaskAlarms() {
+    if (!todoList || todoList.length === 0) return;
+    const now = Date.now();
+
+    for (const todo of todoList) {
+      if (todo.completed || todo.timerRunning) continue;
+
+      const deadlineInfo = getDeadlineInfo(todo);
+      if (deadlineInfo && (deadlineInfo.isMustStartNow || deadlineInfo.isOverdue)) {
+        if (snoozedTaskUntil[todo.id] && now < snoozedTaskUntil[todo.id]) continue;
+        if (alertedTaskIds.has(todo.id)) continue;
+
+        triggerTaskAlarm(todo);
+        break;
+      }
+    }
+  }
+
+  function triggerTaskAlarm(todo) {
+    activeAlarmTask = todo;
+    alertedTaskIds.add(todo.id);
+
+    if (elements.alarmTaskTitle) elements.alarmTaskTitle.textContent = todo.text;
+    if (elements.alarmTaskEst) elements.alarmTaskEst.textContent = todo.estMinutes ? `${todo.estMinutes} phút` : 'Chưa đặt';
+    if (elements.alarmTaskDeadline) {
+      elements.alarmTaskDeadline.textContent = todo.dueDate ? `${todo.dueDate} ${todo.dueTime || ''}` : 'Trong ngày';
+    }
+
+    if (elements.taskAlarmModal) {
+      elements.taskAlarmModal.classList.add('active');
+      playAlarmChimeSound();
+    }
+  }
+
+  function renderTaskViewGrid() {
+    if (!elements.taskViewOverlay || !elements.taskViewOverlay.classList.contains('active')) return;
+
+    const activeTodos = todoList.filter(t => !t.completed);
+    const completedTodos = todoList.filter(t => t.completed);
+
+    const urgentList = [];
+    const todayList = [];
+    const upcomingList = [];
+
+    activeTodos.forEach(todo => {
+      const info = getDeadlineInfo(todo);
+      if (info && (info.isOverdue || info.isMustStartNow)) {
+        urgentList.push(todo);
+      } else if (isDueToday(todo)) {
+        todayList.push(todo);
+      } else {
+        upcomingList.push(todo);
+      }
+    });
+
+    urgentList.sort((a, b) => getTaskPriorityScore(a) - getTaskPriorityScore(b));
+    todayList.sort((a, b) => (b.createdAt || 0) - (a.createdAt || 0));
+    upcomingList.sort((a, b) => (b.createdAt || 0) - (a.createdAt || 0));
+    completedTodos.sort((a, b) => (b.createdAt || 0) - (a.createdAt || 0));
+
+    if (elements.tvCountUrgent) elements.tvCountUrgent.textContent = urgentList.length;
+    if (elements.tvCountToday) elements.tvCountToday.textContent = todayList.length;
+    if (elements.tvCountUpcoming) elements.tvCountUpcoming.textContent = upcomingList.length;
+    if (elements.tvCountCompleted) elements.tvCountCompleted.textContent = completedTodos.length;
+
+    if (elements.tvListUrgent) {
+      elements.tvListUrgent.innerHTML = urgentList.length === 0 ? '<div class="todo-empty-state">✨ Không có task quá hạn</div>' : '';
+      urgentList.forEach((t, i) => elements.tvListUrgent.appendChild(createTodoItemElement(t, i + 1)));
+    }
+
+    if (elements.tvListToday) {
+      elements.tvListToday.innerHTML = todayList.length === 0 ? '<div class="todo-empty-state">✨ Không có task trong ngày</div>' : '';
+      todayList.forEach((t, i) => elements.tvListToday.appendChild(createTodoItemElement(t, i + 1)));
+    }
+
+    if (elements.tvListUpcoming) {
+      elements.tvListUpcoming.innerHTML = upcomingList.length === 0 ? '<div class="todo-empty-state">✨ Chưa có task sắp tới</div>' : '';
+      upcomingList.forEach((t, i) => elements.tvListUpcoming.appendChild(createTodoItemElement(t, i + 1)));
+    }
+
+    if (elements.tvListCompleted) {
+      elements.tvListCompleted.innerHTML = completedTodos.length === 0 ? '<div class="todo-empty-state">📌 Chưa có task hoàn thành</div>' : '';
+      completedTodos.forEach((t, i) => elements.tvListCompleted.appendChild(createTodoItemElement(t, i + 1)));
     }
   }
 

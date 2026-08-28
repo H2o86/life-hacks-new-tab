@@ -30,6 +30,7 @@
           <div class="todo-header-title">
             <h3>📋 Công Việc Cần Làm</h3>
             <button type="button" class="btn-toggle-add-form" id="btnToggleAddForm" title="Bấm để mở giao diện thêm công việc mới">+</button>
+            <button type="button" class="btn-expand-task-view" id="btnExpandTaskView" title="Mở rộng danh sách công việc toàn màn hình (Task View)">⛶ Mở Rộng</button>
           </div>
           <button class="todo-minimize-btn" id="btnMinimizeTodo" title="Thu gọn">&times;</button>
         </div>
@@ -706,6 +707,94 @@
           <button type="submit" class="btn-primary">Thêm Lối Tắt</button>
         </div>
       </form>
+    </div>
+  </div>
+
+  <!-- Center Screen Task Alarm Reminder Modal -->
+  <div class="modal-overlay alarm-popup-overlay" id="taskAlarmModal">
+    <div class="modal-card alarm-modal-card">
+      <div class="alarm-header-banner">
+        <span class="alarm-banner-icon">⚡</span>
+        <h3>ĐẾN GIỜ BẮT ĐẦU CÔNG VIỆC!</h3>
+      </div>
+      <div class="alarm-modal-body">
+        <div class="alarm-task-icon">⏰</div>
+        <h2 class="alarm-task-title" id="alarmTaskTitle">Tên công việc...</h2>
+        <div class="alarm-task-details">
+          <div class="alarm-detail-item">
+            <span class="detail-label">⏱️ Dự kiến làm:</span>
+            <span class="detail-val" id="alarmTaskEst">30 phút</span>
+          </div>
+          <div class="alarm-detail-item">
+            <span class="detail-label">🎯 Hạn chót:</span>
+            <span class="detail-val" id="alarmTaskDeadline">17:00 (Hôm nay)</span>
+          </div>
+        </div>
+        <p class="alarm-advice-tip">🚀 Hãy bắt đầu làm ngay để hoàn thành công việc đúng tiến độ!</p>
+      </div>
+      <div class="alarm-modal-footer">
+        <button type="button" class="btn-alarm-start" id="btnAlarmStart">🚀 Bắt Đầu Ngay</button>
+        <button type="button" class="btn-alarm-snooze" id="btnAlarmSnooze">⏱️ Báo Lại Sau 5 Phút</button>
+        <button type="button" class="btn-alarm-close" id="btnAlarmClose">❌ Đóng</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Windows Task View Fullscreen Grid Modal -->
+  <div class="modal-overlay task-view-overlay" id="taskViewOverlay">
+    <div class="task-view-container">
+      <div class="task-view-header">
+        <div class="task-view-title-box">
+          <h2>⛶ Windows Task View - Quản Lý Công Việc Toàn Màn Hình</h2>
+          <span class="task-view-subtitle">Giao diện danh sách mở rộng trực quan, kiểm soát toàn bộ công việc theo bảng</span>
+        </div>
+        <div class="task-view-header-actions">
+          <button type="button" class="btn-task-view-close" id="btnTaskViewClose" title="Thu gọn giao diện (&lt; ESC &gt;)">↙️ Thu Gọn</button>
+        </div>
+      </div>
+
+      <!-- Task View Grid Columns -->
+      <div class="task-view-grid">
+        <!-- Column 1: Overdue & Urgent -->
+        <div class="task-view-col col-urgent">
+          <div class="col-header">
+            <span class="col-icon">🚨</span>
+            <h3>Cần Làm Ngay & Quá Hạn</h3>
+            <span class="col-count" id="tvCountUrgent">0</span>
+          </div>
+          <div class="col-body" id="tvListUrgent"></div>
+        </div>
+
+        <!-- Column 2: Due Today -->
+        <div class="task-view-col col-today">
+          <div class="col-header">
+            <span class="col-icon">⏳</span>
+            <h3>Công Việc Trong Ngày</h3>
+            <span class="col-count" id="tvCountToday">0</span>
+          </div>
+          <div class="col-body" id="tvListToday"></div>
+        </div>
+
+        <!-- Column 3: Upcoming / General -->
+        <div class="task-view-col col-upcoming">
+          <div class="col-header">
+            <span class="col-icon">📅</span>
+            <h3>Công Việc Sắp Tới</h3>
+            <span class="col-count" id="tvCountUpcoming">0</span>
+          </div>
+          <div class="col-body" id="tvListUpcoming"></div>
+        </div>
+
+        <!-- Column 4: Completed History -->
+        <div class="task-view-col col-completed">
+          <div class="col-header">
+            <span class="col-icon">✅</span>
+            <h3>Đã Hoàn Thành</h3>
+            <span class="col-count" id="tvCountCompleted">0</span>
+          </div>
+          <div class="col-body" id="tvListCompleted"></div>
+        </div>
+      </div>
     </div>
   </div>
 
