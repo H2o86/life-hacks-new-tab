@@ -3963,6 +3963,39 @@ textarea:focus {
   opacity: 0.9;
 }
 
+/* Resize Handle for Timeline Task Slices */
+.slice-resize-handle {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 12px;
+  background: rgba(255, 255, 255, 0.2);
+  cursor: ew-resize;
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
+  transition: background 0.15s ease;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.slice-resize-handle:hover,
+.slice-resize-handle:active {
+  background: rgba(255, 255, 255, 0.5);
+  box-shadow: 0 0 8px rgba(255, 255, 255, 0.8);
+}
+
+.slice-resize-handle::after {
+  content: '||';
+  font-size: 0.6rem;
+  font-weight: 800;
+  color: #ffffff;
+  letter-spacing: -1px;
+  opacity: 0.8;
+}
+
 /* Unscheduled Tray */
 .sandwich-unscheduled-tray {
   padding: 14px 24px;

@@ -2604,9 +2604,10 @@
             <span class="sandwich-slice-time">⏰ ${startTimeStr} - ${endTimeStr}</span>
           </div>
           <div class="sandwich-slice-footer">
-            <span>⏱️ ${item.estMin}m</span>
+            <span class="slice-est-badge">⏱️ ${item.estMin}m</span>
             <span>${isConflicting ? '⚠️ Xung đột' : '✅ Hợp lý'}</span>
           </div>
+          <div class="slice-resize-handle" title="Kéo mép phải để co giãn thời lượng"></div>
         `;
 
         // Pointer Dragging for Slice
@@ -2669,6 +2670,63 @@
 
         slice.addEventListener('pointerup', handlePointerEnd);
         slice.addEventListener('pointercancel', handlePointerEnd);
+
+        // Right Handle Resizing for Slice Duration
+        const resizeHandle = slice.querySelector('.slice-resize-handle');
+        if (resizeHandle) {
+          let isResizing = false;
+          let resizeStartX = 0;
+          let initialEstMin = item.estMin;
+
+          resizeHandle.addEventListener('pointerdown', (e) => {
+            e.stopPropagation();
+            if (e.button !== 0) return;
+            resizeStartX = e.clientX;
+            initialEstMin = item.estMin;
+            isResizing = true;
+            try { resizeHandle.setPointerCapture(e.pointerId); } catch (err) {}
+            slice.style.transition = 'none';
+          });
+
+          resizeHandle.addEventListener('pointermove', (e) => {
+            if (!isResizing) return;
+            const deltaX = e.clientX - resizeStartX;
+            const trackWidth = elements.timelineTrackContainer.clientWidth || 1440;
+            const deltaMin = (deltaX / trackWidth) * 1440;
+            const newEstMin = Math.max(15, Math.min(480, Math.round((initialEstMin + deltaMin) / 5) * 5));
+
+            const newWidthPct = Math.max((newEstMin / 1440) * 100, 2.5);
+            slice.style.width = `${newWidthPct}%`;
+
+            const endTimeStr = formatMinToTime(item.startMin + newEstMin);
+            const timeBadge = slice.querySelector('.sandwich-slice-time');
+            if (timeBadge) timeBadge.textContent = `⏰ ${formatMinToTime(item.startMin)} - ${endTimeStr}`;
+
+            const estBadge = slice.querySelector('.slice-est-badge');
+            if (estBadge) estBadge.textContent = `⏱️ ${newEstMin}m`;
+          });
+
+          const handleResizeEnd = async (e) => {
+            if (!isResizing) return;
+            isResizing = false;
+            try { resizeHandle.releasePointer(e.pointerId); } catch (err) {}
+            slice.style.transition = '';
+
+            const deltaX = e.clientX - resizeStartX;
+            const trackWidth = elements.timelineTrackContainer.clientWidth || 1440;
+            const deltaMin = (deltaX / trackWidth) * 1440;
+            const newEstMin = Math.max(15, Math.min(480, Math.round((initialEstMin + deltaMin) / 5) * 5));
+
+            item.todo.estMinutes = newEstMin;
+            await window.StorageService.saveTodoList(todoList);
+            renderTodoList();
+            renderSandwichPlateTimeline();
+            showToast(`⏱️ Đã co giãn thời lượng task "${item.todo.text}" thành ${newEstMin} phút!`, '⌛');
+          };
+
+          resizeHandle.addEventListener('pointerup', handleResizeEnd);
+          resizeHandle.addEventListener('pointercancel', handleResizeEnd);
+        }
 
         elements.timelineTrack.appendChild(slice);
       });
@@ -2879,18 +2937,31 @@
         if (!todo) return;
 
         const colType = col.dataset.colType;
+        const todayStr = getTodayStr();
+
         if (colType === 'completed') {
           todo.completed = true;
-          todo.lastCompletedDate = getTodayStr();
+          todo.lastCompletedDate = todayStr;
+          showToast(`✅ Đã hoàn thành task "${todo.text}"!`, '🎉');
         } else {
-          // Unschedule from timeline
-          todo.dueTime = null;
+          todo.completed = false;
+          if (colType === 'today' || colType === 'urgent') {
+            todo.dueDate = todayStr;
+            showToast(`⏳ Đã chuyển task "${todo.text}" sang Trong Ngày!`, '📌');
+          } else if (colType === 'upcoming') {
+            const tomorrow = new Date();
+            tomorrow.setDate(tomorrow.getDate() + 1);
+            const m = String(tomorrow.getMonth() + 1).padStart(2, '0');
+            const d = String(tomorrow.getDate()).padStart(2, '0');
+            todo.dueDate = `${tomorrow.getFullYear()}-${m}-${d}`;
+            todo.dueTime = null;
+            showToast(`📅 Đã chuyển task "${todo.text}" sang Công Việc Sắp Tới!`, '📌');
+          }
         }
 
         await window.StorageService.saveTodoList(todoList);
         renderTodoList();
         renderSandwichPlateTimeline();
-        showToast(`📌 Đã chuyển task "${todo.text}" về danh sách!`, '📋');
       });
     });
   }
