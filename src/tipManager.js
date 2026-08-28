@@ -237,6 +237,8 @@ class TipManager {
       const category = categoryFilter && categoryFilter !== 'all' ? categoryFilter : this.detectCategory(rawEnglishAdvice + ' ' + vietnameseAdvice);
       const catNames = {
         productivity: '⚡ Năng suất',
+        '5s': '🧹 5S Văn Phòng',
+        safety: '🦺 An Toàn Lao Động',
         tech: '💻 Công nghệ',
         health: '🧘 Sức khỏe',
         finance: '💰 Tài chính',
@@ -300,6 +302,8 @@ class TipManager {
             const category = categoryFilter && categoryFilter !== 'all' ? categoryFilter : this.detectCategory(rawEnglish + ' ' + vietnameseAdvice);
             const catNames = {
               productivity: '⚡ Năng suất',
+              '5s': '🧹 5S Văn Phòng',
+              safety: '🦺 An Toàn Lao Động',
               tech: '💻 Công nghệ',
               health: '🧘 Sức khỏe',
               finance: '💰 Tài chính',
@@ -334,6 +338,12 @@ class TipManager {
    */
   detectCategory(text) {
     const lower = text.toLowerCase();
+    if (lower.includes('5s') || lower.includes('sàng lọc') || lower.includes('sắp xếp') || lower.includes('sạch sẽ') || lower.includes('săn sóc') || lower.includes('sẵn sàng') || lower.includes('tủ hồ sơ') || lower.includes('bàn làm việc')) {
+      return '5s';
+    }
+    if (lower.includes('an toàn') || lower.includes('bảo hộ') || lower.includes('ppe') || lower.includes('nguy cơ') || lower.includes('máy móc') || lower.includes('cháy nổ') || lower.includes('điện') || lower.includes('thoát hiểm')) {
+      return 'safety';
+    }
     if (lower.includes('work') || lower.includes('time') || lower.includes('plan') || lower.includes('goal') || lower.includes('focus') || lower.includes('task') || lower.includes('công việc') || lower.includes('thời gian') || lower.includes('mục tiêu') || lower.includes('làm việc')) {
       return 'productivity';
     }

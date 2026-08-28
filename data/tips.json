@@ -6,7 +6,11 @@
     "title": "Quy tắc 2 phút của David Allen",
     "content": "Nếu một công việc nào đó tốn ít hơn 2 phút để hoàn thành (như trả lời email ngắn, dọn bàn làm việc, cất tài liệu), hãy làm ngay lập tức thay vì ghi vào danh sách việc cần làm.",
     "action": "👉 Áp dụng ngay: Tìm ngay 1 việc dưới 2 phút bạn đang trì hoãn và xử lý dứt điểm trong 120 giây tới!",
-    "tags": ["#quanlythoigian", "#trihoan", "#gettingthingsdone"],
+    "tags": [
+      "#quanlythoigian",
+      "#trihoan",
+      "#gettingthingsdone"
+    ],
     "accent": "linear-gradient(135deg, #f6d365 0%, #fda085 100%)"
   },
   {
@@ -16,7 +20,11 @@
     "title": "Phương pháp Pomodoro cải tiến 50/10",
     "content": "Thay vì 25 phút làm việc / 5 phút nghỉ truyền thống, phiên 50 phút tập trung sâu và 10 phút nghỉ ngơi giúp não bộ đi sâu vào trạng thái 'Flow State' mà không bị ngắt mạch suy nghĩ quá sớm.",
     "action": "👉 Áp dụng ngay: Đặt đồng hồ 50 phút cho phiên làm việc tiếp theo, tắt hết thông báo mạng xã hội.",
-    "tags": ["#pomodoro", "#flowstate", "#focus"],
+    "tags": [
+      "#pomodoro",
+      "#flowstate",
+      "#focus"
+    ],
     "accent": "linear-gradient(135deg, #f093fb 0%, #f5576c 100%)"
   },
   {
@@ -26,7 +34,11 @@
     "title": "Ăn con ếch (Eat That Frog)",
     "content": "Năng lượng ý chí của bạn cao nhất vào đầu ngày. Hãy chọn ra nhiệm vụ quan trọng nhất, khó nhằn nhất và giải quyết nó đầu tiên trước khi làm bất kỳ việc vặt nào khác.",
     "action": "👉 Áp dụng ngay: Xác định nhiệm vụ quan trọng nhất (MIT) của hôm nay và dành 60 phút đầu giờ giải quyết nó.",
-    "tags": ["#eatthafrog", "#uutien", "#hieuqua"],
+    "tags": [
+      "#eatthafrog",
+      "#uutien",
+      "#hieuqua"
+    ],
     "accent": "linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)"
   },
   {
@@ -36,7 +48,11 @@
     "title": "Quy tắc 5 giây (The 5 Second Rule)",
     "content": "Khoảnh khắc bạn có thôi thúc làm một việc có ích, hãy đếm ngược 5-4-3-2-1 và hành động ngay trước khi não bộ kịp đưa ra những lý do để trì hoãn và bàn lùi.",
     "action": "👉 Áp dụng ngay: Đếm nhẩm 5-4-3-2-1 và bật dậy khỏi ghế ngay khi bạn muốn bắt đầu một thói quen tốt!",
-    "tags": ["#5secondrule", "#dongluc", "#trihoan"],
+    "tags": [
+      "#5secondrule",
+      "#dongluc",
+      "#trihoan"
+    ],
     "accent": "linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%)"
   },
   {
@@ -46,7 +62,11 @@
     "title": "Ma trận Eisenhower phân loại công việc",
     "content": "Chia công việc thành 4 nhóm: 1. Khẩn cấp & Quan trọng (Làm ngay), 2. Không khẩn cấp nhưng Quan trọng (Lên lịch), 3. Khẩn cấp nhưng Không quan trọng (Ủy quyền), 4. Không cả hai (Xóa bỏ).",
     "action": "👉 Áp dụng ngay: Dành 80% thời gian cho nhóm 2 (Học hỏi, sức khỏe, dự án dài hạn) để không bị rơi vào khủng hoảng.",
-    "tags": ["#eisenhower", "#kehoach", "#toiuu"],
+    "tags": [
+      "#eisenhower",
+      "#kehoach",
+      "#toiuu"
+    ],
     "accent": "linear-gradient(135deg, #43e97b 0%, #38f9d7 100%)"
   },
   {
@@ -56,7 +76,11 @@
     "title": "Kỹ thuật Time Boxing (Chia khối thời gian)",
     "content": "Thay vì dùng một to-do list dài ngoằng khiến bạn choáng ngợp, hãy gán từng công việc vào một khung giờ cụ thể trên lịch. Khi biết rõ 'lúc nào làm việc gì', bạn sẽ loại bỏ hoàn toàn sự phân vân.",
     "action": "👉 Áp dụng ngay: Khóa cứng 2 tiếng sáng mai trên Google Calendar chỉ dành riêng cho 1 dự án quan trọng nhất.",
-    "tags": ["#timeboxing", "#calendar", "#focus"],
+    "tags": [
+      "#timeboxing",
+      "#calendar",
+      "#focus"
+    ],
     "accent": "linear-gradient(135deg, #4481eb 0%, #04befe 100%)"
   },
   {
@@ -66,7 +90,11 @@
     "title": "Quy tắc Batching (Gom nhóm công việc)",
     "content": "Não bộ mất tới 23 phút để lấy lại tập trung sau mỗi lần chuyển đổi ngữ cảnh. Hãy gom các việc vặt tương tự nhau (như check email, trả lời tin nhắn, thanh toán hóa đơn) vào 1 khung giờ duy nhất trong ngày.",
     "action": "👉 Áp dụng ngay: Chỉ mở và trả lời email vào 2 khung giờ cố định: 11h trưa và 16h30 chiều.",
-    "tags": ["#batching", "#focus", "#contextswitch"],
+    "tags": [
+      "#batching",
+      "#focus",
+      "#contextswitch"
+    ],
     "accent": "linear-gradient(135deg, #667eea 0%, #764ba2 100%)"
   },
   {
@@ -76,7 +104,11 @@
     "title": "Kỹ thuật 'Ngắt kết nối nhân tạo' để tập trung sâu",
     "content": "Khi cần viết lách, lập trình hay suy nghĩ chiến lược, hãy tạm thời rút dây mạng hoặc bật chế độ Máy bay (Airplane mode) trên máy tính trong 45 phút. Không internet = không xao nhãng.",
     "action": "👉 Áp dụng ngay: Tắt Wi-Fi trong 30 phút tới để hoàn thành bản nháp báo cáo của bạn.",
-    "tags": ["#deepwork", "#focus", "#offline"],
+    "tags": [
+      "#deepwork",
+      "#focus",
+      "#offline"
+    ],
     "accent": "linear-gradient(135deg, #2af598 0%, #009efd 100%)"
   },
   {
@@ -86,7 +118,11 @@
     "title": "Nguyên lý Pareto 80/20 trong công việc",
     "content": "80% kết quả công việc đến từ 20% nỗ lực trọng tâm. Hãy liên tục tự hỏi: 'Trong 10 việc mình chuẩn bị làm, 2 việc nào tạo ra 80% giá trị lớn nhất?' để tập trung tối đa.",
     "action": "👉 Áp dụng ngay: Gạch bỏ hoặc lùi lại 3 việc ít quan trọng nhất trong to-do list hôm nay.",
-    "tags": ["#pareto", "#8020", "#toiuu"],
+    "tags": [
+      "#pareto",
+      "#8020",
+      "#toiuu"
+    ],
     "accent": "linear-gradient(135deg, #f12711 0%, #f5af19 100%)"
   },
   {
@@ -96,7 +132,11 @@
     "title": "Quy tắc 1-3-5 quản lý danh sách việc hàng ngày",
     "content": "Một ngày làm việc hiệu quả chỉ nên gồm: 1 Việc lớn trọng tâm (Big Thing), 3 Việc vừa quan trọng (Medium Things), và 5 Việc nhỏ vụn vặt (Small Things). Điều này giúp bạn không bao giờ cảm thấy bị quá tải.",
     "action": "👉 Áp dụng ngay: Viết ra danh sách 1-3-5 cho ngày làm việc tiếp theo của bạn.",
-    "tags": ["#135rule", "#todolist", "#kehoach"],
+    "tags": [
+      "#135rule",
+      "#todolist",
+      "#kehoach"
+    ],
     "accent": "linear-gradient(135deg, #0ba360 0%, #3cba92 100%)"
   },
   {
@@ -106,7 +146,11 @@
     "title": "Kỹ thuật Feynman: Học sâu mọi kiến thức",
     "content": "Cách tốt nhất để thực sự hiểu một khái niệm phức tạp là thử giải thích nó bằng ngôn ngữ cực kỳ đơn giản cho một đứa trẻ 10 tuổi hiểu. Chỗ nào bạn bị ngắc ngứ chính là lỗ hổng kiến thức bạn cần đọc lại.",
     "action": "👉 Áp dụng ngay: Thử tóm tắt một kỹ năng bạn vừa học trong 3 câu đơn giản không dùng thuật ngữ chuyên ngành.",
-    "tags": ["#feynman", "#hocnhanh", "#kienthuc"],
+    "tags": [
+      "#feynman",
+      "#hocnhanh",
+      "#kienthuc"
+    ],
     "accent": "linear-gradient(135deg, #a18cd1 0%, #fbc2eb 100%)"
   },
   {
@@ -116,7 +160,11 @@
     "title": "Nghi thức khởi động làm việc (Work Ritual)",
     "content": "Tạo một chuỗi hành động lặp đi lặp lại trước khi bắt đầu làm việc (pha một tách trà, dọn sạch mặt bàn, đeo tai nghe chống ồn). Não bộ sẽ tự động chuyển sang chế độ tập trung cao độ khi nhận diện tín hiệu này.",
     "action": "👉 Áp dụng ngay: Thiết lập 1 nghi thức 2 phút trước khi bạn mở laptop làm việc.",
-    "tags": ["#ritual", "#thoi-quen", "#focus"],
+    "tags": [
+      "#ritual",
+      "#thoi-quen",
+      "#focus"
+    ],
     "accent": "linear-gradient(135deg, #ff758c 0%, #ff7eb3 100%)"
   },
   {
@@ -126,7 +174,11 @@
     "title": "Khôi phục tab vừa đóng nhầm trên trình duyệt",
     "content": "Lỡ tay đóng mất một tab quan trọng? Không cần vào lịch sử tìm kiếm, chỉ cần dùng tổ hợp phím tắt thần thánh để mở lại ngay lập tức tab vừa đóng.",
     "action": "👉 Phím tắt: Bấm `Ctrl + Shift + T` (Windows) hoặc `Cmd + Shift + T` (Mac) để mở lại tab vừa đóng!",
-    "tags": ["#chrome", "#phimtat", "#browser"],
+    "tags": [
+      "#chrome",
+      "#phimtat",
+      "#browser"
+    ],
     "accent": "linear-gradient(135deg, #667eea 0%, #764ba2 100%)"
   },
   {
@@ -136,7 +188,11 @@
     "title": "Lịch sử Clipboard đa năng trên Windows",
     "content": "Thay vì chỉ copy được 1 mục duy nhất, bạn có thể lưu trữ lịch sử hàng chục đoạn văn bản và hình ảnh đã copy trước đó chỉ bằng một bảng chọn nhanh.",
     "action": "👉 Phím tắt: Bấm `Windows + V` để mở bảng Clipboard History và dán bất kỳ nội dung nào trong quá khứ!",
-    "tags": ["#windows", "#clipboard", "#shortcut"],
+    "tags": [
+      "#windows",
+      "#clipboard",
+      "#shortcut"
+    ],
     "accent": "linear-gradient(135deg, #2af598 0%, #009efd 100%)"
   },
   {
@@ -146,7 +202,11 @@
     "title": "Tìm kiếm chính xác trên Google với dấu ngoặc kép",
     "content": "Khi bạn đặt cụm từ tìm kiếm trong dấu ngoặc kép `\"cụm từ cần tìm\"`, Google sẽ chỉ trả về những kết quả chứa chính xác từng từ theo đúng thứ tự đó, loại bỏ mọi kết quả suy đoán.",
     "action": "👉 Mẹo tìm kiếm: Thử gõ `\"tên lỗi kỹ thuật cụ thể\"` hoặc `site:github.com \"từ khóa\"` để tìm kết quả chuẩn xác 100%.",
-    "tags": ["#google", "#search", "#tips"],
+    "tags": [
+      "#google",
+      "#search",
+      "#tips"
+    ],
     "accent": "linear-gradient(135deg, #0ba360 0%, #3cba92 100%)"
   },
   {
@@ -156,7 +216,11 @@
     "title": "Tạm dừng video YouTube tức thì bằng phím K",
     "content": "Phím Spacebar thường có thể cuộn trang nếu con trỏ không ở trên video. Sử dụng phím `K` để Pause/Play luôn đảm bảo video dừng/chạy chính xác ở mọi vị trí trên trang.",
     "action": "👉 Thêm phím tắt: Bấm `J` để lùi 10s, `L` để tua tới 10s, và `M` để tắt/bật âm thanh YouTube.",
-    "tags": ["#youtube", "#shortcuts", "#media"],
+    "tags": [
+      "#youtube",
+      "#shortcuts",
+      "#media"
+    ],
     "accent": "linear-gradient(135deg, #ff0844 0%, #ffb199 100%)"
   },
   {
@@ -166,7 +230,11 @@
     "title": "Chụp màn hình chọn vùng nhanh gọn",
     "content": "Không cần mở phần mềm Paint hay Snipping Tool thủ công, bạn có thể chụp ngay một vùng màn hình và tự động lưu vào Clipboard để dán trực tiếp vào Zalo, Slack hay Facebook.",
     "action": "👉 Phím tắt: Bấm `Windows + Shift + S` (Windows) hoặc `Cmd + Shift + 4` (Mac) để khoanh vùng chụp nhanh.",
-    "tags": ["#screenshot", "#efficiency", "#tips"],
+    "tags": [
+      "#screenshot",
+      "#efficiency",
+      "#tips"
+    ],
     "accent": "linear-gradient(135deg, #a18cd1 0%, #fbc2eb 100%)"
   },
   {
@@ -176,7 +244,11 @@
     "title": "Tìm lại mật khẩu đã lưu ẩn dưới dấu sao (***)",
     "content": "Nếu bạn quên mật khẩu trên một trang web nhưng trình duyệt đã tự điền dấu hoa thị: Click chuột phải vào ô mật khẩu -> Chọn `Inspect` (Kiểm tra) -> Đổi `type=\"password\"` thành `type=\"text\"` để xem mật khẩu.",
     "action": "👉 Mẹo tiện lợi: Cách này cực nhanh khi cần xem lại mật khẩu mà không phải vào sâu trong phần cài đặt trình duyệt.",
-    "tags": ["#inspect", "#password", "#chrome"],
+    "tags": [
+      "#inspect",
+      "#password",
+      "#chrome"
+    ],
     "accent": "linear-gradient(135deg, #e14fad 0%, #f9d423 100%)"
   },
   {
@@ -186,7 +258,11 @@
     "title": "Tìm kiếm theo định dạng file trên Google (filetype:)",
     "content": "Bạn muốn tìm tài liệu PDF, Slide PowerPoint hoặc bảng tính Excel? Chỉ cần thêm cú pháp `filetype:pdf` hoặc `filetype:pptx` vào sau từ khóa tìm kiếm trên Google.",
     "action": "👉 Thử ngay: Gõ `Báo cáo tài chính 2025 filetype:pdf` trên Google để tải ngay tài liệu chuẩn.",
-    "tags": ["#google", "#filetype", "#research"],
+    "tags": [
+      "#google",
+      "#filetype",
+      "#research"
+    ],
     "accent": "linear-gradient(135deg, #13547a 0%, #80d0c7 100%)"
   },
   {
@@ -196,7 +272,11 @@
     "title": "Khóa máy tính ngay lập tức khi rời khỏi bàn",
     "content": "Bảo vệ thông tin cá nhân và tài liệu dự án bằng cách khóa máy tính ngay lập tức chỉ với một tổ hợp phím 1 giây khi bạn đứng dậy đi lấy nước hoặc ra ngoài.",
     "action": "👉 Phím tắt: Bấm `Windows + L` (Windows) hoặc `Cmd + Ctrl + Q` (Mac) để khóa màn hình tức thì.",
-    "tags": ["#security", "#windows", "#shortcuts"],
+    "tags": [
+      "#security",
+      "#windows",
+      "#shortcuts"
+    ],
     "accent": "linear-gradient(135deg, #30cfd0 0%, #330867 100%)"
   },
   {
@@ -206,7 +286,11 @@
     "title": "Dán văn bản thuần không kèm định dạng rối rắm",
     "content": "Khi copy văn bản từ web vào Word/Docs thường bị dính màu chữ, font và cỡ chữ lạ. Sử dụng tổ hợp phím dán không định dạng giúp văn bản tự động khớp hoàn hảo với tài liệu hiện tại.",
     "action": "👉 Phím tắt: Bấm `Ctrl + Shift + V` (Windows) hoặc `Cmd + Shift + V` (Mac) để dán văn bản thuần túy.",
-    "tags": ["#paste", "#shortcuts", "#textformatting"],
+    "tags": [
+      "#paste",
+      "#shortcuts",
+      "#textformatting"
+    ],
     "accent": "linear-gradient(135deg, #6a11cb 0%, #2575fc 100%)"
   },
   {
@@ -216,7 +300,11 @@
     "title": "Chuyển nhanh giữa các ứng dụng đang mở",
     "content": "Bấm `Alt + Tab` (hoặc `Cmd + Tab`) để chuyển qua lại giữa 2 ứng dụng gần nhất. Bạn cũng có thể bấm `Windows + Tab` để mở chế độ xem toàn cảnh Task View và tạo nhiều màn hình ảo (Virtual Desktops).",
     "action": "👉 Thử ngay: Tạo một Virtual Desktop thứ hai (`Windows + Ctrl + D`) để phân tách không gian làm việc và giải trí!",
-    "tags": ["#multitasking", "#virtualdesktop", "#windows"],
+    "tags": [
+      "#multitasking",
+      "#virtualdesktop",
+      "#windows"
+    ],
     "accent": "linear-gradient(135deg, #fc6076 0%, #ff9a44 100%)"
   },
   {
@@ -226,7 +314,11 @@
     "title": "Quy tắc 20-20-20 bảo vệ mắt khi dùng máy tính",
     "content": "Cứ mỗi 20 phút nhìn vào màn hình máy tính, hãy phóng tầm mắt nhìn vào một vật ở khoảng cách 20 feet (khoảng 6 mét) trong vòng ít nhất 20 giây để cơ mắt được thư giãn và tránh khô mắt.",
     "action": "👉 Áp dụng ngay: Hãy nhìn ra ngoài cửa sổ hoặc điểm xa nhất trong phòng trong 20 giây ngay bây giờ!",
-    "tags": ["#mat", "#suckhoe", "#dancuvanphong"],
+    "tags": [
+      "#mat",
+      "#suckhoe",
+      "#dancuvanphong"
+    ],
     "accent": "linear-gradient(135deg, #13547a 0%, #80d0c7 100%)"
   },
   {
@@ -236,7 +328,11 @@
     "title": "Uống 1 ly nước ấm ngay sau khi thức dậy",
     "content": "Sau 7-8 tiếng ngủ ban đêm, cơ thể bạn đang ở trạng thái mất nước nhẹ. Uống ngay 1 ly nước ấm vào buổi sáng kích hoạt hệ tiêu hóa, thải độc tố và đánh thức não bộ sảng khoái.",
     "action": "👉 Áp dụng ngay: Đặt một bình nước cạnh giường ngủ để sẵn sàng uống ngay khi vừa mở mắt vào sáng mai.",
-    "tags": ["#nuoc", "#buoisang", "#thoi-quen"],
+    "tags": [
+      "#nuoc",
+      "#buoisang",
+      "#thoi-quen"
+    ],
     "accent": "linear-gradient(135deg, #30cfd0 0%, #330867 100%)"
   },
   {
@@ -246,7 +342,11 @@
     "title": "Kỹ thuật thở 4-7-8 giúp giảm căng thẳng tức thì",
     "content": "Hít vào bằng mũi trong 4 giây, nín thở trong 7 giây, sau đó thở ra hoàn toàn qua miệng trong 8 giây. Kỹ thuật này giúp kích hoạt hệ thần kinh phó giao cảm, hạ nhịp tim và làm dịu cơn lo âu.",
     "action": "👉 Áp dụng ngay: Thực hiện 3 chu kỳ thở 4-7-8 ngay bây giờ để cảm nhận sự thư thái lan tỏa toàn thân.",
-    "tags": ["#giamstress", "#tho", "#tamly"],
+    "tags": [
+      "#giamstress",
+      "#tho",
+      "#tamly"
+    ],
     "accent": "linear-gradient(135deg, #ff758c 0%, #ff7eb3 100%)"
   },
   {
@@ -256,7 +356,11 @@
     "title": "Căn chỉnh màn hình ngang tầm mắt",
     "content": "Mép trên của màn hình máy tính nên ngang bằng hoặc thấp hơn một chút so với tầm mắt của bạn. Điều này giữ cho cổ ở tư thế trung tính, phòng tránh thoái hóa đốt sống cổ và đau vai gáy.",
     "action": "👉 Áp dụng ngay: Kê thêm vài cuốn sách hoặc dùng giá đỡ nâng laptop/màn hình lên đúng độ cao chuẩn.",
-    "tags": ["#tuthe", "#ergonomics", "#vaigay"],
+    "tags": [
+      "#tuthe",
+      "#ergonomics",
+      "#vaigay"
+    ],
     "accent": "linear-gradient(135deg, #6a11cb 0%, #2575fc 100%)"
   },
   {
@@ -266,7 +370,11 @@
     "title": "Ngủ ngắn Power Nap 15-20 phút vào buổi trưa",
     "content": "Một giấc ngủ trưa kéo dài đúng 15-20 phút giúp não bộ phục hồi độ tỉnh táo và khả năng tập trung mà không bị rơi vào giấc ngủ sâu (ngăn ngừa cảm giác chếnh choáng mệt mỏi khi thức dậy).",
     "action": "👉 Áp dụng ngay: Đặt báo thức 20 phút sau bữa ăn trưa để nạp lại 100% năng lượng cho buổi chiều.",
-    "tags": ["#powernap", "#ngutrua", "#nangluong"],
+    "tags": [
+      "#powernap",
+      "#ngutrua",
+      "#nangluong"
+    ],
     "accent": "linear-gradient(135deg, #0acffe 0%, #495aff 100%)"
   },
   {
@@ -276,7 +384,11 @@
     "title": "Quy tắc 90 phút chu kỳ giấc ngủ (Sleep Cycles)",
     "content": "Giấc ngủ tự nhiên của con người diễn ra theo các chu kỳ khoảng 90 phút. Hãy lên lịch ngủ sao cho tổng thời gian ngủ là bội số của 90 phút (6 tiếng, 7.5 tiếng hoặc 9 tiếng) để thức dậy đúng lúc cơ thể ở pha ngủ nông.",
     "action": "👉 Áp dụng ngay: Nếu cần dậy lúc 6h sáng, hãy đi ngủ lúc 22h30 hoặc 0h00 để thức dậy sảng khoái nhất.",
-    "tags": ["#giacngu", "#sleepcycle", "#suckhoe"],
+    "tags": [
+      "#giacngu",
+      "#sleepcycle",
+      "#suckhoe"
+    ],
     "accent": "linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)"
   },
   {
@@ -286,7 +398,11 @@
     "title": "Đứng dậy vươn vai sau mỗi 45 phút ngồi liên tục",
     "content": "Ngồi bất động kéo dài làm giảm lưu thông máu, gây ứ đọng tĩnh mạch và tăng nguy cơ đau cột sống. Hãy đứng dậy đi lại 1-2 phút, uống nước hoặc duỗi thẳng chân tay.",
     "action": "👉 Áp dụng ngay: Đứng dậy, xoay khớp cổ tay và duỗi thẳng lưng trong 30 giây ngay lúc này!",
-    "tags": ["#vandong", "#ngoiit", "#dancuvanphong"],
+    "tags": [
+      "#vandong",
+      "#ngoiit",
+      "#dancuvanphong"
+    ],
     "accent": "linear-gradient(135deg, #11998e 0%, #38ef7d 100%)"
   },
   {
@@ -296,7 +412,11 @@
     "title": "Hạn chế ánh sáng xanh 60 phút trước khi ngủ",
     "content": "Ánh sáng xanh từ màn hình điện thoại và máy tính ức chế hormone Melatonin (hormone gây buồn ngủ), làm giảm chất lượng giấc ngủ sâu. Hãy chuyển màn hình sang chế độ Night Light (Ấm) sau 20h.",
     "action": "👉 Áp dụng ngay: Bật tính năng 'Night Light' trên Windows hoặc 'Night Shift' trên Mac ngay hôm nay.",
-    "tags": ["#anhsangxanh", "#nightshift", "#ngungon"],
+    "tags": [
+      "#anhsangxanh",
+      "#nightshift",
+      "#ngungon"
+    ],
     "accent": "linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%)"
   },
   {
@@ -306,7 +426,11 @@
     "title": "Quy tắc 24 giờ trước khi mua sắm ngoài dự tính",
     "content": "Khi bạn nhìn thấy một món đồ muốn mua không có trong danh sách cần thiết, hãy tự ép bản thân chờ đủ 24 giờ (hoặc 72 giờ cho món đắt tiền). Hơn 70% cảm giác muốn mua sẽ biến mất sau khi cảm xúc hưng phấn hạ nhiệt.",
     "action": "👉 Áp dụng ngay: Nếu có món đồ nào đang nằm trong giỏ hàng online, hãy để đó đến ngày mai xem bạn còn thực sự cần không.",
-    "tags": ["#tietkiem", "#chitieuthongminh", "#muasam"],
+    "tags": [
+      "#tietkiem",
+      "#chitieuthongminh",
+      "#muasam"
+    ],
     "accent": "linear-gradient(135deg, #f12711 0%, #f5af19 100%)"
   },
   {
@@ -316,7 +440,11 @@
     "title": "Nguyên tắc quản lý tài chính 50/30/20",
     "content": "Chia thu nhập hàng tháng thành 3 phần: 50% cho nhu cầu thiết yếu (nhà ở, ăn uống, hóa đơn), 30% cho mong muốn cá nhân (giải trí, sở thích), và 20% bắt buộc dành cho tiết kiệm & đầu tư.",
     "action": "👉 Áp dụng ngay: Tự động trích ngay 20% lương vào tài khoản tiết kiệm/đầu tư ngay trong ngày nhận lương.",
-    "tags": ["#503020", "#ngansach", "#dautu"],
+    "tags": [
+      "#503020",
+      "#ngansach",
+      "#dautu"
+    ],
     "accent": "linear-gradient(135deg, #11998e 0%, #38ef7d 100%)"
   },
   {
@@ -326,7 +454,11 @@
     "title": "Hủy đăng ký các gói dịch vụ ngầm không dùng",
     "content": "Các khoản phí thuê bao định kỳ (Netflix, Spotify, Cloud, App VIP) vài chục đến vài trăm ngàn mỗi tháng tích lũy thành số tiền rất lớn. Kiểm tra lại sao kê ngân hàng mỗi quý một lần.",
     "action": "👉 Áp dụng ngay: Mở danh sách Subscriptions trên điện thoại và hủy ngay 1 dịch vụ bạn không dùng trong 30 ngày qua.",
-    "tags": ["#subscriptions", "#catgiambocuoc", "#taichinh"],
+    "tags": [
+      "#subscriptions",
+      "#catgiambocuoc",
+      "#taichinh"
+    ],
     "accent": "linear-gradient(135deg, #fc6076 0%, #ff9a44 100%)"
   },
   {
@@ -336,7 +468,11 @@
     "title": "Quy đổi giá tiền thành số giờ làm việc",
     "content": "Trước khi mua một món đồ xa xỉ, hãy lấy giá tiền chia cho thu nhập mỗi giờ làm việc của bạn. Tự hỏi: 'Món đồ này có thực sự xứng đáng với 15 giờ mồ hôi công sức lao động của mình không?'",
     "action": "👉 Bài tập: Tính toán xem mỗi giờ làm việc bạn kiếm được bao nhiêu để có hệ quy chiếu chi tiêu chuẩn xác.",
-    "tags": ["#tietkiem", "#chitieuhoply", "#tamlytaichinh"],
+    "tags": [
+      "#tietkiem",
+      "#chitieuhoply",
+      "#tamlytaichinh"
+    ],
     "accent": "linear-gradient(135deg, #43e97b 0%, #38f9d7 100%)"
   },
   {
@@ -346,7 +482,11 @@
     "title": "Xây dựng quỹ khẩn cấp 3-6 tháng chi phí sinh hoạt",
     "content": "Trước khi nghĩ đến đầu tư sinh lời mạo hiểm, hãy đảm bảo bạn có một khoản tiền dự phòng tương đương 3 đến 6 tháng chi phí sinh hoạt thiết yếu gửi tại ngân hàng có tính thanh khoản cao.",
     "action": "👉 Áp dụng ngay: Thiết lập một mục tiêu tiết kiệm quỹ khẩn cấp trong ứng dụng ngân hàng của bạn.",
-    "tags": ["#quykhancap", "#anantoantaichinh", "#tietkiem"],
+    "tags": [
+      "#quykhancap",
+      "#anantoantaichinh",
+      "#tietkiem"
+    ],
     "accent": "linear-gradient(135deg, #667eea 0%, #764ba2 100%)"
   },
   {
@@ -356,7 +496,11 @@
     "title": "Khử mùi lò vi sóng nhanh bằng chanh và nước",
     "content": "Cắt lát 1 quả chanh cho vào bát nước, quay lò vi sóng ở công suất cao trong 3-5 phút. Hơi nước chanh sẽ làm mềm dầu mỡ bám dính và khử sạch mùi hôi tanh, sau đó chỉ cần lấy khăn lau nhẹ là sạch bóng.",
     "action": "👉 Áp dụng ngay: Thử làm sạch lò vi sóng hoặc nồi chiên không dầu bằng mẹo hơi nước chanh này vào cuối tuần.",
-    "tags": ["#nhabep", "#meovat", "#vesinh"],
+    "tags": [
+      "#nhabep",
+      "#meovat",
+      "#vesinh"
+    ],
     "accent": "linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%)"
   },
   {
@@ -366,7 +510,11 @@
     "title": "Bóc vỏ chuối từ phần đáy thay vì phần cuống",
     "content": "Những chú khỉ luôn bóc chuối từ phía đuôi đáy (bóp nhẹ đuôi quả chuối). Cách này giúp vỏ chuối tách ra làm đôi cực kỳ dễ dàng, không bị dập nát phần đầu và loại bỏ sạch các sợi xơ.",
     "action": "👉 Áp dụng ngay: Lần tới ăn chuối, hãy thử bóp nhẹ phần đáy quả để bóc ngược lên nhé!",
-    "tags": ["#anngon", "#meonho", "#khoahoc"],
+    "tags": [
+      "#anngon",
+      "#meonho",
+      "#khoahoc"
+    ],
     "accent": "linear-gradient(135deg, #ffe259 0%, #ffa751 100%)"
   },
   {
@@ -376,7 +524,11 @@
     "title": "Giữ rau củ tươi lâu gấp đôi bằng khăn giấy",
     "content": "Độ ẩm ngưng tụ trong túi nylon là nguyên nhân chính khiến rau nhanh úng thối. Lót 1-2 lớp khăn giấy khô vào hộp đựng rau để hút bớt hơi ẩm thừa, rau sẽ giòn và tươi xanh suốt 1-2 tuần.",
     "action": "👉 Áp dụng ngay: Đặt một tờ khăn giấy khô vào hộp bảo quản rau trong tủ lạnh của bạn hôm nay.",
-    "tags": ["#baoquanthucpham", "#tuilanh", "#meonhabep"],
+    "tags": [
+      "#baoquanthucpham",
+      "#tuilanh",
+      "#meonhabep"
+    ],
     "accent": "linear-gradient(135deg, #00b09b 0%, #96c93d 100%)"
   },
   {
@@ -386,7 +538,11 @@
     "title": "Dùng kẹp ghim giấy để bảo vệ đầu cáp sạc",
     "content": "Lồng một chiếc lò xo bút bi cũ vào phần đầu dây sạc điện thoại. Lò xo sẽ giữ cho sợi cáp luôn thẳng, chống gãy gập dây đồng bên trong và kéo dài tuổi thọ cáp sạc thêm nhiều năm.",
     "action": "👉 Áp dụng ngay: Tận dụng lò xo từ một chiếc bút bi hết mực để bọc bảo vệ đầu cáp sạc của bạn.",
-    "tags": ["#capsac", "#meovat", "#tietkiem"],
+    "tags": [
+      "#capsac",
+      "#meovat",
+      "#tietkiem"
+    ],
     "accent": "linear-gradient(135deg, #a18cd1 0%, #fbc2eb 100%)"
   },
   {
@@ -396,7 +552,11 @@
     "title": "Ủi phẳng quần áo nhanh bằng máy sấy tóc khi đi du lịch",
     "content": "Nếu phòng khách sạn không có bàn là: Treo áo lên móc, xịt một chút nước sương ẩm lên các nếp nhăn, sau đó dùng máy sấy tóc hơ nóng cách 10cm. Hơi nóng và gió sẽ kéo phẳng nếp nhăn trong 2 phút.",
     "action": "👉 Mẹo du lịch: Cứu cánh cực nhanh cho áo sơ mi và váy khi vừa mở vali đồ.",
-    "tags": ["#dulich", "#quanao", "#meosong"],
+    "tags": [
+      "#dulich",
+      "#quanao",
+      "#meosong"
+    ],
     "accent": "linear-gradient(135deg, #f6d365 0%, #fda085 100%)"
   },
   {
@@ -406,7 +566,11 @@
     "title": "Hiệu ứng Tiêu Điểm (Spotlight Effect)",
     "content": "Chúng ta luôn lầm tưởng rằng mọi người xung quanh đang chú ý, soi xét từng lỗi nhỏ hay ngoại hình của mình. Thực tế, ai cũng chỉ đang bận rộn lo nghĩ về chính bản thân họ.",
     "action": "👉 Bài học: Đừng ngần ngại phát biểu hay thử nghiệm điều mới chỉ vì sợ người khác phán xét!",
-    "tags": ["#tamlyhoc", "#tutintoan", "#giamloau"],
+    "tags": [
+      "#tamlyhoc",
+      "#tutintoan",
+      "#giamloau"
+    ],
     "accent": "linear-gradient(135deg, #89f7fe 0%, #66a6ff 100%)"
   },
   {
@@ -416,7 +580,11 @@
     "title": "Tư duy Phát triển (Growth Mindset) vs Cố định",
     "content": "Thay vì nghĩ 'Mình không có năng khiếu làm việc này', hãy thêm từ 'CHƯA' vào: 'Mình CHƯA làm tốt việc này'. Não bộ có tính mềm dẻo (Neuroplasticity) và sẽ tiến bộ theo thời gian nếu bạn kiên trì rèn luyện.",
     "action": "👉 Áp dụng ngay: Mỗi khi gặp khó khăn, hãy tự nhủ: 'Đây là cơ hội để não mình phát triển thêm liên kết mới.'",
-    "tags": ["#growthmindset", "#phattrienbanthan", "#tuduy"],
+    "tags": [
+      "#growthmindset",
+      "#phattrienbanthan",
+      "#tuduy"
+    ],
     "accent": "linear-gradient(135deg, #c471ed 0%, #f64f59 100%)"
   },
   {
@@ -426,7 +594,11 @@
     "title": "Kỹ thuật ghi nhật ký 3 điều biết ơn mỗi tối",
     "content": "Viết ra 3 điều nhỏ bé khiến bạn cảm thấy biết ơn trong ngày (một ly cà phê ngon, một lời khen, một cơn mưa mát) giúp não bộ tái cấu trúc để tự động nhận diện những điều tích cực trong cuộc sống.",
     "action": "👉 Áp dụng ngay: Trước khi đi ngủ tối nay, ghi nhớ 3 điều tốt đẹp đã xảy ra với bạn trong ngày hôm nay.",
-    "tags": ["#bieton", "#hanhphuc", "#thoi-quen"],
+    "tags": [
+      "#bieton",
+      "#hanhphuc",
+      "#thoi-quen"
+    ],
     "accent": "linear-gradient(135deg, #f857a6 0%, #ff5858 100%)"
   },
   {
@@ -436,7 +608,11 @@
     "title": "Quy tắc 'Chiếc vòng kiểm soát' của Chủ nghĩa Khắc kỷ",
     "content": "Mọi sự việc trên đời chia làm 2 loại: Những thứ bạn KIỂM SOÁT ĐƯỢC (thái độ, nỗ lực, phản ứng của bạn) và Những thứ bạn KHÔNG KIỂM SOÁT ĐƯỢC (thời tiết, ý kiến người khác, quá khứ). Đừng tốn 1 giây lo lắng cho nhóm thứ 2.",
     "action": "👉 Áp dụng ngay: Khi gặp chuyện bực mình, tự hỏi: 'Mình có kiểm soát được việc này không?' Nếu không, hãy buông bỏ.",
-    "tags": ["#stoicism", "#khackyi", "#binhyen"],
+    "tags": [
+      "#stoicism",
+      "#khackyi",
+      "#binhyen"
+    ],
     "accent": "linear-gradient(135deg, #13547a 0%, #80d0c7 100%)"
   },
   {
@@ -446,167 +622,3011 @@
     "title": "Quy tắc 1% tốt hơn mỗi ngày (Nguyên lý Kaizen)",
     "content": "Nếu bạn tiến bộ 1% mỗi ngày trong suốt 1 năm, bạn sẽ trở nên tốt hơn gấp 37 lần (1.01^365 = 37.78). Đừng tìm kiếm những thay đổi đột biến khổng lồ, hãy tập trung vào các chiến thắng tí hon hàng ngày.",
     "action": "👉 Áp dụng ngay: Chọn 1 thói quen cực nhỏ (đọc 2 trang sách, chống đẩy 5 cái) và duy trì đều đặn.",
-    "tags": ["#kaizen", "#atomic-habits", "#tiến-bộ"],
+    "tags": [
+      "#kaizen",
+      "#atomic-habits",
+      "#tiến-bộ"
+    ],
     "accent": "linear-gradient(135deg, #30cfd0 0%, #330867 100%)"
   },
   {
     "id": "5s_001",
     "category": "5s",
     "categoryName": "🧹 5S Văn Phòng",
-    "title": "5S - Seiri (Sàng Lọc): Quy tắc 30 ngày cho đồ đạc",
-    "content": "Dán nhãn hoặc để riêng các hồ sơ, tài liệu, vật dụng trên bàn làm việc mà bạn chưa dùng đến trong 30 ngày qua. Nếu sau 30 ngày tiếp theo vẫn không đụng đến, hãy mạnh dạn hủy bỏ, nộp vào kho lưu trữ hoặc tái chế.",
-    "action": "👉 Áp dụng ngay: Lọc ngay 3 vật dụng hoặc tập tài liệu trên bàn đang bị bám bụi và dọn sạch khỏi không gian làm việc.",
-    "tags": ["#5s", "#seiri", "#sangloc", "#vanphonggondang"],
-    "accent": "linear-gradient(135deg, #10b981 0%, #059669 100%)"
+    "title": "S1 – Sàng lọc: Loại bỏ ngay những vật dụng không còn sử dụng.",
+    "content": "Loại bỏ ngay những vật dụng không còn sử dụng.. Việc thực hiện nguyên tắc S1 giúp duy trì không gian làm việc văn phòng và sản xuất tinh gọn, sạch sẽ, chuẩn hóa và nâng cao hiệu suất làm việc mỗi ngày.",
+    "action": "👉 Áp dụng ngay: Thực hiện nguyên tắc 'Loại bỏ ngay những vật dụng không còn sử dụng.' ngay tại góc làm việc của bạn!",
+    "tags": [
+      "#5s",
+      "#vanphong",
+      "#tinhtiet",
+      "#s1"
+    ],
+    "accent": "linear-gradient(135deg, #11998e 0%, #38ef7d 100%)"
   },
   {
     "id": "5s_002",
     "category": "5s",
     "categoryName": "🧹 5S Văn Phòng",
-    "title": "5S - Seiton (Sắp Xếp): Quy tắc 30 giây lấy & 30 giây cất",
-    "content": "Mọi vật dụng văn phòng (bút, bấm kim, kẹp giấy, file trình ký) đều phải có một vị trí cố định được đánh dấu rõ ràng. Thiết kế vị trí sao cho bất kỳ ai cũng có thể lấy ra trong 30 giây và cất về đúng chỗ trong 30 giây.",
-    "action": "👉 Áp dụng ngay: Tạo vị trí cố định cho chìa khóa, bút viết và thẻ nhân viên ngay góc phải bàn làm việc.",
-    "tags": ["#5s", "#seiton", "#sapxep", "#toiuuchithoi"],
-    "accent": "linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%)"
+    "title": "S1 – Sàng lọc: Không giữ tài liệu chỉ vì “có thể một ngày nào đó sẽ cần”.",
+    "content": "Không giữ tài liệu chỉ vì “có thể một ngày nào đó sẽ cần”.. Việc thực hiện nguyên tắc S1 giúp duy trì không gian làm việc văn phòng và sản xuất tinh gọn, sạch sẽ, chuẩn hóa và nâng cao hiệu suất làm việc mỗi ngày.",
+    "action": "👉 Áp dụng ngay: Thực hiện nguyên tắc 'Không giữ tài liệu chỉ vì “có thể một ngày nào đó sẽ cần”.' ngay tại góc làm việc của bạn!",
+    "tags": [
+      "#5s",
+      "#vanphong",
+      "#tinhtiet",
+      "#s1"
+    ],
+    "accent": "linear-gradient(135deg, #00b4db 0%, #0083b0 100%)"
   },
   {
     "id": "5s_003",
     "category": "5s",
     "categoryName": "🧹 5S Văn Phòng",
-    "title": "5S - Seiso (Sạch Sẽ): Vệ sinh thiết bị 5 phút cuối ngày",
-    "content": "Dành 5 phút trước khi ra về để lau sạch bàn làm việc, màn hình máy tính, bàn phím và chuột. Việc vệ sinh máy tính định kỳ không chỉ diệt 99% vi khuẩn mà còn mang lại cảm giác hứng khởi cho sáng hôm sau.",
-    "action": "👉 Áp dụng ngay: Dùng khăn vi sợi lau sạch màn hình và bàn phím máy tính của bạn trước khi tắt máy.",
-    "tags": ["#5s", "#seiso", "#sachse", "#suckhoevanphong"],
-    "accent": "linear-gradient(135deg, #06b6d4 0%, #0891b2 100%)"
+    "title": "S1 – Sàng lọc: Kiểm tra tủ hồ sơ định kỳ và loại bỏ bản hết hiệu lực.",
+    "content": "Kiểm tra tủ hồ sơ định kỳ và loại bỏ bản hết hiệu lực.. Việc thực hiện nguyên tắc S1 giúp duy trì không gian làm việc văn phòng và sản xuất tinh gọn, sạch sẽ, chuẩn hóa và nâng cao hiệu suất làm việc mỗi ngày.",
+    "action": "👉 Áp dụng ngay: Thực hiện nguyên tắc 'Kiểm tra tủ hồ sơ định kỳ và loại bỏ bản hết hiệu lực.' ngay tại góc làm việc của bạn!",
+    "tags": [
+      "#5s",
+      "#vanphong",
+      "#tinhtiet",
+      "#s1"
+    ],
+    "accent": "linear-gradient(135deg, #43e97b 0%, #38f9d7 100%)"
   },
   {
     "id": "5s_004",
     "category": "5s",
     "categoryName": "🧹 5S Văn Phòng",
-    "title": "5S - Seiketsu (Săn Sóc): Chuẩn hóa quy trình 5S cá nhân",
-    "content": "Biến Sàng lọc, Sắp xếp và Sạch sẽ thành chuẩn mực làm việc hàng ngày. Lập danh sách kiểm tra 5S nhanh (Checklist 3 mục) dán ngay cạnh góc làm việc để duy trì không gian luôn ở trạng thái hoàn hảo.",
-    "action": "👉 Áp dụng ngay: Đặt lịch nhắc 17:25 mỗi ngày trên điện thoại để thực hiện 5S nhanh 3 phút.",
-    "tags": ["#5s", "#seiketsu", "#sansoc", "#chuanhoa"],
-    "accent": "linear-gradient(135deg, #8b5cf6 0%, #6d28d9 100%)"
+    "title": "S1 – Sàng lọc: Dán nhãn các vật dụng chưa xác định có cần thiết hay không.",
+    "content": "Dán nhãn các vật dụng chưa xác định có cần thiết hay không.. Việc thực hiện nguyên tắc S1 giúp duy trì không gian làm việc văn phòng và sản xuất tinh gọn, sạch sẽ, chuẩn hóa và nâng cao hiệu suất làm việc mỗi ngày.",
+    "action": "👉 Áp dụng ngay: Thực hiện nguyên tắc 'Dán nhãn các vật dụng chưa xác định có cần thiết hay không.' ngay tại góc làm việc của bạn!",
+    "tags": [
+      "#5s",
+      "#vanphong",
+      "#tinhtiet",
+      "#s1"
+    ],
+    "accent": "linear-gradient(135deg, #0ba360 0%, #3cba92 100%)"
   },
   {
     "id": "5s_005",
     "category": "5s",
     "categoryName": "🧹 5S Văn Phòng",
-    "title": "5S - Shitsuke (Sẵn Sàng): Rèn luyện thói quen tự giác 5S",
-    "content": "5S không phải là một đợt tổng vệ sinh định kỳ mà là ý thức tự giác rèn luyện mỗi ngày. Khi mỗi cá nhân tự giác giữ gìn văn phòng ngăn nắp, tinh thần đồng đội và hiệu suất làm việc toàn công ty sẽ tăng đột biến.",
-    "action": "👉 Áp dụng ngay: Giúp đồng nghiệp xếp gọn lại ghế họp hoặc dọn sạch ly tách sau buổi họp nhóm.",
-    "tags": ["#5s", "#shitsuke", "#sansang", "#vanhoadoanhnghiep"],
-    "accent": "linear-gradient(135deg, #f59e0b 0%, #d97706 100%)"
+    "title": "S1 – Sàng lọc: Quy định thời hạn lưu giữ đối với hồ sơ giấy.",
+    "content": "Quy định thời hạn lưu giữ đối với hồ sơ giấy.. Việc thực hiện nguyên tắc S1 giúp duy trì không gian làm việc văn phòng và sản xuất tinh gọn, sạch sẽ, chuẩn hóa và nâng cao hiệu suất làm việc mỗi ngày.",
+    "action": "👉 Áp dụng ngay: Thực hiện nguyên tắc 'Quy định thời hạn lưu giữ đối với hồ sơ giấy.' ngay tại góc làm việc của bạn!",
+    "tags": [
+      "#5s",
+      "#vanphong",
+      "#tinhtiet",
+      "#s1"
+    ],
+    "accent": "linear-gradient(135deg, #56ab2f 0%, #a8e063 100%)"
   },
   {
     "id": "5s_006",
     "category": "5s",
     "categoryName": "🧹 5S Văn Phòng",
-    "title": "5S Digital (5S File Máy Tính): Sàng lọc desktop & ổ cứng",
-    "content": "Áp dụng 5S cho máy tính: Xóa bỏ các file rác trong folder Downloads, sắp xếp các tập tin trên Desktop vào tối đa 4 thư mục chính (Dự án, Tài liệu, Công cụ, Lưu trữ). Một màn hình Desktop sạch sẽ giúp bạn bớt căng thẳng 40%.",
-    "action": "👉 Áp dụng ngay: Gom toàn bộ file lẻ tẻ trên Desktop vào 1 thư mục 'Cần Phân Loại' ngay bây giờ.",
-    "tags": ["#5sdigital", "#sapxepmaytinh", "#gondang"],
-    "accent": "linear-gradient(135deg, #ec4899 0%, #be185d 100%)"
+    "title": "S1 – Sàng lọc: Xóa file máy tính không còn giá trị sử dụng.",
+    "content": "Xóa file máy tính không còn giá trị sử dụng.. Việc thực hiện nguyên tắc S1 giúp duy trì không gian làm việc văn phòng và sản xuất tinh gọn, sạch sẽ, chuẩn hóa và nâng cao hiệu suất làm việc mỗi ngày.",
+    "action": "👉 Áp dụng ngay: Thực hiện nguyên tắc 'Xóa file máy tính không còn giá trị sử dụng.' ngay tại góc làm việc của bạn!",
+    "tags": [
+      "#5s",
+      "#vanphong",
+      "#tinhtiet",
+      "#s1"
+    ],
+    "accent": "linear-gradient(135deg, #11998e 0%, #38ef7d 100%)"
   },
   {
     "id": "5s_007",
     "category": "5s",
     "categoryName": "🧹 5S Văn Phòng",
-    "title": "5S Quản lý dây cáp điện văn phòng (Cable Management)",
-    "content": "Dây điện, dây sạc lộn xộn dưới chân bàn vừa mất thẩm mỹ vừa dễ gây vấp ngã hoặc chập điện. Dùng dây rút (Zip ties) hoặc ống bọc cáp để gom gọn toàn bộ dây nguồn máy tính thành một nhánh duy nhất.",
-    "action": "👉 Áp dụng ngay: Dùng kẹp bướm hoặc kẹp nhựa cố định đầu dây sạc điện thoại lên cạnh bàn làm việc.",
-    "tags": ["#5svanphong", "#dondang", "#antoandien"],
-    "accent": "linear-gradient(135deg, #14b8a6 0%, #0f766e 100%)"
+    "title": "S1 – Sàng lọc: Dọn thư mục Download mỗi tuần.",
+    "content": "Dọn thư mục Download mỗi tuần.. Việc thực hiện nguyên tắc S1 giúp duy trì không gian làm việc văn phòng và sản xuất tinh gọn, sạch sẽ, chuẩn hóa và nâng cao hiệu suất làm việc mỗi ngày.",
+    "action": "👉 Áp dụng ngay: Thực hiện nguyên tắc 'Dọn thư mục Download mỗi tuần.' ngay tại góc làm việc của bạn!",
+    "tags": [
+      "#5s",
+      "#vanphong",
+      "#tinhtiet",
+      "#s1"
+    ],
+    "accent": "linear-gradient(135deg, #00b4db 0%, #0083b0 100%)"
   },
   {
     "id": "5s_008",
     "category": "5s",
     "categoryName": "🧹 5S Văn Phòng",
-    "title": "5S Trực quan hóa (Visual Management) trong văn phòng",
-    "content": "Sử dụng màu sắc và nhãn dán để quản lý hồ sơ: Dán nhãn màu đỏ cho hồ sơ khẩn cấp, màu xanh cho dự án đang chạy, màu vàng cho tài liệu tham khảo. Nhìn lướt qua 1 giây là nhận biết ngay thông tin.",
-    "action": "👉 Áp dụng ngay: Dán nhãn phân loại màu sắc cho 3 bìa hồ sơ quan trọng nhất trên kệ.",
-    "tags": ["#5s", "#visualmanagement", "#trucquan"],
-    "accent": "linear-gradient(135deg, #6366f1 0%, #4338ca 100%)"
+    "title": "S1 – Sàng lọc: Không để vật tư dư thừa chiếm diện tích sản xuất.",
+    "content": "Không để vật tư dư thừa chiếm diện tích sản xuất.. Việc thực hiện nguyên tắc S1 giúp duy trì không gian làm việc văn phòng và sản xuất tinh gọn, sạch sẽ, chuẩn hóa và nâng cao hiệu suất làm việc mỗi ngày.",
+    "action": "👉 Áp dụng ngay: Thực hiện nguyên tắc 'Không để vật tư dư thừa chiếm diện tích sản xuất.' ngay tại góc làm việc của bạn!",
+    "tags": [
+      "#5s",
+      "#vanphong",
+      "#tinhtiet",
+      "#s1"
+    ],
+    "accent": "linear-gradient(135deg, #43e97b 0%, #38f9d7 100%)"
+  },
+  {
+    "id": "5s_009",
+    "category": "5s",
+    "categoryName": "🧹 5S Văn Phòng",
+    "title": "S1 – Sàng lọc: Phân loại dụng cụ theo tần suất sử dụng.",
+    "content": "Phân loại dụng cụ theo tần suất sử dụng.. Việc thực hiện nguyên tắc S1 giúp duy trì không gian làm việc văn phòng và sản xuất tinh gọn, sạch sẽ, chuẩn hóa và nâng cao hiệu suất làm việc mỗi ngày.",
+    "action": "👉 Áp dụng ngay: Thực hiện nguyên tắc 'Phân loại dụng cụ theo tần suất sử dụng.' ngay tại góc làm việc của bạn!",
+    "tags": [
+      "#5s",
+      "#vanphong",
+      "#tinhtiet",
+      "#s1"
+    ],
+    "accent": "linear-gradient(135deg, #0ba360 0%, #3cba92 100%)"
+  },
+  {
+    "id": "5s_010",
+    "category": "5s",
+    "categoryName": "🧹 5S Văn Phòng",
+    "title": "S1 – Sàng lọc: Tách riêng vật tư đạt, chờ xử lý và không đạt.",
+    "content": "Tách riêng vật tư đạt, chờ xử lý và không đạt.. Việc thực hiện nguyên tắc S1 giúp duy trì không gian làm việc văn phòng và sản xuất tinh gọn, sạch sẽ, chuẩn hóa và nâng cao hiệu suất làm việc mỗi ngày.",
+    "action": "👉 Áp dụng ngay: Thực hiện nguyên tắc 'Tách riêng vật tư đạt, chờ xử lý và không đạt.' ngay tại góc làm việc của bạn!",
+    "tags": [
+      "#5s",
+      "#vanphong",
+      "#tinhtiet",
+      "#s1"
+    ],
+    "accent": "linear-gradient(135deg, #56ab2f 0%, #a8e063 100%)"
+  },
+  {
+    "id": "5s_011",
+    "category": "5s",
+    "categoryName": "🧹 5S Văn Phòng",
+    "title": "S1 – Sàng lọc: Loại bỏ pallet, thùng, bao bì không còn sử dụng.",
+    "content": "Loại bỏ pallet, thùng, bao bì không còn sử dụng.. Việc thực hiện nguyên tắc S1 giúp duy trì không gian làm việc văn phòng và sản xuất tinh gọn, sạch sẽ, chuẩn hóa và nâng cao hiệu suất làm việc mỗi ngày.",
+    "action": "👉 Áp dụng ngay: Thực hiện nguyên tắc 'Loại bỏ pallet, thùng, bao bì không còn sử dụng.' ngay tại góc làm việc của bạn!",
+    "tags": [
+      "#5s",
+      "#vanphong",
+      "#tinhtiet",
+      "#s1"
+    ],
+    "accent": "linear-gradient(135deg, #11998e 0%, #38ef7d 100%)"
+  },
+  {
+    "id": "5s_012",
+    "category": "5s",
+    "categoryName": "🧹 5S Văn Phòng",
+    "title": "S1 – Sàng lọc: Không biến gầm bàn thành nơi chứa đồ.",
+    "content": "Không biến gầm bàn thành nơi chứa đồ.. Việc thực hiện nguyên tắc S1 giúp duy trì không gian làm việc văn phòng và sản xuất tinh gọn, sạch sẽ, chuẩn hóa và nâng cao hiệu suất làm việc mỗi ngày.",
+    "action": "👉 Áp dụng ngay: Thực hiện nguyên tắc 'Không biến gầm bàn thành nơi chứa đồ.' ngay tại góc làm việc của bạn!",
+    "tags": [
+      "#5s",
+      "#vanphong",
+      "#tinhtiet",
+      "#s1"
+    ],
+    "accent": "linear-gradient(135deg, #00b4db 0%, #0083b0 100%)"
+  },
+  {
+    "id": "5s_013",
+    "category": "5s",
+    "categoryName": "🧹 5S Văn Phòng",
+    "title": "S1 – Sàng lọc: Kiểm tra những thiết bị lâu ngày không vận hành.",
+    "content": "Kiểm tra những thiết bị lâu ngày không vận hành.. Việc thực hiện nguyên tắc S1 giúp duy trì không gian làm việc văn phòng và sản xuất tinh gọn, sạch sẽ, chuẩn hóa và nâng cao hiệu suất làm việc mỗi ngày.",
+    "action": "👉 Áp dụng ngay: Thực hiện nguyên tắc 'Kiểm tra những thiết bị lâu ngày không vận hành.' ngay tại góc làm việc của bạn!",
+    "tags": [
+      "#5s",
+      "#vanphong",
+      "#tinhtiet",
+      "#s1"
+    ],
+    "accent": "linear-gradient(135deg, #43e97b 0%, #38f9d7 100%)"
+  },
+  {
+    "id": "5s_014",
+    "category": "5s",
+    "categoryName": "🧹 5S Văn Phòng",
+    "title": "S1 – Sàng lọc: Đưa thiết bị hỏng vào khu vực chờ sửa/xử lý.",
+    "content": "Đưa thiết bị hỏng vào khu vực chờ sửa/xử lý.. Việc thực hiện nguyên tắc S1 giúp duy trì không gian làm việc văn phòng và sản xuất tinh gọn, sạch sẽ, chuẩn hóa và nâng cao hiệu suất làm việc mỗi ngày.",
+    "action": "👉 Áp dụng ngay: Thực hiện nguyên tắc 'Đưa thiết bị hỏng vào khu vực chờ sửa/xử lý.' ngay tại góc làm việc của bạn!",
+    "tags": [
+      "#5s",
+      "#vanphong",
+      "#tinhtiet",
+      "#s1"
+    ],
+    "accent": "linear-gradient(135deg, #0ba360 0%, #3cba92 100%)"
+  },
+  {
+    "id": "5s_015",
+    "category": "5s",
+    "categoryName": "🧹 5S Văn Phòng",
+    "title": "S1 – Sàng lọc: Không lưu nhiều bản sao của cùng một tài liệu.",
+    "content": "Không lưu nhiều bản sao của cùng một tài liệu.. Việc thực hiện nguyên tắc S1 giúp duy trì không gian làm việc văn phòng và sản xuất tinh gọn, sạch sẽ, chuẩn hóa và nâng cao hiệu suất làm việc mỗi ngày.",
+    "action": "👉 Áp dụng ngay: Thực hiện nguyên tắc 'Không lưu nhiều bản sao của cùng một tài liệu.' ngay tại góc làm việc của bạn!",
+    "tags": [
+      "#5s",
+      "#vanphong",
+      "#tinhtiet",
+      "#s1"
+    ],
+    "accent": "linear-gradient(135deg, #56ab2f 0%, #a8e063 100%)"
+  },
+  {
+    "id": "5s_016",
+    "category": "5s",
+    "categoryName": "🧹 5S Văn Phòng",
+    "title": "S1 – Sàng lọc: Kiểm tra định kỳ các bảng biểu, biểu mẫu đang sử dụng.",
+    "content": "Kiểm tra định kỳ các bảng biểu, biểu mẫu đang sử dụng.. Việc thực hiện nguyên tắc S1 giúp duy trì không gian làm việc văn phòng và sản xuất tinh gọn, sạch sẽ, chuẩn hóa và nâng cao hiệu suất làm việc mỗi ngày.",
+    "action": "👉 Áp dụng ngay: Thực hiện nguyên tắc 'Kiểm tra định kỳ các bảng biểu, biểu mẫu đang sử dụng.' ngay tại góc làm việc của bạn!",
+    "tags": [
+      "#5s",
+      "#vanphong",
+      "#tinhtiet",
+      "#s1"
+    ],
+    "accent": "linear-gradient(135deg, #11998e 0%, #38ef7d 100%)"
+  },
+  {
+    "id": "5s_017",
+    "category": "5s",
+    "categoryName": "🧹 5S Văn Phòng",
+    "title": "S1 – Sàng lọc: Loại bỏ biển báo, poster đã lỗi thời.",
+    "content": "Loại bỏ biển báo, poster đã lỗi thời.. Việc thực hiện nguyên tắc S1 giúp duy trì không gian làm việc văn phòng và sản xuất tinh gọn, sạch sẽ, chuẩn hóa và nâng cao hiệu suất làm việc mỗi ngày.",
+    "action": "👉 Áp dụng ngay: Thực hiện nguyên tắc 'Loại bỏ biển báo, poster đã lỗi thời.' ngay tại góc làm việc của bạn!",
+    "tags": [
+      "#5s",
+      "#vanphong",
+      "#tinhtiet",
+      "#s1"
+    ],
+    "accent": "linear-gradient(135deg, #00b4db 0%, #0083b0 100%)"
+  },
+  {
+    "id": "5s_018",
+    "category": "5s",
+    "categoryName": "🧹 5S Văn Phòng",
+    "title": "S1 – Sàng lọc: Không tích trữ vật tư vượt quá nhu cầu hợp lý.",
+    "content": "Không tích trữ vật tư vượt quá nhu cầu hợp lý.. Việc thực hiện nguyên tắc S1 giúp duy trì không gian làm việc văn phòng và sản xuất tinh gọn, sạch sẽ, chuẩn hóa và nâng cao hiệu suất làm việc mỗi ngày.",
+    "action": "👉 Áp dụng ngay: Thực hiện nguyên tắc 'Không tích trữ vật tư vượt quá nhu cầu hợp lý.' ngay tại góc làm việc của bạn!",
+    "tags": [
+      "#5s",
+      "#vanphong",
+      "#tinhtiet",
+      "#s1"
+    ],
+    "accent": "linear-gradient(135deg, #43e97b 0%, #38f9d7 100%)"
+  },
+  {
+    "id": "5s_019",
+    "category": "5s",
+    "categoryName": "🧹 5S Văn Phòng",
+    "title": "S1 – Sàng lọc: Xác định rõ đồ cá nhân được phép mang vào nơi làm việc.",
+    "content": "Xác định rõ đồ cá nhân được phép mang vào nơi làm việc.. Việc thực hiện nguyên tắc S1 giúp duy trì không gian làm việc văn phòng và sản xuất tinh gọn, sạch sẽ, chuẩn hóa và nâng cao hiệu suất làm việc mỗi ngày.",
+    "action": "👉 Áp dụng ngay: Thực hiện nguyên tắc 'Xác định rõ đồ cá nhân được phép mang vào nơi làm việc.' ngay tại góc làm việc của bạn!",
+    "tags": [
+      "#5s",
+      "#vanphong",
+      "#tinhtiet",
+      "#s1"
+    ],
+    "accent": "linear-gradient(135deg, #0ba360 0%, #3cba92 100%)"
+  },
+  {
+    "id": "5s_020",
+    "category": "5s",
+    "categoryName": "🧹 5S Văn Phòng",
+    "title": "S1 – Sàng lọc: Mỗi khu vực nên có danh sách những thứ thực sự cần thiết.",
+    "content": "Mỗi khu vực nên có danh sách những thứ thực sự cần thiết.. Việc thực hiện nguyên tắc S1 giúp duy trì không gian làm việc văn phòng và sản xuất tinh gọn, sạch sẽ, chuẩn hóa và nâng cao hiệu suất làm việc mỗi ngày.",
+    "action": "👉 Áp dụng ngay: Thực hiện nguyên tắc 'Mỗi khu vực nên có danh sách những thứ thực sự cần thiết.' ngay tại góc làm việc của bạn!",
+    "tags": [
+      "#5s",
+      "#vanphong",
+      "#tinhtiet",
+      "#s1"
+    ],
+    "accent": "linear-gradient(135deg, #56ab2f 0%, #a8e063 100%)"
+  },
+  {
+    "id": "5s_021",
+    "category": "5s",
+    "categoryName": "🧹 5S Văn Phòng",
+    "title": "S2 – Sắp xếp: Mọi vật dụng đều phải có một “địa chỉ” cố định.",
+    "content": "Mọi vật dụng đều phải có một “địa chỉ” cố định.. Việc thực hiện nguyên tắc S2 giúp duy trì không gian làm việc văn phòng và sản xuất tinh gọn, sạch sẽ, chuẩn hóa và nâng cao hiệu suất làm việc mỗi ngày.",
+    "action": "👉 Áp dụng ngay: Thực hiện nguyên tắc 'Mọi vật dụng đều phải có một “địa chỉ” cố định.' ngay tại góc làm việc của bạn!",
+    "tags": [
+      "#5s",
+      "#vanphong",
+      "#tinhtiet",
+      "#s2"
+    ],
+    "accent": "linear-gradient(135deg, #11998e 0%, #38ef7d 100%)"
+  },
+  {
+    "id": "5s_022",
+    "category": "5s",
+    "categoryName": "🧹 5S Văn Phòng",
+    "title": "S2 – Sắp xếp: Đồ dùng thường xuyên phải đặt trong vùng dễ lấy.",
+    "content": "Đồ dùng thường xuyên phải đặt trong vùng dễ lấy.. Việc thực hiện nguyên tắc S2 giúp duy trì không gian làm việc văn phòng và sản xuất tinh gọn, sạch sẽ, chuẩn hóa và nâng cao hiệu suất làm việc mỗi ngày.",
+    "action": "👉 Áp dụng ngay: Thực hiện nguyên tắc 'Đồ dùng thường xuyên phải đặt trong vùng dễ lấy.' ngay tại góc làm việc của bạn!",
+    "tags": [
+      "#5s",
+      "#vanphong",
+      "#tinhtiet",
+      "#s2"
+    ],
+    "accent": "linear-gradient(135deg, #00b4db 0%, #0083b0 100%)"
+  },
+  {
+    "id": "5s_023",
+    "category": "5s",
+    "categoryName": "🧹 5S Văn Phòng",
+    "title": "S2 – Sắp xếp: Đồ ít sử dụng đặt ở vị trí phù hợp hơn.",
+    "content": "Đồ ít sử dụng đặt ở vị trí phù hợp hơn.. Việc thực hiện nguyên tắc S2 giúp duy trì không gian làm việc văn phòng và sản xuất tinh gọn, sạch sẽ, chuẩn hóa và nâng cao hiệu suất làm việc mỗi ngày.",
+    "action": "👉 Áp dụng ngay: Thực hiện nguyên tắc 'Đồ ít sử dụng đặt ở vị trí phù hợp hơn.' ngay tại góc làm việc của bạn!",
+    "tags": [
+      "#5s",
+      "#vanphong",
+      "#tinhtiet",
+      "#s2"
+    ],
+    "accent": "linear-gradient(135deg, #43e97b 0%, #38f9d7 100%)"
+  },
+  {
+    "id": "5s_024",
+    "category": "5s",
+    "categoryName": "🧹 5S Văn Phòng",
+    "title": "S2 – Sắp xếp: Dán nhãn rõ ràng cho tủ, kệ và ngăn kéo.",
+    "content": "Dán nhãn rõ ràng cho tủ, kệ và ngăn kéo.. Việc thực hiện nguyên tắc S2 giúp duy trì không gian làm việc văn phòng và sản xuất tinh gọn, sạch sẽ, chuẩn hóa và nâng cao hiệu suất làm việc mỗi ngày.",
+    "action": "👉 Áp dụng ngay: Thực hiện nguyên tắc 'Dán nhãn rõ ràng cho tủ, kệ và ngăn kéo.' ngay tại góc làm việc của bạn!",
+    "tags": [
+      "#5s",
+      "#vanphong",
+      "#tinhtiet",
+      "#s2"
+    ],
+    "accent": "linear-gradient(135deg, #0ba360 0%, #3cba92 100%)"
+  },
+  {
+    "id": "5s_025",
+    "category": "5s",
+    "categoryName": "🧹 5S Văn Phòng",
+    "title": "S2 – Sắp xếp: Dùng vạch màu để xác định vị trí đặt thiết bị.",
+    "content": "Dùng vạch màu để xác định vị trí đặt thiết bị.. Việc thực hiện nguyên tắc S2 giúp duy trì không gian làm việc văn phòng và sản xuất tinh gọn, sạch sẽ, chuẩn hóa và nâng cao hiệu suất làm việc mỗi ngày.",
+    "action": "👉 Áp dụng ngay: Thực hiện nguyên tắc 'Dùng vạch màu để xác định vị trí đặt thiết bị.' ngay tại góc làm việc của bạn!",
+    "tags": [
+      "#5s",
+      "#vanphong",
+      "#tinhtiet",
+      "#s2"
+    ],
+    "accent": "linear-gradient(135deg, #56ab2f 0%, #a8e063 100%)"
+  },
+  {
+    "id": "5s_026",
+    "category": "5s",
+    "categoryName": "🧹 5S Văn Phòng",
+    "title": "S2 – Sắp xếp: Dùng shadow board để quản lý dụng cụ.",
+    "content": "Dùng shadow board để quản lý dụng cụ.. Việc thực hiện nguyên tắc S2 giúp duy trì không gian làm việc văn phòng và sản xuất tinh gọn, sạch sẽ, chuẩn hóa và nâng cao hiệu suất làm việc mỗi ngày.",
+    "action": "👉 Áp dụng ngay: Thực hiện nguyên tắc 'Dùng shadow board để quản lý dụng cụ.' ngay tại góc làm việc của bạn!",
+    "tags": [
+      "#5s",
+      "#vanphong",
+      "#tinhtiet",
+      "#s2"
+    ],
+    "accent": "linear-gradient(135deg, #11998e 0%, #38ef7d 100%)"
+  },
+  {
+    "id": "5s_027",
+    "category": "5s",
+    "categoryName": "🧹 5S Văn Phòng",
+    "title": "S2 – Sắp xếp: Quy định vị trí đỗ xe nâng, xe đẩy và pallet.",
+    "content": "Quy định vị trí đỗ xe nâng, xe đẩy và pallet.. Việc thực hiện nguyên tắc S2 giúp duy trì không gian làm việc văn phòng và sản xuất tinh gọn, sạch sẽ, chuẩn hóa và nâng cao hiệu suất làm việc mỗi ngày.",
+    "action": "👉 Áp dụng ngay: Thực hiện nguyên tắc 'Quy định vị trí đỗ xe nâng, xe đẩy và pallet.' ngay tại góc làm việc của bạn!",
+    "tags": [
+      "#5s",
+      "#vanphong",
+      "#tinhtiet",
+      "#s2"
+    ],
+    "accent": "linear-gradient(135deg, #00b4db 0%, #0083b0 100%)"
+  },
+  {
+    "id": "5s_028",
+    "category": "5s",
+    "categoryName": "🧹 5S Văn Phòng",
+    "title": "S2 – Sắp xếp: Hồ sơ nên được sắp xếp theo mã hoặc theo nhóm.",
+    "content": "Hồ sơ nên được sắp xếp theo mã hoặc theo nhóm.. Việc thực hiện nguyên tắc S2 giúp duy trì không gian làm việc văn phòng và sản xuất tinh gọn, sạch sẽ, chuẩn hóa và nâng cao hiệu suất làm việc mỗi ngày.",
+    "action": "👉 Áp dụng ngay: Thực hiện nguyên tắc 'Hồ sơ nên được sắp xếp theo mã hoặc theo nhóm.' ngay tại góc làm việc của bạn!",
+    "tags": [
+      "#5s",
+      "#vanphong",
+      "#tinhtiet",
+      "#s2"
+    ],
+    "accent": "linear-gradient(135deg, #43e97b 0%, #38f9d7 100%)"
+  },
+  {
+    "id": "5s_029",
+    "category": "5s",
+    "categoryName": "🧹 5S Văn Phòng",
+    "title": "S2 – Sắp xếp: Không đặt đồ vật chắn lối đi.",
+    "content": "Không đặt đồ vật chắn lối đi.. Việc thực hiện nguyên tắc S2 giúp duy trì không gian làm việc văn phòng và sản xuất tinh gọn, sạch sẽ, chuẩn hóa và nâng cao hiệu suất làm việc mỗi ngày.",
+    "action": "👉 Áp dụng ngay: Thực hiện nguyên tắc 'Không đặt đồ vật chắn lối đi.' ngay tại góc làm việc của bạn!",
+    "tags": [
+      "#5s",
+      "#vanphong",
+      "#tinhtiet",
+      "#s2"
+    ],
+    "accent": "linear-gradient(135deg, #0ba360 0%, #3cba92 100%)"
+  },
+  {
+    "id": "5s_030",
+    "category": "5s",
+    "categoryName": "🧹 5S Văn Phòng",
+    "title": "S2 – Sắp xếp: Không đặt vật tư vượt ra ngoài vạch quy định.",
+    "content": "Không đặt vật tư vượt ra ngoài vạch quy định.. Việc thực hiện nguyên tắc S2 giúp duy trì không gian làm việc văn phòng và sản xuất tinh gọn, sạch sẽ, chuẩn hóa và nâng cao hiệu suất làm việc mỗi ngày.",
+    "action": "👉 Áp dụng ngay: Thực hiện nguyên tắc 'Không đặt vật tư vượt ra ngoài vạch quy định.' ngay tại góc làm việc của bạn!",
+    "tags": [
+      "#5s",
+      "#vanphong",
+      "#tinhtiet",
+      "#s2"
+    ],
+    "accent": "linear-gradient(135deg, #56ab2f 0%, #a8e063 100%)"
+  },
+  {
+    "id": "5s_031",
+    "category": "5s",
+    "categoryName": "🧹 5S Văn Phòng",
+    "title": "S2 – Sắp xếp: Sắp xếp dây điện để tránh vướng víu.",
+    "content": "Sắp xếp dây điện để tránh vướng víu.. Việc thực hiện nguyên tắc S2 giúp duy trì không gian làm việc văn phòng và sản xuất tinh gọn, sạch sẽ, chuẩn hóa và nâng cao hiệu suất làm việc mỗi ngày.",
+    "action": "👉 Áp dụng ngay: Thực hiện nguyên tắc 'Sắp xếp dây điện để tránh vướng víu.' ngay tại góc làm việc của bạn!",
+    "tags": [
+      "#5s",
+      "#vanphong",
+      "#tinhtiet",
+      "#s2"
+    ],
+    "accent": "linear-gradient(135deg, #11998e 0%, #38ef7d 100%)"
+  },
+  {
+    "id": "5s_032",
+    "category": "5s",
+    "categoryName": "🧹 5S Văn Phòng",
+    "title": "S2 – Sắp xếp: Gom các loại cáp máy tính theo từng nhóm.",
+    "content": "Gom các loại cáp máy tính theo từng nhóm.. Việc thực hiện nguyên tắc S2 giúp duy trì không gian làm việc văn phòng và sản xuất tinh gọn, sạch sẽ, chuẩn hóa và nâng cao hiệu suất làm việc mỗi ngày.",
+    "action": "👉 Áp dụng ngay: Thực hiện nguyên tắc 'Gom các loại cáp máy tính theo từng nhóm.' ngay tại góc làm việc của bạn!",
+    "tags": [
+      "#5s",
+      "#vanphong",
+      "#tinhtiet",
+      "#s2"
+    ],
+    "accent": "linear-gradient(135deg, #00b4db 0%, #0083b0 100%)"
+  },
+  {
+    "id": "5s_033",
+    "category": "5s",
+    "categoryName": "🧹 5S Văn Phòng",
+    "title": "S2 – Sắp xếp: Màn hình, bàn phím và chuột nên có vị trí ổn định.",
+    "content": "Màn hình, bàn phím và chuột nên có vị trí ổn định.. Việc thực hiện nguyên tắc S2 giúp duy trì không gian làm việc văn phòng và sản xuất tinh gọn, sạch sẽ, chuẩn hóa và nâng cao hiệu suất làm việc mỗi ngày.",
+    "action": "👉 Áp dụng ngay: Thực hiện nguyên tắc 'Màn hình, bàn phím và chuột nên có vị trí ổn định.' ngay tại góc làm việc của bạn!",
+    "tags": [
+      "#5s",
+      "#vanphong",
+      "#tinhtiet",
+      "#s2"
+    ],
+    "accent": "linear-gradient(135deg, #43e97b 0%, #38f9d7 100%)"
+  },
+  {
+    "id": "5s_034",
+    "category": "5s",
+    "categoryName": "🧹 5S Văn Phòng",
+    "title": "S2 – Sắp xếp: Sắp xếp dụng cụ theo trình tự thao tác.",
+    "content": "Sắp xếp dụng cụ theo trình tự thao tác.. Việc thực hiện nguyên tắc S2 giúp duy trì không gian làm việc văn phòng và sản xuất tinh gọn, sạch sẽ, chuẩn hóa và nâng cao hiệu suất làm việc mỗi ngày.",
+    "action": "👉 Áp dụng ngay: Thực hiện nguyên tắc 'Sắp xếp dụng cụ theo trình tự thao tác.' ngay tại góc làm việc của bạn!",
+    "tags": [
+      "#5s",
+      "#vanphong",
+      "#tinhtiet",
+      "#s2"
+    ],
+    "accent": "linear-gradient(135deg, #0ba360 0%, #3cba92 100%)"
+  },
+  {
+    "id": "5s_035",
+    "category": "5s",
+    "categoryName": "🧹 5S Văn Phòng",
+    "title": "S2 – Sắp xếp: Đặt dụng cụ nặng ở vị trí thấp, dễ lấy.",
+    "content": "Đặt dụng cụ nặng ở vị trí thấp, dễ lấy.. Việc thực hiện nguyên tắc S2 giúp duy trì không gian làm việc văn phòng và sản xuất tinh gọn, sạch sẽ, chuẩn hóa và nâng cao hiệu suất làm việc mỗi ngày.",
+    "action": "👉 Áp dụng ngay: Thực hiện nguyên tắc 'Đặt dụng cụ nặng ở vị trí thấp, dễ lấy.' ngay tại góc làm việc của bạn!",
+    "tags": [
+      "#5s",
+      "#vanphong",
+      "#tinhtiet",
+      "#s2"
+    ],
+    "accent": "linear-gradient(135deg, #56ab2f 0%, #a8e063 100%)"
+  },
+  {
+    "id": "5s_036",
+    "category": "5s",
+    "categoryName": "🧹 5S Văn Phòng",
+    "title": "S2 – Sắp xếp: Dùng khay/hộp riêng cho từng loại linh kiện.",
+    "content": "Dùng khay/hộp riêng cho từng loại linh kiện.. Việc thực hiện nguyên tắc S2 giúp duy trì không gian làm việc văn phòng và sản xuất tinh gọn, sạch sẽ, chuẩn hóa và nâng cao hiệu suất làm việc mỗi ngày.",
+    "action": "👉 Áp dụng ngay: Thực hiện nguyên tắc 'Dùng khay/hộp riêng cho từng loại linh kiện.' ngay tại góc làm việc của bạn!",
+    "tags": [
+      "#5s",
+      "#vanphong",
+      "#tinhtiet",
+      "#s2"
+    ],
+    "accent": "linear-gradient(135deg, #11998e 0%, #38ef7d 100%)"
+  },
+  {
+    "id": "5s_037",
+    "category": "5s",
+    "categoryName": "🧹 5S Văn Phòng",
+    "title": "S2 – Sắp xếp: Không trộn lẫn vật tư có mã khác nhau.",
+    "content": "Không trộn lẫn vật tư có mã khác nhau.. Việc thực hiện nguyên tắc S2 giúp duy trì không gian làm việc văn phòng và sản xuất tinh gọn, sạch sẽ, chuẩn hóa và nâng cao hiệu suất làm việc mỗi ngày.",
+    "action": "👉 Áp dụng ngay: Thực hiện nguyên tắc 'Không trộn lẫn vật tư có mã khác nhau.' ngay tại góc làm việc của bạn!",
+    "tags": [
+      "#5s",
+      "#vanphong",
+      "#tinhtiet",
+      "#s2"
+    ],
+    "accent": "linear-gradient(135deg, #00b4db 0%, #0083b0 100%)"
+  },
+  {
+    "id": "5s_038",
+    "category": "5s",
+    "categoryName": "🧹 5S Văn Phòng",
+    "title": "S2 – Sắp xếp: Đặt FIFO cho vật tư cần quản lý theo thời gian.",
+    "content": "Đặt FIFO cho vật tư cần quản lý theo thời gian.. Việc thực hiện nguyên tắc S2 giúp duy trì không gian làm việc văn phòng và sản xuất tinh gọn, sạch sẽ, chuẩn hóa và nâng cao hiệu suất làm việc mỗi ngày.",
+    "action": "👉 Áp dụng ngay: Thực hiện nguyên tắc 'Đặt FIFO cho vật tư cần quản lý theo thời gian.' ngay tại góc làm việc của bạn!",
+    "tags": [
+      "#5s",
+      "#vanphong",
+      "#tinhtiet",
+      "#s2"
+    ],
+    "accent": "linear-gradient(135deg, #43e97b 0%, #38f9d7 100%)"
+  },
+  {
+    "id": "5s_039",
+    "category": "5s",
+    "categoryName": "🧹 5S Văn Phòng",
+    "title": "S2 – Sắp xếp: Tạo khu vực riêng cho hàng chờ kiểm tra.",
+    "content": "Tạo khu vực riêng cho hàng chờ kiểm tra.. Việc thực hiện nguyên tắc S2 giúp duy trì không gian làm việc văn phòng và sản xuất tinh gọn, sạch sẽ, chuẩn hóa và nâng cao hiệu suất làm việc mỗi ngày.",
+    "action": "👉 Áp dụng ngay: Thực hiện nguyên tắc 'Tạo khu vực riêng cho hàng chờ kiểm tra.' ngay tại góc làm việc của bạn!",
+    "tags": [
+      "#5s",
+      "#vanphong",
+      "#tinhtiet",
+      "#s2"
+    ],
+    "accent": "linear-gradient(135deg, #0ba360 0%, #3cba92 100%)"
+  },
+  {
+    "id": "5s_040",
+    "category": "5s",
+    "categoryName": "🧹 5S Văn Phòng",
+    "title": "S2 – Sắp xếp: Biển chỉ dẫn phải dễ nhìn từ khoảng cách phù hợp.",
+    "content": "Biển chỉ dẫn phải dễ nhìn từ khoảng cách phù hợp.. Việc thực hiện nguyên tắc S2 giúp duy trì không gian làm việc văn phòng và sản xuất tinh gọn, sạch sẽ, chuẩn hóa và nâng cao hiệu suất làm việc mỗi ngày.",
+    "action": "👉 Áp dụng ngay: Thực hiện nguyên tắc 'Biển chỉ dẫn phải dễ nhìn từ khoảng cách phù hợp.' ngay tại góc làm việc của bạn!",
+    "tags": [
+      "#5s",
+      "#vanphong",
+      "#tinhtiet",
+      "#s2"
+    ],
+    "accent": "linear-gradient(135deg, #56ab2f 0%, #a8e063 100%)"
+  },
+  {
+    "id": "5s_041",
+    "category": "5s",
+    "categoryName": "🧹 5S Văn Phòng",
+    "title": "S3 – Sạch sẽ: Lau bàn làm việc trước khi kết thúc ca.",
+    "content": "Lau bàn làm việc trước khi kết thúc ca.. Việc thực hiện nguyên tắc S3 giúp duy trì không gian làm việc văn phòng và sản xuất tinh gọn, sạch sẽ, chuẩn hóa và nâng cao hiệu suất làm việc mỗi ngày.",
+    "action": "👉 Áp dụng ngay: Thực hiện nguyên tắc 'Lau bàn làm việc trước khi kết thúc ca.' ngay tại góc làm việc của bạn!",
+    "tags": [
+      "#5s",
+      "#vanphong",
+      "#tinhtiet",
+      "#s3"
+    ],
+    "accent": "linear-gradient(135deg, #11998e 0%, #38ef7d 100%)"
+  },
+  {
+    "id": "5s_042",
+    "category": "5s",
+    "categoryName": "🧹 5S Văn Phòng",
+    "title": "S3 – Sạch sẽ: Không đợi bẩn mới vệ sinh.",
+    "content": "Không đợi bẩn mới vệ sinh.. Việc thực hiện nguyên tắc S3 giúp duy trì không gian làm việc văn phòng và sản xuất tinh gọn, sạch sẽ, chuẩn hóa và nâng cao hiệu suất làm việc mỗi ngày.",
+    "action": "👉 Áp dụng ngay: Thực hiện nguyên tắc 'Không đợi bẩn mới vệ sinh.' ngay tại góc làm việc của bạn!",
+    "tags": [
+      "#5s",
+      "#vanphong",
+      "#tinhtiet",
+      "#s3"
+    ],
+    "accent": "linear-gradient(135deg, #00b4db 0%, #0083b0 100%)"
+  },
+  {
+    "id": "5s_043",
+    "category": "5s",
+    "categoryName": "🧹 5S Văn Phòng",
+    "title": "S3 – Sạch sẽ: Quy định rõ ai chịu trách nhiệm vệ sinh từng khu vực.",
+    "content": "Quy định rõ ai chịu trách nhiệm vệ sinh từng khu vực.. Việc thực hiện nguyên tắc S3 giúp duy trì không gian làm việc văn phòng và sản xuất tinh gọn, sạch sẽ, chuẩn hóa và nâng cao hiệu suất làm việc mỗi ngày.",
+    "action": "👉 Áp dụng ngay: Thực hiện nguyên tắc 'Quy định rõ ai chịu trách nhiệm vệ sinh từng khu vực.' ngay tại góc làm việc của bạn!",
+    "tags": [
+      "#5s",
+      "#vanphong",
+      "#tinhtiet",
+      "#s3"
+    ],
+    "accent": "linear-gradient(135deg, #43e97b 0%, #38f9d7 100%)"
+  },
+  {
+    "id": "5s_044",
+    "category": "5s",
+    "categoryName": "🧹 5S Văn Phòng",
+    "title": "S3 – Sạch sẽ: Vệ sinh máy móc theo checklist.",
+    "content": "Vệ sinh máy móc theo checklist.. Việc thực hiện nguyên tắc S3 giúp duy trì không gian làm việc văn phòng và sản xuất tinh gọn, sạch sẽ, chuẩn hóa và nâng cao hiệu suất làm việc mỗi ngày.",
+    "action": "👉 Áp dụng ngay: Thực hiện nguyên tắc 'Vệ sinh máy móc theo checklist.' ngay tại góc làm việc của bạn!",
+    "tags": [
+      "#5s",
+      "#vanphong",
+      "#tinhtiet",
+      "#s3"
+    ],
+    "accent": "linear-gradient(135deg, #0ba360 0%, #3cba92 100%)"
+  },
+  {
+    "id": "5s_045",
+    "category": "5s",
+    "categoryName": "🧹 5S Văn Phòng",
+    "title": "S3 – Sạch sẽ: Xử lý dầu mỡ rò rỉ ngay khi phát hiện.",
+    "content": "Xử lý dầu mỡ rò rỉ ngay khi phát hiện.. Việc thực hiện nguyên tắc S3 giúp duy trì không gian làm việc văn phòng và sản xuất tinh gọn, sạch sẽ, chuẩn hóa và nâng cao hiệu suất làm việc mỗi ngày.",
+    "action": "👉 Áp dụng ngay: Thực hiện nguyên tắc 'Xử lý dầu mỡ rò rỉ ngay khi phát hiện.' ngay tại góc làm việc của bạn!",
+    "tags": [
+      "#5s",
+      "#vanphong",
+      "#tinhtiet",
+      "#s3"
+    ],
+    "accent": "linear-gradient(135deg, #56ab2f 0%, #a8e063 100%)"
+  },
+  {
+    "id": "5s_046",
+    "category": "5s",
+    "categoryName": "🧹 5S Văn Phòng",
+    "title": "S3 – Sạch sẽ: Không để phoi, bụi và rác tích tụ quanh máy.",
+    "content": "Không để phoi, bụi và rác tích tụ quanh máy.. Việc thực hiện nguyên tắc S3 giúp duy trì không gian làm việc văn phòng và sản xuất tinh gọn, sạch sẽ, chuẩn hóa và nâng cao hiệu suất làm việc mỗi ngày.",
+    "action": "👉 Áp dụng ngay: Thực hiện nguyên tắc 'Không để phoi, bụi và rác tích tụ quanh máy.' ngay tại góc làm việc của bạn!",
+    "tags": [
+      "#5s",
+      "#vanphong",
+      "#tinhtiet",
+      "#s3"
+    ],
+    "accent": "linear-gradient(135deg, #11998e 0%, #38ef7d 100%)"
+  },
+  {
+    "id": "5s_047",
+    "category": "5s",
+    "categoryName": "🧹 5S Văn Phòng",
+    "title": "S3 – Sạch sẽ: Giữ sạch khu vực dưới máy.",
+    "content": "Giữ sạch khu vực dưới máy.. Việc thực hiện nguyên tắc S3 giúp duy trì không gian làm việc văn phòng và sản xuất tinh gọn, sạch sẽ, chuẩn hóa và nâng cao hiệu suất làm việc mỗi ngày.",
+    "action": "👉 Áp dụng ngay: Thực hiện nguyên tắc 'Giữ sạch khu vực dưới máy.' ngay tại góc làm việc của bạn!",
+    "tags": [
+      "#5s",
+      "#vanphong",
+      "#tinhtiet",
+      "#s3"
+    ],
+    "accent": "linear-gradient(135deg, #00b4db 0%, #0083b0 100%)"
+  },
+  {
+    "id": "5s_048",
+    "category": "5s",
+    "categoryName": "🧹 5S Văn Phòng",
+    "title": "S3 – Sạch sẽ: Vệ sinh dụng cụ sau khi sử dụng.",
+    "content": "Vệ sinh dụng cụ sau khi sử dụng.. Việc thực hiện nguyên tắc S3 giúp duy trì không gian làm việc văn phòng và sản xuất tinh gọn, sạch sẽ, chuẩn hóa và nâng cao hiệu suất làm việc mỗi ngày.",
+    "action": "👉 Áp dụng ngay: Thực hiện nguyên tắc 'Vệ sinh dụng cụ sau khi sử dụng.' ngay tại góc làm việc của bạn!",
+    "tags": [
+      "#5s",
+      "#vanphong",
+      "#tinhtiet",
+      "#s3"
+    ],
+    "accent": "linear-gradient(135deg, #43e97b 0%, #38f9d7 100%)"
+  },
+  {
+    "id": "5s_049",
+    "category": "5s",
+    "categoryName": "🧹 5S Văn Phòng",
+    "title": "S3 – Sạch sẽ: Không để rác tồn qua ca.",
+    "content": "Không để rác tồn qua ca.. Việc thực hiện nguyên tắc S3 giúp duy trì không gian làm việc văn phòng và sản xuất tinh gọn, sạch sẽ, chuẩn hóa và nâng cao hiệu suất làm việc mỗi ngày.",
+    "action": "👉 Áp dụng ngay: Thực hiện nguyên tắc 'Không để rác tồn qua ca.' ngay tại góc làm việc của bạn!",
+    "tags": [
+      "#5s",
+      "#vanphong",
+      "#tinhtiet",
+      "#s3"
+    ],
+    "accent": "linear-gradient(135deg, #0ba360 0%, #3cba92 100%)"
+  },
+  {
+    "id": "5s_050",
+    "category": "5s",
+    "categoryName": "🧹 5S Văn Phòng",
+    "title": "S3 – Sạch sẽ: Thùng rác phải có vị trí cố định.",
+    "content": "Thùng rác phải có vị trí cố định.. Việc thực hiện nguyên tắc S3 giúp duy trì không gian làm việc văn phòng và sản xuất tinh gọn, sạch sẽ, chuẩn hóa và nâng cao hiệu suất làm việc mỗi ngày.",
+    "action": "👉 Áp dụng ngay: Thực hiện nguyên tắc 'Thùng rác phải có vị trí cố định.' ngay tại góc làm việc của bạn!",
+    "tags": [
+      "#5s",
+      "#vanphong",
+      "#tinhtiet",
+      "#s3"
+    ],
+    "accent": "linear-gradient(135deg, #56ab2f 0%, #a8e063 100%)"
+  },
+  {
+    "id": "5s_051",
+    "category": "5s",
+    "categoryName": "🧹 5S Văn Phòng",
+    "title": "S3 – Sạch sẽ: Làm sạch màn hình và thiết bị văn phòng định kỳ.",
+    "content": "Làm sạch màn hình và thiết bị văn phòng định kỳ.. Việc thực hiện nguyên tắc S3 giúp duy trì không gian làm việc văn phòng và sản xuất tinh gọn, sạch sẽ, chuẩn hóa và nâng cao hiệu suất làm việc mỗi ngày.",
+    "action": "👉 Áp dụng ngay: Thực hiện nguyên tắc 'Làm sạch màn hình và thiết bị văn phòng định kỳ.' ngay tại góc làm việc của bạn!",
+    "tags": [
+      "#5s",
+      "#vanphong",
+      "#tinhtiet",
+      "#s3"
+    ],
+    "accent": "linear-gradient(135deg, #11998e 0%, #38ef7d 100%)"
+  },
+  {
+    "id": "5s_052",
+    "category": "5s",
+    "categoryName": "🧹 5S Văn Phòng",
+    "title": "S3 – Sạch sẽ: Không ăn uống tại vị trí sản xuất nếu không được phép.",
+    "content": "Không ăn uống tại vị trí sản xuất nếu không được phép.. Việc thực hiện nguyên tắc S3 giúp duy trì không gian làm việc văn phòng và sản xuất tinh gọn, sạch sẽ, chuẩn hóa và nâng cao hiệu suất làm việc mỗi ngày.",
+    "action": "👉 Áp dụng ngay: Thực hiện nguyên tắc 'Không ăn uống tại vị trí sản xuất nếu không được phép.' ngay tại góc làm việc của bạn!",
+    "tags": [
+      "#5s",
+      "#vanphong",
+      "#tinhtiet",
+      "#s3"
+    ],
+    "accent": "linear-gradient(135deg, #00b4db 0%, #0083b0 100%)"
+  },
+  {
+    "id": "5s_053",
+    "category": "5s",
+    "categoryName": "🧹 5S Văn Phòng",
+    "title": "S3 – Sạch sẽ: Giữ khu vực pantry sạch sau mỗi lần sử dụng.",
+    "content": "Giữ khu vực pantry sạch sau mỗi lần sử dụng.. Việc thực hiện nguyên tắc S3 giúp duy trì không gian làm việc văn phòng và sản xuất tinh gọn, sạch sẽ, chuẩn hóa và nâng cao hiệu suất làm việc mỗi ngày.",
+    "action": "👉 Áp dụng ngay: Thực hiện nguyên tắc 'Giữ khu vực pantry sạch sau mỗi lần sử dụng.' ngay tại góc làm việc của bạn!",
+    "tags": [
+      "#5s",
+      "#vanphong",
+      "#tinhtiet",
+      "#s3"
+    ],
+    "accent": "linear-gradient(135deg, #43e97b 0%, #38f9d7 100%)"
+  },
+  {
+    "id": "5s_054",
+    "category": "5s",
+    "categoryName": "🧹 5S Văn Phòng",
+    "title": "S3 – Sạch sẽ: Lau sạch tay trước khi sử dụng thiết bị chung.",
+    "content": "Lau sạch tay trước khi sử dụng thiết bị chung.. Việc thực hiện nguyên tắc S3 giúp duy trì không gian làm việc văn phòng và sản xuất tinh gọn, sạch sẽ, chuẩn hóa và nâng cao hiệu suất làm việc mỗi ngày.",
+    "action": "👉 Áp dụng ngay: Thực hiện nguyên tắc 'Lau sạch tay trước khi sử dụng thiết bị chung.' ngay tại góc làm việc của bạn!",
+    "tags": [
+      "#5s",
+      "#vanphong",
+      "#tinhtiet",
+      "#s3"
+    ],
+    "accent": "linear-gradient(135deg, #0ba360 0%, #3cba92 100%)"
+  },
+  {
+    "id": "5s_055",
+    "category": "5s",
+    "categoryName": "🧹 5S Văn Phòng",
+    "title": "S3 – Sạch sẽ: Vệ sinh bàn họp ngay sau cuộc họp.",
+    "content": "Vệ sinh bàn họp ngay sau cuộc họp.. Việc thực hiện nguyên tắc S3 giúp duy trì không gian làm việc văn phòng và sản xuất tinh gọn, sạch sẽ, chuẩn hóa và nâng cao hiệu suất làm việc mỗi ngày.",
+    "action": "👉 Áp dụng ngay: Thực hiện nguyên tắc 'Vệ sinh bàn họp ngay sau cuộc họp.' ngay tại góc làm việc của bạn!",
+    "tags": [
+      "#5s",
+      "#vanphong",
+      "#tinhtiet",
+      "#s3"
+    ],
+    "accent": "linear-gradient(135deg, #56ab2f 0%, #a8e063 100%)"
+  },
+  {
+    "id": "5s_056",
+    "category": "5s",
+    "categoryName": "🧹 5S Văn Phòng",
+    "title": "S3 – Sạch sẽ: Không để cốc nước, chai nước trên thiết bị điện.",
+    "content": "Không để cốc nước, chai nước trên thiết bị điện.. Việc thực hiện nguyên tắc S3 giúp duy trì không gian làm việc văn phòng và sản xuất tinh gọn, sạch sẽ, chuẩn hóa và nâng cao hiệu suất làm việc mỗi ngày.",
+    "action": "👉 Áp dụng ngay: Thực hiện nguyên tắc 'Không để cốc nước, chai nước trên thiết bị điện.' ngay tại góc làm việc của bạn!",
+    "tags": [
+      "#5s",
+      "#vanphong",
+      "#tinhtiet",
+      "#s3"
+    ],
+    "accent": "linear-gradient(135deg, #11998e 0%, #38ef7d 100%)"
+  },
+  {
+    "id": "5s_057",
+    "category": "5s",
+    "categoryName": "🧹 5S Văn Phòng",
+    "title": "S3 – Sạch sẽ: Kiểm tra các góc khuất khi vệ sinh.",
+    "content": "Kiểm tra các góc khuất khi vệ sinh.. Việc thực hiện nguyên tắc S3 giúp duy trì không gian làm việc văn phòng và sản xuất tinh gọn, sạch sẽ, chuẩn hóa và nâng cao hiệu suất làm việc mỗi ngày.",
+    "action": "👉 Áp dụng ngay: Thực hiện nguyên tắc 'Kiểm tra các góc khuất khi vệ sinh.' ngay tại góc làm việc của bạn!",
+    "tags": [
+      "#5s",
+      "#vanphong",
+      "#tinhtiet",
+      "#s3"
+    ],
+    "accent": "linear-gradient(135deg, #00b4db 0%, #0083b0 100%)"
+  },
+  {
+    "id": "5s_058",
+    "category": "5s",
+    "categoryName": "🧹 5S Văn Phòng",
+    "title": "S3 – Sạch sẽ: Phát hiện nguồn gây bẩn thay vì chỉ lau hậu quả.",
+    "content": "Phát hiện nguồn gây bẩn thay vì chỉ lau hậu quả.. Việc thực hiện nguyên tắc S3 giúp duy trì không gian làm việc văn phòng và sản xuất tinh gọn, sạch sẽ, chuẩn hóa và nâng cao hiệu suất làm việc mỗi ngày.",
+    "action": "👉 Áp dụng ngay: Thực hiện nguyên tắc 'Phát hiện nguồn gây bẩn thay vì chỉ lau hậu quả.' ngay tại góc làm việc của bạn!",
+    "tags": [
+      "#5s",
+      "#vanphong",
+      "#tinhtiet",
+      "#s3"
+    ],
+    "accent": "linear-gradient(135deg, #43e97b 0%, #38f9d7 100%)"
+  },
+  {
+    "id": "5s_059",
+    "category": "5s",
+    "categoryName": "🧹 5S Văn Phòng",
+    "title": "S3 – Sạch sẽ: Xác định “điểm bẩn” thường xuyên phát sinh.",
+    "content": "Xác định “điểm bẩn” thường xuyên phát sinh.. Việc thực hiện nguyên tắc S3 giúp duy trì không gian làm việc văn phòng và sản xuất tinh gọn, sạch sẽ, chuẩn hóa và nâng cao hiệu suất làm việc mỗi ngày.",
+    "action": "👉 Áp dụng ngay: Thực hiện nguyên tắc 'Xác định “điểm bẩn” thường xuyên phát sinh.' ngay tại góc làm việc của bạn!",
+    "tags": [
+      "#5s",
+      "#vanphong",
+      "#tinhtiet",
+      "#s3"
+    ],
+    "accent": "linear-gradient(135deg, #0ba360 0%, #3cba92 100%)"
+  },
+  {
+    "id": "5s_060",
+    "category": "5s",
+    "categoryName": "🧹 5S Văn Phòng",
+    "title": "S3 – Sạch sẽ: Mỗi khu vực nên có tiêu chuẩn sạch cụ thể.",
+    "content": "Mỗi khu vực nên có tiêu chuẩn sạch cụ thể.. Việc thực hiện nguyên tắc S3 giúp duy trì không gian làm việc văn phòng và sản xuất tinh gọn, sạch sẽ, chuẩn hóa và nâng cao hiệu suất làm việc mỗi ngày.",
+    "action": "👉 Áp dụng ngay: Thực hiện nguyên tắc 'Mỗi khu vực nên có tiêu chuẩn sạch cụ thể.' ngay tại góc làm việc của bạn!",
+    "tags": [
+      "#5s",
+      "#vanphong",
+      "#tinhtiet",
+      "#s3"
+    ],
+    "accent": "linear-gradient(135deg, #56ab2f 0%, #a8e063 100%)"
+  },
+  {
+    "id": "5s_061",
+    "category": "5s",
+    "categoryName": "🧹 5S Văn Phòng",
+    "title": "S4 – Săn sóc/Chuẩn hóa: Chụp ảnh trạng thái chuẩn của khu vực.",
+    "content": "Chụp ảnh trạng thái chuẩn của khu vực.. Việc thực hiện nguyên tắc S4 giúp duy trì không gian làm việc văn phòng và sản xuất tinh gọn, sạch sẽ, chuẩn hóa và nâng cao hiệu suất làm việc mỗi ngày.",
+    "action": "👉 Áp dụng ngay: Thực hiện nguyên tắc 'Chụp ảnh trạng thái chuẩn của khu vực.' ngay tại góc làm việc của bạn!",
+    "tags": [
+      "#5s",
+      "#vanphong",
+      "#tinhtiet",
+      "#s4"
+    ],
+    "accent": "linear-gradient(135deg, #11998e 0%, #38ef7d 100%)"
+  },
+  {
+    "id": "5s_062",
+    "category": "5s",
+    "categoryName": "🧹 5S Văn Phòng",
+    "title": "S4 – Săn sóc/Chuẩn hóa: Dùng ảnh chuẩn để đánh giá 5S.",
+    "content": "Dùng ảnh chuẩn để đánh giá 5S.. Việc thực hiện nguyên tắc S4 giúp duy trì không gian làm việc văn phòng và sản xuất tinh gọn, sạch sẽ, chuẩn hóa và nâng cao hiệu suất làm việc mỗi ngày.",
+    "action": "👉 Áp dụng ngay: Thực hiện nguyên tắc 'Dùng ảnh chuẩn để đánh giá 5S.' ngay tại góc làm việc của bạn!",
+    "tags": [
+      "#5s",
+      "#vanphong",
+      "#tinhtiet",
+      "#s4"
+    ],
+    "accent": "linear-gradient(135deg, #00b4db 0%, #0083b0 100%)"
+  },
+  {
+    "id": "5s_063",
+    "category": "5s",
+    "categoryName": "🧹 5S Văn Phòng",
+    "title": "S4 – Săn sóc/Chuẩn hóa: Chuẩn hóa màu sắc nhận diện.",
+    "content": "Chuẩn hóa màu sắc nhận diện.. Việc thực hiện nguyên tắc S4 giúp duy trì không gian làm việc văn phòng và sản xuất tinh gọn, sạch sẽ, chuẩn hóa và nâng cao hiệu suất làm việc mỗi ngày.",
+    "action": "👉 Áp dụng ngay: Thực hiện nguyên tắc 'Chuẩn hóa màu sắc nhận diện.' ngay tại góc làm việc của bạn!",
+    "tags": [
+      "#5s",
+      "#vanphong",
+      "#tinhtiet",
+      "#s4"
+    ],
+    "accent": "linear-gradient(135deg, #43e97b 0%, #38f9d7 100%)"
+  },
+  {
+    "id": "5s_064",
+    "category": "5s",
+    "categoryName": "🧹 5S Văn Phòng",
+    "title": "S4 – Săn sóc/Chuẩn hóa: Chuẩn hóa cách đặt dụng cụ.",
+    "content": "Chuẩn hóa cách đặt dụng cụ.. Việc thực hiện nguyên tắc S4 giúp duy trì không gian làm việc văn phòng và sản xuất tinh gọn, sạch sẽ, chuẩn hóa và nâng cao hiệu suất làm việc mỗi ngày.",
+    "action": "👉 Áp dụng ngay: Thực hiện nguyên tắc 'Chuẩn hóa cách đặt dụng cụ.' ngay tại góc làm việc của bạn!",
+    "tags": [
+      "#5s",
+      "#vanphong",
+      "#tinhtiet",
+      "#s4"
+    ],
+    "accent": "linear-gradient(135deg, #0ba360 0%, #3cba92 100%)"
+  },
+  {
+    "id": "5s_065",
+    "category": "5s",
+    "categoryName": "🧹 5S Văn Phòng",
+    "title": "S4 – Săn sóc/Chuẩn hóa: Chuẩn hóa tên và mã hồ sơ.",
+    "content": "Chuẩn hóa tên và mã hồ sơ.. Việc thực hiện nguyên tắc S4 giúp duy trì không gian làm việc văn phòng và sản xuất tinh gọn, sạch sẽ, chuẩn hóa và nâng cao hiệu suất làm việc mỗi ngày.",
+    "action": "👉 Áp dụng ngay: Thực hiện nguyên tắc 'Chuẩn hóa tên và mã hồ sơ.' ngay tại góc làm việc của bạn!",
+    "tags": [
+      "#5s",
+      "#vanphong",
+      "#tinhtiet",
+      "#s4"
+    ],
+    "accent": "linear-gradient(135deg, #56ab2f 0%, #a8e063 100%)"
+  },
+  {
+    "id": "5s_066",
+    "category": "5s",
+    "categoryName": "🧹 5S Văn Phòng",
+    "title": "S4 – Săn sóc/Chuẩn hóa: Chuẩn hóa cách đặt tên file máy tính.",
+    "content": "Chuẩn hóa cách đặt tên file máy tính.. Việc thực hiện nguyên tắc S4 giúp duy trì không gian làm việc văn phòng và sản xuất tinh gọn, sạch sẽ, chuẩn hóa và nâng cao hiệu suất làm việc mỗi ngày.",
+    "action": "👉 Áp dụng ngay: Thực hiện nguyên tắc 'Chuẩn hóa cách đặt tên file máy tính.' ngay tại góc làm việc của bạn!",
+    "tags": [
+      "#5s",
+      "#vanphong",
+      "#tinhtiet",
+      "#s4"
+    ],
+    "accent": "linear-gradient(135deg, #11998e 0%, #38ef7d 100%)"
+  },
+  {
+    "id": "5s_067",
+    "category": "5s",
+    "categoryName": "🧹 5S Văn Phòng",
+    "title": "S4 – Săn sóc/Chuẩn hóa: Chuẩn hóa vị trí lưu trữ dữ liệu.",
+    "content": "Chuẩn hóa vị trí lưu trữ dữ liệu.. Việc thực hiện nguyên tắc S4 giúp duy trì không gian làm việc văn phòng và sản xuất tinh gọn, sạch sẽ, chuẩn hóa và nâng cao hiệu suất làm việc mỗi ngày.",
+    "action": "👉 Áp dụng ngay: Thực hiện nguyên tắc 'Chuẩn hóa vị trí lưu trữ dữ liệu.' ngay tại góc làm việc của bạn!",
+    "tags": [
+      "#5s",
+      "#vanphong",
+      "#tinhtiet",
+      "#s4"
+    ],
+    "accent": "linear-gradient(135deg, #00b4db 0%, #0083b0 100%)"
+  },
+  {
+    "id": "5s_068",
+    "category": "5s",
+    "categoryName": "🧹 5S Văn Phòng",
+    "title": "S4 – Săn sóc/Chuẩn hóa: Xây dựng checklist 5S đơn giản.",
+    "content": "Xây dựng checklist 5S đơn giản.. Việc thực hiện nguyên tắc S4 giúp duy trì không gian làm việc văn phòng và sản xuất tinh gọn, sạch sẽ, chuẩn hóa và nâng cao hiệu suất làm việc mỗi ngày.",
+    "action": "👉 Áp dụng ngay: Thực hiện nguyên tắc 'Xây dựng checklist 5S đơn giản.' ngay tại góc làm việc của bạn!",
+    "tags": [
+      "#5s",
+      "#vanphong",
+      "#tinhtiet",
+      "#s4"
+    ],
+    "accent": "linear-gradient(135deg, #43e97b 0%, #38f9d7 100%)"
+  },
+  {
+    "id": "5s_069",
+    "category": "5s",
+    "categoryName": "🧹 5S Văn Phòng",
+    "title": "S4 – Săn sóc/Chuẩn hóa: Checklist phải có người chịu trách nhiệm.",
+    "content": "Checklist phải có người chịu trách nhiệm.. Việc thực hiện nguyên tắc S4 giúp duy trì không gian làm việc văn phòng và sản xuất tinh gọn, sạch sẽ, chuẩn hóa và nâng cao hiệu suất làm việc mỗi ngày.",
+    "action": "👉 Áp dụng ngay: Thực hiện nguyên tắc 'Checklist phải có người chịu trách nhiệm.' ngay tại góc làm việc của bạn!",
+    "tags": [
+      "#5s",
+      "#vanphong",
+      "#tinhtiet",
+      "#s4"
+    ],
+    "accent": "linear-gradient(135deg, #0ba360 0%, #3cba92 100%)"
+  },
+  {
+    "id": "5s_070",
+    "category": "5s",
+    "categoryName": "🧹 5S Văn Phòng",
+    "title": "S4 – Săn sóc/Chuẩn hóa: Quy định tần suất kiểm tra 5S.",
+    "content": "Quy định tần suất kiểm tra 5S.. Việc thực hiện nguyên tắc S4 giúp duy trì không gian làm việc văn phòng và sản xuất tinh gọn, sạch sẽ, chuẩn hóa và nâng cao hiệu suất làm việc mỗi ngày.",
+    "action": "👉 Áp dụng ngay: Thực hiện nguyên tắc 'Quy định tần suất kiểm tra 5S.' ngay tại góc làm việc của bạn!",
+    "tags": [
+      "#5s",
+      "#vanphong",
+      "#tinhtiet",
+      "#s4"
+    ],
+    "accent": "linear-gradient(135deg, #56ab2f 0%, #a8e063 100%)"
+  },
+  {
+    "id": "5s_071",
+    "category": "5s",
+    "categoryName": "🧹 5S Văn Phòng",
+    "title": "S4 – Săn sóc/Chuẩn hóa: Đánh dấu ngày kiểm tra gần nhất.",
+    "content": "Đánh dấu ngày kiểm tra gần nhất.. Việc thực hiện nguyên tắc S4 giúp duy trì không gian làm việc văn phòng và sản xuất tinh gọn, sạch sẽ, chuẩn hóa và nâng cao hiệu suất làm việc mỗi ngày.",
+    "action": "👉 Áp dụng ngay: Thực hiện nguyên tắc 'Đánh dấu ngày kiểm tra gần nhất.' ngay tại góc làm việc của bạn!",
+    "tags": [
+      "#5s",
+      "#vanphong",
+      "#tinhtiet",
+      "#s4"
+    ],
+    "accent": "linear-gradient(135deg, #11998e 0%, #38ef7d 100%)"
+  },
+  {
+    "id": "5s_072",
+    "category": "5s",
+    "categoryName": "🧹 5S Văn Phòng",
+    "title": "S4 – Săn sóc/Chuẩn hóa: Tiêu chuẩn 5S phải dễ hiểu với người mới.",
+    "content": "Tiêu chuẩn 5S phải dễ hiểu với người mới.. Việc thực hiện nguyên tắc S4 giúp duy trì không gian làm việc văn phòng và sản xuất tinh gọn, sạch sẽ, chuẩn hóa và nâng cao hiệu suất làm việc mỗi ngày.",
+    "action": "👉 Áp dụng ngay: Thực hiện nguyên tắc 'Tiêu chuẩn 5S phải dễ hiểu với người mới.' ngay tại góc làm việc của bạn!",
+    "tags": [
+      "#5s",
+      "#vanphong",
+      "#tinhtiet",
+      "#s4"
+    ],
+    "accent": "linear-gradient(135deg, #00b4db 0%, #0083b0 100%)"
+  },
+  {
+    "id": "5s_073",
+    "category": "5s",
+    "categoryName": "🧹 5S Văn Phòng",
+    "title": "S4 – Săn sóc/Chuẩn hóa: Không xây dựng tiêu chuẩn quá phức tạp.",
+    "content": "Không xây dựng tiêu chuẩn quá phức tạp.. Việc thực hiện nguyên tắc S4 giúp duy trì không gian làm việc văn phòng và sản xuất tinh gọn, sạch sẽ, chuẩn hóa và nâng cao hiệu suất làm việc mỗi ngày.",
+    "action": "👉 Áp dụng ngay: Thực hiện nguyên tắc 'Không xây dựng tiêu chuẩn quá phức tạp.' ngay tại góc làm việc của bạn!",
+    "tags": [
+      "#5s",
+      "#vanphong",
+      "#tinhtiet",
+      "#s4"
+    ],
+    "accent": "linear-gradient(135deg, #43e97b 0%, #38f9d7 100%)"
+  },
+  {
+    "id": "5s_074",
+    "category": "5s",
+    "categoryName": "🧹 5S Văn Phòng",
+    "title": "S4 – Săn sóc/Chuẩn hóa: Quy định rõ thế nào là “đạt”.",
+    "content": "Quy định rõ thế nào là “đạt”.. Việc thực hiện nguyên tắc S4 giúp duy trì không gian làm việc văn phòng và sản xuất tinh gọn, sạch sẽ, chuẩn hóa và nâng cao hiệu suất làm việc mỗi ngày.",
+    "action": "👉 Áp dụng ngay: Thực hiện nguyên tắc 'Quy định rõ thế nào là “đạt”.' ngay tại góc làm việc của bạn!",
+    "tags": [
+      "#5s",
+      "#vanphong",
+      "#tinhtiet",
+      "#s4"
+    ],
+    "accent": "linear-gradient(135deg, #0ba360 0%, #3cba92 100%)"
+  },
+  {
+    "id": "5s_075",
+    "category": "5s",
+    "categoryName": "🧹 5S Văn Phòng",
+    "title": "S4 – Săn sóc/Chuẩn hóa: Quy định rõ thế nào là “không đạt”.",
+    "content": "Quy định rõ thế nào là “không đạt”.. Việc thực hiện nguyên tắc S4 giúp duy trì không gian làm việc văn phòng và sản xuất tinh gọn, sạch sẽ, chuẩn hóa và nâng cao hiệu suất làm việc mỗi ngày.",
+    "action": "👉 Áp dụng ngay: Thực hiện nguyên tắc 'Quy định rõ thế nào là “không đạt”.' ngay tại góc làm việc của bạn!",
+    "tags": [
+      "#5s",
+      "#vanphong",
+      "#tinhtiet",
+      "#s4"
+    ],
+    "accent": "linear-gradient(135deg, #56ab2f 0%, #a8e063 100%)"
+  },
+  {
+    "id": "5s_076",
+    "category": "5s",
+    "categoryName": "🧹 5S Văn Phòng",
+    "title": "S4 – Săn sóc/Chuẩn hóa: Dùng bảng trực quan để thể hiện tình trạng 5S.",
+    "content": "Dùng bảng trực quan để thể hiện tình trạng 5S.. Việc thực hiện nguyên tắc S4 giúp duy trì không gian làm việc văn phòng và sản xuất tinh gọn, sạch sẽ, chuẩn hóa và nâng cao hiệu suất làm việc mỗi ngày.",
+    "action": "👉 Áp dụng ngay: Thực hiện nguyên tắc 'Dùng bảng trực quan để thể hiện tình trạng 5S.' ngay tại góc làm việc của bạn!",
+    "tags": [
+      "#5s",
+      "#vanphong",
+      "#tinhtiet",
+      "#s4"
+    ],
+    "accent": "linear-gradient(135deg, #11998e 0%, #38ef7d 100%)"
+  },
+  {
+    "id": "5s_077",
+    "category": "5s",
+    "categoryName": "🧹 5S Văn Phòng",
+    "title": "S4 – Săn sóc/Chuẩn hóa: Cập nhật tiêu chuẩn khi quy trình thay đổi.",
+    "content": "Cập nhật tiêu chuẩn khi quy trình thay đổi.. Việc thực hiện nguyên tắc S4 giúp duy trì không gian làm việc văn phòng và sản xuất tinh gọn, sạch sẽ, chuẩn hóa và nâng cao hiệu suất làm việc mỗi ngày.",
+    "action": "👉 Áp dụng ngay: Thực hiện nguyên tắc 'Cập nhật tiêu chuẩn khi quy trình thay đổi.' ngay tại góc làm việc của bạn!",
+    "tags": [
+      "#5s",
+      "#vanphong",
+      "#tinhtiet",
+      "#s4"
+    ],
+    "accent": "linear-gradient(135deg, #00b4db 0%, #0083b0 100%)"
+  },
+  {
+    "id": "5s_078",
+    "category": "5s",
+    "categoryName": "🧹 5S Văn Phòng",
+    "title": "S4 – Săn sóc/Chuẩn hóa: Đưa 5S vào bàn giao giữa các ca.",
+    "content": "Đưa 5S vào bàn giao giữa các ca.. Việc thực hiện nguyên tắc S4 giúp duy trì không gian làm việc văn phòng và sản xuất tinh gọn, sạch sẽ, chuẩn hóa và nâng cao hiệu suất làm việc mỗi ngày.",
+    "action": "👉 Áp dụng ngay: Thực hiện nguyên tắc 'Đưa 5S vào bàn giao giữa các ca.' ngay tại góc làm việc của bạn!",
+    "tags": [
+      "#5s",
+      "#vanphong",
+      "#tinhtiet",
+      "#s4"
+    ],
+    "accent": "linear-gradient(135deg, #43e97b 0%, #38f9d7 100%)"
+  },
+  {
+    "id": "5s_079",
+    "category": "5s",
+    "categoryName": "🧹 5S Văn Phòng",
+    "title": "S4 – Săn sóc/Chuẩn hóa: Kiểm tra cả khu vực làm việc và khu vực phụ trợ.",
+    "content": "Kiểm tra cả khu vực làm việc và khu vực phụ trợ.. Việc thực hiện nguyên tắc S4 giúp duy trì không gian làm việc văn phòng và sản xuất tinh gọn, sạch sẽ, chuẩn hóa và nâng cao hiệu suất làm việc mỗi ngày.",
+    "action": "👉 Áp dụng ngay: Thực hiện nguyên tắc 'Kiểm tra cả khu vực làm việc và khu vực phụ trợ.' ngay tại góc làm việc của bạn!",
+    "tags": [
+      "#5s",
+      "#vanphong",
+      "#tinhtiet",
+      "#s4"
+    ],
+    "accent": "linear-gradient(135deg, #0ba360 0%, #3cba92 100%)"
+  },
+  {
+    "id": "5s_080",
+    "category": "5s",
+    "categoryName": "🧹 5S Văn Phòng",
+    "title": "S4 – Săn sóc/Chuẩn hóa: Ưu tiên tiêu chuẩn có thể nhìn thấy bằng mắt.",
+    "content": "Ưu tiên tiêu chuẩn có thể nhìn thấy bằng mắt.. Việc thực hiện nguyên tắc S4 giúp duy trì không gian làm việc văn phòng và sản xuất tinh gọn, sạch sẽ, chuẩn hóa và nâng cao hiệu suất làm việc mỗi ngày.",
+    "action": "👉 Áp dụng ngay: Thực hiện nguyên tắc 'Ưu tiên tiêu chuẩn có thể nhìn thấy bằng mắt.' ngay tại góc làm việc của bạn!",
+    "tags": [
+      "#5s",
+      "#vanphong",
+      "#tinhtiet",
+      "#s4"
+    ],
+    "accent": "linear-gradient(135deg, #56ab2f 0%, #a8e063 100%)"
+  },
+  {
+    "id": "5s_081",
+    "category": "5s",
+    "categoryName": "🧹 5S Văn Phòng",
+    "title": "S5 – Sẵn sàng/Duy trì: 5S phải trở thành thói quen hằng ngày.",
+    "content": "5S phải trở thành thói quen hằng ngày.. Việc thực hiện nguyên tắc S5 giúp duy trì không gian làm việc văn phòng và sản xuất tinh gọn, sạch sẽ, chuẩn hóa và nâng cao hiệu suất làm việc mỗi ngày.",
+    "action": "👉 Áp dụng ngay: Thực hiện nguyên tắc '5S phải trở thành thói quen hằng ngày.' ngay tại góc làm việc của bạn!",
+    "tags": [
+      "#5s",
+      "#vanphong",
+      "#tinhtiet",
+      "#s5"
+    ],
+    "accent": "linear-gradient(135deg, #11998e 0%, #38ef7d 100%)"
+  },
+  {
+    "id": "5s_082",
+    "category": "5s",
+    "categoryName": "🧹 5S Văn Phòng",
+    "title": "S5 – Sẵn sàng/Duy trì: Dành vài phút cuối ca để trả lại trạng thái chuẩn.",
+    "content": "Dành vài phút cuối ca để trả lại trạng thái chuẩn.. Việc thực hiện nguyên tắc S5 giúp duy trì không gian làm việc văn phòng và sản xuất tinh gọn, sạch sẽ, chuẩn hóa và nâng cao hiệu suất làm việc mỗi ngày.",
+    "action": "👉 Áp dụng ngay: Thực hiện nguyên tắc 'Dành vài phút cuối ca để trả lại trạng thái chuẩn.' ngay tại góc làm việc của bạn!",
+    "tags": [
+      "#5s",
+      "#vanphong",
+      "#tinhtiet",
+      "#s5"
+    ],
+    "accent": "linear-gradient(135deg, #00b4db 0%, #0083b0 100%)"
+  },
+  {
+    "id": "5s_083",
+    "category": "5s",
+    "categoryName": "🧹 5S Văn Phòng",
+    "title": "S5 – Sẵn sàng/Duy trì: Người sử dụng phải chịu trách nhiệm giữ khu vực của mình.",
+    "content": "Người sử dụng phải chịu trách nhiệm giữ khu vực của mình.. Việc thực hiện nguyên tắc S5 giúp duy trì không gian làm việc văn phòng và sản xuất tinh gọn, sạch sẽ, chuẩn hóa và nâng cao hiệu suất làm việc mỗi ngày.",
+    "action": "👉 Áp dụng ngay: Thực hiện nguyên tắc 'Người sử dụng phải chịu trách nhiệm giữ khu vực của mình.' ngay tại góc làm việc của bạn!",
+    "tags": [
+      "#5s",
+      "#vanphong",
+      "#tinhtiet",
+      "#s5"
+    ],
+    "accent": "linear-gradient(135deg, #43e97b 0%, #38f9d7 100%)"
+  },
+  {
+    "id": "5s_084",
+    "category": "5s",
+    "categoryName": "🧹 5S Văn Phòng",
+    "title": "S5 – Sẵn sàng/Duy trì: Thấy sai thì sửa ngay nếu có thể.",
+    "content": "Thấy sai thì sửa ngay nếu có thể.. Việc thực hiện nguyên tắc S5 giúp duy trì không gian làm việc văn phòng và sản xuất tinh gọn, sạch sẽ, chuẩn hóa và nâng cao hiệu suất làm việc mỗi ngày.",
+    "action": "👉 Áp dụng ngay: Thực hiện nguyên tắc 'Thấy sai thì sửa ngay nếu có thể.' ngay tại góc làm việc của bạn!",
+    "tags": [
+      "#5s",
+      "#vanphong",
+      "#tinhtiet",
+      "#s5"
+    ],
+    "accent": "linear-gradient(135deg, #0ba360 0%, #3cba92 100%)"
+  },
+  {
+    "id": "5s_085",
+    "category": "5s",
+    "categoryName": "🧹 5S Văn Phòng",
+    "title": "S5 – Sẵn sàng/Duy trì: Không chờ đoàn kiểm tra mới thực hiện 5S.",
+    "content": "Không chờ đoàn kiểm tra mới thực hiện 5S.. Việc thực hiện nguyên tắc S5 giúp duy trì không gian làm việc văn phòng và sản xuất tinh gọn, sạch sẽ, chuẩn hóa và nâng cao hiệu suất làm việc mỗi ngày.",
+    "action": "👉 Áp dụng ngay: Thực hiện nguyên tắc 'Không chờ đoàn kiểm tra mới thực hiện 5S.' ngay tại góc làm việc của bạn!",
+    "tags": [
+      "#5s",
+      "#vanphong",
+      "#tinhtiet",
+      "#s5"
+    ],
+    "accent": "linear-gradient(135deg, #56ab2f 0%, #a8e063 100%)"
+  },
+  {
+    "id": "5s_086",
+    "category": "5s",
+    "categoryName": "🧹 5S Văn Phòng",
+    "title": "S5 – Sẵn sàng/Duy trì: Khuyến khích nhân viên đề xuất cải tiến 5S.",
+    "content": "Khuyến khích nhân viên đề xuất cải tiến 5S.. Việc thực hiện nguyên tắc S5 giúp duy trì không gian làm việc văn phòng và sản xuất tinh gọn, sạch sẽ, chuẩn hóa và nâng cao hiệu suất làm việc mỗi ngày.",
+    "action": "👉 Áp dụng ngay: Thực hiện nguyên tắc 'Khuyến khích nhân viên đề xuất cải tiến 5S.' ngay tại góc làm việc của bạn!",
+    "tags": [
+      "#5s",
+      "#vanphong",
+      "#tinhtiet",
+      "#s5"
+    ],
+    "accent": "linear-gradient(135deg, #11998e 0%, #38ef7d 100%)"
+  },
+  {
+    "id": "5s_087",
+    "category": "5s",
+    "categoryName": "🧹 5S Văn Phòng",
+    "title": "S5 – Sẵn sàng/Duy trì: Ghi nhận những khu vực thực hiện 5S tốt.",
+    "content": "Ghi nhận những khu vực thực hiện 5S tốt.. Việc thực hiện nguyên tắc S5 giúp duy trì không gian làm việc văn phòng và sản xuất tinh gọn, sạch sẽ, chuẩn hóa và nâng cao hiệu suất làm việc mỗi ngày.",
+    "action": "👉 Áp dụng ngay: Thực hiện nguyên tắc 'Ghi nhận những khu vực thực hiện 5S tốt.' ngay tại góc làm việc của bạn!",
+    "tags": [
+      "#5s",
+      "#vanphong",
+      "#tinhtiet",
+      "#s5"
+    ],
+    "accent": "linear-gradient(135deg, #00b4db 0%, #0083b0 100%)"
+  },
+  {
+    "id": "5s_088",
+    "category": "5s",
+    "categoryName": "🧹 5S Văn Phòng",
+    "title": "S5 – Sẵn sàng/Duy trì: Không biến 5S thành phong trào chỉ để chụp ảnh.",
+    "content": "Không biến 5S thành phong trào chỉ để chụp ảnh.. Việc thực hiện nguyên tắc S5 giúp duy trì không gian làm việc văn phòng và sản xuất tinh gọn, sạch sẽ, chuẩn hóa và nâng cao hiệu suất làm việc mỗi ngày.",
+    "action": "👉 Áp dụng ngay: Thực hiện nguyên tắc 'Không biến 5S thành phong trào chỉ để chụp ảnh.' ngay tại góc làm việc của bạn!",
+    "tags": [
+      "#5s",
+      "#vanphong",
+      "#tinhtiet",
+      "#s5"
+    ],
+    "accent": "linear-gradient(135deg, #43e97b 0%, #38f9d7 100%)"
+  },
+  {
+    "id": "5s_089",
+    "category": "5s",
+    "categoryName": "🧹 5S Văn Phòng",
+    "title": "S5 – Sẵn sàng/Duy trì: Đánh giá 5S bằng kết quả thực tế.",
+    "content": "Đánh giá 5S bằng kết quả thực tế.. Việc thực hiện nguyên tắc S5 giúp duy trì không gian làm việc văn phòng và sản xuất tinh gọn, sạch sẽ, chuẩn hóa và nâng cao hiệu suất làm việc mỗi ngày.",
+    "action": "👉 Áp dụng ngay: Thực hiện nguyên tắc 'Đánh giá 5S bằng kết quả thực tế.' ngay tại góc làm việc của bạn!",
+    "tags": [
+      "#5s",
+      "#vanphong",
+      "#tinhtiet",
+      "#s5"
+    ],
+    "accent": "linear-gradient(135deg, #0ba360 0%, #3cba92 100%)"
+  },
+  {
+    "id": "5s_090",
+    "category": "5s",
+    "categoryName": "🧹 5S Văn Phòng",
+    "title": "S5 – Sẵn sàng/Duy trì: Kiểm tra đột xuất để đánh giá tính duy trì.",
+    "content": "Kiểm tra đột xuất để đánh giá tính duy trì.. Việc thực hiện nguyên tắc S5 giúp duy trì không gian làm việc văn phòng và sản xuất tinh gọn, sạch sẽ, chuẩn hóa và nâng cao hiệu suất làm việc mỗi ngày.",
+    "action": "👉 Áp dụng ngay: Thực hiện nguyên tắc 'Kiểm tra đột xuất để đánh giá tính duy trì.' ngay tại góc làm việc của bạn!",
+    "tags": [
+      "#5s",
+      "#vanphong",
+      "#tinhtiet",
+      "#s5"
+    ],
+    "accent": "linear-gradient(135deg, #56ab2f 0%, #a8e063 100%)"
+  },
+  {
+    "id": "5s_091",
+    "category": "5s",
+    "categoryName": "🧹 5S Văn Phòng",
+    "title": "S5 – Sẵn sàng/Duy trì: Luân phiên người đánh giá để tránh đánh giá hình thức.",
+    "content": "Luân phiên người đánh giá để tránh đánh giá hình thức.. Việc thực hiện nguyên tắc S5 giúp duy trì không gian làm việc văn phòng và sản xuất tinh gọn, sạch sẽ, chuẩn hóa và nâng cao hiệu suất làm việc mỗi ngày.",
+    "action": "👉 Áp dụng ngay: Thực hiện nguyên tắc 'Luân phiên người đánh giá để tránh đánh giá hình thức.' ngay tại góc làm việc của bạn!",
+    "tags": [
+      "#5s",
+      "#vanphong",
+      "#tinhtiet",
+      "#s5"
+    ],
+    "accent": "linear-gradient(135deg, #11998e 0%, #38ef7d 100%)"
+  },
+  {
+    "id": "5s_092",
+    "category": "5s",
+    "categoryName": "🧹 5S Văn Phòng",
+    "title": "S5 – Sẵn sàng/Duy trì: Đào tạo 5S cho nhân viên mới.",
+    "content": "Đào tạo 5S cho nhân viên mới.. Việc thực hiện nguyên tắc S5 giúp duy trì không gian làm việc văn phòng và sản xuất tinh gọn, sạch sẽ, chuẩn hóa và nâng cao hiệu suất làm việc mỗi ngày.",
+    "action": "👉 Áp dụng ngay: Thực hiện nguyên tắc 'Đào tạo 5S cho nhân viên mới.' ngay tại góc làm việc của bạn!",
+    "tags": [
+      "#5s",
+      "#vanphong",
+      "#tinhtiet",
+      "#s5"
+    ],
+    "accent": "linear-gradient(135deg, #00b4db 0%, #0083b0 100%)"
+  },
+  {
+    "id": "5s_093",
+    "category": "5s",
+    "categoryName": "🧹 5S Văn Phòng",
+    "title": "S5 – Sẵn sàng/Duy trì: Nhắc lại tiêu chuẩn 5S khi có sai lệch.",
+    "content": "Nhắc lại tiêu chuẩn 5S khi có sai lệch.. Việc thực hiện nguyên tắc S5 giúp duy trì không gian làm việc văn phòng và sản xuất tinh gọn, sạch sẽ, chuẩn hóa và nâng cao hiệu suất làm việc mỗi ngày.",
+    "action": "👉 Áp dụng ngay: Thực hiện nguyên tắc 'Nhắc lại tiêu chuẩn 5S khi có sai lệch.' ngay tại góc làm việc của bạn!",
+    "tags": [
+      "#5s",
+      "#vanphong",
+      "#tinhtiet",
+      "#s5"
+    ],
+    "accent": "linear-gradient(135deg, #43e97b 0%, #38f9d7 100%)"
+  },
+  {
+    "id": "5s_094",
+    "category": "5s",
+    "categoryName": "🧹 5S Văn Phòng",
+    "title": "S5 – Sẵn sàng/Duy trì: Xử lý nguyên nhân khiến 5S khó duy trì.",
+    "content": "Xử lý nguyên nhân khiến 5S khó duy trì.. Việc thực hiện nguyên tắc S5 giúp duy trì không gian làm việc văn phòng và sản xuất tinh gọn, sạch sẽ, chuẩn hóa và nâng cao hiệu suất làm việc mỗi ngày.",
+    "action": "👉 Áp dụng ngay: Thực hiện nguyên tắc 'Xử lý nguyên nhân khiến 5S khó duy trì.' ngay tại góc làm việc của bạn!",
+    "tags": [
+      "#5s",
+      "#vanphong",
+      "#tinhtiet",
+      "#s5"
+    ],
+    "accent": "linear-gradient(135deg, #0ba360 0%, #3cba92 100%)"
+  },
+  {
+    "id": "5s_095",
+    "category": "5s",
+    "categoryName": "🧹 5S Văn Phòng",
+    "title": "S5 – Sẵn sàng/Duy trì: Thiết kế nơi làm việc để “đặt đúng chỗ” dễ hơn “đặt sai chỗ”.",
+    "content": "Thiết kế nơi làm việc để “đặt đúng chỗ” dễ hơn “đặt sai chỗ”.. Việc thực hiện nguyên tắc S5 giúp duy trì không gian làm việc văn phòng và sản xuất tinh gọn, sạch sẽ, chuẩn hóa và nâng cao hiệu suất làm việc mỗi ngày.",
+    "action": "👉 Áp dụng ngay: Thực hiện nguyên tắc 'Thiết kế nơi làm việc để “đặt đúng chỗ” dễ hơn “đặt sai chỗ”.' ngay tại góc làm việc của bạn!",
+    "tags": [
+      "#5s",
+      "#vanphong",
+      "#tinhtiet",
+      "#s5"
+    ],
+    "accent": "linear-gradient(135deg, #56ab2f 0%, #a8e063 100%)"
+  },
+  {
+    "id": "5s_096",
+    "category": "5s",
+    "categoryName": "🧹 5S Văn Phòng",
+    "title": "S5 – Sẵn sàng/Duy trì: Ưu tiên trực quan hóa thay cho nhắc nhở bằng lời.",
+    "content": "Ưu tiên trực quan hóa thay cho nhắc nhở bằng lời.. Việc thực hiện nguyên tắc S5 giúp duy trì không gian làm việc văn phòng và sản xuất tinh gọn, sạch sẽ, chuẩn hóa và nâng cao hiệu suất làm việc mỗi ngày.",
+    "action": "👉 Áp dụng ngay: Thực hiện nguyên tắc 'Ưu tiên trực quan hóa thay cho nhắc nhở bằng lời.' ngay tại góc làm việc của bạn!",
+    "tags": [
+      "#5s",
+      "#vanphong",
+      "#tinhtiet",
+      "#s5"
+    ],
+    "accent": "linear-gradient(135deg, #11998e 0%, #38ef7d 100%)"
+  },
+  {
+    "id": "5s_097",
+    "category": "5s",
+    "categoryName": "🧹 5S Văn Phòng",
+    "title": "S5 – Sẵn sàng/Duy trì: Mỗi tháng nên có ít nhất một cải tiến 5S.",
+    "content": "Mỗi tháng nên có ít nhất một cải tiến 5S.. Việc thực hiện nguyên tắc S5 giúp duy trì không gian làm việc văn phòng và sản xuất tinh gọn, sạch sẽ, chuẩn hóa và nâng cao hiệu suất làm việc mỗi ngày.",
+    "action": "👉 Áp dụng ngay: Thực hiện nguyên tắc 'Mỗi tháng nên có ít nhất một cải tiến 5S.' ngay tại góc làm việc của bạn!",
+    "tags": [
+      "#5s",
+      "#vanphong",
+      "#tinhtiet",
+      "#s5"
+    ],
+    "accent": "linear-gradient(135deg, #00b4db 0%, #0083b0 100%)"
+  },
+  {
+    "id": "5s_098",
+    "category": "5s",
+    "categoryName": "🧹 5S Văn Phòng",
+    "title": "S5 – Sẵn sàng/Duy trì: 5S phải hỗ trợ năng suất chứ không tạo thêm thủ tục.",
+    "content": "5S phải hỗ trợ năng suất chứ không tạo thêm thủ tục.. Việc thực hiện nguyên tắc S5 giúp duy trì không gian làm việc văn phòng và sản xuất tinh gọn, sạch sẽ, chuẩn hóa và nâng cao hiệu suất làm việc mỗi ngày.",
+    "action": "👉 Áp dụng ngay: Thực hiện nguyên tắc '5S phải hỗ trợ năng suất chứ không tạo thêm thủ tục.' ngay tại góc làm việc của bạn!",
+    "tags": [
+      "#5s",
+      "#vanphong",
+      "#tinhtiet",
+      "#s5"
+    ],
+    "accent": "linear-gradient(135deg, #43e97b 0%, #38f9d7 100%)"
+  },
+  {
+    "id": "5s_099",
+    "category": "5s",
+    "categoryName": "🧹 5S Văn Phòng",
+    "title": "S5 – Sẵn sàng/Duy trì: Hãy hỏi: “Có thể làm cho việc giữ 5S dễ hơn không?”",
+    "content": "Hãy hỏi: “Có thể làm cho việc giữ 5S dễ hơn không?”. Việc thực hiện nguyên tắc S5 giúp duy trì không gian làm việc văn phòng và sản xuất tinh gọn, sạch sẽ, chuẩn hóa và nâng cao hiệu suất làm việc mỗi ngày.",
+    "action": "👉 Áp dụng ngay: Thực hiện nguyên tắc 'Hãy hỏi: “Có thể làm cho việc giữ 5S dễ hơn không?”' ngay tại góc làm việc của bạn!",
+    "tags": [
+      "#5s",
+      "#vanphong",
+      "#tinhtiet",
+      "#s5"
+    ],
+    "accent": "linear-gradient(135deg, #0ba360 0%, #3cba92 100%)"
+  },
+  {
+    "id": "5s_100",
+    "category": "5s",
+    "categoryName": "🧹 5S Văn Phòng",
+    "title": "S5 – Sẵn sàng/Duy trì: Mục tiêu cuối cùng của 5S là nơi làm việc an toàn, thuận tiện và hiệu quả.",
+    "content": "Mục tiêu cuối cùng của 5S là nơi làm việc an toàn, thuận tiện và hiệu quả.. Việc thực hiện nguyên tắc S5 giúp duy trì không gian làm việc văn phòng và sản xuất tinh gọn, sạch sẽ, chuẩn hóa và nâng cao hiệu suất làm việc mỗi ngày.",
+    "action": "👉 Áp dụng ngay: Thực hiện nguyên tắc 'Mục tiêu cuối cùng của 5S là nơi làm việc an toàn, thuận tiện và hiệu quả.' ngay tại góc làm việc của bạn!",
+    "tags": [
+      "#5s",
+      "#vanphong",
+      "#tinhtiet",
+      "#s5"
+    ],
+    "accent": "linear-gradient(135deg, #56ab2f 0%, #a8e063 100%)"
   },
   {
     "id": "safety_001",
     "category": "safety",
     "categoryName": "🦺 An Toàn Lao Động",
-    "title": "An toàn tư thế ngồi máy tính chuẩn Ergonomics",
-    "content": "Chỉnh đỉnh màn hình ngang tầm mắt, hai bàn chân đặt bằng phẳng trên sàn, lưng tựa sát vào tựa lưng tự nhiên của ghế. Khuỷu tay vuông góc 90 độ khi gõ bàn phím để tránh hội chứng ống cổ tay và thoái hóa đốt sống cổ.",
-    "action": "👉 Áp dụng ngay: Điều chỉnh độ cao ghế và góc màn hình sao cho mắt bạn nhìn thẳng vào 1/3 trên của màn hình.",
-    "tags": ["#antoanlaodong", "#ergonomics", "#tuthengoi", "#suckhoevanphong"],
-    "accent": "linear-gradient(135deg, #ef4444 0%, #b91c1c 100%)"
+    "title": "Nhận diện nguy cơ: Trước khi làm việc, hãy quan sát nguy cơ xung quanh.",
+    "content": "Trước khi làm việc, hãy quan sát nguy cơ xung quanh.. Đảm bảo tuân thủ nghiêm ngặt các quy tắc an toàn lao động giúp bảo vệ sức khỏe bản thân, đồng nghiệp và ngăn ngừa tối đa các sự cố rủi ro tai nạn.",
+    "action": "👉 Kiểm tra ngay: Kiểm tra khu vực xung quanh bạn theo tiêu chí 'Trước khi làm việc, hãy quan sát nguy cơ xung quanh.' để đảm bảo an toàn tuyệt đối!",
+    "tags": [
+      "#antoan",
+      "#laodong",
+      "#antoanlaodong",
+      "#nhậndiệnnguycơ"
+    ],
+    "accent": "linear-gradient(135deg, #ff416c 0%, #ff4b2b 100%)"
   },
   {
     "id": "safety_002",
     "category": "safety",
     "categoryName": "🦺 An Toàn Lao Động",
-    "title": "Quy tắc 20-20-20 bảo vệ thị lực khi làm việc",
-    "content": "Sau mỗi 20 phút nhìn vào màn hình máy tính, hãy nhìn xa 20 feet (khoảng 6 mét) trong vòng ít nhất 20 giây. Thói quen này giúp cơ mắt thư giãn, chống khô mắt, nhức mỏi và chói mắt hiệu quả.",
-    "action": "👉 Áp dụng ngay: Hướng mắt ra cửa sổ hoặc chậu cây xanh gần nhất trong 20 giây ngay bây giờ!",
-    "tags": ["#matkhoe", "#202020", "#antoanmat", "#congty"],
-    "accent": "linear-gradient(135deg, #10b981 0%, #047857 100%)"
+    "title": "Nhận diện nguy cơ: Không bắt đầu công việc khi chưa hiểu rõ nguy cơ.",
+    "content": "Không bắt đầu công việc khi chưa hiểu rõ nguy cơ.. Đảm bảo tuân thủ nghiêm ngặt các quy tắc an toàn lao động giúp bảo vệ sức khỏe bản thân, đồng nghiệp và ngăn ngừa tối đa các sự cố rủi ro tai nạn.",
+    "action": "👉 Kiểm tra ngay: Kiểm tra khu vực xung quanh bạn theo tiêu chí 'Không bắt đầu công việc khi chưa hiểu rõ nguy cơ.' để đảm bảo an toàn tuyệt đối!",
+    "tags": [
+      "#antoan",
+      "#laodong",
+      "#antoanlaodong",
+      "#nhậndiệnnguycơ"
+    ],
+    "accent": "linear-gradient(135deg, #f857a6 0%, #ff5858 100%)"
   },
   {
     "id": "safety_003",
     "category": "safety",
     "categoryName": "🦺 An Toàn Lao Động",
-    "title": "An toàn điện văn phòng & Chống quá tải ổ cắm",
-    "content": "Không cắm nối tiếp quá nhiều ổ cắm truyền động (Daisy chaining) hoặc cắm thiết bị công suất cao (bấm nhiệt, ấm siêu tốc, máy sưởi) chung một ổ cắm máy tính. Kiểm tra dây điện nếu bị rách vỏ nhựa cách điện thì phải thay ngay.",
-    "action": "👉 Áp dụng ngay: Kiểm tra ngay ổ cắm dưới chân bàn xem có bị đè nén hoặc cắm quá tải không.",
-    "tags": ["#antoandien", "#pccc", "#antoanlaodong"],
-    "accent": "linear-gradient(135deg, #f59e0b 0%, #b45309 100%)"
+    "title": "Nhận diện nguy cơ: Thấy nguy cơ mới phải báo ngay.",
+    "content": "Thấy nguy cơ mới phải báo ngay.. Đảm bảo tuân thủ nghiêm ngặt các quy tắc an toàn lao động giúp bảo vệ sức khỏe bản thân, đồng nghiệp và ngăn ngừa tối đa các sự cố rủi ro tai nạn.",
+    "action": "👉 Kiểm tra ngay: Kiểm tra khu vực xung quanh bạn theo tiêu chí 'Thấy nguy cơ mới phải báo ngay.' để đảm bảo an toàn tuyệt đối!",
+    "tags": [
+      "#antoan",
+      "#laodong",
+      "#antoanlaodong",
+      "#nhậndiệnnguycơ"
+    ],
+    "accent": "linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%)"
   },
   {
     "id": "safety_004",
     "category": "safety",
     "categoryName": "🦺 An Toàn Lao Động",
-    "title": "Quy tắc An toàn PCCC & Lối thoát hiểm văn phòng",
-    "content": "Luôn ghi nhớ vị trí bình chữa cháy gần nhất và lối thoát hiểm của tầng làm việc. Tuyệt đối không để hàng hóa, thùng carton hay vật dụng chèn chắn trước cửa thoát hiểm hoặc tủ chứa bình chữa cháy.",
-    "action": "👉 Áp dụng ngay: Hãy quay sang tìm xem bình chữa cháy gần bàn làm việc của bạn nằm ở đâu.",
-    "tags": ["#pccc", "#thoathiem", "#antoanvanphong"],
-    "accent": "linear-gradient(135deg, #dc2626 0%, #991b1b 100%)"
+    "title": "Nhận diện nguy cơ: Không coi một nguy cơ quen thuộc là nguy cơ an toàn.",
+    "content": "Không coi một nguy cơ quen thuộc là nguy cơ an toàn.. Đảm bảo tuân thủ nghiêm ngặt các quy tắc an toàn lao động giúp bảo vệ sức khỏe bản thân, đồng nghiệp và ngăn ngừa tối đa các sự cố rủi ro tai nạn.",
+    "action": "👉 Kiểm tra ngay: Kiểm tra khu vực xung quanh bạn theo tiêu chí 'Không coi một nguy cơ quen thuộc là nguy cơ an toàn.' để đảm bảo an toàn tuyệt đối!",
+    "tags": [
+      "#antoan",
+      "#laodong",
+      "#antoanlaodong",
+      "#nhậndiệnnguycơ"
+    ],
+    "accent": "linear-gradient(135deg, #f12711 0%, #f5af19 100%)"
   },
   {
     "id": "safety_005",
     "category": "safety",
     "categoryName": "🦺 An Toàn Lao Động",
-    "title": "Phòng tránh chấn thương do trượt ngã (Slips & Trips)",
-    "content": "Trượt ngã là tai nạn phổ biến nhất tại văn phòng. Lau khô ngay tức khắc vết nước đổ trên sàn, không đi tất trên sàn gạch bóng, và nhặt ngay các vật nhỏ (bút, kẹp giấy, sỏi đá) rơi trên sàn nhà.",
-    "action": "👉 Áp dụng ngay: Báo cho bộ phận vệ sinh hoặc tự tay lau sạch nếu phát hiện giọt nước đổ gần cây nước uống.",
-    "tags": ["#antoanlaodong", "#phongtranhchanthuong", "#vanphong"],
-    "accent": "linear-gradient(135deg, #fb923c 0%, #c2410c 100%)"
+    "title": "Nhận diện nguy cơ: Kiểm tra mặt bằng trước khi vận hành máy.",
+    "content": "Kiểm tra mặt bằng trước khi vận hành máy.. Đảm bảo tuân thủ nghiêm ngặt các quy tắc an toàn lao động giúp bảo vệ sức khỏe bản thân, đồng nghiệp và ngăn ngừa tối đa các sự cố rủi ro tai nạn.",
+    "action": "👉 Kiểm tra ngay: Kiểm tra khu vực xung quanh bạn theo tiêu chí 'Kiểm tra mặt bằng trước khi vận hành máy.' để đảm bảo an toàn tuyệt đối!",
+    "tags": [
+      "#antoan",
+      "#laodong",
+      "#antoanlaodong",
+      "#nhậndiệnnguycơ"
+    ],
+    "accent": "linear-gradient(135deg, #eb3b5a 0%, #fa8231 100%)"
   },
   {
     "id": "safety_006",
     "category": "safety",
     "categoryName": "🦺 An Toàn Lao Động",
-    "title": "An toàn khi nâng hạ vật nặng (Manual Handling)",
-    "content": "Khi bê thùng tài liệu hoặc thiết bị nặng: Đứng sát vật thể, gập đầu gối (dùng lực cơ đùi chứ không dùng lực lưng), giữ lưng thẳng và ôm sát vật vào ngực trước khi đứng lên. Tuyệt đối không xoay người đột ngột khi đang bê nặng.",
-    "action": "👉 Áp dụng ngay: Luôn hạ thấp trọng tâm và dùng lực chân khi nhấc thùng giấy tài liệu từ dưới sàn.",
-    "tags": ["#bematngung", "#antoancotban", "#laodong"],
-    "accent": "linear-gradient(135deg, #84cc16 0%, #4d7c0f 100%)"
+    "title": "Nhận diện nguy cơ: Xác định các điểm kẹp, nghiền, cắt và cuốn.",
+    "content": "Xác định các điểm kẹp, nghiền, cắt và cuốn.. Đảm bảo tuân thủ nghiêm ngặt các quy tắc an toàn lao động giúp bảo vệ sức khỏe bản thân, đồng nghiệp và ngăn ngừa tối đa các sự cố rủi ro tai nạn.",
+    "action": "👉 Kiểm tra ngay: Kiểm tra khu vực xung quanh bạn theo tiêu chí 'Xác định các điểm kẹp, nghiền, cắt và cuốn.' để đảm bảo an toàn tuyệt đối!",
+    "tags": [
+      "#antoan",
+      "#laodong",
+      "#antoanlaodong",
+      "#nhậndiệnnguycơ"
+    ],
+    "accent": "linear-gradient(135deg, #ff416c 0%, #ff4b2b 100%)"
   },
   {
     "id": "safety_007",
     "category": "safety",
     "categoryName": "🦺 An Toàn Lao Động",
-    "title": "Vấn đề chất lượng không khí & Thông thoáng văn phòng",
-    "content": "Ngồi trong phòng máy lạnh kín thời gian dài dễ gây mệt mỏi do thiếu oxy và tích tụ CO2. Hãy mở cửa sổ thông gió 10 phút vào đầu buổi sáng hoặc đi dạo ra không gian mở ngoài trời trong giờ nghỉ giải lao.",
-    "action": "👉 Áp dụng ngay: Bước ra ban công hoặc cửa sổ hít thở sâu 5 nhịp không khí tự nhiên.",
-    "tags": ["#khongkhisach", "#suckhoelaodong", "#vanphong"],
-    "accent": "linear-gradient(135deg, #0ea5e9 0%, #0369a1 100%)"
+    "title": "Nhận diện nguy cơ: Chú ý các nguồn năng lượng nguy hiểm.",
+    "content": "Chú ý các nguồn năng lượng nguy hiểm.. Đảm bảo tuân thủ nghiêm ngặt các quy tắc an toàn lao động giúp bảo vệ sức khỏe bản thân, đồng nghiệp và ngăn ngừa tối đa các sự cố rủi ro tai nạn.",
+    "action": "👉 Kiểm tra ngay: Kiểm tra khu vực xung quanh bạn theo tiêu chí 'Chú ý các nguồn năng lượng nguy hiểm.' để đảm bảo an toàn tuyệt đối!",
+    "tags": [
+      "#antoan",
+      "#laodong",
+      "#antoanlaodong",
+      "#nhậndiệnnguycơ"
+    ],
+    "accent": "linear-gradient(135deg, #f857a6 0%, #ff5858 100%)"
   },
   {
     "id": "safety_008",
     "category": "safety",
     "categoryName": "🦺 An Toàn Lao Động",
-    "title": "Bảo vệ sức khỏe tâm thần & Chống Kiệt Sức (Burnout)",
-    "content": "An toàn lao động bao gồm cả an toàn sức khỏe tâm thần. Khi cảm thấy quá tải stress, hãy áp dụng kỹ thuật thở bụng 4-7-8 (Hít vào 4s - Giữ 7s - Thở ra 8s) để hạ nhịp tim và đưa hệ thần kinh về trạng thái cân bằng.",
-    "action": "👉 Áp dụng ngay: Nhắm mắt lại và thực hiện 3 nhịp hít thở sâu 4-7-8 ngay lúc này.",
-    "tags": ["#suckhoetamthan", "#stressmanagement", "#burnout"],
-    "accent": "linear-gradient(135deg, #a855f7 0%, #7e22ce 100%)"
+    "title": "Nhận diện nguy cơ: Kiểm tra nguy cơ điện trước khi thao tác.",
+    "content": "Kiểm tra nguy cơ điện trước khi thao tác.. Đảm bảo tuân thủ nghiêm ngặt các quy tắc an toàn lao động giúp bảo vệ sức khỏe bản thân, đồng nghiệp và ngăn ngừa tối đa các sự cố rủi ro tai nạn.",
+    "action": "👉 Kiểm tra ngay: Kiểm tra khu vực xung quanh bạn theo tiêu chí 'Kiểm tra nguy cơ điện trước khi thao tác.' để đảm bảo an toàn tuyệt đối!",
+    "tags": [
+      "#antoan",
+      "#laodong",
+      "#antoanlaodong",
+      "#nhậndiệnnguycơ"
+    ],
+    "accent": "linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%)"
+  },
+  {
+    "id": "safety_009",
+    "category": "safety",
+    "categoryName": "🦺 An Toàn Lao Động",
+    "title": "Nhận diện nguy cơ: Quan sát nguy cơ trượt, vấp và ngã.",
+    "content": "Quan sát nguy cơ trượt, vấp và ngã.. Đảm bảo tuân thủ nghiêm ngặt các quy tắc an toàn lao động giúp bảo vệ sức khỏe bản thân, đồng nghiệp và ngăn ngừa tối đa các sự cố rủi ro tai nạn.",
+    "action": "👉 Kiểm tra ngay: Kiểm tra khu vực xung quanh bạn theo tiêu chí 'Quan sát nguy cơ trượt, vấp và ngã.' để đảm bảo an toàn tuyệt đối!",
+    "tags": [
+      "#antoan",
+      "#laodong",
+      "#antoanlaodong",
+      "#nhậndiệnnguycơ"
+    ],
+    "accent": "linear-gradient(135deg, #f12711 0%, #f5af19 100%)"
+  },
+  {
+    "id": "safety_010",
+    "category": "safety",
+    "categoryName": "🦺 An Toàn Lao Động",
+    "title": "Nhận diện nguy cơ: Đừng bỏ qua những nguy cơ nhỏ lặp lại hằng ngày.",
+    "content": "Đừng bỏ qua những nguy cơ nhỏ lặp lại hằng ngày.. Đảm bảo tuân thủ nghiêm ngặt các quy tắc an toàn lao động giúp bảo vệ sức khỏe bản thân, đồng nghiệp và ngăn ngừa tối đa các sự cố rủi ro tai nạn.",
+    "action": "👉 Kiểm tra ngay: Kiểm tra khu vực xung quanh bạn theo tiêu chí 'Đừng bỏ qua những nguy cơ nhỏ lặp lại hằng ngày.' để đảm bảo an toàn tuyệt đối!",
+    "tags": [
+      "#antoan",
+      "#laodong",
+      "#antoanlaodong",
+      "#nhậndiệnnguycơ"
+    ],
+    "accent": "linear-gradient(135deg, #eb3b5a 0%, #fa8231 100%)"
+  },
+  {
+    "id": "safety_011",
+    "category": "safety",
+    "categoryName": "🦺 An Toàn Lao Động",
+    "title": "Máy móc – thiết bị: Chỉ vận hành máy khi đã được hướng dẫn.",
+    "content": "Chỉ vận hành máy khi đã được hướng dẫn.. Đảm bảo tuân thủ nghiêm ngặt các quy tắc an toàn lao động giúp bảo vệ sức khỏe bản thân, đồng nghiệp và ngăn ngừa tối đa các sự cố rủi ro tai nạn.",
+    "action": "👉 Kiểm tra ngay: Kiểm tra khu vực xung quanh bạn theo tiêu chí 'Chỉ vận hành máy khi đã được hướng dẫn.' để đảm bảo an toàn tuyệt đối!",
+    "tags": [
+      "#antoan",
+      "#laodong",
+      "#antoanlaodong",
+      "#máymóc–thiếtbị"
+    ],
+    "accent": "linear-gradient(135deg, #ff416c 0%, #ff4b2b 100%)"
+  },
+  {
+    "id": "safety_012",
+    "category": "safety",
+    "categoryName": "🦺 An Toàn Lao Động",
+    "title": "Máy móc – thiết bị: Không tháo bỏ cơ cấu bảo vệ máy.",
+    "content": "Không tháo bỏ cơ cấu bảo vệ máy.. Đảm bảo tuân thủ nghiêm ngặt các quy tắc an toàn lao động giúp bảo vệ sức khỏe bản thân, đồng nghiệp và ngăn ngừa tối đa các sự cố rủi ro tai nạn.",
+    "action": "👉 Kiểm tra ngay: Kiểm tra khu vực xung quanh bạn theo tiêu chí 'Không tháo bỏ cơ cấu bảo vệ máy.' để đảm bảo an toàn tuyệt đối!",
+    "tags": [
+      "#antoan",
+      "#laodong",
+      "#antoanlaodong",
+      "#máymóc–thiếtbị"
+    ],
+    "accent": "linear-gradient(135deg, #f857a6 0%, #ff5858 100%)"
+  },
+  {
+    "id": "safety_013",
+    "category": "safety",
+    "categoryName": "🦺 An Toàn Lao Động",
+    "title": "Máy móc – thiết bị: Không đưa tay vào vùng nguy hiểm khi máy đang hoạt động.",
+    "content": "Không đưa tay vào vùng nguy hiểm khi máy đang hoạt động.. Đảm bảo tuân thủ nghiêm ngặt các quy tắc an toàn lao động giúp bảo vệ sức khỏe bản thân, đồng nghiệp và ngăn ngừa tối đa các sự cố rủi ro tai nạn.",
+    "action": "👉 Kiểm tra ngay: Kiểm tra khu vực xung quanh bạn theo tiêu chí 'Không đưa tay vào vùng nguy hiểm khi máy đang hoạt động.' để đảm bảo an toàn tuyệt đối!",
+    "tags": [
+      "#antoan",
+      "#laodong",
+      "#antoanlaodong",
+      "#máymóc–thiếtbị"
+    ],
+    "accent": "linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%)"
+  },
+  {
+    "id": "safety_014",
+    "category": "safety",
+    "categoryName": "🦺 An Toàn Lao Động",
+    "title": "Máy móc – thiết bị: Không dùng tay để lấy phôi khi máy đang chạy.",
+    "content": "Không dùng tay để lấy phôi khi máy đang chạy.. Đảm bảo tuân thủ nghiêm ngặt các quy tắc an toàn lao động giúp bảo vệ sức khỏe bản thân, đồng nghiệp và ngăn ngừa tối đa các sự cố rủi ro tai nạn.",
+    "action": "👉 Kiểm tra ngay: Kiểm tra khu vực xung quanh bạn theo tiêu chí 'Không dùng tay để lấy phôi khi máy đang chạy.' để đảm bảo an toàn tuyệt đối!",
+    "tags": [
+      "#antoan",
+      "#laodong",
+      "#antoanlaodong",
+      "#máymóc–thiếtbị"
+    ],
+    "accent": "linear-gradient(135deg, #f12711 0%, #f5af19 100%)"
+  },
+  {
+    "id": "safety_015",
+    "category": "safety",
+    "categoryName": "🦺 An Toàn Lao Động",
+    "title": "Máy móc – thiết bị: Không vệ sinh máy khi chưa kiểm soát nguồn năng lượng.",
+    "content": "Không vệ sinh máy khi chưa kiểm soát nguồn năng lượng.. Đảm bảo tuân thủ nghiêm ngặt các quy tắc an toàn lao động giúp bảo vệ sức khỏe bản thân, đồng nghiệp và ngăn ngừa tối đa các sự cố rủi ro tai nạn.",
+    "action": "👉 Kiểm tra ngay: Kiểm tra khu vực xung quanh bạn theo tiêu chí 'Không vệ sinh máy khi chưa kiểm soát nguồn năng lượng.' để đảm bảo an toàn tuyệt đối!",
+    "tags": [
+      "#antoan",
+      "#laodong",
+      "#antoanlaodong",
+      "#máymóc–thiếtbị"
+    ],
+    "accent": "linear-gradient(135deg, #eb3b5a 0%, #fa8231 100%)"
+  },
+  {
+    "id": "safety_016",
+    "category": "safety",
+    "categoryName": "🦺 An Toàn Lao Động",
+    "title": "Máy móc – thiết bị: Không sửa máy khi chưa được phép.",
+    "content": "Không sửa máy khi chưa được phép.. Đảm bảo tuân thủ nghiêm ngặt các quy tắc an toàn lao động giúp bảo vệ sức khỏe bản thân, đồng nghiệp và ngăn ngừa tối đa các sự cố rủi ro tai nạn.",
+    "action": "👉 Kiểm tra ngay: Kiểm tra khu vực xung quanh bạn theo tiêu chí 'Không sửa máy khi chưa được phép.' để đảm bảo an toàn tuyệt đối!",
+    "tags": [
+      "#antoan",
+      "#laodong",
+      "#antoanlaodong",
+      "#máymóc–thiếtbị"
+    ],
+    "accent": "linear-gradient(135deg, #ff416c 0%, #ff4b2b 100%)"
+  },
+  {
+    "id": "safety_017",
+    "category": "safety",
+    "categoryName": "🦺 An Toàn Lao Động",
+    "title": "Máy móc – thiết bị: Kiểm tra nút dừng khẩn cấp định kỳ.",
+    "content": "Kiểm tra nút dừng khẩn cấp định kỳ.. Đảm bảo tuân thủ nghiêm ngặt các quy tắc an toàn lao động giúp bảo vệ sức khỏe bản thân, đồng nghiệp và ngăn ngừa tối đa các sự cố rủi ro tai nạn.",
+    "action": "👉 Kiểm tra ngay: Kiểm tra khu vực xung quanh bạn theo tiêu chí 'Kiểm tra nút dừng khẩn cấp định kỳ.' để đảm bảo an toàn tuyệt đối!",
+    "tags": [
+      "#antoan",
+      "#laodong",
+      "#antoanlaodong",
+      "#máymóc–thiếtbị"
+    ],
+    "accent": "linear-gradient(135deg, #f857a6 0%, #ff5858 100%)"
+  },
+  {
+    "id": "safety_018",
+    "category": "safety",
+    "categoryName": "🦺 An Toàn Lao Động",
+    "title": "Máy móc – thiết bị: Biết vị trí công tắc nguồn trước khi vận hành.",
+    "content": "Biết vị trí công tắc nguồn trước khi vận hành.. Đảm bảo tuân thủ nghiêm ngặt các quy tắc an toàn lao động giúp bảo vệ sức khỏe bản thân, đồng nghiệp và ngăn ngừa tối đa các sự cố rủi ro tai nạn.",
+    "action": "👉 Kiểm tra ngay: Kiểm tra khu vực xung quanh bạn theo tiêu chí 'Biết vị trí công tắc nguồn trước khi vận hành.' để đảm bảo an toàn tuyệt đối!",
+    "tags": [
+      "#antoan",
+      "#laodong",
+      "#antoanlaodong",
+      "#máymóc–thiếtbị"
+    ],
+    "accent": "linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%)"
+  },
+  {
+    "id": "safety_019",
+    "category": "safety",
+    "categoryName": "🦺 An Toàn Lao Động",
+    "title": "Máy móc – thiết bị: Không vận hành máy khi phát hiện bất thường.",
+    "content": "Không vận hành máy khi phát hiện bất thường.. Đảm bảo tuân thủ nghiêm ngặt các quy tắc an toàn lao động giúp bảo vệ sức khỏe bản thân, đồng nghiệp và ngăn ngừa tối đa các sự cố rủi ro tai nạn.",
+    "action": "👉 Kiểm tra ngay: Kiểm tra khu vực xung quanh bạn theo tiêu chí 'Không vận hành máy khi phát hiện bất thường.' để đảm bảo an toàn tuyệt đối!",
+    "tags": [
+      "#antoan",
+      "#laodong",
+      "#antoanlaodong",
+      "#máymóc–thiếtbị"
+    ],
+    "accent": "linear-gradient(135deg, #f12711 0%, #f5af19 100%)"
+  },
+  {
+    "id": "safety_020",
+    "category": "safety",
+    "categoryName": "🦺 An Toàn Lao Động",
+    "title": "Máy móc – thiết bị: Báo ngay tiếng ồn hoặc rung động bất thường.",
+    "content": "Báo ngay tiếng ồn hoặc rung động bất thường.. Đảm bảo tuân thủ nghiêm ngặt các quy tắc an toàn lao động giúp bảo vệ sức khỏe bản thân, đồng nghiệp và ngăn ngừa tối đa các sự cố rủi ro tai nạn.",
+    "action": "👉 Kiểm tra ngay: Kiểm tra khu vực xung quanh bạn theo tiêu chí 'Báo ngay tiếng ồn hoặc rung động bất thường.' để đảm bảo an toàn tuyệt đối!",
+    "tags": [
+      "#antoan",
+      "#laodong",
+      "#antoanlaodong",
+      "#máymóc–thiếtbị"
+    ],
+    "accent": "linear-gradient(135deg, #eb3b5a 0%, #fa8231 100%)"
+  },
+  {
+    "id": "safety_021",
+    "category": "safety",
+    "categoryName": "🦺 An Toàn Lao Động",
+    "title": "Máy móc – thiết bị: Không đứng trong vùng chuyển động của máy.",
+    "content": "Không đứng trong vùng chuyển động của máy.. Đảm bảo tuân thủ nghiêm ngặt các quy tắc an toàn lao động giúp bảo vệ sức khỏe bản thân, đồng nghiệp và ngăn ngừa tối đa các sự cố rủi ro tai nạn.",
+    "action": "👉 Kiểm tra ngay: Kiểm tra khu vực xung quanh bạn theo tiêu chí 'Không đứng trong vùng chuyển động của máy.' để đảm bảo an toàn tuyệt đối!",
+    "tags": [
+      "#antoan",
+      "#laodong",
+      "#antoanlaodong",
+      "#máymóc–thiếtbị"
+    ],
+    "accent": "linear-gradient(135deg, #ff416c 0%, #ff4b2b 100%)"
+  },
+  {
+    "id": "safety_022",
+    "category": "safety",
+    "categoryName": "🦺 An Toàn Lao Động",
+    "title": "Máy móc – thiết bị: Không trèo lên máy để thao tác.",
+    "content": "Không trèo lên máy để thao tác.. Đảm bảo tuân thủ nghiêm ngặt các quy tắc an toàn lao động giúp bảo vệ sức khỏe bản thân, đồng nghiệp và ngăn ngừa tối đa các sự cố rủi ro tai nạn.",
+    "action": "👉 Kiểm tra ngay: Kiểm tra khu vực xung quanh bạn theo tiêu chí 'Không trèo lên máy để thao tác.' để đảm bảo an toàn tuyệt đối!",
+    "tags": [
+      "#antoan",
+      "#laodong",
+      "#antoanlaodong",
+      "#máymóc–thiếtbị"
+    ],
+    "accent": "linear-gradient(135deg, #f857a6 0%, #ff5858 100%)"
+  },
+  {
+    "id": "safety_023",
+    "category": "safety",
+    "categoryName": "🦺 An Toàn Lao Động",
+    "title": "Máy móc – thiết bị: Không sử dụng dụng cụ sai mục đích.",
+    "content": "Không sử dụng dụng cụ sai mục đích.. Đảm bảo tuân thủ nghiêm ngặt các quy tắc an toàn lao động giúp bảo vệ sức khỏe bản thân, đồng nghiệp và ngăn ngừa tối đa các sự cố rủi ro tai nạn.",
+    "action": "👉 Kiểm tra ngay: Kiểm tra khu vực xung quanh bạn theo tiêu chí 'Không sử dụng dụng cụ sai mục đích.' để đảm bảo an toàn tuyệt đối!",
+    "tags": [
+      "#antoan",
+      "#laodong",
+      "#antoanlaodong",
+      "#máymóc–thiếtbị"
+    ],
+    "accent": "linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%)"
+  },
+  {
+    "id": "safety_024",
+    "category": "safety",
+    "categoryName": "🦺 An Toàn Lao Động",
+    "title": "Máy móc – thiết bị: Kiểm tra dụng cụ trước khi sử dụng.",
+    "content": "Kiểm tra dụng cụ trước khi sử dụng.. Đảm bảo tuân thủ nghiêm ngặt các quy tắc an toàn lao động giúp bảo vệ sức khỏe bản thân, đồng nghiệp và ngăn ngừa tối đa các sự cố rủi ro tai nạn.",
+    "action": "👉 Kiểm tra ngay: Kiểm tra khu vực xung quanh bạn theo tiêu chí 'Kiểm tra dụng cụ trước khi sử dụng.' để đảm bảo an toàn tuyệt đối!",
+    "tags": [
+      "#antoan",
+      "#laodong",
+      "#antoanlaodong",
+      "#máymóc–thiếtbị"
+    ],
+    "accent": "linear-gradient(135deg, #f12711 0%, #f5af19 100%)"
+  },
+  {
+    "id": "safety_025",
+    "category": "safety",
+    "categoryName": "🦺 An Toàn Lao Động",
+    "title": "Máy móc – thiết bị: Không sử dụng dụng cụ đã hư hỏng.",
+    "content": "Không sử dụng dụng cụ đã hư hỏng.. Đảm bảo tuân thủ nghiêm ngặt các quy tắc an toàn lao động giúp bảo vệ sức khỏe bản thân, đồng nghiệp và ngăn ngừa tối đa các sự cố rủi ro tai nạn.",
+    "action": "👉 Kiểm tra ngay: Kiểm tra khu vực xung quanh bạn theo tiêu chí 'Không sử dụng dụng cụ đã hư hỏng.' để đảm bảo an toàn tuyệt đối!",
+    "tags": [
+      "#antoan",
+      "#laodong",
+      "#antoanlaodong",
+      "#máymóc–thiếtbị"
+    ],
+    "accent": "linear-gradient(135deg, #eb3b5a 0%, #fa8231 100%)"
+  },
+  {
+    "id": "safety_026",
+    "category": "safety",
+    "categoryName": "🦺 An Toàn Lao Động",
+    "title": "Máy móc – thiết bị: Giữ tay tránh xa điểm kẹp.",
+    "content": "Giữ tay tránh xa điểm kẹp.. Đảm bảo tuân thủ nghiêm ngặt các quy tắc an toàn lao động giúp bảo vệ sức khỏe bản thân, đồng nghiệp và ngăn ngừa tối đa các sự cố rủi ro tai nạn.",
+    "action": "👉 Kiểm tra ngay: Kiểm tra khu vực xung quanh bạn theo tiêu chí 'Giữ tay tránh xa điểm kẹp.' để đảm bảo an toàn tuyệt đối!",
+    "tags": [
+      "#antoan",
+      "#laodong",
+      "#antoanlaodong",
+      "#máymóc–thiếtbị"
+    ],
+    "accent": "linear-gradient(135deg, #ff416c 0%, #ff4b2b 100%)"
+  },
+  {
+    "id": "safety_027",
+    "category": "safety",
+    "categoryName": "🦺 An Toàn Lao Động",
+    "title": "Máy móc – thiết bị: Không can thiệp vào cơ cấu đang chuyển động.",
+    "content": "Không can thiệp vào cơ cấu đang chuyển động.. Đảm bảo tuân thủ nghiêm ngặt các quy tắc an toàn lao động giúp bảo vệ sức khỏe bản thân, đồng nghiệp và ngăn ngừa tối đa các sự cố rủi ro tai nạn.",
+    "action": "👉 Kiểm tra ngay: Kiểm tra khu vực xung quanh bạn theo tiêu chí 'Không can thiệp vào cơ cấu đang chuyển động.' để đảm bảo an toàn tuyệt đối!",
+    "tags": [
+      "#antoan",
+      "#laodong",
+      "#antoanlaodong",
+      "#máymóc–thiếtbị"
+    ],
+    "accent": "linear-gradient(135deg, #f857a6 0%, #ff5858 100%)"
+  },
+  {
+    "id": "safety_028",
+    "category": "safety",
+    "categoryName": "🦺 An Toàn Lao Động",
+    "title": "Máy móc – thiết bị: Không vượt qua hàng rào an toàn.",
+    "content": "Không vượt qua hàng rào an toàn.. Đảm bảo tuân thủ nghiêm ngặt các quy tắc an toàn lao động giúp bảo vệ sức khỏe bản thân, đồng nghiệp và ngăn ngừa tối đa các sự cố rủi ro tai nạn.",
+    "action": "👉 Kiểm tra ngay: Kiểm tra khu vực xung quanh bạn theo tiêu chí 'Không vượt qua hàng rào an toàn.' để đảm bảo an toàn tuyệt đối!",
+    "tags": [
+      "#antoan",
+      "#laodong",
+      "#antoanlaodong",
+      "#máymóc–thiếtbị"
+    ],
+    "accent": "linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%)"
+  },
+  {
+    "id": "safety_029",
+    "category": "safety",
+    "categoryName": "🦺 An Toàn Lao Động",
+    "title": "Máy móc – thiết bị: Không vô hiệu hóa cảm biến an toàn.",
+    "content": "Không vô hiệu hóa cảm biến an toàn.. Đảm bảo tuân thủ nghiêm ngặt các quy tắc an toàn lao động giúp bảo vệ sức khỏe bản thân, đồng nghiệp và ngăn ngừa tối đa các sự cố rủi ro tai nạn.",
+    "action": "👉 Kiểm tra ngay: Kiểm tra khu vực xung quanh bạn theo tiêu chí 'Không vô hiệu hóa cảm biến an toàn.' để đảm bảo an toàn tuyệt đối!",
+    "tags": [
+      "#antoan",
+      "#laodong",
+      "#antoanlaodong",
+      "#máymóc–thiếtbị"
+    ],
+    "accent": "linear-gradient(135deg, #f12711 0%, #f5af19 100%)"
+  },
+  {
+    "id": "safety_030",
+    "category": "safety",
+    "categoryName": "🦺 An Toàn Lao Động",
+    "title": "Máy móc – thiết bị: Khi nghi ngờ, hãy dừng máy và hỏi.",
+    "content": "Khi nghi ngờ, hãy dừng máy và hỏi.. Đảm bảo tuân thủ nghiêm ngặt các quy tắc an toàn lao động giúp bảo vệ sức khỏe bản thân, đồng nghiệp và ngăn ngừa tối đa các sự cố rủi ro tai nạn.",
+    "action": "👉 Kiểm tra ngay: Kiểm tra khu vực xung quanh bạn theo tiêu chí 'Khi nghi ngờ, hãy dừng máy và hỏi.' để đảm bảo an toàn tuyệt đối!",
+    "tags": [
+      "#antoan",
+      "#laodong",
+      "#antoanlaodong",
+      "#máymóc–thiếtbị"
+    ],
+    "accent": "linear-gradient(135deg, #eb3b5a 0%, #fa8231 100%)"
+  },
+  {
+    "id": "safety_031",
+    "category": "safety",
+    "categoryName": "🦺 An Toàn Lao Động",
+    "title": "Điện: Không thao tác điện nếu không được phân quyền.",
+    "content": "Không thao tác điện nếu không được phân quyền.. Đảm bảo tuân thủ nghiêm ngặt các quy tắc an toàn lao động giúp bảo vệ sức khỏe bản thân, đồng nghiệp và ngăn ngừa tối đa các sự cố rủi ro tai nạn.",
+    "action": "👉 Kiểm tra ngay: Kiểm tra khu vực xung quanh bạn theo tiêu chí 'Không thao tác điện nếu không được phân quyền.' để đảm bảo an toàn tuyệt đối!",
+    "tags": [
+      "#antoan",
+      "#laodong",
+      "#antoanlaodong",
+      "#điện"
+    ],
+    "accent": "linear-gradient(135deg, #ff416c 0%, #ff4b2b 100%)"
+  },
+  {
+    "id": "safety_032",
+    "category": "safety",
+    "categoryName": "🦺 An Toàn Lao Động",
+    "title": "Điện: Kiểm tra dây điện trước khi sử dụng.",
+    "content": "Kiểm tra dây điện trước khi sử dụng.. Đảm bảo tuân thủ nghiêm ngặt các quy tắc an toàn lao động giúp bảo vệ sức khỏe bản thân, đồng nghiệp và ngăn ngừa tối đa các sự cố rủi ro tai nạn.",
+    "action": "👉 Kiểm tra ngay: Kiểm tra khu vực xung quanh bạn theo tiêu chí 'Kiểm tra dây điện trước khi sử dụng.' để đảm bảo an toàn tuyệt đối!",
+    "tags": [
+      "#antoan",
+      "#laodong",
+      "#antoanlaodong",
+      "#điện"
+    ],
+    "accent": "linear-gradient(135deg, #f857a6 0%, #ff5858 100%)"
+  },
+  {
+    "id": "safety_033",
+    "category": "safety",
+    "categoryName": "🦺 An Toàn Lao Động",
+    "title": "Điện: Không sử dụng dây điện bị hở.",
+    "content": "Không sử dụng dây điện bị hở.. Đảm bảo tuân thủ nghiêm ngặt các quy tắc an toàn lao động giúp bảo vệ sức khỏe bản thân, đồng nghiệp và ngăn ngừa tối đa các sự cố rủi ro tai nạn.",
+    "action": "👉 Kiểm tra ngay: Kiểm tra khu vực xung quanh bạn theo tiêu chí 'Không sử dụng dây điện bị hở.' để đảm bảo an toàn tuyệt đối!",
+    "tags": [
+      "#antoan",
+      "#laodong",
+      "#antoanlaodong",
+      "#điện"
+    ],
+    "accent": "linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%)"
+  },
+  {
+    "id": "safety_034",
+    "category": "safety",
+    "categoryName": "🦺 An Toàn Lao Động",
+    "title": "Điện: Không kéo dây điện bằng cách giật dây.",
+    "content": "Không kéo dây điện bằng cách giật dây.. Đảm bảo tuân thủ nghiêm ngặt các quy tắc an toàn lao động giúp bảo vệ sức khỏe bản thân, đồng nghiệp và ngăn ngừa tối đa các sự cố rủi ro tai nạn.",
+    "action": "👉 Kiểm tra ngay: Kiểm tra khu vực xung quanh bạn theo tiêu chí 'Không kéo dây điện bằng cách giật dây.' để đảm bảo an toàn tuyệt đối!",
+    "tags": [
+      "#antoan",
+      "#laodong",
+      "#antoanlaodong",
+      "#điện"
+    ],
+    "accent": "linear-gradient(135deg, #f12711 0%, #f5af19 100%)"
+  },
+  {
+    "id": "safety_035",
+    "category": "safety",
+    "categoryName": "🦺 An Toàn Lao Động",
+    "title": "Điện: Không cắm quá nhiều thiết bị vào một ổ điện.",
+    "content": "Không cắm quá nhiều thiết bị vào một ổ điện.. Đảm bảo tuân thủ nghiêm ngặt các quy tắc an toàn lao động giúp bảo vệ sức khỏe bản thân, đồng nghiệp và ngăn ngừa tối đa các sự cố rủi ro tai nạn.",
+    "action": "👉 Kiểm tra ngay: Kiểm tra khu vực xung quanh bạn theo tiêu chí 'Không cắm quá nhiều thiết bị vào một ổ điện.' để đảm bảo an toàn tuyệt đối!",
+    "tags": [
+      "#antoan",
+      "#laodong",
+      "#antoanlaodong",
+      "#điện"
+    ],
+    "accent": "linear-gradient(135deg, #eb3b5a 0%, #fa8231 100%)"
+  },
+  {
+    "id": "safety_036",
+    "category": "safety",
+    "categoryName": "🦺 An Toàn Lao Động",
+    "title": "Điện: Giữ thiết bị điện tránh xa nước.",
+    "content": "Giữ thiết bị điện tránh xa nước.. Đảm bảo tuân thủ nghiêm ngặt các quy tắc an toàn lao động giúp bảo vệ sức khỏe bản thân, đồng nghiệp và ngăn ngừa tối đa các sự cố rủi ro tai nạn.",
+    "action": "👉 Kiểm tra ngay: Kiểm tra khu vực xung quanh bạn theo tiêu chí 'Giữ thiết bị điện tránh xa nước.' để đảm bảo an toàn tuyệt đối!",
+    "tags": [
+      "#antoan",
+      "#laodong",
+      "#antoanlaodong",
+      "#điện"
+    ],
+    "accent": "linear-gradient(135deg, #ff416c 0%, #ff4b2b 100%)"
+  },
+  {
+    "id": "safety_037",
+    "category": "safety",
+    "categoryName": "🦺 An Toàn Lao Động",
+    "title": "Điện: Không dùng tay ướt thao tác thiết bị điện.",
+    "content": "Không dùng tay ướt thao tác thiết bị điện.. Đảm bảo tuân thủ nghiêm ngặt các quy tắc an toàn lao động giúp bảo vệ sức khỏe bản thân, đồng nghiệp và ngăn ngừa tối đa các sự cố rủi ro tai nạn.",
+    "action": "👉 Kiểm tra ngay: Kiểm tra khu vực xung quanh bạn theo tiêu chí 'Không dùng tay ướt thao tác thiết bị điện.' để đảm bảo an toàn tuyệt đối!",
+    "tags": [
+      "#antoan",
+      "#laodong",
+      "#antoanlaodong",
+      "#điện"
+    ],
+    "accent": "linear-gradient(135deg, #f857a6 0%, #ff5858 100%)"
+  },
+  {
+    "id": "safety_038",
+    "category": "safety",
+    "categoryName": "🦺 An Toàn Lao Động",
+    "title": "Điện: Tủ điện phải được đóng và quản lý phù hợp.",
+    "content": "Tủ điện phải được đóng và quản lý phù hợp.. Đảm bảo tuân thủ nghiêm ngặt các quy tắc an toàn lao động giúp bảo vệ sức khỏe bản thân, đồng nghiệp và ngăn ngừa tối đa các sự cố rủi ro tai nạn.",
+    "action": "👉 Kiểm tra ngay: Kiểm tra khu vực xung quanh bạn theo tiêu chí 'Tủ điện phải được đóng và quản lý phù hợp.' để đảm bảo an toàn tuyệt đối!",
+    "tags": [
+      "#antoan",
+      "#laodong",
+      "#antoanlaodong",
+      "#điện"
+    ],
+    "accent": "linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%)"
+  },
+  {
+    "id": "safety_039",
+    "category": "safety",
+    "categoryName": "🦺 An Toàn Lao Động",
+    "title": "Điện: Không tự ý thay đổi đấu nối điện.",
+    "content": "Không tự ý thay đổi đấu nối điện.. Đảm bảo tuân thủ nghiêm ngặt các quy tắc an toàn lao động giúp bảo vệ sức khỏe bản thân, đồng nghiệp và ngăn ngừa tối đa các sự cố rủi ro tai nạn.",
+    "action": "👉 Kiểm tra ngay: Kiểm tra khu vực xung quanh bạn theo tiêu chí 'Không tự ý thay đổi đấu nối điện.' để đảm bảo an toàn tuyệt đối!",
+    "tags": [
+      "#antoan",
+      "#laodong",
+      "#antoanlaodong",
+      "#điện"
+    ],
+    "accent": "linear-gradient(135deg, #f12711 0%, #f5af19 100%)"
+  },
+  {
+    "id": "safety_040",
+    "category": "safety",
+    "categoryName": "🦺 An Toàn Lao Động",
+    "title": "Điện: Khi sửa chữa phải kiểm soát nguồn điện.",
+    "content": "Khi sửa chữa phải kiểm soát nguồn điện.. Đảm bảo tuân thủ nghiêm ngặt các quy tắc an toàn lao động giúp bảo vệ sức khỏe bản thân, đồng nghiệp và ngăn ngừa tối đa các sự cố rủi ro tai nạn.",
+    "action": "👉 Kiểm tra ngay: Kiểm tra khu vực xung quanh bạn theo tiêu chí 'Khi sửa chữa phải kiểm soát nguồn điện.' để đảm bảo an toàn tuyệt đối!",
+    "tags": [
+      "#antoan",
+      "#laodong",
+      "#antoanlaodong",
+      "#điện"
+    ],
+    "accent": "linear-gradient(135deg, #eb3b5a 0%, #fa8231 100%)"
+  },
+  {
+    "id": "safety_041",
+    "category": "safety",
+    "categoryName": "🦺 An Toàn Lao Động",
+    "title": "Điện: Biết vị trí thiết bị ngắt điện khẩn cấp.",
+    "content": "Biết vị trí thiết bị ngắt điện khẩn cấp.. Đảm bảo tuân thủ nghiêm ngặt các quy tắc an toàn lao động giúp bảo vệ sức khỏe bản thân, đồng nghiệp và ngăn ngừa tối đa các sự cố rủi ro tai nạn.",
+    "action": "👉 Kiểm tra ngay: Kiểm tra khu vực xung quanh bạn theo tiêu chí 'Biết vị trí thiết bị ngắt điện khẩn cấp.' để đảm bảo an toàn tuyệt đối!",
+    "tags": [
+      "#antoan",
+      "#laodong",
+      "#antoanlaodong",
+      "#điện"
+    ],
+    "accent": "linear-gradient(135deg, #ff416c 0%, #ff4b2b 100%)"
+  },
+  {
+    "id": "safety_042",
+    "category": "safety",
+    "categoryName": "🦺 An Toàn Lao Động",
+    "title": "Điện: Không che khuất tủ điện.",
+    "content": "Không che khuất tủ điện.. Đảm bảo tuân thủ nghiêm ngặt các quy tắc an toàn lao động giúp bảo vệ sức khỏe bản thân, đồng nghiệp và ngăn ngừa tối đa các sự cố rủi ro tai nạn.",
+    "action": "👉 Kiểm tra ngay: Kiểm tra khu vực xung quanh bạn theo tiêu chí 'Không che khuất tủ điện.' để đảm bảo an toàn tuyệt đối!",
+    "tags": [
+      "#antoan",
+      "#laodong",
+      "#antoanlaodong",
+      "#điện"
+    ],
+    "accent": "linear-gradient(135deg, #f857a6 0%, #ff5858 100%)"
+  },
+  {
+    "id": "safety_043",
+    "category": "safety",
+    "categoryName": "🦺 An Toàn Lao Động",
+    "title": "Điện: Không để vật liệu dễ cháy gần nguồn điện.",
+    "content": "Không để vật liệu dễ cháy gần nguồn điện.. Đảm bảo tuân thủ nghiêm ngặt các quy tắc an toàn lao động giúp bảo vệ sức khỏe bản thân, đồng nghiệp và ngăn ngừa tối đa các sự cố rủi ro tai nạn.",
+    "action": "👉 Kiểm tra ngay: Kiểm tra khu vực xung quanh bạn theo tiêu chí 'Không để vật liệu dễ cháy gần nguồn điện.' để đảm bảo an toàn tuyệt đối!",
+    "tags": [
+      "#antoan",
+      "#laodong",
+      "#antoanlaodong",
+      "#điện"
+    ],
+    "accent": "linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%)"
+  },
+  {
+    "id": "safety_044",
+    "category": "safety",
+    "categoryName": "🦺 An Toàn Lao Động",
+    "title": "Điện: Báo ngay khi phát hiện mùi khét hoặc phát nhiệt bất thường.",
+    "content": "Báo ngay khi phát hiện mùi khét hoặc phát nhiệt bất thường.. Đảm bảo tuân thủ nghiêm ngặt các quy tắc an toàn lao động giúp bảo vệ sức khỏe bản thân, đồng nghiệp và ngăn ngừa tối đa các sự cố rủi ro tai nạn.",
+    "action": "👉 Kiểm tra ngay: Kiểm tra khu vực xung quanh bạn theo tiêu chí 'Báo ngay khi phát hiện mùi khét hoặc phát nhiệt bất thường.' để đảm bảo an toàn tuyệt đối!",
+    "tags": [
+      "#antoan",
+      "#laodong",
+      "#antoanlaodong",
+      "#điện"
+    ],
+    "accent": "linear-gradient(135deg, #f12711 0%, #f5af19 100%)"
+  },
+  {
+    "id": "safety_045",
+    "category": "safety",
+    "categoryName": "🦺 An Toàn Lao Động",
+    "title": "Điện: Thiết bị điện bất thường phải được cô lập và kiểm tra.",
+    "content": "Thiết bị điện bất thường phải được cô lập và kiểm tra.. Đảm bảo tuân thủ nghiêm ngặt các quy tắc an toàn lao động giúp bảo vệ sức khỏe bản thân, đồng nghiệp và ngăn ngừa tối đa các sự cố rủi ro tai nạn.",
+    "action": "👉 Kiểm tra ngay: Kiểm tra khu vực xung quanh bạn theo tiêu chí 'Thiết bị điện bất thường phải được cô lập và kiểm tra.' để đảm bảo an toàn tuyệt đối!",
+    "tags": [
+      "#antoan",
+      "#laodong",
+      "#antoanlaodong",
+      "#điện"
+    ],
+    "accent": "linear-gradient(135deg, #eb3b5a 0%, #fa8231 100%)"
+  },
+  {
+    "id": "safety_046",
+    "category": "safety",
+    "categoryName": "🦺 An Toàn Lao Động",
+    "title": "PPE – phương tiện bảo vệ cá nhân: Sử dụng PPE đúng với nguy cơ công việc.",
+    "content": "Sử dụng PPE đúng với nguy cơ công việc.. Đảm bảo tuân thủ nghiêm ngặt các quy tắc an toàn lao động giúp bảo vệ sức khỏe bản thân, đồng nghiệp và ngăn ngừa tối đa các sự cố rủi ro tai nạn.",
+    "action": "👉 Kiểm tra ngay: Kiểm tra khu vực xung quanh bạn theo tiêu chí 'Sử dụng PPE đúng với nguy cơ công việc.' để đảm bảo an toàn tuyệt đối!",
+    "tags": [
+      "#antoan",
+      "#laodong",
+      "#antoanlaodong",
+      "#ppe–phươngtiệnbảovệcánhân"
+    ],
+    "accent": "linear-gradient(135deg, #ff416c 0%, #ff4b2b 100%)"
+  },
+  {
+    "id": "safety_047",
+    "category": "safety",
+    "categoryName": "🦺 An Toàn Lao Động",
+    "title": "PPE – phương tiện bảo vệ cá nhân: Kiểm tra PPE trước khi sử dụng.",
+    "content": "Kiểm tra PPE trước khi sử dụng.. Đảm bảo tuân thủ nghiêm ngặt các quy tắc an toàn lao động giúp bảo vệ sức khỏe bản thân, đồng nghiệp và ngăn ngừa tối đa các sự cố rủi ro tai nạn.",
+    "action": "👉 Kiểm tra ngay: Kiểm tra khu vực xung quanh bạn theo tiêu chí 'Kiểm tra PPE trước khi sử dụng.' để đảm bảo an toàn tuyệt đối!",
+    "tags": [
+      "#antoan",
+      "#laodong",
+      "#antoanlaodong",
+      "#ppe–phươngtiệnbảovệcánhân"
+    ],
+    "accent": "linear-gradient(135deg, #f857a6 0%, #ff5858 100%)"
+  },
+  {
+    "id": "safety_048",
+    "category": "safety",
+    "categoryName": "🦺 An Toàn Lao Động",
+    "title": "PPE – phương tiện bảo vệ cá nhân: Không sử dụng PPE đã hư hỏng.",
+    "content": "Không sử dụng PPE đã hư hỏng.. Đảm bảo tuân thủ nghiêm ngặt các quy tắc an toàn lao động giúp bảo vệ sức khỏe bản thân, đồng nghiệp và ngăn ngừa tối đa các sự cố rủi ro tai nạn.",
+    "action": "👉 Kiểm tra ngay: Kiểm tra khu vực xung quanh bạn theo tiêu chí 'Không sử dụng PPE đã hư hỏng.' để đảm bảo an toàn tuyệt đối!",
+    "tags": [
+      "#antoan",
+      "#laodong",
+      "#antoanlaodong",
+      "#ppe–phươngtiệnbảovệcánhân"
+    ],
+    "accent": "linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%)"
+  },
+  {
+    "id": "safety_049",
+    "category": "safety",
+    "categoryName": "🦺 An Toàn Lao Động",
+    "title": "PPE – phương tiện bảo vệ cá nhân: Kính bảo hộ phải phù hợp với công việc.",
+    "content": "Kính bảo hộ phải phù hợp với công việc.. Đảm bảo tuân thủ nghiêm ngặt các quy tắc an toàn lao động giúp bảo vệ sức khỏe bản thân, đồng nghiệp và ngăn ngừa tối đa các sự cố rủi ro tai nạn.",
+    "action": "👉 Kiểm tra ngay: Kiểm tra khu vực xung quanh bạn theo tiêu chí 'Kính bảo hộ phải phù hợp với công việc.' để đảm bảo an toàn tuyệt đối!",
+    "tags": [
+      "#antoan",
+      "#laodong",
+      "#antoanlaodong",
+      "#ppe–phươngtiệnbảovệcánhân"
+    ],
+    "accent": "linear-gradient(135deg, #f12711 0%, #f5af19 100%)"
+  },
+  {
+    "id": "safety_050",
+    "category": "safety",
+    "categoryName": "🦺 An Toàn Lao Động",
+    "title": "PPE – phương tiện bảo vệ cá nhân: Sử dụng bảo vệ thính giác tại khu vực có nguy cơ tiếng ồn.",
+    "content": "Sử dụng bảo vệ thính giác tại khu vực có nguy cơ tiếng ồn.. Đảm bảo tuân thủ nghiêm ngặt các quy tắc an toàn lao động giúp bảo vệ sức khỏe bản thân, đồng nghiệp và ngăn ngừa tối đa các sự cố rủi ro tai nạn.",
+    "action": "👉 Kiểm tra ngay: Kiểm tra khu vực xung quanh bạn theo tiêu chí 'Sử dụng bảo vệ thính giác tại khu vực có nguy cơ tiếng ồn.' để đảm bảo an toàn tuyệt đối!",
+    "tags": [
+      "#antoan",
+      "#laodong",
+      "#antoanlaodong",
+      "#ppe–phươngtiệnbảovệcánhân"
+    ],
+    "accent": "linear-gradient(135deg, #eb3b5a 0%, #fa8231 100%)"
+  },
+  {
+    "id": "safety_051",
+    "category": "safety",
+    "categoryName": "🦺 An Toàn Lao Động",
+    "title": "PPE – phương tiện bảo vệ cá nhân: Sử dụng giày bảo hộ phù hợp.",
+    "content": "Sử dụng giày bảo hộ phù hợp.. Đảm bảo tuân thủ nghiêm ngặt các quy tắc an toàn lao động giúp bảo vệ sức khỏe bản thân, đồng nghiệp và ngăn ngừa tối đa các sự cố rủi ro tai nạn.",
+    "action": "👉 Kiểm tra ngay: Kiểm tra khu vực xung quanh bạn theo tiêu chí 'Sử dụng giày bảo hộ phù hợp.' để đảm bảo an toàn tuyệt đối!",
+    "tags": [
+      "#antoan",
+      "#laodong",
+      "#antoanlaodong",
+      "#ppe–phươngtiệnbảovệcánhân"
+    ],
+    "accent": "linear-gradient(135deg, #ff416c 0%, #ff4b2b 100%)"
+  },
+  {
+    "id": "safety_052",
+    "category": "safety",
+    "categoryName": "🦺 An Toàn Lao Động",
+    "title": "PPE – phương tiện bảo vệ cá nhân: Không sử dụng PPE chỉ để đối phó với kiểm tra.",
+    "content": "Không sử dụng PPE chỉ để đối phó với kiểm tra.. Đảm bảo tuân thủ nghiêm ngặt các quy tắc an toàn lao động giúp bảo vệ sức khỏe bản thân, đồng nghiệp và ngăn ngừa tối đa các sự cố rủi ro tai nạn.",
+    "action": "👉 Kiểm tra ngay: Kiểm tra khu vực xung quanh bạn theo tiêu chí 'Không sử dụng PPE chỉ để đối phó với kiểm tra.' để đảm bảo an toàn tuyệt đối!",
+    "tags": [
+      "#antoan",
+      "#laodong",
+      "#antoanlaodong",
+      "#ppe–phươngtiệnbảovệcánhân"
+    ],
+    "accent": "linear-gradient(135deg, #f857a6 0%, #ff5858 100%)"
+  },
+  {
+    "id": "safety_053",
+    "category": "safety",
+    "categoryName": "🦺 An Toàn Lao Động",
+    "title": "PPE – phương tiện bảo vệ cá nhân: PPE không thay thế biện pháp kiểm soát nguy cơ.",
+    "content": "PPE không thay thế biện pháp kiểm soát nguy cơ.. Đảm bảo tuân thủ nghiêm ngặt các quy tắc an toàn lao động giúp bảo vệ sức khỏe bản thân, đồng nghiệp và ngăn ngừa tối đa các sự cố rủi ro tai nạn.",
+    "action": "👉 Kiểm tra ngay: Kiểm tra khu vực xung quanh bạn theo tiêu chí 'PPE không thay thế biện pháp kiểm soát nguy cơ.' để đảm bảo an toàn tuyệt đối!",
+    "tags": [
+      "#antoan",
+      "#laodong",
+      "#antoanlaodong",
+      "#ppe–phươngtiệnbảovệcánhân"
+    ],
+    "accent": "linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%)"
+  },
+  {
+    "id": "safety_054",
+    "category": "safety",
+    "categoryName": "🦺 An Toàn Lao Động",
+    "title": "PPE – phương tiện bảo vệ cá nhân: Giữ PPE sạch và bảo quản đúng cách.",
+    "content": "Giữ PPE sạch và bảo quản đúng cách.. Đảm bảo tuân thủ nghiêm ngặt các quy tắc an toàn lao động giúp bảo vệ sức khỏe bản thân, đồng nghiệp và ngăn ngừa tối đa các sự cố rủi ro tai nạn.",
+    "action": "👉 Kiểm tra ngay: Kiểm tra khu vực xung quanh bạn theo tiêu chí 'Giữ PPE sạch và bảo quản đúng cách.' để đảm bảo an toàn tuyệt đối!",
+    "tags": [
+      "#antoan",
+      "#laodong",
+      "#antoanlaodong",
+      "#ppe–phươngtiệnbảovệcánhân"
+    ],
+    "accent": "linear-gradient(135deg, #f12711 0%, #f5af19 100%)"
+  },
+  {
+    "id": "safety_055",
+    "category": "safety",
+    "categoryName": "🦺 An Toàn Lao Động",
+    "title": "PPE – phương tiện bảo vệ cá nhân: Người lao động phải biết giới hạn bảo vệ của PPE.",
+    "content": "Người lao động phải biết giới hạn bảo vệ của PPE.. Đảm bảo tuân thủ nghiêm ngặt các quy tắc an toàn lao động giúp bảo vệ sức khỏe bản thân, đồng nghiệp và ngăn ngừa tối đa các sự cố rủi ro tai nạn.",
+    "action": "👉 Kiểm tra ngay: Kiểm tra khu vực xung quanh bạn theo tiêu chí 'Người lao động phải biết giới hạn bảo vệ của PPE.' để đảm bảo an toàn tuyệt đối!",
+    "tags": [
+      "#antoan",
+      "#laodong",
+      "#antoanlaodong",
+      "#ppe–phươngtiệnbảovệcánhân"
+    ],
+    "accent": "linear-gradient(135deg, #eb3b5a 0%, #fa8231 100%)"
+  },
+  {
+    "id": "safety_056",
+    "category": "safety",
+    "categoryName": "🦺 An Toàn Lao Động",
+    "title": "Nâng hạ – vận chuyển: Không đứng dưới vật đang được nâng.",
+    "content": "Không đứng dưới vật đang được nâng.. Đảm bảo tuân thủ nghiêm ngặt các quy tắc an toàn lao động giúp bảo vệ sức khỏe bản thân, đồng nghiệp và ngăn ngừa tối đa các sự cố rủi ro tai nạn.",
+    "action": "👉 Kiểm tra ngay: Kiểm tra khu vực xung quanh bạn theo tiêu chí 'Không đứng dưới vật đang được nâng.' để đảm bảo an toàn tuyệt đối!",
+    "tags": [
+      "#antoan",
+      "#laodong",
+      "#antoanlaodong",
+      "#nânghạ–vậnchuyển"
+    ],
+    "accent": "linear-gradient(135deg, #ff416c 0%, #ff4b2b 100%)"
+  },
+  {
+    "id": "safety_057",
+    "category": "safety",
+    "categoryName": "🦺 An Toàn Lao Động",
+    "title": "Nâng hạ – vận chuyển: Không đi vào vùng nguy hiểm của thiết bị nâng.",
+    "content": "Không đi vào vùng nguy hiểm của thiết bị nâng.. Đảm bảo tuân thủ nghiêm ngặt các quy tắc an toàn lao động giúp bảo vệ sức khỏe bản thân, đồng nghiệp và ngăn ngừa tối đa các sự cố rủi ro tai nạn.",
+    "action": "👉 Kiểm tra ngay: Kiểm tra khu vực xung quanh bạn theo tiêu chí 'Không đi vào vùng nguy hiểm của thiết bị nâng.' để đảm bảo an toàn tuyệt đối!",
+    "tags": [
+      "#antoan",
+      "#laodong",
+      "#antoanlaodong",
+      "#nânghạ–vậnchuyển"
+    ],
+    "accent": "linear-gradient(135deg, #f857a6 0%, #ff5858 100%)"
+  },
+  {
+    "id": "safety_058",
+    "category": "safety",
+    "categoryName": "🦺 An Toàn Lao Động",
+    "title": "Nâng hạ – vận chuyển: Kiểm tra tải trọng trước khi nâng.",
+    "content": "Kiểm tra tải trọng trước khi nâng.. Đảm bảo tuân thủ nghiêm ngặt các quy tắc an toàn lao động giúp bảo vệ sức khỏe bản thân, đồng nghiệp và ngăn ngừa tối đa các sự cố rủi ro tai nạn.",
+    "action": "👉 Kiểm tra ngay: Kiểm tra khu vực xung quanh bạn theo tiêu chí 'Kiểm tra tải trọng trước khi nâng.' để đảm bảo an toàn tuyệt đối!",
+    "tags": [
+      "#antoan",
+      "#laodong",
+      "#antoanlaodong",
+      "#nânghạ–vậnchuyển"
+    ],
+    "accent": "linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%)"
+  },
+  {
+    "id": "safety_059",
+    "category": "safety",
+    "categoryName": "🦺 An Toàn Lao Động",
+    "title": "Nâng hạ – vận chuyển: Không nâng tải vượt khả năng thiết bị.",
+    "content": "Không nâng tải vượt khả năng thiết bị.. Đảm bảo tuân thủ nghiêm ngặt các quy tắc an toàn lao động giúp bảo vệ sức khỏe bản thân, đồng nghiệp và ngăn ngừa tối đa các sự cố rủi ro tai nạn.",
+    "action": "👉 Kiểm tra ngay: Kiểm tra khu vực xung quanh bạn theo tiêu chí 'Không nâng tải vượt khả năng thiết bị.' để đảm bảo an toàn tuyệt đối!",
+    "tags": [
+      "#antoan",
+      "#laodong",
+      "#antoanlaodong",
+      "#nânghạ–vậnchuyển"
+    ],
+    "accent": "linear-gradient(135deg, #f12711 0%, #f5af19 100%)"
+  },
+  {
+    "id": "safety_060",
+    "category": "safety",
+    "categoryName": "🦺 An Toàn Lao Động",
+    "title": "Nâng hạ – vận chuyển: Không đứng giữa hai vật có nguy cơ kẹp.",
+    "content": "Không đứng giữa hai vật có nguy cơ kẹp.. Đảm bảo tuân thủ nghiêm ngặt các quy tắc an toàn lao động giúp bảo vệ sức khỏe bản thân, đồng nghiệp và ngăn ngừa tối đa các sự cố rủi ro tai nạn.",
+    "action": "👉 Kiểm tra ngay: Kiểm tra khu vực xung quanh bạn theo tiêu chí 'Không đứng giữa hai vật có nguy cơ kẹp.' để đảm bảo an toàn tuyệt đối!",
+    "tags": [
+      "#antoan",
+      "#laodong",
+      "#antoanlaodong",
+      "#nânghạ–vậnchuyển"
+    ],
+    "accent": "linear-gradient(135deg, #eb3b5a 0%, #fa8231 100%)"
+  },
+  {
+    "id": "safety_061",
+    "category": "safety",
+    "categoryName": "🦺 An Toàn Lao Động",
+    "title": "Nâng hạ – vận chuyển: Giữ khoảng cách an toàn với xe nâng.",
+    "content": "Giữ khoảng cách an toàn với xe nâng.. Đảm bảo tuân thủ nghiêm ngặt các quy tắc an toàn lao động giúp bảo vệ sức khỏe bản thân, đồng nghiệp và ngăn ngừa tối đa các sự cố rủi ro tai nạn.",
+    "action": "👉 Kiểm tra ngay: Kiểm tra khu vực xung quanh bạn theo tiêu chí 'Giữ khoảng cách an toàn với xe nâng.' để đảm bảo an toàn tuyệt đối!",
+    "tags": [
+      "#antoan",
+      "#laodong",
+      "#antoanlaodong",
+      "#nânghạ–vậnchuyển"
+    ],
+    "accent": "linear-gradient(135deg, #ff416c 0%, #ff4b2b 100%)"
+  },
+  {
+    "id": "safety_062",
+    "category": "safety",
+    "categoryName": "🦺 An Toàn Lao Động",
+    "title": "Nâng hạ – vận chuyển: Không đi bộ vào đường di chuyển của xe nâng.",
+    "content": "Không đi bộ vào đường di chuyển của xe nâng.. Đảm bảo tuân thủ nghiêm ngặt các quy tắc an toàn lao động giúp bảo vệ sức khỏe bản thân, đồng nghiệp và ngăn ngừa tối đa các sự cố rủi ro tai nạn.",
+    "action": "👉 Kiểm tra ngay: Kiểm tra khu vực xung quanh bạn theo tiêu chí 'Không đi bộ vào đường di chuyển của xe nâng.' để đảm bảo an toàn tuyệt đối!",
+    "tags": [
+      "#antoan",
+      "#laodong",
+      "#antoanlaodong",
+      "#nânghạ–vậnchuyển"
+    ],
+    "accent": "linear-gradient(135deg, #f857a6 0%, #ff5858 100%)"
+  },
+  {
+    "id": "safety_063",
+    "category": "safety",
+    "categoryName": "🦺 An Toàn Lao Động",
+    "title": "Nâng hạ – vận chuyển: Tài xế phải quan sát toàn bộ hướng di chuyển.",
+    "content": "Tài xế phải quan sát toàn bộ hướng di chuyển.. Đảm bảo tuân thủ nghiêm ngặt các quy tắc an toàn lao động giúp bảo vệ sức khỏe bản thân, đồng nghiệp và ngăn ngừa tối đa các sự cố rủi ro tai nạn.",
+    "action": "👉 Kiểm tra ngay: Kiểm tra khu vực xung quanh bạn theo tiêu chí 'Tài xế phải quan sát toàn bộ hướng di chuyển.' để đảm bảo an toàn tuyệt đối!",
+    "tags": [
+      "#antoan",
+      "#laodong",
+      "#antoanlaodong",
+      "#nânghạ–vậnchuyển"
+    ],
+    "accent": "linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%)"
+  },
+  {
+    "id": "safety_064",
+    "category": "safety",
+    "categoryName": "🦺 An Toàn Lao Động",
+    "title": "Nâng hạ – vận chuyển: Giảm tốc tại giao điểm và góc khuất.",
+    "content": "Giảm tốc tại giao điểm và góc khuất.. Đảm bảo tuân thủ nghiêm ngặt các quy tắc an toàn lao động giúp bảo vệ sức khỏe bản thân, đồng nghiệp và ngăn ngừa tối đa các sự cố rủi ro tai nạn.",
+    "action": "👉 Kiểm tra ngay: Kiểm tra khu vực xung quanh bạn theo tiêu chí 'Giảm tốc tại giao điểm và góc khuất.' để đảm bảo an toàn tuyệt đối!",
+    "tags": [
+      "#antoan",
+      "#laodong",
+      "#antoanlaodong",
+      "#nânghạ–vậnchuyển"
+    ],
+    "accent": "linear-gradient(135deg, #f12711 0%, #f5af19 100%)"
+  },
+  {
+    "id": "safety_065",
+    "category": "safety",
+    "categoryName": "🦺 An Toàn Lao Động",
+    "title": "Nâng hạ – vận chuyển: Không chở người bằng thiết bị không được thiết kế để chở người.",
+    "content": "Không chở người bằng thiết bị không được thiết kế để chở người.. Đảm bảo tuân thủ nghiêm ngặt các quy tắc an toàn lao động giúp bảo vệ sức khỏe bản thân, đồng nghiệp và ngăn ngừa tối đa các sự cố rủi ro tai nạn.",
+    "action": "👉 Kiểm tra ngay: Kiểm tra khu vực xung quanh bạn theo tiêu chí 'Không chở người bằng thiết bị không được thiết kế để chở người.' để đảm bảo an toàn tuyệt đối!",
+    "tags": [
+      "#antoan",
+      "#laodong",
+      "#antoanlaodong",
+      "#nânghạ–vậnchuyển"
+    ],
+    "accent": "linear-gradient(135deg, #eb3b5a 0%, #fa8231 100%)"
+  },
+  {
+    "id": "safety_066",
+    "category": "safety",
+    "categoryName": "🦺 An Toàn Lao Động",
+    "title": "Nâng hạ – vận chuyển: Hàng hóa phải được xếp ổn định.",
+    "content": "Hàng hóa phải được xếp ổn định.. Đảm bảo tuân thủ nghiêm ngặt các quy tắc an toàn lao động giúp bảo vệ sức khỏe bản thân, đồng nghiệp và ngăn ngừa tối đa các sự cố rủi ro tai nạn.",
+    "action": "👉 Kiểm tra ngay: Kiểm tra khu vực xung quanh bạn theo tiêu chí 'Hàng hóa phải được xếp ổn định.' để đảm bảo an toàn tuyệt đối!",
+    "tags": [
+      "#antoan",
+      "#laodong",
+      "#antoanlaodong",
+      "#nânghạ–vậnchuyển"
+    ],
+    "accent": "linear-gradient(135deg, #ff416c 0%, #ff4b2b 100%)"
+  },
+  {
+    "id": "safety_067",
+    "category": "safety",
+    "categoryName": "🦺 An Toàn Lao Động",
+    "title": "Nâng hạ – vận chuyển: Không đứng dưới hàng hóa đang treo.",
+    "content": "Không đứng dưới hàng hóa đang treo.. Đảm bảo tuân thủ nghiêm ngặt các quy tắc an toàn lao động giúp bảo vệ sức khỏe bản thân, đồng nghiệp và ngăn ngừa tối đa các sự cố rủi ro tai nạn.",
+    "action": "👉 Kiểm tra ngay: Kiểm tra khu vực xung quanh bạn theo tiêu chí 'Không đứng dưới hàng hóa đang treo.' để đảm bảo an toàn tuyệt đối!",
+    "tags": [
+      "#antoan",
+      "#laodong",
+      "#antoanlaodong",
+      "#nânghạ–vậnchuyển"
+    ],
+    "accent": "linear-gradient(135deg, #f857a6 0%, #ff5858 100%)"
+  },
+  {
+    "id": "safety_068",
+    "category": "safety",
+    "categoryName": "🦺 An Toàn Lao Động",
+    "title": "Nâng hạ – vận chuyển: Kiểm tra dây cáp, xích và móc trước khi sử dụng.",
+    "content": "Kiểm tra dây cáp, xích và móc trước khi sử dụng.. Đảm bảo tuân thủ nghiêm ngặt các quy tắc an toàn lao động giúp bảo vệ sức khỏe bản thân, đồng nghiệp và ngăn ngừa tối đa các sự cố rủi ro tai nạn.",
+    "action": "👉 Kiểm tra ngay: Kiểm tra khu vực xung quanh bạn theo tiêu chí 'Kiểm tra dây cáp, xích và móc trước khi sử dụng.' để đảm bảo an toàn tuyệt đối!",
+    "tags": [
+      "#antoan",
+      "#laodong",
+      "#antoanlaodong",
+      "#nânghạ–vậnchuyển"
+    ],
+    "accent": "linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%)"
+  },
+  {
+    "id": "safety_069",
+    "category": "safety",
+    "categoryName": "🦺 An Toàn Lao Động",
+    "title": "Nâng hạ – vận chuyển: Không sử dụng thiết bị nâng có dấu hiệu hư hỏng.",
+    "content": "Không sử dụng thiết bị nâng có dấu hiệu hư hỏng.. Đảm bảo tuân thủ nghiêm ngặt các quy tắc an toàn lao động giúp bảo vệ sức khỏe bản thân, đồng nghiệp và ngăn ngừa tối đa các sự cố rủi ro tai nạn.",
+    "action": "👉 Kiểm tra ngay: Kiểm tra khu vực xung quanh bạn theo tiêu chí 'Không sử dụng thiết bị nâng có dấu hiệu hư hỏng.' để đảm bảo an toàn tuyệt đối!",
+    "tags": [
+      "#antoan",
+      "#laodong",
+      "#antoanlaodong",
+      "#nânghạ–vậnchuyển"
+    ],
+    "accent": "linear-gradient(135deg, #f12711 0%, #f5af19 100%)"
+  },
+  {
+    "id": "safety_070",
+    "category": "safety",
+    "categoryName": "🦺 An Toàn Lao Động",
+    "title": "Nâng hạ – vận chuyển: Khi không chắc chắn về tải trọng, không nâng.",
+    "content": "Khi không chắc chắn về tải trọng, không nâng.. Đảm bảo tuân thủ nghiêm ngặt các quy tắc an toàn lao động giúp bảo vệ sức khỏe bản thân, đồng nghiệp và ngăn ngừa tối đa các sự cố rủi ro tai nạn.",
+    "action": "👉 Kiểm tra ngay: Kiểm tra khu vực xung quanh bạn theo tiêu chí 'Khi không chắc chắn về tải trọng, không nâng.' để đảm bảo an toàn tuyệt đối!",
+    "tags": [
+      "#antoan",
+      "#laodong",
+      "#antoanlaodong",
+      "#nânghạ–vậnchuyển"
+    ],
+    "accent": "linear-gradient(135deg, #eb3b5a 0%, #fa8231 100%)"
+  },
+  {
+    "id": "safety_071",
+    "category": "safety",
+    "categoryName": "🦺 An Toàn Lao Động",
+    "title": "Làm việc trên cao: Không làm việc trên cao khi chưa đánh giá nguy cơ.",
+    "content": "Không làm việc trên cao khi chưa đánh giá nguy cơ.. Đảm bảo tuân thủ nghiêm ngặt các quy tắc an toàn lao động giúp bảo vệ sức khỏe bản thân, đồng nghiệp và ngăn ngừa tối đa các sự cố rủi ro tai nạn.",
+    "action": "👉 Kiểm tra ngay: Kiểm tra khu vực xung quanh bạn theo tiêu chí 'Không làm việc trên cao khi chưa đánh giá nguy cơ.' để đảm bảo an toàn tuyệt đối!",
+    "tags": [
+      "#antoan",
+      "#laodong",
+      "#antoanlaodong",
+      "#làmviệctrêncao"
+    ],
+    "accent": "linear-gradient(135deg, #ff416c 0%, #ff4b2b 100%)"
+  },
+  {
+    "id": "safety_072",
+    "category": "safety",
+    "categoryName": "🦺 An Toàn Lao Động",
+    "title": "Làm việc trên cao: Kiểm tra thang trước khi sử dụng.",
+    "content": "Kiểm tra thang trước khi sử dụng.. Đảm bảo tuân thủ nghiêm ngặt các quy tắc an toàn lao động giúp bảo vệ sức khỏe bản thân, đồng nghiệp và ngăn ngừa tối đa các sự cố rủi ro tai nạn.",
+    "action": "👉 Kiểm tra ngay: Kiểm tra khu vực xung quanh bạn theo tiêu chí 'Kiểm tra thang trước khi sử dụng.' để đảm bảo an toàn tuyệt đối!",
+    "tags": [
+      "#antoan",
+      "#laodong",
+      "#antoanlaodong",
+      "#làmviệctrêncao"
+    ],
+    "accent": "linear-gradient(135deg, #f857a6 0%, #ff5858 100%)"
+  },
+  {
+    "id": "safety_073",
+    "category": "safety",
+    "categoryName": "🦺 An Toàn Lao Động",
+    "title": "Làm việc trên cao: Đặt thang trên nền vững chắc.",
+    "content": "Đặt thang trên nền vững chắc.. Đảm bảo tuân thủ nghiêm ngặt các quy tắc an toàn lao động giúp bảo vệ sức khỏe bản thân, đồng nghiệp và ngăn ngừa tối đa các sự cố rủi ro tai nạn.",
+    "action": "👉 Kiểm tra ngay: Kiểm tra khu vực xung quanh bạn theo tiêu chí 'Đặt thang trên nền vững chắc.' để đảm bảo an toàn tuyệt đối!",
+    "tags": [
+      "#antoan",
+      "#laodong",
+      "#antoanlaodong",
+      "#làmviệctrêncao"
+    ],
+    "accent": "linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%)"
+  },
+  {
+    "id": "safety_074",
+    "category": "safety",
+    "categoryName": "🦺 An Toàn Lao Động",
+    "title": "Làm việc trên cao: Không sử dụng thang bị hư hỏng.",
+    "content": "Không sử dụng thang bị hư hỏng.. Đảm bảo tuân thủ nghiêm ngặt các quy tắc an toàn lao động giúp bảo vệ sức khỏe bản thân, đồng nghiệp và ngăn ngừa tối đa các sự cố rủi ro tai nạn.",
+    "action": "👉 Kiểm tra ngay: Kiểm tra khu vực xung quanh bạn theo tiêu chí 'Không sử dụng thang bị hư hỏng.' để đảm bảo an toàn tuyệt đối!",
+    "tags": [
+      "#antoan",
+      "#laodong",
+      "#antoanlaodong",
+      "#làmviệctrêncao"
+    ],
+    "accent": "linear-gradient(135deg, #f12711 0%, #f5af19 100%)"
+  },
+  {
+    "id": "safety_075",
+    "category": "safety",
+    "categoryName": "🦺 An Toàn Lao Động",
+    "title": "Làm việc trên cao: Không với quá xa khi đang đứng trên thang.",
+    "content": "Không với quá xa khi đang đứng trên thang.. Đảm bảo tuân thủ nghiêm ngặt các quy tắc an toàn lao động giúp bảo vệ sức khỏe bản thân, đồng nghiệp và ngăn ngừa tối đa các sự cố rủi ro tai nạn.",
+    "action": "👉 Kiểm tra ngay: Kiểm tra khu vực xung quanh bạn theo tiêu chí 'Không với quá xa khi đang đứng trên thang.' để đảm bảo an toàn tuyệt đối!",
+    "tags": [
+      "#antoan",
+      "#laodong",
+      "#antoanlaodong",
+      "#làmviệctrêncao"
+    ],
+    "accent": "linear-gradient(135deg, #eb3b5a 0%, #fa8231 100%)"
+  },
+  {
+    "id": "safety_076",
+    "category": "safety",
+    "categoryName": "🦺 An Toàn Lao Động",
+    "title": "Làm việc trên cao: Sử dụng hệ thống chống ngã phù hợp khi cần.",
+    "content": "Sử dụng hệ thống chống ngã phù hợp khi cần.. Đảm bảo tuân thủ nghiêm ngặt các quy tắc an toàn lao động giúp bảo vệ sức khỏe bản thân, đồng nghiệp và ngăn ngừa tối đa các sự cố rủi ro tai nạn.",
+    "action": "👉 Kiểm tra ngay: Kiểm tra khu vực xung quanh bạn theo tiêu chí 'Sử dụng hệ thống chống ngã phù hợp khi cần.' để đảm bảo an toàn tuyệt đối!",
+    "tags": [
+      "#antoan",
+      "#laodong",
+      "#antoanlaodong",
+      "#làmviệctrêncao"
+    ],
+    "accent": "linear-gradient(135deg, #ff416c 0%, #ff4b2b 100%)"
+  },
+  {
+    "id": "safety_077",
+    "category": "safety",
+    "categoryName": "🦺 An Toàn Lao Động",
+    "title": "Làm việc trên cao: Không ném dụng cụ từ trên cao xuống.",
+    "content": "Không ném dụng cụ từ trên cao xuống.. Đảm bảo tuân thủ nghiêm ngặt các quy tắc an toàn lao động giúp bảo vệ sức khỏe bản thân, đồng nghiệp và ngăn ngừa tối đa các sự cố rủi ro tai nạn.",
+    "action": "👉 Kiểm tra ngay: Kiểm tra khu vực xung quanh bạn theo tiêu chí 'Không ném dụng cụ từ trên cao xuống.' để đảm bảo an toàn tuyệt đối!",
+    "tags": [
+      "#antoan",
+      "#laodong",
+      "#antoanlaodong",
+      "#làmviệctrêncao"
+    ],
+    "accent": "linear-gradient(135deg, #f857a6 0%, #ff5858 100%)"
+  },
+  {
+    "id": "safety_078",
+    "category": "safety",
+    "categoryName": "🦺 An Toàn Lao Động",
+    "title": "Làm việc trên cao: Không để vật rơi xuống khu vực bên dưới.",
+    "content": "Không để vật rơi xuống khu vực bên dưới.. Đảm bảo tuân thủ nghiêm ngặt các quy tắc an toàn lao động giúp bảo vệ sức khỏe bản thân, đồng nghiệp và ngăn ngừa tối đa các sự cố rủi ro tai nạn.",
+    "action": "👉 Kiểm tra ngay: Kiểm tra khu vực xung quanh bạn theo tiêu chí 'Không để vật rơi xuống khu vực bên dưới.' để đảm bảo an toàn tuyệt đối!",
+    "tags": [
+      "#antoan",
+      "#laodong",
+      "#antoanlaodong",
+      "#làmviệctrêncao"
+    ],
+    "accent": "linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%)"
+  },
+  {
+    "id": "safety_079",
+    "category": "safety",
+    "categoryName": "🦺 An Toàn Lao Động",
+    "title": "Làm việc trên cao: Rào chắn khu vực có nguy cơ vật rơi.",
+    "content": "Rào chắn khu vực có nguy cơ vật rơi.. Đảm bảo tuân thủ nghiêm ngặt các quy tắc an toàn lao động giúp bảo vệ sức khỏe bản thân, đồng nghiệp và ngăn ngừa tối đa các sự cố rủi ro tai nạn.",
+    "action": "👉 Kiểm tra ngay: Kiểm tra khu vực xung quanh bạn theo tiêu chí 'Rào chắn khu vực có nguy cơ vật rơi.' để đảm bảo an toàn tuyệt đối!",
+    "tags": [
+      "#antoan",
+      "#laodong",
+      "#antoanlaodong",
+      "#làmviệctrêncao"
+    ],
+    "accent": "linear-gradient(135deg, #f12711 0%, #f5af19 100%)"
+  },
+  {
+    "id": "safety_080",
+    "category": "safety",
+    "categoryName": "🦺 An Toàn Lao Động",
+    "title": "Làm việc trên cao: Không làm việc trên cao khi điều kiện không an toàn.",
+    "content": "Không làm việc trên cao khi điều kiện không an toàn.. Đảm bảo tuân thủ nghiêm ngặt các quy tắc an toàn lao động giúp bảo vệ sức khỏe bản thân, đồng nghiệp và ngăn ngừa tối đa các sự cố rủi ro tai nạn.",
+    "action": "👉 Kiểm tra ngay: Kiểm tra khu vực xung quanh bạn theo tiêu chí 'Không làm việc trên cao khi điều kiện không an toàn.' để đảm bảo an toàn tuyệt đối!",
+    "tags": [
+      "#antoan",
+      "#laodong",
+      "#antoanlaodong",
+      "#làmviệctrêncao"
+    ],
+    "accent": "linear-gradient(135deg, #eb3b5a 0%, #fa8231 100%)"
+  },
+  {
+    "id": "safety_081",
+    "category": "safety",
+    "categoryName": "🦺 An Toàn Lao Động",
+    "title": "Cháy nổ – hóa chất: Biết vị trí bình chữa cháy gần khu vực làm việc.",
+    "content": "Biết vị trí bình chữa cháy gần khu vực làm việc.. Đảm bảo tuân thủ nghiêm ngặt các quy tắc an toàn lao động giúp bảo vệ sức khỏe bản thân, đồng nghiệp và ngăn ngừa tối đa các sự cố rủi ro tai nạn.",
+    "action": "👉 Kiểm tra ngay: Kiểm tra khu vực xung quanh bạn theo tiêu chí 'Biết vị trí bình chữa cháy gần khu vực làm việc.' để đảm bảo an toàn tuyệt đối!",
+    "tags": [
+      "#antoan",
+      "#laodong",
+      "#antoanlaodong",
+      "#cháynổ–hóachất"
+    ],
+    "accent": "linear-gradient(135deg, #ff416c 0%, #ff4b2b 100%)"
+  },
+  {
+    "id": "safety_082",
+    "category": "safety",
+    "categoryName": "🦺 An Toàn Lao Động",
+    "title": "Cháy nổ – hóa chất: Không che khuất thiết bị PCCC.",
+    "content": "Không che khuất thiết bị PCCC.. Đảm bảo tuân thủ nghiêm ngặt các quy tắc an toàn lao động giúp bảo vệ sức khỏe bản thân, đồng nghiệp và ngăn ngừa tối đa các sự cố rủi ro tai nạn.",
+    "action": "👉 Kiểm tra ngay: Kiểm tra khu vực xung quanh bạn theo tiêu chí 'Không che khuất thiết bị PCCC.' để đảm bảo an toàn tuyệt đối!",
+    "tags": [
+      "#antoan",
+      "#laodong",
+      "#antoanlaodong",
+      "#cháynổ–hóachất"
+    ],
+    "accent": "linear-gradient(135deg, #f857a6 0%, #ff5858 100%)"
+  },
+  {
+    "id": "safety_083",
+    "category": "safety",
+    "categoryName": "🦺 An Toàn Lao Động",
+    "title": "Cháy nổ – hóa chất: Không để vật liệu dễ cháy gần nguồn nhiệt.",
+    "content": "Không để vật liệu dễ cháy gần nguồn nhiệt.. Đảm bảo tuân thủ nghiêm ngặt các quy tắc an toàn lao động giúp bảo vệ sức khỏe bản thân, đồng nghiệp và ngăn ngừa tối đa các sự cố rủi ro tai nạn.",
+    "action": "👉 Kiểm tra ngay: Kiểm tra khu vực xung quanh bạn theo tiêu chí 'Không để vật liệu dễ cháy gần nguồn nhiệt.' để đảm bảo an toàn tuyệt đối!",
+    "tags": [
+      "#antoan",
+      "#laodong",
+      "#antoanlaodong",
+      "#cháynổ–hóachất"
+    ],
+    "accent": "linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%)"
+  },
+  {
+    "id": "safety_084",
+    "category": "safety",
+    "categoryName": "🦺 An Toàn Lao Động",
+    "title": "Cháy nổ – hóa chất: Giữ lối thoát hiểm luôn thông thoáng.",
+    "content": "Giữ lối thoát hiểm luôn thông thoáng.. Đảm bảo tuân thủ nghiêm ngặt các quy tắc an toàn lao động giúp bảo vệ sức khỏe bản thân, đồng nghiệp và ngăn ngừa tối đa các sự cố rủi ro tai nạn.",
+    "action": "👉 Kiểm tra ngay: Kiểm tra khu vực xung quanh bạn theo tiêu chí 'Giữ lối thoát hiểm luôn thông thoáng.' để đảm bảo an toàn tuyệt đối!",
+    "tags": [
+      "#antoan",
+      "#laodong",
+      "#antoanlaodong",
+      "#cháynổ–hóachất"
+    ],
+    "accent": "linear-gradient(135deg, #f12711 0%, #f5af19 100%)"
+  },
+  {
+    "id": "safety_085",
+    "category": "safety",
+    "categoryName": "🦺 An Toàn Lao Động",
+    "title": "Cháy nổ – hóa chất: Biết ít nhất một đường thoát hiểm của khu vực.",
+    "content": "Biết ít nhất một đường thoát hiểm của khu vực.. Đảm bảo tuân thủ nghiêm ngặt các quy tắc an toàn lao động giúp bảo vệ sức khỏe bản thân, đồng nghiệp và ngăn ngừa tối đa các sự cố rủi ro tai nạn.",
+    "action": "👉 Kiểm tra ngay: Kiểm tra khu vực xung quanh bạn theo tiêu chí 'Biết ít nhất một đường thoát hiểm của khu vực.' để đảm bảo an toàn tuyệt đối!",
+    "tags": [
+      "#antoan",
+      "#laodong",
+      "#antoanlaodong",
+      "#cháynổ–hóachất"
+    ],
+    "accent": "linear-gradient(135deg, #eb3b5a 0%, #fa8231 100%)"
+  },
+  {
+    "id": "safety_086",
+    "category": "safety",
+    "categoryName": "🦺 An Toàn Lao Động",
+    "title": "Cháy nổ – hóa chất: Không tự ý sử dụng hóa chất không rõ nguồn gốc.",
+    "content": "Không tự ý sử dụng hóa chất không rõ nguồn gốc.. Đảm bảo tuân thủ nghiêm ngặt các quy tắc an toàn lao động giúp bảo vệ sức khỏe bản thân, đồng nghiệp và ngăn ngừa tối đa các sự cố rủi ro tai nạn.",
+    "action": "👉 Kiểm tra ngay: Kiểm tra khu vực xung quanh bạn theo tiêu chí 'Không tự ý sử dụng hóa chất không rõ nguồn gốc.' để đảm bảo an toàn tuyệt đối!",
+    "tags": [
+      "#antoan",
+      "#laodong",
+      "#antoanlaodong",
+      "#cháynổ–hóachất"
+    ],
+    "accent": "linear-gradient(135deg, #ff416c 0%, #ff4b2b 100%)"
+  },
+  {
+    "id": "safety_087",
+    "category": "safety",
+    "categoryName": "🦺 An Toàn Lao Động",
+    "title": "Cháy nổ – hóa chất: Đọc nhãn và hướng dẫn trước khi sử dụng hóa chất.",
+    "content": "Đọc nhãn và hướng dẫn trước khi sử dụng hóa chất.. Đảm bảo tuân thủ nghiêm ngặt các quy tắc an toàn lao động giúp bảo vệ sức khỏe bản thân, đồng nghiệp và ngăn ngừa tối đa các sự cố rủi ro tai nạn.",
+    "action": "👉 Kiểm tra ngay: Kiểm tra khu vực xung quanh bạn theo tiêu chí 'Đọc nhãn và hướng dẫn trước khi sử dụng hóa chất.' để đảm bảo an toàn tuyệt đối!",
+    "tags": [
+      "#antoan",
+      "#laodong",
+      "#antoanlaodong",
+      "#cháynổ–hóachất"
+    ],
+    "accent": "linear-gradient(135deg, #f857a6 0%, #ff5858 100%)"
+  },
+  {
+    "id": "safety_088",
+    "category": "safety",
+    "categoryName": "🦺 An Toàn Lao Động",
+    "title": "Cháy nổ – hóa chất: Không trộn các hóa chất khi chưa biết tính tương thích.",
+    "content": "Không trộn các hóa chất khi chưa biết tính tương thích.. Đảm bảo tuân thủ nghiêm ngặt các quy tắc an toàn lao động giúp bảo vệ sức khỏe bản thân, đồng nghiệp và ngăn ngừa tối đa các sự cố rủi ro tai nạn.",
+    "action": "👉 Kiểm tra ngay: Kiểm tra khu vực xung quanh bạn theo tiêu chí 'Không trộn các hóa chất khi chưa biết tính tương thích.' để đảm bảo an toàn tuyệt đối!",
+    "tags": [
+      "#antoan",
+      "#laodong",
+      "#antoanlaodong",
+      "#cháynổ–hóachất"
+    ],
+    "accent": "linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%)"
+  },
+  {
+    "id": "safety_089",
+    "category": "safety",
+    "categoryName": "🦺 An Toàn Lao Động",
+    "title": "Cháy nổ – hóa chất: Lưu trữ hóa chất đúng quy định.",
+    "content": "Lưu trữ hóa chất đúng quy định.. Đảm bảo tuân thủ nghiêm ngặt các quy tắc an toàn lao động giúp bảo vệ sức khỏe bản thân, đồng nghiệp và ngăn ngừa tối đa các sự cố rủi ro tai nạn.",
+    "action": "👉 Kiểm tra ngay: Kiểm tra khu vực xung quanh bạn theo tiêu chí 'Lưu trữ hóa chất đúng quy định.' để đảm bảo an toàn tuyệt đối!",
+    "tags": [
+      "#antoan",
+      "#laodong",
+      "#antoanlaodong",
+      "#cháynổ–hóachất"
+    ],
+    "accent": "linear-gradient(135deg, #f12711 0%, #f5af19 100%)"
+  },
+  {
+    "id": "safety_090",
+    "category": "safety",
+    "categoryName": "🦺 An Toàn Lao Động",
+    "title": "Cháy nổ – hóa chất: Báo ngay khi phát hiện rò rỉ hóa chất.",
+    "content": "Báo ngay khi phát hiện rò rỉ hóa chất.. Đảm bảo tuân thủ nghiêm ngặt các quy tắc an toàn lao động giúp bảo vệ sức khỏe bản thân, đồng nghiệp và ngăn ngừa tối đa các sự cố rủi ro tai nạn.",
+    "action": "👉 Kiểm tra ngay: Kiểm tra khu vực xung quanh bạn theo tiêu chí 'Báo ngay khi phát hiện rò rỉ hóa chất.' để đảm bảo an toàn tuyệt đối!",
+    "tags": [
+      "#antoan",
+      "#laodong",
+      "#antoanlaodong",
+      "#cháynổ–hóachất"
+    ],
+    "accent": "linear-gradient(135deg, #eb3b5a 0%, #fa8231 100%)"
+  },
+  {
+    "id": "safety_091",
+    "category": "safety",
+    "categoryName": "🦺 An Toàn Lao Động",
+    "title": "Hành vi & văn hóa an toàn: Không chạy trong khu vực sản xuất.",
+    "content": "Không chạy trong khu vực sản xuất.. Đảm bảo tuân thủ nghiêm ngặt các quy tắc an toàn lao động giúp bảo vệ sức khỏe bản thân, đồng nghiệp và ngăn ngừa tối đa các sự cố rủi ro tai nạn.",
+    "action": "👉 Kiểm tra ngay: Kiểm tra khu vực xung quanh bạn theo tiêu chí 'Không chạy trong khu vực sản xuất.' để đảm bảo an toàn tuyệt đối!",
+    "tags": [
+      "#antoan",
+      "#laodong",
+      "#antoanlaodong",
+      "#hànhvi&vănhóaantoàn"
+    ],
+    "accent": "linear-gradient(135deg, #ff416c 0%, #ff4b2b 100%)"
+  },
+  {
+    "id": "safety_092",
+    "category": "safety",
+    "categoryName": "🦺 An Toàn Lao Động",
+    "title": "Hành vi & văn hóa an toàn: Không sử dụng điện thoại khi đang vận hành máy.",
+    "content": "Không sử dụng điện thoại khi đang vận hành máy.. Đảm bảo tuân thủ nghiêm ngặt các quy tắc an toàn lao động giúp bảo vệ sức khỏe bản thân, đồng nghiệp và ngăn ngừa tối đa các sự cố rủi ro tai nạn.",
+    "action": "👉 Kiểm tra ngay: Kiểm tra khu vực xung quanh bạn theo tiêu chí 'Không sử dụng điện thoại khi đang vận hành máy.' để đảm bảo an toàn tuyệt đối!",
+    "tags": [
+      "#antoan",
+      "#laodong",
+      "#antoanlaodong",
+      "#hànhvi&vănhóaantoàn"
+    ],
+    "accent": "linear-gradient(135deg, #f857a6 0%, #ff5858 100%)"
+  },
+  {
+    "id": "safety_093",
+    "category": "safety",
+    "categoryName": "🦺 An Toàn Lao Động",
+    "title": "Hành vi & văn hóa an toàn: Không đùa nghịch tại nơi làm việc.",
+    "content": "Không đùa nghịch tại nơi làm việc.. Đảm bảo tuân thủ nghiêm ngặt các quy tắc an toàn lao động giúp bảo vệ sức khỏe bản thân, đồng nghiệp và ngăn ngừa tối đa các sự cố rủi ro tai nạn.",
+    "action": "👉 Kiểm tra ngay: Kiểm tra khu vực xung quanh bạn theo tiêu chí 'Không đùa nghịch tại nơi làm việc.' để đảm bảo an toàn tuyệt đối!",
+    "tags": [
+      "#antoan",
+      "#laodong",
+      "#antoanlaodong",
+      "#hànhvi&vănhóaantoàn"
+    ],
+    "accent": "linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%)"
+  },
+  {
+    "id": "safety_094",
+    "category": "safety",
+    "categoryName": "🦺 An Toàn Lao Động",
+    "title": "Hành vi & văn hóa an toàn: Không bỏ qua quy trình an toàn vì “làm nhanh hơn”.",
+    "content": "Không bỏ qua quy trình an toàn vì “làm nhanh hơn”.. Đảm bảo tuân thủ nghiêm ngặt các quy tắc an toàn lao động giúp bảo vệ sức khỏe bản thân, đồng nghiệp và ngăn ngừa tối đa các sự cố rủi ro tai nạn.",
+    "action": "👉 Kiểm tra ngay: Kiểm tra khu vực xung quanh bạn theo tiêu chí 'Không bỏ qua quy trình an toàn vì “làm nhanh hơn”.' để đảm bảo an toàn tuyệt đối!",
+    "tags": [
+      "#antoan",
+      "#laodong",
+      "#antoanlaodong",
+      "#hànhvi&vănhóaantoàn"
+    ],
+    "accent": "linear-gradient(135deg, #f12711 0%, #f5af19 100%)"
+  },
+  {
+    "id": "safety_095",
+    "category": "safety",
+    "categoryName": "🦺 An Toàn Lao Động",
+    "title": "Hành vi & văn hóa an toàn: Không làm việc khi mất tập trung.",
+    "content": "Không làm việc khi mất tập trung.. Đảm bảo tuân thủ nghiêm ngặt các quy tắc an toàn lao động giúp bảo vệ sức khỏe bản thân, đồng nghiệp và ngăn ngừa tối đa các sự cố rủi ro tai nạn.",
+    "action": "👉 Kiểm tra ngay: Kiểm tra khu vực xung quanh bạn theo tiêu chí 'Không làm việc khi mất tập trung.' để đảm bảo an toàn tuyệt đối!",
+    "tags": [
+      "#antoan",
+      "#laodong",
+      "#antoanlaodong",
+      "#hànhvi&vănhóaantoàn"
+    ],
+    "accent": "linear-gradient(135deg, #eb3b5a 0%, #fa8231 100%)"
+  },
+  {
+    "id": "safety_096",
+    "category": "safety",
+    "categoryName": "🦺 An Toàn Lao Động",
+    "title": "Hành vi & văn hóa an toàn: Nếu thấy đồng nghiệp làm việc nguy hiểm, hãy nhắc nhở.",
+    "content": "Nếu thấy đồng nghiệp làm việc nguy hiểm, hãy nhắc nhở.. Đảm bảo tuân thủ nghiêm ngặt các quy tắc an toàn lao động giúp bảo vệ sức khỏe bản thân, đồng nghiệp và ngăn ngừa tối đa các sự cố rủi ro tai nạn.",
+    "action": "👉 Kiểm tra ngay: Kiểm tra khu vực xung quanh bạn theo tiêu chí 'Nếu thấy đồng nghiệp làm việc nguy hiểm, hãy nhắc nhở.' để đảm bảo an toàn tuyệt đối!",
+    "tags": [
+      "#antoan",
+      "#laodong",
+      "#antoanlaodong",
+      "#hànhvi&vănhóaantoàn"
+    ],
+    "accent": "linear-gradient(135deg, #ff416c 0%, #ff4b2b 100%)"
+  },
+  {
+    "id": "safety_097",
+    "category": "safety",
+    "categoryName": "🦺 An Toàn Lao Động",
+    "title": "Hành vi & văn hóa an toàn: Báo cáo near-miss, không chỉ báo cáo tai nạn.",
+    "content": "Báo cáo near-miss, không chỉ báo cáo tai nạn.. Đảm bảo tuân thủ nghiêm ngặt các quy tắc an toàn lao động giúp bảo vệ sức khỏe bản thân, đồng nghiệp và ngăn ngừa tối đa các sự cố rủi ro tai nạn.",
+    "action": "👉 Kiểm tra ngay: Kiểm tra khu vực xung quanh bạn theo tiêu chí 'Báo cáo near-miss, không chỉ báo cáo tai nạn.' để đảm bảo an toàn tuyệt đối!",
+    "tags": [
+      "#antoan",
+      "#laodong",
+      "#antoanlaodong",
+      "#hànhvi&vănhóaantoàn"
+    ],
+    "accent": "linear-gradient(135deg, #f857a6 0%, #ff5858 100%)"
+  },
+  {
+    "id": "safety_098",
+    "category": "safety",
+    "categoryName": "🦺 An Toàn Lao Động",
+    "title": "Hành vi & văn hóa an toàn: Sau sự cố, tìm nguyên nhân thay vì chỉ tìm người để đổ lỗi.",
+    "content": "Sau sự cố, tìm nguyên nhân thay vì chỉ tìm người để đổ lỗi.. Đảm bảo tuân thủ nghiêm ngặt các quy tắc an toàn lao động giúp bảo vệ sức khỏe bản thân, đồng nghiệp và ngăn ngừa tối đa các sự cố rủi ro tai nạn.",
+    "action": "👉 Kiểm tra ngay: Kiểm tra khu vực xung quanh bạn theo tiêu chí 'Sau sự cố, tìm nguyên nhân thay vì chỉ tìm người để đổ lỗi.' để đảm bảo an toàn tuyệt đối!",
+    "tags": [
+      "#antoan",
+      "#laodong",
+      "#antoanlaodong",
+      "#hànhvi&vănhóaantoàn"
+    ],
+    "accent": "linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%)"
+  },
+  {
+    "id": "safety_099",
+    "category": "safety",
+    "categoryName": "🦺 An Toàn Lao Động",
+    "title": "Hành vi & văn hóa an toàn: Nếu không chắc chắn, hãy dừng công việc và hỏi người có trách nhiệm.",
+    "content": "Nếu không chắc chắn, hãy dừng công việc và hỏi người có trách nhiệm.. Đảm bảo tuân thủ nghiêm ngặt các quy tắc an toàn lao động giúp bảo vệ sức khỏe bản thân, đồng nghiệp và ngăn ngừa tối đa các sự cố rủi ro tai nạn.",
+    "action": "👉 Kiểm tra ngay: Kiểm tra khu vực xung quanh bạn theo tiêu chí 'Nếu không chắc chắn, hãy dừng công việc và hỏi người có trách nhiệm.' để đảm bảo an toàn tuyệt đối!",
+    "tags": [
+      "#antoan",
+      "#laodong",
+      "#antoanlaodong",
+      "#hànhvi&vănhóaantoàn"
+    ],
+    "accent": "linear-gradient(135deg, #f12711 0%, #f5af19 100%)"
+  },
+  {
+    "id": "safety_100",
+    "category": "safety",
+    "categoryName": "🦺 An Toàn Lao Động",
+    "title": "Hành vi & văn hóa an toàn: An toàn không phải là việc làm thêm; an toàn là một phần của công việc.",
+    "content": "An toàn không phải là việc làm thêm; an toàn là một phần của công việc.. Đảm bảo tuân thủ nghiêm ngặt các quy tắc an toàn lao động giúp bảo vệ sức khỏe bản thân, đồng nghiệp và ngăn ngừa tối đa các sự cố rủi ro tai nạn.",
+    "action": "👉 Kiểm tra ngay: Kiểm tra khu vực xung quanh bạn theo tiêu chí 'An toàn không phải là việc làm thêm; an toàn là một phần của công việc.' để đảm bảo an toàn tuyệt đối!",
+    "tags": [
+      "#antoan",
+      "#laodong",
+      "#antoanlaodong",
+      "#hànhvi&vănhóaantoàn"
+    ],
+    "accent": "linear-gradient(135deg, #eb3b5a 0%, #fa8231 100%)"
   }
 ]
