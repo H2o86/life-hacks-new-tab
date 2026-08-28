@@ -191,6 +191,7 @@
     btnOpenSandwichPlate: document.getElementById('btnOpenSandwichPlate'),
     sandwichPlateOverlay: document.getElementById('sandwichPlateOverlay'),
     btnPlateClose: document.getElementById('btnPlateClose'),
+    btnQuickAddSandwichTask: document.getElementById('btnQuickAddSandwichTask'),
     btnAutoFixConflicts: document.getElementById('btnAutoFixConflicts'),
     sandwichConflictBanner: document.getElementById('sandwichConflictBanner'),
     sandwichConflictText: document.getElementById('sandwichConflictText'),
@@ -2274,6 +2275,10 @@
       elements.btnAutoFixConflicts.addEventListener('click', autoFixTaskConflicts);
     }
 
+    if (elements.btnQuickAddSandwichTask) {
+      elements.btnQuickAddSandwichTask.addEventListener('click', () => quickCreateSandwichTask('09:00'));
+    }
+
     // Alarm Modal Controls
     if (elements.btnAlarmStart) {
       elements.btnAlarmStart.addEventListener('click', () => {
@@ -2561,7 +2566,7 @@
       }
     }
 
-    // 6. Render Scheduled Task Slices on Timeline Track
+    // 6. Render Scheduled Task Slices on Timeline Track with Pointer Dragging
     if (elements.timelineTrack) {
       elements.timelineTrack.innerHTML = '';
       scheduled.forEach(item => {
@@ -2588,11 +2593,84 @@
           </div>
         `;
 
-        slice.addEventListener('click', () => {
-          promptAdjustTaskTime(item.todo);
+        // Pointer Dragging for Slice
+        let startPointerX = 0;
+        let initialStartMin = item.startMin;
+        let isDragging = false;
+        let hasMoved = false;
+
+        slice.addEventListener('pointerdown', (e) => {
+          if (e.button !== 0) return;
+          startPointerX = e.clientX;
+          initialStartMin = item.startMin;
+          isDragging = true;
+          hasMoved = false;
+          slice.setPointerCapture(e.pointerId);
+          slice.style.transition = 'none';
         });
 
+        slice.addEventListener('pointermove', (e) => {
+          if (!isDragging) return;
+          const deltaX = e.clientX - startPointerX;
+          if (Math.abs(deltaX) > 4) hasMoved = true;
+
+          const trackWidth = elements.timelineTrackContainer.clientWidth || 1440;
+          const deltaMin = (deltaX / trackWidth) * 1440;
+          let newStartMin = Math.max(0, Math.min(1440 - item.estMin, Math.round((initialStartMin + deltaMin) / 5) * 5));
+
+          const newLeftPct = (newStartMin / 1440) * 100;
+          slice.style.left = `${newLeftPct}%`;
+
+          const newStartStr = formatMinToTime(newStartMin);
+          const newEndStr = formatMinToTime(newStartMin + item.estMin);
+          const timeBadge = slice.querySelector('.sandwich-slice-time');
+          if (timeBadge) timeBadge.textContent = `⏰ ${newStartStr} - ${newEndStr}`;
+        });
+
+        const handlePointerEnd = async (e) => {
+          if (!isDragging) return;
+          isDragging = false;
+          try { slice.releasePointer(e.pointerId); } catch (err) {}
+          slice.style.transition = '';
+
+          if (hasMoved) {
+            const deltaX = e.clientX - startPointerX;
+            const trackWidth = elements.timelineTrackContainer.clientWidth || 1440;
+            const deltaMin = (deltaX / trackWidth) * 1440;
+            let newStartMin = Math.max(0, Math.min(1440 - item.estMin, Math.round((initialStartMin + deltaMin) / 5) * 5));
+
+            item.todo.dueTime = formatMinToTime(newStartMin);
+            if (!item.todo.dueDate) item.todo.dueDate = getTodayStr();
+
+            await window.StorageService.saveTodoList(todoList);
+            renderTodoList();
+            renderSandwichPlateTimeline();
+            showToast(`📍 Đã xếp task "${item.todo.text}" vào khung giờ ${item.todo.dueTime}`, '🥪');
+          } else {
+            promptAdjustTaskTime(item.todo);
+          }
+        };
+
+        slice.addEventListener('pointerup', handlePointerEnd);
+        slice.addEventListener('pointercancel', handlePointerEnd);
+
         elements.timelineTrack.appendChild(slice);
+      });
+    }
+
+    // Click on empty track area to create task directly at clicked time
+    if (elements.timelineTrackContainer && !elements.timelineTrackContainer.dataset.clickBound) {
+      elements.timelineTrackContainer.dataset.clickBound = 'true';
+      elements.timelineTrackContainer.addEventListener('click', (e) => {
+        if (e.target.closest('.sandwich-slice')) return;
+
+        const rect = elements.timelineTrackContainer.getBoundingClientRect();
+        const clickX = e.clientX - rect.left;
+        const pct = Math.max(0, Math.min(1, clickX / rect.width));
+        const clickedMin = Math.round((pct * 1440) / 15) * 15;
+
+        const timeStr = formatMinToTime(clickedMin);
+        quickCreateSandwichTask(timeStr);
       });
     }
 
@@ -2632,6 +2710,33 @@
       renderSandwichPlateTimeline();
       showToast(`Đã gán giờ ${todo.dueTime} cho task "${todo.text}"`, '⏰');
     }
+  }
+
+  async function quickCreateSandwichTask(defaultTimeStr = '09:00') {
+    const taskName = prompt(`🥪 Thêm công việc mới trên đĩa 24H (Bắt đầu lúc ${defaultTimeStr}):`, '');
+    if (!taskName || !taskName.trim()) return;
+
+    const estDurationStr = prompt(`Dự kiến làm "${taskName.trim()}" bao nhiêu phút? (Ví dụ: 30, 45, 60):`, '30');
+    const estMinutes = parseInt(estDurationStr, 10) || 30;
+
+    const newTodo = {
+      id: `todo_${Date.now()}`,
+      text: taskName.trim(),
+      isRecurring: false,
+      isMonthly: false,
+      dueDate: getTodayStr(),
+      dueTime: defaultTimeStr,
+      estMinutes: estMinutes,
+      completed: false,
+      createdAt: Date.now()
+    };
+
+    todoList.unshift(newTodo);
+    await window.StorageService.saveTodoList(todoList);
+
+    renderTodoList();
+    renderSandwichPlateTimeline();
+    showToast(`🎉 Đã thêm miếng bánh task "${newTodo.text}" vào đĩa 24H lúc ${defaultTimeStr}!`, '🥪');
   }
 
   async function autoFixTaskConflicts() {

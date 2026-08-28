@@ -3618,10 +3618,21 @@ textarea:focus {
   color: var(--text-muted);
 }
 
-.plate-header-actions {
-  display: flex;
-  align-items: center;
-  gap: 10px;
+.btn-quick-add-sandwich {
+  background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+  border: none;
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 0.82rem;
+  padding: 8px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.15s ease;
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+}
+
+.btn-quick-add-sandwich:hover {
+  transform: scale(1.04);
 }
 
 .btn-auto-fix-conflicts {
