@@ -2833,40 +2833,73 @@
   }
 
   async function autoFixTaskConflicts() {
-    const activeToday = todoList.filter(t => !t.completed && isDueToday(t) && t.dueTime);
+    const todayStr = getTodayStr();
 
+    // 1. Get all active (uncompleted) tasks for today
+    let activeToday = todoList.filter(t => !t.completed && isDueToday(t));
+
+    // If no active tasks exist for today, check if there are upcoming tasks to pick from
     if (activeToday.length === 0) {
-      showToast('Không có task nào bị trùng giờ!', '✨');
+      const upcoming = todoList.filter(t => !t.completed && !isDueToday(t));
+      if (upcoming.length > 0) {
+        const confirmPick = confirm(`Hôm nay chưa có task nào được chọn. Bạn có muốn chọn ${upcoming.length} task sắp tới để xếp vào làm hôm nay không?`);
+        if (confirmPick) {
+          upcoming.forEach(t => t.dueDate = todayStr);
+          activeToday = upcoming;
+        } else {
+          return;
+        }
+      } else {
+        showToast('Chưa có task nào được chọn làm trong ngày!', '⚠️');
+        return;
+      }
+    }
+
+    // 2. Ask user for start time (Default: 07:30 AM)
+    const startTimeInput = prompt('⏰ Nhập mốc thời gian bắt đầu xếp nối tiếp các task trong ngày (Định dạng HH:mm):', '07:30');
+    if (!startTimeInput || !/^([01]?[0-9]|2[0-3]):[0-5][0-9]$/.test(startTimeInput.trim())) {
+      showToast('Đã hủy xếp lịch (Định dạng giờ không hợp lệ)!', '⚠️');
       return;
     }
 
-    const items = activeToday.map(todo => {
-      const parts = todo.dueTime.split(':');
-      const startMin = parseInt(parts[0], 10) * 60 + parseInt(parts[1], 10);
-      const estMin = todo.estMinutes || 30;
-      return { todo, startMin, estMin };
-    }).sort((a, b) => a.startMin - b.startMin);
+    const parts = startTimeInput.trim().split(':');
+    let currentPointer = parseInt(parts[0], 10) * 60 + parseInt(parts[1], 10);
+    const startStr = startTimeInput.trim();
 
-    let currentPointer = items[0].startMin;
-    let fixedCount = 0;
-
-    items.forEach(item => {
-      if (item.startMin < currentPointer) {
-        item.startMin = currentPointer;
-        item.todo.dueTime = formatMinToTime(item.startMin);
-        fixedCount++;
+    // 3. Ensure every task has an estimated duration (estMinutes)
+    let missingCount = 0;
+    activeToday.forEach(todo => {
+      if (!todo.estMinutes || todo.estMinutes <= 0) {
+        todo.estMinutes = 30; // default 30 mins
+        missingCount++;
       }
-      currentPointer = item.startMin + item.estMin;
     });
 
-    if (fixedCount > 0) {
-      await window.StorageService.saveTodoList(todoList);
-      renderTodoList();
-      renderSandwichPlateTimeline();
-      showToast(`⚡ Đã tự động xếp nối tiếp ${fixedCount} task tránh bị trùng giờ!`, '🎉');
-    } else {
-      showToast('✨ Tất cả các task đã ở khung giờ hợp lý, không bị trùng!', '✅');
+    if (missingCount > 0) {
+      showToast(`💡 Tự động gán 30 phút cho ${missingCount} task chưa ước lượng thời gian`, '⏱️');
     }
+
+    // 4. Sort tasks: Priority first, or by existing dueTime, or by createdAt
+    activeToday.sort((a, b) => {
+      if (a.dueTime && b.dueTime) return a.dueTime.localeCompare(b.dueTime);
+      if (a.dueTime) return -1;
+      if (b.dueTime) return 1;
+      return (b.createdAt || 0) - (a.createdAt || 0);
+    });
+
+    // 5. Sequentially arrange all tasks starting from 07:30 AM
+    activeToday.forEach(todo => {
+      todo.dueDate = todayStr;
+      todo.dueTime = formatMinToTime(currentPointer);
+      currentPointer += (todo.estMinutes || 30);
+    });
+
+    const endStr = formatMinToTime(currentPointer);
+
+    await window.StorageService.saveTodoList(todoList);
+    renderTodoList();
+    renderSandwichPlateTimeline();
+    showToast(`🎉 Đã tự động xếp ${activeToday.length} task nối tiếp nhau từ ${startStr} đến ${endStr}!`, '⚡');
   }
 
   function bindTimelineAndGridDragDrop() {
