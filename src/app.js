@@ -2498,7 +2498,9 @@
   }
 
   function renderSandwichPlateTimeline() {
-    if (!elements.sandwichPlateOverlay || !elements.sandwichPlateOverlay.classList.contains('active')) return;
+    const isOverlayActive = (elements.taskViewOverlay && elements.taskViewOverlay.classList.contains('active')) ||
+                            (elements.sandwichPlateOverlay && elements.sandwichPlateOverlay.classList.contains('active'));
+    if (!isOverlayActive) return;
 
     // 1. Render Ruler (00:00 -> 23:00)
     if (elements.timelineRuler) {

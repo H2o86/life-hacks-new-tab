@@ -3512,13 +3512,21 @@ textarea:focus {
 }
 
 .embedded-timeline-section .timeline-ruler {
-  height: 20px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  display: flex !important;
+  min-width: 1440px !important;
+  height: 24px !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15) !important;
+  position: relative !important;
 }
 
 .embedded-timeline-section .timeline-tick {
-  font-size: 0.68rem;
-  padding-left: 2px;
+  flex: 1 !important;
+  font-size: 0.72rem !important;
+  font-weight: 700 !important;
+  color: #94a3b8 !important;
+  border-left: 1px solid rgba(255, 255, 255, 0.12) !important;
+  padding-left: 4px !important;
+  white-space: nowrap !important;
 }
 
 .embedded-timeline-section .timeline-track-container {
