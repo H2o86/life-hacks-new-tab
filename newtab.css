@@ -3494,24 +3494,69 @@ textarea:focus {
   }
 }
 
-/* Embedded Timeline Section inside Task View Overlay */
+/* Embedded Timeline Section inside Task View Overlay - Compact 3-Row Height */
 .embedded-timeline-section {
-  padding: 12px 20px;
-  background: rgba(15, 23, 42, 0.5);
+  padding: 8px 16px;
+  background: rgba(15, 23, 42, 0.6);
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 4px;
+  flex-shrink: 0;
 }
 
 .embedded-timeline-section .sandwich-plate-body {
-  padding: 10px 0;
+  padding: 4px 0;
   background: transparent;
+  overflow-x: auto;
+}
+
+.embedded-timeline-section .timeline-ruler {
+  height: 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.embedded-timeline-section .timeline-tick {
+  font-size: 0.68rem;
+  padding-left: 2px;
 }
 
 .embedded-timeline-section .timeline-track-container {
-  min-height: 110px;
+  min-height: 74px !important;
+  height: 74px !important;
+  background: rgba(15, 23, 42, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 8px;
+  position: relative;
+  overflow: hidden;
   transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.embedded-timeline-section .timeline-track {
+  min-height: 74px !important;
+  height: 74px !important;
+}
+
+.embedded-timeline-section .sandwich-slice {
+  height: 48px !important;
+  top: 13px !important;
+  padding: 4px 8px;
+  border-radius: 6px;
+  font-size: 0.75rem;
+}
+
+.embedded-timeline-section .sandwich-slice-title {
+  font-size: 0.76rem;
+  font-weight: 700;
+}
+
+.embedded-timeline-section .sandwich-slice-time {
+  font-size: 0.66rem;
+  padding: 1px 4px;
+}
+
+.embedded-timeline-section .sandwich-slice-footer {
+  font-size: 0.65rem;
 }
 
 .timeline-track-container.drag-over {
@@ -3524,6 +3569,51 @@ textarea:focus {
   border-color: #10b981 !important;
   box-shadow: 0 0 20px rgba(16, 185, 129, 0.3) !important;
   background: rgba(16, 185, 129, 0.08) !important;
+}
+
+/* Task View Grid Item Layout Fix */
+.task-view-col .todo-item {
+  display: flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  background: rgba(30, 41, 59, 0.85) !important;
+  border: 1px solid rgba(255, 255, 255, 0.12) !important;
+  border-radius: 8px !important;
+  padding: 8px 12px !important;
+  min-height: 44px !important;
+  max-height: none !important;
+  height: auto !important;
+  overflow: visible !important;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25) !important;
+  opacity: 1 !important;
+  flex-shrink: 0 !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
+}
+
+.task-view-col .todo-item:hover {
+  background: rgba(51, 65, 85, 0.95) !important;
+  border-color: rgba(255, 255, 255, 0.25) !important;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.35) !important;
+}
+
+/* Fix completed task items in column 4 so they don't look like dark collapsed bars */
+.task-view-col.col-completed .todo-item {
+  background: rgba(15, 23, 42, 0.75) !important;
+  border: 1px solid rgba(16, 185, 129, 0.3) !important;
+  opacity: 0.9 !important;
+}
+
+.task-view-col.col-completed .todo-item:hover {
+  background: rgba(16, 185, 129, 0.15) !important;
+  border-color: rgba(16, 185, 129, 0.5) !important;
+  opacity: 1 !important;
+}
+
+.task-view-col.col-completed .todo-text {
+  text-decoration: line-through !important;
+  color: var(--text-muted) !important;
+  font-weight: 500 !important;
 }
 
 .task-view-col .todo-item[draggable="true"] {
