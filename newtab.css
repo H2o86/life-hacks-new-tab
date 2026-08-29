@@ -2237,6 +2237,61 @@ textarea:focus {
   font-weight: 800;
 }
 
+/* Reset / Clear Timeline Schedule Button */
+.btn-clear-timeline-schedule {
+  background: rgba(239, 68, 68, 0.15);
+  border: 1px solid rgba(239, 68, 68, 0.4);
+  color: #fca5a5;
+  font-size: 0.8rem;
+  font-weight: 700;
+  padding: 6px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.btn-clear-timeline-schedule:hover {
+  background: rgba(239, 68, 68, 0.35);
+  border-color: #ef4444;
+  color: #ffffff;
+  box-shadow: 0 0 12px rgba(239, 68, 68, 0.4);
+}
+
+/* Selection Mode Guide Banner */
+.selection-mode-guide-banner {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: linear-gradient(90deg, rgba(59, 130, 246, 0.2) 0%, rgba(37, 99, 235, 0.12) 100%);
+  border: 1px solid rgba(59, 130, 246, 0.4);
+  border-radius: var(--radius-md, 10px);
+  padding: 8px 14px;
+  margin-top: 10px;
+  margin-bottom: 12px;
+  color: #93c5fd;
+  font-size: 0.83rem;
+  line-height: 1.4;
+  animation: bannerFadeDown 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes bannerFadeDown {
+  from { opacity: 0; transform: translateY(-6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.selection-mode-guide-banner .guide-icon {
+  font-size: 1.2rem;
+  flex-shrink: 0;
+}
+
+.selection-mode-guide-banner .guide-text strong {
+  color: #ffffff;
+}
+
 /* Dedicated Timeline Selection Mode Toggle Button in Task View */
 .btn-selection-mode-toggle {
   background: rgba(59, 130, 246, 0.15);
@@ -2276,6 +2331,22 @@ textarea:focus {
   border-color: #3b82f6 !important;
   box-shadow: 0 0 14px rgba(59, 130, 246, 0.45) !important;
   background: linear-gradient(90deg, rgba(59, 130, 246, 0.22) 0%, rgba(15, 23, 42, 0.7) 100%) !important;
+}
+
+/* Order Badge indicator when selecting tasks for auto-scheduling */
+.selection-order-badge {
+  background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+  color: #ffffff;
+  font-size: 0.72rem;
+  font-weight: 800;
+  border: 1px solid #93c5fd;
+  border-radius: 6px;
+  padding: 1px 6px;
+  min-width: 24px;
+  text-align: center;
+  box-shadow: 0 0 8px rgba(59, 130, 246, 0.5);
+  margin-right: 4px;
+  flex-shrink: 0;
 }
 
 .task-view-grid.selection-mode-active .todo-item.selected-for-timeline .todo-checkbox {

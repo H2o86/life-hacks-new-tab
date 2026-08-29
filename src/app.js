@@ -180,6 +180,8 @@
     taskViewOverlay: document.getElementById('taskViewOverlay'),
     btnTaskViewClose: document.getElementById('btnTaskViewClose'),
     btnToggleSelectionMode: document.getElementById('btnToggleSelectionMode'),
+    btnClearTimelineSchedule: document.getElementById('btnClearTimelineSchedule'),
+    selectionModeGuideBanner: document.getElementById('selectionModeGuideBanner'),
     tvCountUrgent: document.getElementById('tvCountUrgent'),
     tvListUrgent: document.getElementById('tvListUrgent'),
     tvCountToday: document.getElementById('tvCountToday'),
@@ -1240,7 +1242,7 @@
   let selectedTaskType = 'single'; // 'single' | 'recurring'
   let selectedWeekdays = new Set([1, 2, 3, 4, 5]); // Default Mon-Fri
   let isSelectionMode = false; // Toggle mode for selecting tasks to schedule on Timeline
-  let selectedTimelineTaskIds = new Set(); // Task IDs selected for timeline auto-scheduling
+  let selectedTimelineTaskArray = []; // Task IDs ordered sequence for timeline auto-scheduling
   let taskTimerInterval = null;
 
   let dailyWorkHistory = {};
@@ -1764,7 +1766,7 @@
         groupDiv.appendChild(headerDiv);
         groupDiv.appendChild(listUl);
 
-        elements.todoCompletedList.appendChild(groupDiv);
+elements.todoCompletedList.appendChild(groupDiv);
       });
     }
 
@@ -1815,7 +1817,8 @@
     const isOverdue = deadlineInfo && deadlineInfo.isOverdue && !todo.completed;
     const isMustStart = deadlineInfo && deadlineInfo.isMustStartNow && !todo.completed;
     const dueToday = isDueToday(todo);
-    const isSelectedForTimeline = selectedTimelineTaskIds.has(todo.id);
+    const selectedOrderIndex = selectedTimelineTaskArray.indexOf(todo.id);
+    const isSelectedForTimeline = selectedOrderIndex !== -1;
 
     li.className = `todo-item ${todo.completed ? 'completed' : ''} ${isOverdue ? 'overdue' : ''} ${isMustStart ? 'must-start-now' : ''} ${dueToday && !isOverdue && !isMustStart ? 'due-today' : ''} ${isSelectedForTimeline ? 'selected-for-timeline' : ''}`;
     li.dataset.todoId = todo.id;
@@ -1831,15 +1834,17 @@
     checkbox.className = 'todo-checkbox';
 
     if (isTaskView && isSelectionMode) {
-      // In Selection Mode: Checkbox ticks to SELECT task for Timeline auto-scheduling
+      // In Selection Mode: Checkbox ticks to SELECT task for Timeline auto-scheduling in exact order
       checkbox.checked = isSelectedForTimeline;
-      checkbox.title = isSelectedForTimeline ? 'Đã chọn task này để xếp lịch (Bấm để bỏ chọn)' : 'Bấm để chọn task này xếp lịch tự động từ 07:30 AM';
+      checkbox.title = isSelectedForTimeline ? `Đã chọn xếp vị trí #${selectedOrderIndex + 1} (Bấm để bỏ chọn)` : 'Bấm để chọn task này vào danh sách xếp lịch';
       checkbox.addEventListener('change', (e) => {
         e.stopPropagation();
         if (checkbox.checked) {
-          selectedTimelineTaskIds.add(todo.id);
+          if (!selectedTimelineTaskArray.includes(todo.id)) {
+            selectedTimelineTaskArray.push(todo.id);
+          }
         } else {
-          selectedTimelineTaskIds.delete(todo.id);
+          selectedTimelineTaskArray = selectedTimelineTaskArray.filter(id => id !== todo.id);
         }
         renderTaskViewGrid();
         updateAutoArrangeButtonText();
@@ -1861,7 +1866,7 @@
             todo.lastStartTime = null;
           }
           todo.onBreak = false;
-          selectedTimelineTaskIds.delete(todo.id);
+          selectedTimelineTaskArray = selectedTimelineTaskArray.filter(id => id !== todo.id);
         }
         await window.StorageService.saveTodoList(todoList);
         showToast(todo.completed ? '🎉 Đã hoàn thành công việc!' : '🔄 Đã khôi phục công việc', todo.completed ? '✅' : '📋');
@@ -2298,11 +2303,29 @@
       elements.btnToggleSelectionMode.addEventListener('click', () => {
         isSelectionMode = !isSelectionMode;
         if (!isSelectionMode) {
-          selectedTimelineTaskIds.clear();
+          selectedTimelineTaskArray = [];
         }
         renderTaskViewGrid();
         updateAutoArrangeButtonText();
         showToast(isSelectionMode ? '☑️ Đã bật Chế độ Chọn Task Xếp Lịch!' : '🔄 Đã quay về Chế độ Thường', '⚡');
+      });
+    }
+
+    if (elements.btnClearTimelineSchedule) {
+      elements.btnClearTimelineSchedule.addEventListener('click', async () => {
+        const scheduledToday = todoList.filter(t => isDueToday(t) && t.dueTime);
+        if (scheduledToday.length === 0) {
+          showToast('Không có task nào trên Timeline để reset!', '⚠️');
+          return;
+        }
+        const confirmReset = confirm(`Bạn có chắc chắn muốn xóa mốc giờ của ${scheduledToday.length} task trên Timeline 24h để xếp lại từ đầu?`);
+        if (!confirmReset) return;
+
+        scheduledToday.forEach(t => t.dueTime = null);
+        await window.StorageService.saveTodoList(todoList);
+        renderTodoList();
+        renderSandwichPlateTimeline();
+        showToast(`🧹 Đã reset sạch giờ của ${scheduledToday.length} task trên Timeline!`, '✨');
       });
     }
 
@@ -2478,6 +2501,10 @@
     const gridEl = document.querySelector('.task-view-grid');
     if (gridEl) {
       gridEl.classList.toggle('selection-mode-active', isSelectionMode);
+    }
+
+    if (elements.selectionModeGuideBanner) {
+      elements.selectionModeGuideBanner.style.display = isSelectionMode ? 'flex' : 'none';
     }
 
     if (elements.btnToggleSelectionMode) {
@@ -2874,10 +2901,10 @@
 
   function updateAutoArrangeButtonText() {
     if (!elements.btnAutoFixConflicts) return;
-    const count = selectedTimelineTaskIds.size;
+    const count = selectedTimelineTaskArray.length;
     if (count > 0) {
-      elements.btnAutoFixConflicts.innerHTML = `⚡ Xếp ${count} Task Đã Chọn (07:30)`;
-      elements.btnAutoFixConflicts.title = `Tự động xếp ${count} task đã chọn nối tiếp nhau bắt đầu từ 07:30 AM`;
+      elements.btnAutoFixConflicts.innerHTML = `⚡ Xếp ${count} Task Theo Thứ Tự (07:30)`;
+      elements.btnAutoFixConflicts.title = `Tự động xếp ${count} task theo thứ tự bạn vừa chọn nối tiếp nhau từ 07:30 AM`;
     } else {
       elements.btnAutoFixConflicts.innerHTML = `⚡ Tự Động Xếp Timeline (07:30)`;
       elements.btnAutoFixConflicts.title = `Tự động xếp nối tiếp các task dự kiến làm trong ngày bắt đầu từ 07:30 AM`;
@@ -2887,9 +2914,11 @@
   async function autoFixTaskConflicts() {
     const todayStr = getTodayStr();
     let tasksToSchedule = [];
+    let isCustomOrder = false;
 
-    if (selectedTimelineTaskIds.size > 0) {
-      tasksToSchedule = todoList.filter(t => !t.completed && selectedTimelineTaskIds.has(t.id));
+    if (selectedTimelineTaskArray.length > 0) {
+      tasksToSchedule = selectedTimelineTaskArray.map(id => todoList.find(t => t.id === id)).filter(Boolean);
+      isCustomOrder = true;
     } else {
       tasksToSchedule = todoList.filter(t => !t.completed && isDueToday(t));
     }
@@ -2935,13 +2964,15 @@
       showToast(`💡 Tự động gán 30 phút cho ${missingCount} task chưa ước lượng thời gian`, '⏱️');
     }
 
-    // 4. Sort tasks: Priority first, or by existing dueTime, or by createdAt
-    tasksToSchedule.sort((a, b) => {
-      if (a.dueTime && b.dueTime) return a.dueTime.localeCompare(b.dueTime);
-      if (a.dueTime) return -1;
-      if (b.dueTime) return 1;
-      return (b.createdAt || 0) - (a.createdAt || 0);
-    });
+    // 4. Sort tasks if not explicitly ordered by user selection
+    if (!isCustomOrder) {
+      tasksToSchedule.sort((a, b) => {
+        if (a.dueTime && b.dueTime) return a.dueTime.localeCompare(b.dueTime);
+        if (a.dueTime) return -1;
+        if (b.dueTime) return 1;
+        return (b.createdAt || 0) - (a.createdAt || 0);
+      });
+    }
 
     // 5. Sequentially arrange all tasks starting from 07:30 AM
     tasksToSchedule.forEach(todo => {
@@ -2953,7 +2984,7 @@
     const endStr = formatMinToTime(currentPointer);
 
     // Clear selection & reset mode after scheduling
-    selectedTimelineTaskIds.clear();
+    selectedTimelineTaskArray = [];
     isSelectionMode = false;
 
     await window.StorageService.saveTodoList(todoList);
