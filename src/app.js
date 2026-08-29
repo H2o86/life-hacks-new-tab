@@ -164,6 +164,7 @@
     todoCompletedList: document.getElementById('todoCompletedList'),
     btnClearCompleted: document.getElementById('btnClearCompleted'),
     todoFormContainer: document.getElementById('todoFormContainer'),
+    btnToggleAddForm: document.getElementById('btnToggleAddForm'),
     btnExpandTaskView: document.getElementById('btnExpandTaskView'),
 
     // Task Alarm Center Screen Popup
@@ -2237,15 +2238,6 @@
         if (selectedTaskType === 'monthly') toastMsg = 'Đã thêm task lặp lại hàng tháng!';
         else if (selectedTaskType === 'recurring') toastMsg = 'Đã thêm task lặp lại hàng tuần!';
         showToast(toastMsg, '📝');
-
-        // Automatically collapse form after adding task to prioritize task list view
-        if (elements.todoFormContainer) {
-          elements.todoFormContainer.style.display = 'none';
-        }
-        if (elements.btnToggleAddForm) {
-          elements.btnToggleAddForm.classList.remove('active');
-          elements.btnToggleAddForm.title = 'Bấm để mở giao diện thêm công việc mới';
-        }
       });
     }
 
