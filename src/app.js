@@ -181,7 +181,20 @@
     btnTaskViewClose: document.getElementById('btnTaskViewClose'),
     btnToggleSelectionMode: document.getElementById('btnToggleSelectionMode'),
     btnClearTimelineSchedule: document.getElementById('btnClearTimelineSchedule'),
+    btnExportErpReport: document.getElementById('btnExportErpReport'),
     selectionModeGuideBanner: document.getElementById('selectionModeGuideBanner'),
+
+    // ERP Daily Work Report Export Modal
+    erpReportModal: document.getElementById('erpReportModal'),
+    btnCloseErpReportModal: document.getElementById('btnCloseErpReportModal'),
+    btnCloseErpReportFooter: document.getElementById('btnCloseErpReportFooter'),
+    erpReportDate: document.getElementById('erpReportDate'),
+    erpStatCompleted: document.getElementById('erpStatCompleted'),
+    erpStatTotalTime: document.getElementById('erpStatTotalTime'),
+    erpStatRate: document.getElementById('erpStatRate'),
+    erpReportTextarea: document.getElementById('erpReportTextarea'),
+    btnCopyErpText: document.getElementById('btnCopyErpText'),
+    btnExportErpCsv: document.getElementById('btnExportErpCsv'),
     tvCountUrgent: document.getElementById('tvCountUrgent'),
     tvListUrgent: document.getElementById('tvListUrgent'),
     tvCountToday: document.getElementById('tvCountToday'),
@@ -2333,8 +2346,57 @@ elements.todoCompletedList.appendChild(groupDiv);
       elements.btnAutoFixConflicts.addEventListener('click', autoFixTaskConflicts);
     }
 
-    if (elements.btnQuickAddSandwichTask) {
-      elements.btnQuickAddSandwichTask.addEventListener('click', () => quickCreateSandwichTask('09:00'));
+    if (elements.btnExportErpReport) {
+      elements.btnExportErpReport.addEventListener('click', () => {
+        if (elements.erpReportDate) {
+          elements.erpReportDate.value = getTodayStr();
+        }
+        if (elements.erpReportModal) {
+          elements.erpReportModal.classList.add('active');
+        }
+        generateErpReportForDate(getTodayStr());
+      });
+    }
+
+    if (elements.btnCloseErpReportModal && elements.erpReportModal) {
+      elements.btnCloseErpReportModal.addEventListener('click', () => {
+        elements.erpReportModal.classList.remove('active');
+      });
+    }
+
+    if (elements.btnCloseErpReportFooter && elements.erpReportModal) {
+      elements.btnCloseErpReportFooter.addEventListener('click', () => {
+        elements.erpReportModal.classList.remove('active');
+      });
+    }
+
+    if (elements.erpReportDate) {
+      elements.erpReportDate.addEventListener('change', (e) => {
+        generateErpReportForDate(e.target.value);
+      });
+    }
+
+    if (elements.btnCopyErpText) {
+      elements.btnCopyErpText.addEventListener('click', async () => {
+        const text = elements.erpReportTextarea ? elements.erpReportTextarea.value : '';
+        if (!text) {
+          showToast('Không có nội dung báo cáo để sao chép!', '⚠️');
+          return;
+        }
+        try {
+          await navigator.clipboard.writeText(text);
+          showToast('📋 Đã sao chép báo cáo ERP vào bộ nhớ tạm!', '✅');
+        } catch (err) {
+          showToast('Không thể sao chép tự động. Hãy bôi đen và nhấn Ctrl+C!', '⚠️');
+        }
+      });
+    }
+
+    if (elements.btnExportErpCsv) {
+      elements.btnExportErpCsv.addEventListener('click', () => {
+        const targetDate = elements.erpReportDate ? elements.erpReportDate.value : getTodayStr();
+        downloadErpCsv(targetDate);
+      });
     }
 
     // Alarm Modal Controls
@@ -2992,6 +3054,133 @@ elements.todoCompletedList.appendChild(groupDiv);
     renderSandwichPlateTimeline();
     updateAutoArrangeButtonText();
     showToast(`🎉 Đã tự động xếp ${tasksToSchedule.length} task nối tiếp nhau từ ${startStr} đến ${endStr}!`, '⚡');
+  }
+
+  /* ==========================================================================
+     ERP Daily Work Report Export Engine
+     ========================================================================== */
+
+  function generateErpReportForDate(targetDateStr) {
+    if (!targetDateStr) targetDateStr = getTodayStr();
+
+    const dateTasks = todoList.filter(t => {
+      const isDueDate = t.dueDate === targetDateStr;
+      const isCompletedDate = t.lastCompletedDate === targetDateStr;
+      return isDueDate || isCompletedDate;
+    });
+
+    const completed = dateTasks.filter(t => t.completed && (t.lastCompletedDate === targetDateStr || t.dueDate === targetDateStr));
+    const pending = dateTasks.filter(t => !t.completed);
+
+    let totalWorkSec = 0;
+    dateTasks.forEach(t => {
+      totalWorkSec += getLiveWorkSeconds(t);
+    });
+
+    const workHours = Math.floor(totalWorkSec / 3600);
+    const workMins = Math.floor((totalWorkSec % 3600) / 60);
+
+    const totalCount = dateTasks.length;
+    const completedCount = completed.length;
+    const ratePct = totalCount > 0 ? Math.round((completedCount / totalCount) * 100) : 0;
+
+    if (elements.erpStatCompleted) elements.erpStatCompleted.textContent = `✅ ${completedCount}/${totalCount} Hoàn Thành`;
+    if (elements.erpStatTotalTime) elements.erpStatTotalTime.textContent = `⏱️ ${workHours}h ${workMins}m Thực Làm`;
+    if (elements.erpStatRate) elements.erpStatRate.textContent = `📈 ${ratePct}% Tiến Độ`;
+
+    const dateParts = targetDateStr.split('-');
+    const formattedDate = dateParts.length === 3 ? `${dateParts[2]}/${dateParts[1]}/${dateParts[0]}` : targetDateStr;
+
+    let lines = [];
+    lines.push(`📊 BÁO CÁO KẾT QUẢ CÔNG VIỆC NGÀY ${formattedDate}`);
+    lines.push(`--------------------------------------------------`);
+    lines.push(`⏱️ Tổng thời gian làm việc thực tế: ${workHours} giờ ${workMins} phút`);
+    lines.push(`📈 Tỷ lệ hoàn thành công việc: ${completedCount}/${totalCount} task (${ratePct}%)`);
+    lines.push(``);
+
+    lines.push(`I. DANH SÁCH CÔNG VIỆC ĐÃ HOÀN THÀNH (${completedCount}):`);
+    if (completed.length === 0) {
+      lines.push(`  (Chưa có công việc nào hoàn thành trong ngày)`);
+    } else {
+      completed.forEach((t, i) => {
+        const sec = getLiveWorkSeconds(t);
+        const actualMins = Math.floor(sec / 60);
+        const estStr = t.estMinutes ? ` / Dự kiến ${t.estMinutes}m` : '';
+        const timeStr = t.dueTime ? ` [Lịch ${t.dueTime}]` : '';
+        lines.push(`  ${i + 1}. ${t.text}${timeStr} - (Thực tế: ${actualMins} phút${estStr})`);
+      });
+    }
+
+    lines.push(``);
+    lines.push(`II. CÔNG VIỆC CHƯA HOÀN THÀNH / CHUYỂN SANG HÔM SAU (${pending.length}):`);
+    if (pending.length === 0) {
+      lines.push(`  ✨ (Đã hoàn thành 100% tất cả công việc trong ngày!)`);
+    } else {
+      pending.forEach((t, i) => {
+        const estStr = t.estMinutes ? ` [Dự kiến ${t.estMinutes}m]` : '';
+        const timeStr = t.dueTime ? ` (Khung giờ ${t.dueTime})` : '';
+        lines.push(`  ${i + 1}. ${t.text}${estStr}${timeStr}`);
+      });
+    }
+
+    lines.push(``);
+    lines.push(`--------------------------------------------------`);
+    lines.push(`Báo cáo được xuất tự động từ tiện ích Life Hacks NewTab Extension.`);
+
+    const reportText = lines.join('\n');
+    if (elements.erpReportTextarea) elements.erpReportTextarea.value = reportText;
+    return reportText;
+  }
+
+  function downloadErpCsv(targetDateStr) {
+    if (!targetDateStr) targetDateStr = getTodayStr();
+
+    const dateTasks = todoList.filter(t => {
+      const isDueDate = t.dueDate === targetDateStr;
+      const isCompletedDate = t.lastCompletedDate === targetDateStr;
+      return isDueDate || isCompletedDate;
+    });
+
+    if (dateTasks.length === 0) {
+      showToast(`Không có dữ liệu công việc ngày ${targetDateStr} để xuất CSV!`, '⚠️');
+      return;
+    }
+
+    const headers = ['STT', 'Tên Công Việc', 'Trạng Thái', 'Ngày Hạn Chót', 'Khung Giờ', 'Dự Kiến (Phút)', 'Thực Hiện (Phút)', 'Chênh Lệch (Phút)'];
+    let csvRows = [];
+    csvRows.push(headers.map(h => `"${h}"`).join(','));
+
+    dateTasks.forEach((t, i) => {
+      const statusStr = t.completed ? 'Đã hoàn thành' : 'Đang thực hiện';
+      const actualMins = Math.floor(getLiveWorkSeconds(t) / 60);
+      const estMins = t.estMinutes || 0;
+      const diffMins = estMins > 0 ? (actualMins - estMins) : 0;
+      const escapeField = str => `"${String(str || '').replace(/"/g, '""')}"`;
+
+      const row = [
+        i + 1,
+        escapeField(t.text),
+        escapeField(statusStr),
+        escapeField(t.dueDate || ''),
+        escapeField(t.dueTime || ''),
+        estMins,
+        actualMins,
+        diffMins > 0 ? `+${diffMins}` : diffMins
+      ];
+      csvRows.push(row.join(','));
+    });
+
+    const csvContent = '\uFEFF' + csvRows.join('\r\n');
+    const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = `Bao_Cao_Cong_Viec_ERP_${targetDateStr}.csv`;
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    URL.revokeObjectURL(url);
+    showToast(`📥 Đã tải xuống file CSV cho ERP: Bao_Cao_Cong_Viec_ERP_${targetDateStr}.csv`, '💾');
   }
 
   function bindTimelineAndGridDragDrop() {

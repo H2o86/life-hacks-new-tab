@@ -778,6 +778,7 @@
           <button type="button" class="btn-selection-mode-toggle" id="btnToggleSelectionMode" title="Bật/Tắt chế độ chọn task để sắp xếp thông minh vào Timeline">☑️ Chế Độ: Chọn Xếp Lịch</button>
           <button type="button" class="btn-auto-fix-conflicts" id="btnAutoFixConflicts" title="Tự động xếp nối tiếp các task dự kiến làm trong ngày bắt đầu từ 07:30 AM">⚡ Tự Động Xếp Timeline (07:30)</button>
           <button type="button" class="btn-clear-timeline-schedule" id="btnClearTimelineSchedule" title="Xóa toàn bộ giờ đã xếp trên Timeline 24h để làm lại từ đầu">🧹 Reset Timeline</button>
+          <button type="button" class="btn-export-erp-report" id="btnExportErpReport" title="Xuất báo cáo kết quả công việc trong ngày để nộp lên phần mềm ERP">📊 Xuất Báo Cáo ERP</button>
           <button type="button" class="btn-task-view-close" id="btnTaskViewClose" title="Thu gọn giao diện (&lt; ESC &gt;)">↙️ Thu Gọn</button>
         </div>
       </div>
@@ -942,6 +943,48 @@
       <div class="sandwich-unscheduled-tray">
         <h4>📋 Task Chưa Có Giờ Cụ Thể Trong Ngày (Bấm vào để gán khung giờ)</h4>
         <div class="unscheduled-slices-list" id="unscheduledSlicesList"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ERP Daily Work Report Export Modal -->
+  <div class="modal-overlay" id="erpReportModal">
+    <div class="modal-card erp-report-card">
+      <div class="modal-header">
+        <div class="erp-report-title-box">
+          <h3>📊 Báo Cáo Kết Quả Công Việc Ngày (Nộp ERP)</h3>
+          <p class="erp-report-subtitle">Tổng hợp kết quả công việc đã thực hiện để nộp báo cáo ngày lên ERP / Zalo / Email</p>
+        </div>
+        <button class="btn-close-modal" id="btnCloseErpReportModal">&times;</button>
+      </div>
+
+      <div class="modal-scroll-body">
+        <!-- Date Picker & Quick Stats -->
+        <div class="erp-report-controls-row">
+          <div class="erp-date-picker-group">
+            <label for="erpReportDate">📅 Ngày Báo Cáo:</label>
+            <input type="date" id="erpReportDate" class="erp-date-input">
+          </div>
+          <div class="erp-quick-stats">
+            <span class="stat-badge completed" id="erpStatCompleted">✅ 0 Task Hoàn Thành</span>
+            <span class="stat-badge total-time" id="erpStatTotalTime">⏱️ 0h 0m</span>
+            <span class="stat-badge rate" id="erpStatRate">📈 0% Tiến Độ</span>
+          </div>
+        </div>
+
+        <!-- Live Preview Textarea Container -->
+        <div class="erp-report-preview-container">
+          <div class="preview-header">
+            <span>📄 Mẫu Văn Bản Báo Cáo ERP (Format Chuẩn)</span>
+            <button type="button" class="btn-copy-erp-text" id="btnCopyErpText">📋 Copy Nội Dung Nộp ERP</button>
+          </div>
+          <textarea id="erpReportTextarea" class="erp-report-textarea" readonly rows="12" placeholder="Đang tạo báo cáo..."></textarea>
+        </div>
+      </div>
+
+      <div class="modal-footer erp-footer">
+        <button type="button" class="btn-export-csv" id="btnExportErpCsv">📥 Xuất File Excel / CSV (UTF-8)</button>
+        <button type="button" class="btn-secondary" id="btnCloseErpReportFooter">Đóng</button>
       </div>
     </div>
   </div>
