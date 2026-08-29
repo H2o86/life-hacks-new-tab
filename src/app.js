@@ -1238,6 +1238,7 @@
   let activeTodoTab = 'active';
   let selectedTaskType = 'single'; // 'single' | 'recurring'
   let selectedWeekdays = new Set([1, 2, 3, 4, 5]); // Default Mon-Fri
+  let selectedTimelineTaskIds = new Set(); // Task IDs selected for timeline auto-scheduling
   let taskTimerInterval = null;
 
   let dailyWorkHistory = {};
@@ -1806,14 +1807,15 @@
     return false;
   }
 
-  function createTodoItemElement(todo, itemIndex) {
+  function createTodoItemElement(todo, itemIndex, isTaskView = false) {
     const li = document.createElement('li');
     const deadlineInfo = getDeadlineInfo(todo);
     const isOverdue = deadlineInfo && deadlineInfo.isOverdue && !todo.completed;
     const isMustStart = deadlineInfo && deadlineInfo.isMustStartNow && !todo.completed;
     const dueToday = isDueToday(todo);
+    const isSelectedForTimeline = selectedTimelineTaskIds.has(todo.id);
 
-    li.className = `todo-item ${todo.completed ? 'completed' : ''} ${isOverdue ? 'overdue' : ''} ${isMustStart ? 'must-start-now' : ''} ${dueToday && !isOverdue && !isMustStart ? 'due-today' : ''}`;
+    li.className = `todo-item ${todo.completed ? 'completed' : ''} ${isOverdue ? 'overdue' : ''} ${isMustStart ? 'must-start-now' : ''} ${dueToday && !isOverdue && !isMustStart ? 'due-today' : ''} ${isSelectedForTimeline ? 'selected-for-timeline' : ''}`;
     li.dataset.todoId = todo.id;
     li.draggable = true;
 
@@ -1822,10 +1824,12 @@
       e.dataTransfer.effectAllowed = 'move';
     });
     
+    // Completion Checkbox (Strictly for marking task as Completed / Undone)
     const checkbox = document.createElement('input');
     checkbox.type = 'checkbox';
     checkbox.className = 'todo-checkbox';
     checkbox.checked = !!todo.completed;
+    checkbox.title = todo.completed ? 'Bấm để khôi phục công việc' : 'Bấm để đánh dấu hoàn thành công việc';
 
     const indexBadge = document.createElement('span');
     indexBadge.className = 'todo-index-badge';
@@ -2031,16 +2035,40 @@
           todo.lastStartTime = null;
         }
         todo.onBreak = false;
+        selectedTimelineTaskIds.delete(todo.id);
       }
       await window.StorageService.saveTodoList(todoList);
       showToast(todo.completed ? '🎉 Đã hoàn thành công việc!' : '🔄 Đã khôi phục công việc', todo.completed ? '✅' : '📋');
       renderTodoList();
+      updateAutoArrangeButtonText();
     });
 
     li.appendChild(checkbox);
     if (itemIndex) {
       li.appendChild(indexBadge);
     }
+
+    // In Task View: Dedicated Timeline Selection Button (➕ Chọn xếp lịch / ⚡ Đã chọn)
+    if (isTaskView && !todo.completed) {
+      const selectBtn = document.createElement('button');
+      selectBtn.type = 'button';
+      selectBtn.className = `todo-select-timeline-btn ${isSelectedForTimeline ? 'active' : ''}`;
+      selectBtn.innerHTML = isSelectedForTimeline ? '⚡ Đã chọn' : '➕ Chọn xếp lịch';
+      selectBtn.title = isSelectedForTimeline ? 'Bấm để bỏ chọn xếp lịch task này' : 'Bấm để chọn task này xếp lịch tự động từ 07:30 AM';
+
+      selectBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        if (selectedTimelineTaskIds.has(todo.id)) {
+          selectedTimelineTaskIds.delete(todo.id);
+        } else {
+          selectedTimelineTaskIds.add(todo.id);
+        }
+        renderTaskViewGrid();
+        updateAutoArrangeButtonText();
+      });
+      li.appendChild(selectBtn);
+    }
+
     li.appendChild(contentBox);
     li.appendChild(actionBox);
     return li;
@@ -2468,24 +2496,25 @@
 
     if (elements.tvListUrgent) {
       elements.tvListUrgent.innerHTML = urgentList.length === 0 ? '<div class="todo-empty-state">✨ Không có task quá hạn</div>' : '';
-      urgentList.forEach((t, i) => elements.tvListUrgent.appendChild(createTodoItemElement(t, i + 1)));
+      urgentList.forEach((t, i) => elements.tvListUrgent.appendChild(createTodoItemElement(t, i + 1, true)));
     }
 
     if (elements.tvListToday) {
       elements.tvListToday.innerHTML = todayList.length === 0 ? '<div class="todo-empty-state">✨ Không có task trong ngày</div>' : '';
-      todayList.forEach((t, i) => elements.tvListToday.appendChild(createTodoItemElement(t, i + 1)));
+      todayList.forEach((t, i) => elements.tvListToday.appendChild(createTodoItemElement(t, i + 1, true)));
     }
 
     if (elements.tvListUpcoming) {
       elements.tvListUpcoming.innerHTML = upcomingList.length === 0 ? '<div class="todo-empty-state">✨ Chưa có task sắp tới</div>' : '';
-      upcomingList.forEach((t, i) => elements.tvListUpcoming.appendChild(createTodoItemElement(t, i + 1)));
+      upcomingList.forEach((t, i) => elements.tvListUpcoming.appendChild(createTodoItemElement(t, i + 1, true)));
     }
 
     if (elements.tvListCompleted) {
       elements.tvListCompleted.innerHTML = completedTodos.length === 0 ? '<div class="todo-empty-state">📌 Chưa có task hoàn thành</div>' : '';
-      completedTodos.forEach((t, i) => elements.tvListCompleted.appendChild(createTodoItemElement(t, i + 1)));
+      completedTodos.forEach((t, i) => elements.tvListCompleted.appendChild(createTodoItemElement(t, i + 1, true)));
     }
 
+    updateAutoArrangeButtonText();
     bindTimelineAndGridDragDrop();
   }
 
@@ -2824,20 +2853,36 @@
     showToast(`🎉 Đã thêm task "${newTodo.text}" vào Timeline 24h lúc ${defaultTimeStr}!`, '⏳');
   }
 
+  function updateAutoArrangeButtonText() {
+    if (!elements.btnAutoFixConflicts) return;
+    const count = selectedTimelineTaskIds.size;
+    if (count > 0) {
+      elements.btnAutoFixConflicts.innerHTML = `⚡ Xếp ${count} Task Đã Chọn (07:30)`;
+      elements.btnAutoFixConflicts.title = `Tự động xếp ${count} task đã chọn nối tiếp nhau bắt đầu từ 07:30 AM`;
+    } else {
+      elements.btnAutoFixConflicts.innerHTML = `⚡ Tự Động Xếp Timeline (07:30)`;
+      elements.btnAutoFixConflicts.title = `Tự động xếp nối tiếp các task dự kiến làm trong ngày bắt đầu từ 07:30 AM`;
+    }
+  }
+
   async function autoFixTaskConflicts() {
     const todayStr = getTodayStr();
+    let tasksToSchedule = [];
 
-    // 1. Get all active (uncompleted) tasks for today
-    let activeToday = todoList.filter(t => !t.completed && isDueToday(t));
+    if (selectedTimelineTaskIds.size > 0) {
+      tasksToSchedule = todoList.filter(t => !t.completed && selectedTimelineTaskIds.has(t.id));
+    } else {
+      tasksToSchedule = todoList.filter(t => !t.completed && isDueToday(t));
+    }
 
-    // If no active tasks exist for today, check if there are upcoming tasks to pick from
-    if (activeToday.length === 0) {
+    // If no tasks exist to schedule, check if there are upcoming tasks to pick from
+    if (tasksToSchedule.length === 0) {
       const upcoming = todoList.filter(t => !t.completed && !isDueToday(t));
       if (upcoming.length > 0) {
         const confirmPick = confirm(`Hôm nay chưa có task nào được chọn. Bạn có muốn chọn ${upcoming.length} task sắp tới để xếp vào làm hôm nay không?`);
         if (confirmPick) {
           upcoming.forEach(t => t.dueDate = todayStr);
-          activeToday = upcoming;
+          tasksToSchedule = upcoming;
         } else {
           return;
         }
@@ -2860,7 +2905,7 @@
 
     // 3. Ensure every task has an estimated duration (estMinutes)
     let missingCount = 0;
-    activeToday.forEach(todo => {
+    tasksToSchedule.forEach(todo => {
       if (!todo.estMinutes || todo.estMinutes <= 0) {
         todo.estMinutes = 30; // default 30 mins
         missingCount++;
@@ -2872,7 +2917,7 @@
     }
 
     // 4. Sort tasks: Priority first, or by existing dueTime, or by createdAt
-    activeToday.sort((a, b) => {
+    tasksToSchedule.sort((a, b) => {
       if (a.dueTime && b.dueTime) return a.dueTime.localeCompare(b.dueTime);
       if (a.dueTime) return -1;
       if (b.dueTime) return 1;
@@ -2880,7 +2925,7 @@
     });
 
     // 5. Sequentially arrange all tasks starting from 07:30 AM
-    activeToday.forEach(todo => {
+    tasksToSchedule.forEach(todo => {
       todo.dueDate = todayStr;
       todo.dueTime = formatMinToTime(currentPointer);
       currentPointer += (todo.estMinutes || 30);
@@ -2888,10 +2933,14 @@
 
     const endStr = formatMinToTime(currentPointer);
 
+    // Clear selection after scheduling
+    selectedTimelineTaskIds.clear();
+
     await window.StorageService.saveTodoList(todoList);
     renderTodoList();
     renderSandwichPlateTimeline();
-    showToast(`🎉 Đã tự động xếp ${activeToday.length} task nối tiếp nhau từ ${startStr} đến ${endStr}!`, '⚡');
+    updateAutoArrangeButtonText();
+    showToast(`🎉 Đã tự động xếp ${tasksToSchedule.length} task nối tiếp nhau từ ${startStr} đến ${endStr}!`, '⚡');
   }
 
   function bindTimelineAndGridDragDrop() {

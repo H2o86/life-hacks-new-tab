@@ -2237,6 +2237,40 @@ textarea:focus {
   font-weight: 800;
 }
 
+/* Dedicated Timeline Schedule Selection Button in Task View */
+.todo-select-timeline-btn {
+  background: rgba(59, 130, 246, 0.15);
+  border: 1px solid rgba(59, 130, 246, 0.4);
+  color: #60a5fa;
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 3px 8px;
+  border-radius: 6px;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 0.2s ease;
+  flex-shrink: 0;
+}
+
+.todo-select-timeline-btn:hover {
+  background: rgba(59, 130, 246, 0.35);
+  border-color: #3b82f6;
+  color: #ffffff;
+}
+
+.todo-select-timeline-btn.active {
+  background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+  border-color: #60a5fa;
+  color: #ffffff;
+  box-shadow: 0 0 10px rgba(59, 130, 246, 0.5);
+}
+
+.todo-item.selected-for-timeline {
+  border-color: #3b82f6 !important;
+  box-shadow: 0 0 12px rgba(59, 130, 246, 0.35) !important;
+  background: rgba(59, 130, 246, 0.12) !important;
+}
+
 /* Todo Item Index Badge */
 .todo-index-badge {
   font-size: 0.7rem;
