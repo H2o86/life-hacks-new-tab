@@ -1870,11 +1870,202 @@
       });
     }
 
+    const indexBadge = document.createElement('span');
+    indexBadge.className = 'todo-index-badge';
+    indexBadge.textContent = `#${itemIndex || 1}`;
+
+    const contentBox = document.createElement('div');
+    contentBox.className = 'todo-content-box';
+
+    const span = document.createElement('span');
+    span.className = 'todo-text';
+    span.textContent = todo.text;
+    span.style.cursor = 'pointer';
+    span.title = 'Bấm để bắt đầu làm việc và chuyển sang bên trái màn hình';
+    span.addEventListener('click', (e) => {
+      e.stopPropagation();
+      if (!todo.completed) {
+        toggleTaskTimer(todo.id);
+      }
+    });
+    contentBox.appendChild(span);
+
+    contentBox.style.cursor = 'pointer';
+    contentBox.addEventListener('click', (e) => {
+      if (e.target === span || e.target.closest('.todo-timer-btn')) return;
+      if (!todo.completed) {
+        toggleTaskTimer(todo.id);
+      }
+    });
+
+    // Render Deadline Badge if present and task not completed
+    if (deadlineInfo && !todo.completed) {
+      const badge = document.createElement('span');
+      badge.className = `todo-deadline-badge deadline-${deadlineInfo.type}`;
+      badge.textContent = deadlineInfo.text;
+      contentBox.appendChild(badge);
+    }
+
+    // Render Timer Controls Box
+    const timerBox = document.createElement('div');
+    timerBox.className = 'todo-timer-box';
+
+    const liveSec = getLiveWorkSeconds(todo);
+    const timerBadge = document.createElement('span');
+    timerBadge.className = `todo-timer-badge ${todo.timerRunning ? 'active-timing' : (todo.onBreak ? 'on-break' : '')}`;
+    timerBadge.textContent = `⏱️ ${formatWorkDuration(liveSec)}`;
+    timerBox.appendChild(timerBadge);
+
+    if (!todo.completed) {
+      const timerBtn = document.createElement('button');
+      timerBtn.type = 'button';
+      timerBtn.className = `todo-timer-btn ${todo.timerRunning ? 'running' : ''}`;
+      timerBtn.innerHTML = todo.timerRunning ? '⏸️ Tạm dừng' : (todo.onBreak ? '▶️ Tiếp tục' : '▶️ Bắt đầu');
+      timerBtn.title = todo.timerRunning ? 'Tạm dừng đếm thời gian' : 'Bắt đầu đếm thời gian thực hiện';
+      
+      timerBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        toggleTaskTimer(todo.id);
+      });
+      timerBox.appendChild(timerBtn);
+    }
+    contentBox.appendChild(timerBox);
+
+    // Action Box (Edit & Delete controls)
+    const actionBox = document.createElement('div');
+    actionBox.className = 'todo-actions-box';
+
+    const editBtn = document.createElement('button');
+    editBtn.type = 'button';
+    editBtn.className = 'todo-action-btn edit-btn';
+    editBtn.title = 'Sửa công việc này';
+    editBtn.innerHTML = '✏️';
+
+    const delBtn = document.createElement('button');
+    delBtn.type = 'button';
+    delBtn.className = 'todo-action-btn del-btn';
+    delBtn.title = 'Xóa công việc này';
+    delBtn.innerHTML = '🗑️';
+
+    actionBox.appendChild(editBtn);
+    actionBox.appendChild(delBtn);
+
+    editBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      enterEditMode();
+    });
+
+    delBtn.addEventListener('click', async (e) => {
+      e.stopPropagation();
+      todoList = todoList.filter(t => t.id !== todo.id);
+      await window.StorageService.saveTodoList(todoList);
+      renderTodoList();
+      showToast('Đã xóa công việc', '🗑️');
+    });
+
+    function enterEditMode() {
+      li.classList.add('editing');
+      li.innerHTML = ''; // Clear card contents for inline editing
+
+      const editContainer = document.createElement('div');
+      editContainer.className = 'todo-edit-container';
+
+      const textInput = document.createElement('input');
+      textInput.type = 'text';
+      textInput.className = 'todo-edit-text-input';
+      textInput.value = todo.text;
+      textInput.placeholder = 'Tên công việc...';
+
+      const subRow = document.createElement('div');
+      subRow.className = 'todo-edit-sub-row';
+
+      const dateInput = document.createElement('input');
+      dateInput.type = 'date';
+      dateInput.value = todo.dueDate || '';
+      dateInput.title = 'Sửa ngày hạn chót';
+
+      const timeInput = document.createElement('input');
+      timeInput.type = 'time';
+      timeInput.value = todo.dueTime || '';
+      timeInput.title = 'Sửa giờ hạn chót';
+
+      const estInput = document.createElement('input');
+      estInput.type = 'number';
+      estInput.value = todo.estMinutes || '';
+      estInput.placeholder = 'Dự kiến (m)';
+      estInput.title = 'Thời lượng làm dự kiến (phút)';
+      estInput.min = '5';
+      estInput.max = '1440';
+      estInput.style.width = '90px';
+
+      subRow.appendChild(dateInput);
+      subRow.appendChild(timeInput);
+      subRow.appendChild(estInput);
+
+      const btnsRow = document.createElement('div');
+      btnsRow.className = 'todo-edit-btns-row';
+
+      const saveBtn = document.createElement('button');
+      saveBtn.type = 'button';
+      saveBtn.className = 'btn-save-edit';
+      saveBtn.innerHTML = '💾 Lưu';
+
+      const cancelBtn = document.createElement('button');
+      cancelBtn.type = 'button';
+      cancelBtn.className = 'btn-cancel-edit';
+      cancelBtn.innerHTML = '❌ Hủy';
+
+      btnsRow.appendChild(saveBtn);
+      btnsRow.appendChild(cancelBtn);
+
+      editContainer.appendChild(textInput);
+      editContainer.appendChild(subRow);
+      editContainer.appendChild(btnsRow);
+
+      li.appendChild(editContainer);
+      setTimeout(() => textInput.focus(), 50);
+
+      async function saveChanges() {
+        const newText = textInput.value.trim();
+        if (!newText) {
+          showToast('Tên công việc không được để trống!', '⚠️');
+          return;
+        }
+        todo.text = newText;
+        todo.dueDate = dateInput.value || null;
+        todo.dueTime = timeInput.value || null;
+        todo.estMinutes = estInput.value ? parseInt(estInput.value, 10) : null;
+
+        await window.StorageService.saveTodoList(todoList);
+        renderTodoList();
+        showToast('✏️ Đã cập nhật công việc!', '💾');
+      }
+
+      saveBtn.addEventListener('click', (ev) => {
+        ev.stopPropagation();
+        saveChanges();
+      });
+
+      cancelBtn.addEventListener('click', (ev) => {
+        ev.stopPropagation();
+        renderTodoList();
+      });
+
+      textInput.addEventListener('keydown', (ev) => {
+        if (ev.key === 'Enter') {
+          ev.preventDefault();
+          saveChanges();
+        } else if (ev.key === 'Escape') {
+          ev.preventDefault();
+          renderTodoList();
+        }
+      });
+    }
+
     li.appendChild(checkbox);
     if (itemIndex) {
       li.appendChild(indexBadge);
     }
-
     li.appendChild(contentBox);
     li.appendChild(actionBox);
     return li;
