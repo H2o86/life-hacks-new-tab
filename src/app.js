@@ -179,6 +179,7 @@
     // Fullscreen Windows Task View Overlay
     taskViewOverlay: document.getElementById('taskViewOverlay'),
     btnTaskViewClose: document.getElementById('btnTaskViewClose'),
+    btnToggleSelectionMode: document.getElementById('btnToggleSelectionMode'),
     tvCountUrgent: document.getElementById('tvCountUrgent'),
     tvListUrgent: document.getElementById('tvListUrgent'),
     tvCountToday: document.getElementById('tvCountToday'),
@@ -1238,6 +1239,7 @@
   let activeTodoTab = 'active';
   let selectedTaskType = 'single'; // 'single' | 'recurring'
   let selectedWeekdays = new Set([1, 2, 3, 4, 5]); // Default Mon-Fri
+  let isSelectionMode = false; // Toggle mode for selecting tasks to schedule on Timeline
   let selectedTimelineTaskIds = new Set(); // Task IDs selected for timeline auto-scheduling
   let taskTimerInterval = null;
 
@@ -1824,249 +1826,53 @@
       e.dataTransfer.effectAllowed = 'move';
     });
     
-    // Completion Checkbox (Strictly for marking task as Completed / Undone)
     const checkbox = document.createElement('input');
     checkbox.type = 'checkbox';
     checkbox.className = 'todo-checkbox';
-    checkbox.checked = !!todo.completed;
-    checkbox.title = todo.completed ? 'Bấm để khôi phục công việc' : 'Bấm để đánh dấu hoàn thành công việc';
 
-    const indexBadge = document.createElement('span');
-    indexBadge.className = 'todo-index-badge';
-    indexBadge.textContent = `#${itemIndex || 1}`;
-
-    const contentBox = document.createElement('div');
-    contentBox.className = 'todo-content-box';
-
-    const span = document.createElement('span');
-    span.className = 'todo-text';
-    span.textContent = todo.text;
-    span.style.cursor = 'pointer';
-    span.title = 'Bấm để bắt đầu làm việc và chuyển sang bên trái màn hình';
-    span.addEventListener('click', (e) => {
-      e.stopPropagation();
-      if (!todo.completed) {
-        toggleTaskTimer(todo.id);
-      }
-    });
-    contentBox.appendChild(span);
-
-    contentBox.style.cursor = 'pointer';
-    contentBox.addEventListener('click', (e) => {
-      if (e.target === span || e.target.closest('.todo-timer-btn')) return;
-      if (!todo.completed) {
-        toggleTaskTimer(todo.id);
-      }
-    });
-
-    // Render Deadline Badge if present and task not completed
-    if (deadlineInfo && !todo.completed) {
-      const badge = document.createElement('span');
-      badge.className = `todo-deadline-badge deadline-${deadlineInfo.type}`;
-      badge.textContent = deadlineInfo.text;
-      contentBox.appendChild(badge);
-    }
-
-    // Render Timer Controls Box
-    const timerBox = document.createElement('div');
-    timerBox.className = 'todo-timer-box';
-
-    const liveSec = getLiveWorkSeconds(todo);
-    const timerBadge = document.createElement('span');
-    timerBadge.className = `todo-timer-badge ${todo.timerRunning ? 'active-timing' : (todo.onBreak ? 'on-break' : '')}`;
-    timerBadge.textContent = `⏱️ ${formatWorkDuration(liveSec)}`;
-    timerBox.appendChild(timerBadge);
-
-    if (!todo.completed) {
-      const timerBtn = document.createElement('button');
-      timerBtn.type = 'button';
-      timerBtn.className = `todo-timer-btn ${todo.timerRunning ? 'running' : ''}`;
-      timerBtn.innerHTML = todo.timerRunning ? '⏸️ Tạm dừng' : (todo.onBreak ? '▶️ Tiếp tục' : '▶️ Bắt đầu');
-      timerBtn.title = todo.timerRunning ? 'Tạm dừng đếm thời gian' : 'Bắt đầu đếm thời gian thực hiện';
-      
-      timerBtn.addEventListener('click', (e) => {
+    if (isTaskView && isSelectionMode) {
+      // In Selection Mode: Checkbox ticks to SELECT task for Timeline auto-scheduling
+      checkbox.checked = isSelectedForTimeline;
+      checkbox.title = isSelectedForTimeline ? 'Đã chọn task này để xếp lịch (Bấm để bỏ chọn)' : 'Bấm để chọn task này xếp lịch tự động từ 07:30 AM';
+      checkbox.addEventListener('change', (e) => {
         e.stopPropagation();
-        toggleTaskTimer(todo.id);
-      });
-      timerBox.appendChild(timerBtn);
-    }
-    contentBox.appendChild(timerBox);
-
-    // Action Box (Edit & Delete controls)
-    const actionBox = document.createElement('div');
-    actionBox.className = 'todo-actions-box';
-
-    const editBtn = document.createElement('button');
-    editBtn.type = 'button';
-    editBtn.className = 'todo-action-btn edit-btn';
-    editBtn.title = 'Sửa công việc này';
-    editBtn.innerHTML = '✏️';
-
-    const delBtn = document.createElement('button');
-    delBtn.type = 'button';
-    delBtn.className = 'todo-action-btn del-btn';
-    delBtn.title = 'Xóa công việc này';
-    delBtn.innerHTML = '🗑️';
-
-    actionBox.appendChild(editBtn);
-    actionBox.appendChild(delBtn);
-
-    editBtn.addEventListener('click', (e) => {
-      e.stopPropagation();
-      enterEditMode();
-    });
-
-    delBtn.addEventListener('click', async (e) => {
-      e.stopPropagation();
-      todoList = todoList.filter(t => t.id !== todo.id);
-      await window.StorageService.saveTodoList(todoList);
-      renderTodoList();
-      showToast('Đã xóa công việc', '🗑️');
-    });
-
-    function enterEditMode() {
-      li.classList.add('editing');
-      li.innerHTML = ''; // Clear card contents for inline editing
-
-      const editContainer = document.createElement('div');
-      editContainer.className = 'todo-edit-container';
-
-      const textInput = document.createElement('input');
-      textInput.type = 'text';
-      textInput.className = 'todo-edit-text-input';
-      textInput.value = todo.text;
-      textInput.placeholder = 'Tên công việc...';
-
-      const subRow = document.createElement('div');
-      subRow.className = 'todo-edit-sub-row';
-
-      const dateInput = document.createElement('input');
-      dateInput.type = 'date';
-      dateInput.value = todo.dueDate || '';
-      dateInput.title = 'Sửa ngày hạn chót';
-
-      const timeInput = document.createElement('input');
-      timeInput.type = 'time';
-      timeInput.value = todo.dueTime || '';
-      timeInput.title = 'Sửa giờ hạn chót';
-
-      const estInput = document.createElement('input');
-      estInput.type = 'number';
-      estInput.value = todo.estMinutes || '';
-      estInput.placeholder = 'Dự kiến (m)';
-      estInput.title = 'Thời lượng làm dự kiến (phút)';
-      estInput.min = '5';
-      estInput.max = '1440';
-      estInput.style.width = '90px';
-
-      subRow.appendChild(dateInput);
-      subRow.appendChild(timeInput);
-      subRow.appendChild(estInput);
-
-      const btnsRow = document.createElement('div');
-      btnsRow.className = 'todo-edit-btns-row';
-
-      const saveBtn = document.createElement('button');
-      saveBtn.type = 'button';
-      saveBtn.className = 'btn-save-edit';
-      saveBtn.innerHTML = '💾 Lưu';
-
-      const cancelBtn = document.createElement('button');
-      cancelBtn.type = 'button';
-      cancelBtn.className = 'btn-cancel-edit';
-      cancelBtn.innerHTML = '❌ Hủy';
-
-      btnsRow.appendChild(saveBtn);
-      btnsRow.appendChild(cancelBtn);
-
-      editContainer.appendChild(textInput);
-      editContainer.appendChild(subRow);
-      editContainer.appendChild(btnsRow);
-
-      li.appendChild(editContainer);
-      setTimeout(() => textInput.focus(), 50);
-
-      async function saveChanges() {
-        const newText = textInput.value.trim();
-        if (!newText) {
-          showToast('Tên công việc không được để trống!', '⚠️');
-          return;
-        }
-        todo.text = newText;
-        todo.dueDate = dateInput.value || null;
-        todo.dueTime = timeInput.value || null;
-        todo.estMinutes = estInput.value ? parseInt(estInput.value, 10) : null;
-
-        await window.StorageService.saveTodoList(todoList);
-        renderTodoList();
-        showToast('✏️ Đã cập nhật công việc!', '💾');
-      }
-
-      saveBtn.addEventListener('click', (ev) => {
-        ev.stopPropagation();
-        saveChanges();
-      });
-
-      cancelBtn.addEventListener('click', (ev) => {
-        ev.stopPropagation();
-        renderTodoList();
-      });
-
-      textInput.addEventListener('keydown', (ev) => {
-        if (ev.key === 'Enter') {
-          ev.preventDefault();
-          saveChanges();
-        } else if (ev.key === 'Escape') {
-          ev.preventDefault();
-          renderTodoList();
-        }
-      });
-    }
-
-    checkbox.addEventListener('change', async () => {
-      todo.completed = checkbox.checked;
-      if (todo.completed) {
-        todo.lastCompletedDate = getTodayStr();
-        if (todo.timerRunning) {
-          if (todo.lastStartTime) {
-            todo.totalWorkSeconds = (todo.totalWorkSeconds || 0) + Math.floor((Date.now() - todo.lastStartTime) / 1000);
-          }
-          todo.timerRunning = false;
-          todo.lastStartTime = null;
-        }
-        todo.onBreak = false;
-        selectedTimelineTaskIds.delete(todo.id);
-      }
-      await window.StorageService.saveTodoList(todoList);
-      showToast(todo.completed ? '🎉 Đã hoàn thành công việc!' : '🔄 Đã khôi phục công việc', todo.completed ? '✅' : '📋');
-      renderTodoList();
-      updateAutoArrangeButtonText();
-    });
-
-    li.appendChild(checkbox);
-    if (itemIndex) {
-      li.appendChild(indexBadge);
-    }
-
-    // In Task View: Dedicated Timeline Selection Button (➕ Chọn xếp lịch / ⚡ Đã chọn)
-    if (isTaskView && !todo.completed) {
-      const selectBtn = document.createElement('button');
-      selectBtn.type = 'button';
-      selectBtn.className = `todo-select-timeline-btn ${isSelectedForTimeline ? 'active' : ''}`;
-      selectBtn.innerHTML = isSelectedForTimeline ? '⚡ Đã chọn' : '➕ Chọn xếp lịch';
-      selectBtn.title = isSelectedForTimeline ? 'Bấm để bỏ chọn xếp lịch task này' : 'Bấm để chọn task này xếp lịch tự động từ 07:30 AM';
-
-      selectBtn.addEventListener('click', (e) => {
-        e.stopPropagation();
-        if (selectedTimelineTaskIds.has(todo.id)) {
-          selectedTimelineTaskIds.delete(todo.id);
-        } else {
+        if (checkbox.checked) {
           selectedTimelineTaskIds.add(todo.id);
+        } else {
+          selectedTimelineTaskIds.delete(todo.id);
         }
         renderTaskViewGrid();
         updateAutoArrangeButtonText();
       });
-      li.appendChild(selectBtn);
+    } else {
+      // In Normal Mode: Checkbox ticks to MARK TASK AS COMPLETED / UNDONE
+      checkbox.checked = !!todo.completed;
+      checkbox.title = todo.completed ? 'Bấm để khôi phục công việc' : 'Bấm để đánh dấu hoàn thành công việc';
+      checkbox.addEventListener('change', async (e) => {
+        e.stopPropagation();
+        todo.completed = checkbox.checked;
+        if (todo.completed) {
+          todo.lastCompletedDate = getTodayStr();
+          if (todo.timerRunning) {
+            if (todo.lastStartTime) {
+              todo.totalWorkSeconds = (todo.totalWorkSeconds || 0) + Math.floor((Date.now() - todo.lastStartTime) / 1000);
+            }
+            todo.timerRunning = false;
+            todo.lastStartTime = null;
+          }
+          todo.onBreak = false;
+          selectedTimelineTaskIds.delete(todo.id);
+        }
+        await window.StorageService.saveTodoList(todoList);
+        showToast(todo.completed ? '🎉 Đã hoàn thành công việc!' : '🔄 Đã khôi phục công việc', todo.completed ? '✅' : '📋');
+        renderTodoList();
+        updateAutoArrangeButtonText();
+      });
+    }
+
+    li.appendChild(checkbox);
+    if (itemIndex) {
+      li.appendChild(indexBadge);
     }
 
     li.appendChild(contentBox);
@@ -2297,6 +2103,18 @@
       });
     }
 
+    if (elements.btnToggleSelectionMode) {
+      elements.btnToggleSelectionMode.addEventListener('click', () => {
+        isSelectionMode = !isSelectionMode;
+        if (!isSelectionMode) {
+          selectedTimelineTaskIds.clear();
+        }
+        renderTaskViewGrid();
+        updateAutoArrangeButtonText();
+        showToast(isSelectionMode ? '☑️ Đã bật Chế độ Chọn Task Xếp Lịch!' : '🔄 Đã quay về Chế độ Thường', '⚡');
+      });
+    }
+
     if (elements.btnAutoFixConflicts) {
       elements.btnAutoFixConflicts.addEventListener('click', autoFixTaskConflicts);
     }
@@ -2465,6 +2283,16 @@
 
   function renderTaskViewGrid() {
     if (!elements.taskViewOverlay || !elements.taskViewOverlay.classList.contains('active')) return;
+
+    const gridEl = document.querySelector('.task-view-grid');
+    if (gridEl) {
+      gridEl.classList.toggle('selection-mode-active', isSelectionMode);
+    }
+
+    if (elements.btnToggleSelectionMode) {
+      elements.btnToggleSelectionMode.classList.toggle('active', isSelectionMode);
+      elements.btnToggleSelectionMode.innerHTML = isSelectionMode ? '⚡ Đang Chọn Task Xếp Lịch' : '☑️ Chế Độ: Chọn Xếp Lịch';
+    }
 
     const activeTodos = todoList.filter(t => !t.completed);
     const completedTodos = todoList.filter(t => t.completed);
@@ -2933,8 +2761,9 @@
 
     const endStr = formatMinToTime(currentPointer);
 
-    // Clear selection after scheduling
+    // Clear selection & reset mode after scheduling
     selectedTimelineTaskIds.clear();
+    isSelectionMode = false;
 
     await window.StorageService.saveTodoList(todoList);
     renderTodoList();
