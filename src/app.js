@@ -3063,13 +3063,14 @@ elements.todoCompletedList.appendChild(groupDiv);
   function generateErpReportForDate(targetDateStr) {
     if (!targetDateStr) targetDateStr = getTodayStr();
 
+    // Strictly filter tasks due or completed on targetDateStr (exclude future tasks & undated tasks)
     const dateTasks = todoList.filter(t => {
-      const isDueDate = t.dueDate === targetDateStr;
-      const isCompletedDate = t.lastCompletedDate === targetDateStr;
-      return isDueDate || isCompletedDate;
+      if (t.completed && t.lastCompletedDate === targetDateStr) return true;
+      if (!t.completed && t.dueDate === targetDateStr) return true;
+      return false;
     });
 
-    const completed = dateTasks.filter(t => t.completed && (t.lastCompletedDate === targetDateStr || t.dueDate === targetDateStr));
+    const completed = dateTasks.filter(t => t.completed && t.lastCompletedDate === targetDateStr);
     const pending = dateTasks.filter(t => !t.completed);
 
     let totalWorkSec = 0;
@@ -3135,10 +3136,11 @@ elements.todoCompletedList.appendChild(groupDiv);
   function downloadErpCsv(targetDateStr) {
     if (!targetDateStr) targetDateStr = getTodayStr();
 
+    // Strictly filter tasks due or completed on targetDateStr (exclude future tasks & undated tasks)
     const dateTasks = todoList.filter(t => {
-      const isDueDate = t.dueDate === targetDateStr;
-      const isCompletedDate = t.lastCompletedDate === targetDateStr;
-      return isDueDate || isCompletedDate;
+      if (t.completed && t.lastCompletedDate === targetDateStr) return true;
+      if (!t.completed && t.dueDate === targetDateStr) return true;
+      return false;
     });
 
     if (dateTasks.length === 0) {
